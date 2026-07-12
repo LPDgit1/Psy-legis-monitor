@@ -77,6 +77,38 @@ class CameraConnector(BaseConnector):
             return documents
         return []
 
+    def diagnose_fetch(self) -> dict[str, object]:
+        diagnostics: dict[str, object] = {
+            "endpoint_url": self.endpoint_url,
+            "fallback_url": self.fallback_url,
+            "fetch_method": self.fetch_method,
+        }
+        try:
+            html = fetch_text(self.fallback_url, method=self.fetch_method, timeout=self.timeout)
+        except Exception as exc:
+            diagnostics["fallback_error"] = str(exc)
+            return diagnostics
+
+        soup = BeautifulSoup(html, "html.parser")
+        text = normalize_text(soup.get_text(" "))
+        documents = parse_camera_latest_bills(
+            html,
+            self.fallback_url,
+            fetched_at=datetime.now(UTC),
+            limit=self.limit,
+        )
+        diagnostics.update(
+            {
+                "fallback_html_length": len(html),
+                "fallback_title": normalize_text(soup.title.get_text(" ")) if soup.title else "",
+                "contains_ac_marker": bool(re.search(r"\bA\.?\s*C\.?\s*\d+", text, flags=re.IGNORECASE)),
+                "ac_marker_count": len(re.findall(r"\bA\.?\s*C\.?\s*\d+", text, flags=re.IGNORECASE)),
+                "parsed_documents": len(documents),
+                "sample_text": text[:500],
+            }
+        )
+        return diagnostics
+
 
 def _build_camera_query(legislature_uri: str, limit: int) -> str:
     return f"""

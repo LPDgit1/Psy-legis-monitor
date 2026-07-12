@@ -28,6 +28,53 @@ DEFAULT_SEARCH_TERMS = [
     "bonus psicologo",
 ]
 
+MINISTRY_DIRECT_RELEVANCE_TERMS = [
+    "psicolog",
+    "psicoterapia",
+    "psicoterapeut",
+    "counsel",
+    "salute mentale",
+    "bonus psicologo",
+    "consultori",
+    "neuropsichiatria",
+    "neuropsic",
+    "dipendenze",
+    "disturbi alimentari",
+    "disturbo alimentare",
+    "disturbi della nutrizione",
+    "suicidio",
+    "disagio psicologico",
+    "disagio psichico",
+    "autismo",
+]
+
+MINISTRY_LOW_SIGNAL_TERMS = [
+    "telemedicina",
+    "fascicolo sanitario",
+    "dati sanitari",
+    "consenso informato",
+    "violenza di genere",
+]
+
+MINISTRY_EXCLUSION_TERMS = [
+    "veterinar",
+    "animale",
+    "animali",
+    "sanita animale",
+    "farmaco veterinario",
+    "farmaci veterinari",
+    "medicinale veterinario",
+    "medicinali veterinari",
+    "mangimi",
+    "allevament",
+    "acquacoltura",
+    "peste suina",
+    "influenza aviaria",
+    "blue tongue",
+    "lingua blu",
+    "prodotti fitosanitari",
+]
+
 
 class TrovaNormeSaluteConnector(BaseConnector):
     """Fetch recent health-law items from the official Ministry/IPZS portal."""
@@ -68,6 +115,8 @@ class TrovaNormeSaluteConnector(BaseConnector):
                     fetched_at=fetched_at,
                 )
             )
+            if not is_ministry_health_document_relevant(document.title, document.text):
+                continue
             documents.append(document)
             seen_urls.add(document.url)
 
@@ -80,6 +129,8 @@ class TrovaNormeSaluteConnector(BaseConnector):
                 max_items=self.max_items_per_search,
             ):
                 if detail_url in seen_urls:
+                    continue
+                if not is_ministry_health_document_relevant(title, title, search_term=term):
                     continue
                 seen_urls.add(detail_url)
                 documents.append(
@@ -216,6 +267,23 @@ def parse_trovanorme_detail(
             "accessed_at": fetched_at.isoformat(),
         },
     )
+
+
+def is_ministry_health_document_relevant(
+    title: str,
+    text: str | None = None,
+    *,
+    search_term: str | None = None,
+) -> bool:
+    folded = fold_for_search(" ".join(part for part in [title, text, search_term] if part))
+    title_text = fold_for_search(" ".join(part for part in [title, text] if part))
+    has_direct_relevance = any(term in title_text for term in MINISTRY_DIRECT_RELEVANCE_TERMS)
+    has_low_signal_relevance = any(term in title_text for term in MINISTRY_LOW_SIGNAL_TERMS)
+    came_from_direct_search = bool(search_term and fold_for_search(search_term) in MINISTRY_DIRECT_RELEVANCE_TERMS)
+    has_exclusion = any(term in folded for term in MINISTRY_EXCLUSION_TERMS)
+    if has_exclusion and not has_direct_relevance:
+        return False
+    return has_direct_relevance or has_low_signal_relevance or came_from_direct_search
 
 
 def _find_news_heading(soup: BeautifulSoup):

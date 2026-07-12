@@ -603,6 +603,13 @@ with st.sidebar:
             ingest_individual("gazzetta", "Gazzetta")
         if right_button.button("Camera", use_container_width=True):
             ingest_individual("camera", "Camera")
+        if st.button("Diagnostica Camera", use_container_width=True):
+            from app.connectors.camera import CameraConnector
+
+            try:
+                st.json(CameraConnector().diagnose_fetch())
+            except Exception as exc:
+                st.error(f"Diagnostica Camera non riuscita: {compact_connector_error('camera', exc)}")
         left_button, right_button = st.columns(2)
         if left_button.button("Senato", use_container_width=True):
             ingest_individual("senato", "Senato")

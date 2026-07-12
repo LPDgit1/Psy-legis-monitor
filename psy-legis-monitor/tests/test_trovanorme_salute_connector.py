@@ -2,6 +2,7 @@ from datetime import UTC, datetime
 
 from app.connectors.trovanorme_salute import (
     build_trovanorme_act_document,
+    is_ministry_health_document_relevant,
     parse_trovanorme_act_links,
     parse_trovanorme_detail,
     parse_trovanorme_news_links,
@@ -98,6 +99,22 @@ def test_build_trovanorme_act_document_uses_result_metadata():
     assert document.title.startswith("Riparto del Fondo")
     assert "Atto: Decreto ministeriale 23/06/2026" in document.summary
     assert document.metadata["search_term"] == "salute mentale"
+
+
+def test_ministry_relevance_rejects_veterinary_false_positive():
+    assert not is_ministry_health_document_relevant(
+        "Decreto ministeriale sui medicinali veterinari",
+        "Autorizzazione all'immissione in commercio di farmaci veterinari per animali",
+        search_term="psicologo",
+    )
+
+
+def test_ministry_relevance_keeps_mental_health_related_act():
+    assert is_ministry_health_document_relevant(
+        "Riparto del Fondo per il contrasto dei disturbi della nutrizione e dell'alimentazione",
+        "Misure per servizi di salute mentale e disturbi alimentari",
+        search_term="salute mentale",
+    )
 
 
 def test_parse_trovanorme_detail_builds_legislative_document():
