@@ -147,7 +147,7 @@ def test_sparql_query_auto_tries_powershell_post_after_httpx_html(monkeypatch):
 
     def fake_run(command, **kwargs):
         captured["command"] = command
-        captured["input"] = kwargs["input"]
+        captured["env_query"] = kwargs["env"]["PSY_LEGIS_SPARQL_QUERY"]
         return Completed()
 
     def fail_fetch_text(*args, **kwargs):
@@ -161,7 +161,7 @@ def test_sparql_query_auto_tries_powershell_post_after_httpx_html(monkeypatch):
     rows = sparql_query("https://example.test/sparql", "SELECT ?title WHERE {}", method="auto", timeout=12)
 
     assert rows == [{"title": "A.C. psicologia"}]
-    assert captured["input"] == "SELECT ?title WHERE {}"
+    assert captured["env_query"] == "SELECT ?title WHERE {}"
     assert captured["command"][0] == "powershell.exe"
 
 
@@ -383,7 +383,7 @@ def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
 
     diagnostics = CameraConnector(fetch_method="httpx", limit=5).diagnose_fetch()
 
-    assert diagnostics["diagnostic_schema_version"] == 3
+    assert diagnostics["diagnostic_schema_version"] == 4
     assert diagnostics["sparql_status"] == "ok"
     assert diagnostics["sparql_rows"] == 1
     assert diagnostics["sparql_sample_identifier"] == "3014"

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import shutil
 import subprocess
 from urllib.parse import urlencode
@@ -101,7 +102,7 @@ def _sparql_post_json_with_powershell(endpoint_url: str, query: str, *, timeout:
         "$ProgressPreference='SilentlyContinue'; "
         "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; "
         "[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new(); "
-        "$query=[Console]::In.ReadToEnd(); "
+        "$query=$env:PSY_LEGIS_SPARQL_QUERY; "
         f"$url='{escaped_url}'; "
         "$body=@{ query=$query; format='application/sparql-results+json' }; "
         "$headers=@{ Accept='application/sparql-results+json, application/json;q=0.9'; "
@@ -111,15 +112,17 @@ def _sparql_post_json_with_powershell(endpoint_url: str, query: str, *, timeout:
         "[System.Text.Encoding]::UTF8.GetString($response.Content) "
         "} else { [string]$response.Content }",
     ]
+    env = os.environ.copy()
+    env["PSY_LEGIS_SPARQL_QUERY"] = query
     completed = subprocess.run(
         command,
-        input=query,
         check=True,
         capture_output=True,
         text=True,
         encoding="utf-8",
         errors="replace",
         timeout=timeout,
+        env=env,
     )
     return parse_sparql_json(completed.stdout)
 
@@ -134,7 +137,8 @@ def parse_sparql_json(payload: str) -> list[dict[str, str]]:
     try:
         data = json.loads(payload)
     except json.JSONDecodeError as exc:
-        raise ValueError("Risposta SPARQL JSON non valida") from exc
+        snippet = normalize_text(payload[:200])
+        raise ValueError(f"Risposta SPARQL JSON non valida. Inizio risposta: {snippet}") from exc
 
     bindings = data.get("results", {}).get("bindings", [])
     if not isinstance(bindings, list):
