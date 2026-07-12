@@ -6,7 +6,7 @@ import re
 from datetime import UTC, datetime
 from urllib.parse import urljoin
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString, Tag
 
 from app.config.settings import load_yaml, settings
 from app.connectors.base import BaseConnector
@@ -159,12 +159,9 @@ def parse_camera_latest_bills(
 
     for anchor in soup.find_all("a", href=True):
         identifier = compact_identifier(anchor.get_text(" "))
-        if not identifier or not re.match(r"^A\.?\s*C\.?\s*\d+", identifier, flags=re.IGNORECASE):
+        if not _is_camera_bill_identifier(identifier):
             continue
-        container = anchor.find_parent("li") or anchor.parent
-        if container is None:
-            continue
-        raw_text = normalize_text(container.get_text(" "))
+        raw_text = _camera_latest_bill_context(anchor)
         title = _camera_latest_bill_title(raw_text, identifier)
         if not title:
             continue
@@ -210,6 +207,36 @@ def parse_camera_latest_bills(
         if len(documents) >= limit:
             break
     return documents
+
+
+def _is_camera_bill_identifier(value: str | None) -> bool:
+    return bool(value) and bool(re.match(r"^A\.?\s*C\.?\s*\d+", value, flags=re.IGNORECASE))
+
+
+def _camera_latest_bill_context(anchor: Tag) -> str:
+    container = anchor.find_parent("li")
+    if container is not None:
+        text = normalize_text(container.get_text(" "))
+        if _camera_latest_bill_title(text, normalize_text(anchor.get_text(" "))):
+            return text
+
+    parts: list[str] = []
+    for node in anchor.next_elements:
+        if isinstance(node, Tag):
+            if node is not anchor and node.name == "a" and _is_camera_bill_identifier(normalize_text(node.get_text(" "))):
+                break
+            continue
+        if not isinstance(node, NavigableString):
+            continue
+        text = normalize_text(str(node))
+        if not text:
+            continue
+        if re.search(r"\b(?:RICERCA PER NUMERO|FILTRA I PROGETTI DI LEGGE)\b", text, flags=re.IGNORECASE):
+            break
+        parts.append(text)
+        if "Stampato il" in text or len(" ".join(parts)) > 1200:
+            break
+    return normalize_text(" ".join(parts))
 
 
 def _camera_latest_bill_title(raw_text: str, identifier: str) -> str:

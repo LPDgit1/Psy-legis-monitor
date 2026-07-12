@@ -183,6 +183,37 @@ def test_parse_camera_latest_bills_extracts_official_html_fallback():
     assert "A.C. 2937" not in documents[0].title
 
 
+def test_parse_camera_latest_bills_reads_text_after_anchor_without_list_item():
+    html = """
+    <div>
+      <a href="https://documenti.camera.it/leg19/pdl/pdf/test.pdf">A.C. 2997</a>
+    </div>
+    <p>
+      PROPOSTA DI LEGGE D'INIZIATIVA POPOLARE:
+      "Disposizioni in materia di governo dei flussi migratori" (2997)
+    </p>
+    <p>Stampato il 10-07-2026</p>
+    <div>
+      <a href="https://documenti.camera.it/leg19/pdl/pdf/next.pdf">A.C. 3006</a>
+      "Disposizioni per l'assestamento del bilancio dello Stato" (3006)
+      Stampato il 10-07-2026
+    </div>
+    """
+
+    documents = parse_camera_latest_bills(
+        html,
+        "https://www.camera.it/leg19/141",
+        fetched_at=datetime(2026, 7, 12, 12, 0, tzinfo=UTC),
+        limit=10,
+    )
+
+    assert len(documents) == 2
+    assert documents[0].identifier == "A.C. 2997"
+    assert documents[0].date_published.isoformat() == "2026-07-10"
+    assert "governo dei flussi migratori" in documents[0].title
+    assert documents[1].identifier == "A.C. 3006"
+
+
 def test_camera_connector_falls_back_to_latest_bills_page(monkeypatch):
     def fake_sparql_query(*args, **kwargs):
         raise RuntimeError("Risposta SPARQL in HTML invece che JSON")

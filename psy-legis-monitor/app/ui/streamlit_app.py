@@ -207,7 +207,7 @@ def _fetch_normative_documents() -> list:
         try:
             documents.extend(connector.fetch_documents())
         except Exception as exc:
-            st.warning(f"{connector.name} saltato: {exc}")
+            show_connector_warning(connector.name, exc)
     return documents
 
 
@@ -221,7 +221,7 @@ def _fetch_institutional_documents() -> list:
         try:
             documents.extend(connector.fetch_documents())
         except Exception as exc:
-            st.warning(f"{connector.name} saltato: {exc}")
+            show_connector_warning(connector.name, exc)
     return documents
 
 
@@ -285,7 +285,7 @@ def ingest_individual(connector_name: str, label: str) -> None:
         )
         refresh_data()
     except Exception as exc:
-        st.error(f"{label} non riuscito: {exc}")
+        st.error(f"{label} non riuscito: {compact_connector_error(connector_name, exc)}")
 
 
 def _legacy_priority_fetch() -> list:
@@ -315,7 +315,7 @@ def _legacy_priority_fetch() -> list:
             try:
                 documents.extend(connector.fetch_documents())
             except Exception as exc:
-                st.warning(f"{connector.name} saltato: {exc}")
+                show_connector_warning(connector.name, exc)
     except Exception:
         return documents
     return documents
@@ -327,6 +327,22 @@ def counter_chart_rows(counter: Counter) -> list[dict]:
         for key, value in counter.items()
         if key
     ]
+
+
+def show_connector_warning(connector_name: str, exc: Exception) -> None:
+    st.warning(f"{connector_name} saltato: {compact_connector_error(connector_name, exc)}")
+
+
+def compact_connector_error(connector_name: str, exc: Exception) -> str:
+    text = clean_display_text(str(exc))
+    if connector_name == "camera" and (
+        "SPARQL" in text or "fallback HTML" in text or "pagina tecnica/cache" in text
+    ):
+        return (
+            "la fonte Camera non ha restituito dati utilizzabili in questa esecuzione. "
+            "Il connettore prova SPARQL e poi la pagina ufficiale dei progetti di legge."
+        )
+    return text[:240] + "..." if len(text) > 240 else text
 
 
 def render_table(rows: list[dict], *, max_rows: int = 100) -> None:
