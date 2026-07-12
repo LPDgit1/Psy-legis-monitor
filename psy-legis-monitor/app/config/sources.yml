@@ -1,0 +1,380 @@
+gazzetta:
+  enabled: true
+  fetch_method: "auto"
+  max_issues_per_series: 1
+  fetch_act_text: false
+  series:
+    - name: "Serie Generale"
+      enabled: true
+      source: "Gazzetta Ufficiale - Serie Generale"
+      level: "nazionale"
+      list_url: "https://www.gazzettaufficiale.it/30giorni/serie_generale"
+
+    - name: "3a Serie Speciale - Regioni"
+      enabled: true
+      source: "Gazzetta Ufficiale - 3a Serie Speciale Regioni"
+      level: "regionale"
+      list_url: "https://www.gazzettaufficiale.it/30giorni/regioni"
+
+camera:
+  enabled: true
+  endpoint_url: "https://dati.camera.it/sparql"
+  legislature_uri: "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19"
+  fetch_method: "auto"
+  timeout: 30
+  limit: 30
+
+senato:
+  enabled: true
+  endpoint_url: "https://dati.senato.it/sparql"
+  legislature: 19
+  fetch_method: "auto"
+  timeout: 30
+  limit: 30
+
+normattiva:
+  enabled: true
+  homepage_url: "https://www.normattiva.it/"
+  approved_not_published_url: "https://www.parlamento.it/leg/ldl_new/v3/sldlelencoddlappnonpub.htm"
+  fetch_method: "auto"
+  timeout: 30
+  max_items: 30
+
+ministero_salute:
+  enabled: true
+  sources:
+    - name: "Ministero Salute - Norme e atti"
+      enabled: true
+      source: "Ministero della Salute - Norme e atti"
+      level: "nazionale"
+      region:
+      act_type: "altro"
+      status: "pubblicato"
+      url: "https://www.salute.gov.it/new/it/sezione/norme-e-atti/"
+      source_type: "html"
+      fetch_method: "auto"
+      max_items: 40
+      include_patterns:
+        - "norme"
+        - "atti"
+        - "decreto"
+        - "ordinanza"
+        - "linee guida"
+        - "professioni sanitarie"
+        - "psicolog"
+        - "psicoterapia"
+        - "counsel"
+        - "salute mentale"
+        - "bonus psicologo"
+        - "consultori"
+        - "neuropsichiatria"
+        - "dipendenze"
+        - "disturbi alimentari"
+        - "suicidio"
+        - "telemedicina"
+        - "fascicolo sanitario"
+        - "PNRR"
+        - "LEA"
+      exclude_patterns:
+        - "Cookie"
+        - "Privacy"
+        - "Facebook"
+        - "Instagram"
+        - "Youtube"
+        - "Linkedin"
+
+agenas:
+  enabled: true
+  sources:
+    - name: "AGENAS - Home e aree tematiche"
+      enabled: true
+      source: "AGENAS - Agenzia Nazionale per i Servizi Sanitari Regionali"
+      level: "nazionale"
+      region:
+      act_type: "altro"
+      status: "pubblicato"
+      url: "https://www.agenas.gov.it/"
+      source_type: "html"
+      fetch_method: "auto"
+      max_items: 40
+      include_patterns:
+        - "Primo piano"
+        - "Comunicati Stampa"
+        - "LEA"
+        - "Livelli Essenziali"
+        - "Fabbisogno del Personale Sanitario"
+        - "Accreditamento"
+        - "Rischio clinico"
+        - "Umanizzazione"
+        - "HTA"
+        - "ECM"
+        - "PNRR"
+        - "Telemedicina"
+        - "PNE"
+        - "psicolog"
+        - "psicoterapia"
+        - "salute mentale"
+        - "consultori"
+        - "neuropsichiatria"
+        - "dipendenze"
+        - "disabilita"
+      exclude_patterns:
+        - "Cookie"
+        - "Privacy"
+        - "Facebook"
+        - "Twitter"
+        - "Youtube"
+        - "Linkedin"
+
+eurlex:
+  enabled: true
+  sources:
+    - name: "EUR-Lex - Gazzetta ufficiale UE"
+      enabled: true
+      source: "EUR-Lex - Gazzetta ufficiale dell'Unione europea"
+      level: "europeo"
+      region:
+      act_type: "altro"
+      status: "pubblicato"
+      url: "https://eur-lex.europa.eu/homepage.html?locale=it"
+      source_type: "html"
+      fetch_method: "auto"
+      max_items: 30
+      include_patterns:
+        - "Serie L della GU"
+        - "Serie C della GU"
+        - "Atti giuridici"
+        - "Documenti preparatori"
+        - "Procedure normative"
+        - "Regolamento"
+        - "Direttiva"
+        - "Decisione"
+        - "salute"
+        - "salute mentale"
+        - "mental health"
+        - "psicolog"
+        - "psicoterapia"
+        - "professioni sanitarie"
+        - "dati"
+        - "dati sanitari"
+        - "sanita digitale"
+        - "minori"
+        - "AI"
+      exclude_patterns:
+        - "Cookie"
+        - "Connettersi"
+        - "Registrarsi"
+        - "Aiuto"
+
+regione_veneto:
+  enabled: true
+  url: "https://bur.regione.veneto.it/"
+  fetch_method: "auto"
+  timeout: 30
+
+regione_veneto_pages:
+  enabled: true
+  sources:
+    - name: "Regione Veneto - Normativa"
+      enabled: true
+      source: "Regione Veneto - Normativa"
+      level: "regionale"
+      region: "Veneto"
+      act_type: "altro"
+      status: "pubblicato"
+      url: "https://www.regione.veneto.it/web/guest/normativa"
+      source_type: "html"
+      fetch_method: "auto"
+      max_items: 20
+      include_patterns:
+        - "legge regionale"
+        - "deliberazione"
+        - "sanita"
+        - "sociale"
+        - "salute mentale"
+        - "consultori"
+        - "psicolog"
+        - "psicoterapia"
+        - "counsel"
+        - "neuropsichiatria"
+        - "dipendenze"
+      exclude_patterns:
+        - "Cookie"
+        - "Privacy"
+
+regione_lombardia:
+  enabled: true
+  sources:
+    - name: "Regione Lombardia - BURL"
+      enabled: true
+      source: "Regione Lombardia - Bollettino Ufficiale"
+      level: "regionale"
+      region: "Lombardia"
+      act_type: "bur"
+      status: "pubblicato"
+      url: "https://www.consultazioniburl.servizirl.it/ConsultazioneBurl/"
+      source_type: "html"
+      fetch_method: "auto"
+      max_items: 30
+      include_patterns:
+        - "BURL"
+        - "Bollettino"
+        - "Serie Ordinaria"
+        - "Serie Avvisi"
+        - "legge regionale"
+        - "deliberazione"
+        - "sanita"
+        - "salute"
+        - "sociale"
+        - "psicolog"
+        - "psicoterapia"
+        - "salute mentale"
+        - "consultori"
+        - "neuropsichiatria"
+        - "dipendenze"
+      exclude_patterns:
+        - "Cookie"
+        - "Privacy"
+
+    - name: "Regione Lombardia - Normativa"
+      enabled: true
+      source: "Regione Lombardia - Normativa"
+      level: "regionale"
+      region: "Lombardia"
+      act_type: "altro"
+      status: "pubblicato"
+      url: "https://www.regione.lombardia.it/wps/portal/istituzionale/HP/istituzione/Normativa"
+      source_type: "html"
+      fetch_method: "auto"
+      max_items: 20
+      include_patterns:
+        - "legge regionale"
+        - "regolamento"
+        - "deliberazione"
+        - "sanita"
+        - "salute"
+        - "welfare"
+        - "sociale"
+        - "psicolog"
+      exclude_patterns:
+        - "Cookie"
+        - "Privacy"
+
+rss_sources:
+  - name: "CNOP - News"
+    enabled: true
+    source: "CNOP - Consiglio Nazionale Ordine Psicologi"
+    level: "nazionale"
+    region:
+    act_type: "altro"
+    status: "pubblicato"
+    url: "https://www.psy.it/feed/"
+    source_type: "rss"
+    fetch_method: "auto"
+
+  - name: "ENPAP - News"
+    enabled: true
+    source: "ENPAP - Ente Nazionale Previdenza e Assistenza Psicologi"
+    level: "nazionale"
+    region:
+    act_type: "altro"
+    status: "pubblicato"
+    url: "https://www.enpap.it/feed/"
+    source_type: "rss"
+    fetch_method: "auto"
+
+page_sources:
+  - name: "ENPAP - News page"
+    enabled: true
+    source: "ENPAP - Ente Nazionale Previdenza e Assistenza Psicologi"
+    level: "nazionale"
+    region:
+    act_type: "altro"
+    status: "pubblicato"
+    url: "https://www.enpap.it/"
+    source_type: "html"
+    fetch_method: "auto"
+    max_items: 20
+    include_patterns:
+      - "ICAP"
+      - "Webinar"
+      - "Facilitatori"
+      - "Bandi assistenziali"
+      - "eventi territoriali"
+      - "Enti 103"
+      - "audizione"
+      - "A tu per tu"
+      - "Equilibrio vita-lavoro"
+      - "Ricongiunzione"
+      - "riforma previdenziale"
+      - "contributi"
+      - "Pronto Soccorso"
+      - "psicolog"
+      - "psicoterapia"
+      - "counsel"
+      - "salute mentale"
+      - "ENPAP"
+    exclude_patterns:
+      - "Privacy"
+      - "Cookie"
+      - "Gestisci"
+
+  - name: "Conferenza Stato-Regioni - Notizie"
+    enabled: true
+    source: "Conferenza Stato-Regioni"
+    level: "nazionale"
+    region:
+    act_type: "altro"
+    status: "pubblicato"
+    url: "https://www.statoregioni.it/it/"
+    source_type: "html"
+    fetch_method: "auto"
+    max_items: 20
+    include_patterns:
+      - "Report della seduta"
+      - "ordine del giorno"
+      - "o\\.d\\.g\\."
+      - "convocata"
+      - "Calendario Conferenze"
+      - "salute mentale"
+      - "psicolog"
+      - "consultori"
+      - "dipendenze"
+      - "neuropsichiatria"
+    exclude_patterns:
+      - "Privacy"
+      - "Cookie"
+      - "Dichiarazione di accessibilita"
+
+  - name: "Garante Privacy - Home"
+    enabled: true
+    source: "Garante per la protezione dei dati personali"
+    level: "nazionale"
+    region:
+    act_type: "altro"
+    status: "pubblicato"
+    url: "https://www.garanteprivacy.it/"
+    source_type: "html"
+    fetch_method: "auto"
+    max_items: 30
+    include_patterns:
+      - "COMUNICATO STAMPA"
+      - "NEWSLETTER"
+      - "Provvedimento"
+      - "AUDIZIONE"
+      - "VADEMECUM"
+      - "Linee guida"
+      - "Sanita:"
+      - "Sanità:"
+      - "dati sanitari"
+      - "salute mentale"
+      - "psicolog"
+      - "minori"
+      - "intelligenza artificiale"
+      - "AI"
+    exclude_patterns:
+      - "Cookie"
+      - "Privacy e Cookie"
+      - "^Linee guida$"
+      - "^Newsletter$"
+      - "^Infografiche e vademecum$"

@@ -1,0 +1,176 @@
+thresholds:
+  alta: 15
+  media: 8
+  bassa: 1
+
+categories:
+  professione_diretta:
+    weight: 3.0
+    terms:
+      psicologo: 3
+      psicologi: 3
+      psicologa: 3
+      psicologhe: 3
+      psicologia: 2.5
+      psicologico: 2
+      psicologica: 2
+      professione psicologica: 4
+      professioni psicologiche: 4
+      prestazioni psicologiche: 4
+      attivita psicologica: 3
+      psicoterapia: 3
+      psicoterapeuta: 3
+      psicoterapeuti: 3
+      psicoterapeutico: 2.5
+      counseling: 2
+      counselling: 2
+      counselor: 1.5
+      Ordine degli psicologi: 5
+      Consiglio nazionale ordine psicologi: 5
+      CNOP: 4
+      albo degli psicologi: 5
+      ENPAP: 3
+
+  servizi_psicologici:
+    weight: 2.6
+    terms:
+      servizio psicologico: 3
+      servizi psicologici: 3
+      supporto psicologico: 3
+      sostegno psicologico: 3
+      assistenza psicologica: 3
+      consulenza psicologica: 3
+      intervento psicologico: 3
+      presa in carico psicologica: 4
+      sportello psicologico: 4
+      psicologo scolastico: 5
+      psicologia scolastica: 4
+      psicologo di base: 5
+      psicologo delle cure primarie: 5
+      psicologo territoriale: 4
+      psicologia di comunita: 4
+      psicologo di comunita: 4
+      psicologo ospedaliero: 4
+      psicologo penitenziario: 4
+      psicologo consultoriale: 4
+      psicologo perinatale: 4
+      psicologia perinatale: 4
+      benessere psicologico: 3
+      salute mentale: 3
+      psicologia clinica: 4
+      neuropsicologia: 3
+      psicodiagnosi: 3
+
+  salute_mentale_servizi:
+    weight: 2.2
+    terms:
+      dipartimento di salute mentale: 5
+      dipartimenti di salute mentale: 5
+      DSM: 3
+      centro di salute mentale: 4
+      centri di salute mentale: 4
+      CSM: 2
+      SPDC: 3
+      servizi psichiatrici: 3
+      neuropsichiatria infantile: 4
+      NPIA: 3
+      SerD: 3
+      servizi per le dipendenze: 3
+      dipendenze patologiche: 3
+      disturbi alimentari: 3
+      disturbo alimentare: 3
+      disagio psicologico: 4
+      disagio psichico: 4
+      sofferenza psicologica: 4
+      psichiatria: 2
+      psichiatrico: 2
+      suicidio: 3
+      prevenzione del suicidio: 4
+
+  sanita_welfare:
+    weight: 1.6
+    terms:
+      case della comunita: 2
+      distretti: 1
+      consultori: 2
+      consultorio familiare: 2
+      servizi territoriali: 2
+      servizi sociosanitari: 2
+      equipe multidisciplinare: 2
+      equipe multiprofessionale: 2
+      LEA: 2
+      presa in carico: 2
+      cronicita: 1
+      fragilita: 1
+      servizi sociali: 1
+      disabilita: 1
+      caregiver: 1
+      PNRR salute: 2
+
+  scuola_minori_famiglia:
+    weight: 1.4
+    terms:
+      scuola: 0.8
+      scuole: 0.8
+      studenti: 0.5
+      alunni: 0.5
+      adolescenti: 2
+      minori: 0.8
+      infanzia: 1
+      famiglia: 0.5
+      genitorialita: 2
+      bullismo: 2
+      cyberbullismo: 2
+      dispersione scolastica: 2
+      disagio giovanile: 2
+      disagio minorile: 2
+      tutela minori: 2
+      sviluppo cognitivo: 2
+      sviluppo neurocognitivo: 3
+      sviluppo relazionale: 2
+
+  clinica_sociale:
+    weight: 1.7
+    terms:
+      dipendenze: 2
+      autismo: 2
+      disturbo dello spettro autistico: 2
+      disabilita: 2
+      violenza di genere: 2
+      trauma: 2
+      emergenza psicologica: 3
+      emergenza: 0.5
+      migrazione: 0.5
+      marginalita: 1
+      vulnerabilita: 1
+
+  anziani_lavoro_organizzazioni:
+    weight: 1.3
+    terms:
+      anziani: 1
+      demenze: 2
+      non autosufficienza: 2
+      caregiver: 2
+      lavoro: 0.2
+      stress lavoro-correlato: 3
+      stress lavoro correlato: 3
+      burnout: 3
+      clima organizzativo: 2
+      benessere organizzativo: 2
+      rischi psicosociali: 3
+
+  tecnologia_ai_privacy:
+    weight: 1.5
+    terms:
+      intelligenza artificiale: 3
+      sistemi automatizzati: 2
+      algoritmo: 2
+      dati sanitari: 3
+      dati relativi alla salute: 3
+      privacy: 2
+      consenso informato: 2
+      sanita digitale: 3
+      fascicolo sanitario elettronico: 3
+      telemedicina: 2
+      chatbot: 2
+      assistenti virtuali: 2

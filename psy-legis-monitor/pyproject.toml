@@ -1,0 +1,42 @@
+[project]
+name = "psy-legis-monitor"
+version = "0.1.0"
+description = "MVP di legislative intelligence per atti rilevanti per la psicologia."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "SQLAlchemy>=2.0",
+  "alembic>=1.13",
+  "pydantic>=2.6",
+  "PyYAML>=6.0",
+  "httpx>=0.27",
+  "beautifulsoup4>=4.12",
+  "lxml>=5.0",
+  "pypdf>=4.0",
+  "APScheduler>=3.10",
+  "streamlit>=1.35",
+  "psycopg[binary]>=3.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.5",
+  "black>=24.0",
+]
+
+[project.scripts]
+psy-legis = "app.cli.commands:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+

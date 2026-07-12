@@ -1,0 +1,176 @@
+areas:
+  professione_psicologica_e_ordinamento:
+    keywords:
+      - psicologo
+      - psicologi
+      - psicologia
+      - professione psicologica
+      - professioni psicologiche
+      - Ordine degli psicologi
+      - Consiglio nazionale ordine psicologi
+      - CNOP
+      - albo degli psicologi
+      - ENPAP
+
+  psicoterapia_e_clinica:
+    keywords:
+      - psicoterapia
+      - psicoterapeuta
+      - psicologia clinica
+      - psicodiagnosi
+      - salute mentale
+      - disturbi alimentari
+      - suicidio
+
+  counseling_e_supporto_psicologico:
+    keywords:
+      - counseling
+      - counselling
+      - consulenza psicologica
+      - supporto psicologico
+      - sostegno psicologico
+      - benessere psicologico
+
+  psicologia_cure_primarie:
+    keywords:
+      - psicologo di base
+      - psicologo delle cure primarie
+      - cure primarie
+      - case della comunita
+      - distretti
+      - servizi territoriali
+
+  psicologia_scolastica:
+    keywords:
+      - psicologo scolastico
+      - psicologia scolastica
+      - sportello psicologico
+      - scuola
+      - studenti
+      - dispersione scolastica
+      - bullismo
+      - cyberbullismo
+
+  salute_mentale_territoriale:
+    keywords:
+      - salute mentale
+      - dipartimento di salute mentale
+      - DSM
+      - centro di salute mentale
+      - CSM
+      - SPDC
+      - servizi territoriali
+      - presa in carico
+      - equipe multidisciplinare
+      - equipe multiprofessionale
+
+  neuropsichiatria_minori_famiglia:
+    keywords:
+      - neuropsichiatria infantile
+      - NPIA
+      - minori
+      - adolescenti
+      - famiglia
+      - genitorialita
+      - consultori
+      - consultorio familiare
+      - tutela minori
+
+  violenza_trauma_emergenza:
+    keywords:
+      - violenza di genere
+      - trauma
+      - emergenza psicologica
+      - supporto psicologico
+
+  dipendenze:
+    keywords:
+      - dipendenze
+      - dipendenza
+      - dipendenze patologiche
+      - servizi per le dipendenze
+      - SerD
+      - sostanze
+      - gioco d'azzardo
+
+  disabilita_autismo_neurodivergenze:
+    keywords:
+      - disabilita
+      - autismo
+      - disturbo dello spettro autistico
+      - neurodivergenze
+      - fragilita
+
+  anziani_demenze_non_autosufficienza:
+    keywords:
+      - anziani
+      - demenze
+      - non autosufficienza
+      - caregiver
+
+  lavoro_organizzazioni_burnout:
+    keywords:
+      - lavoro
+      - stress lavoro-correlato
+      - stress lavoro correlato
+      - burnout
+      - clima organizzativo
+      - benessere organizzativo
+      - rischi psicosociali
+
+  carcere_giustizia:
+    keywords:
+      - carcere
+      - giustizia
+      - detenuti
+      - messa alla prova
+      - psicologo penitenziario
+
+  migrazione_marginalita_inclusione:
+    keywords:
+      - migrazione
+      - marginalita
+      - inclusione
+      - vulnerabilita
+
+  formazione_professioni_sanitarie:
+    keywords:
+      - formazione sanitaria
+      - professioni sanitarie
+      - crediti ECM
+      - ECM
+      - requisiti professionali
+
+  privacy_dati_sanitari_sanita_digitale:
+    keywords:
+      - dati sanitari
+      - dati relativi alla salute
+      - privacy
+      - consenso informato
+      - sanita digitale
+      - fascicolo sanitario elettronico
+      - telemedicina
+
+  intelligenza_artificiale_tecnologie_psicologiche:
+    keywords:
+      - intelligenza artificiale
+      - sistemi automatizzati
+      - algoritmo
+      - chatbot
+      - assistenti virtuali
+
+  welfare_lea_servizi_sociosanitari:
+    keywords:
+      - welfare
+      - LEA
+      - servizi sociosanitari
+      - servizi territoriali
+      - case della comunita
+
+  competenze_professionali_criticita:
+    keywords:
+      - competenze
+      - requisiti
+      - incarichi
+      - riserva
+      - albo
