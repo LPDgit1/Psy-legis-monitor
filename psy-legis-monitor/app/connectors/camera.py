@@ -79,9 +79,13 @@ class CameraConnector(BaseConnector):
 
     def diagnose_fetch(self) -> dict[str, object]:
         diagnostics: dict[str, object] = {
+            "diagnostic_schema_version": 2,
             "endpoint_url": self.endpoint_url,
             "fallback_url": self.fallback_url,
             "fetch_method": self.fetch_method,
+            "sparql_status": "not_checked",
+            "fallback_status": "not_checked",
+            "overall_status": "diagnostica avviata",
         }
         try:
             rows = sparql_query(
@@ -92,18 +96,22 @@ class CameraConnector(BaseConnector):
             )
             diagnostics.update(
                 {
+                    "sparql_status": "ok" if rows else "ok_empty",
                     "sparql_rows": len(rows),
                     "sparql_sample_title": normalize_text(rows[0].get("title")) if rows else "",
                     "sparql_sample_identifier": compact_identifier(rows[0].get("identifier")) if rows else "",
                 }
             )
         except Exception as exc:
+            diagnostics["sparql_status"] = "error"
             diagnostics["sparql_error"] = str(exc)
 
         try:
             html = fetch_text(self.fallback_url, method=self.fetch_method, timeout=self.timeout)
         except Exception as exc:
+            diagnostics["fallback_status"] = "error"
             diagnostics["fallback_error"] = str(exc)
+            diagnostics["overall_status"] = _camera_diagnostic_status(diagnostics)
             return diagnostics
 
         soup = BeautifulSoup(html, "html.parser")
@@ -117,6 +125,9 @@ class CameraConnector(BaseConnector):
         )
         diagnostics.update(
             {
+                "fallback_status": "blocked_by_browser_check"
+                if browser_check
+                else ("ok" if documents else "ok_no_documents"),
                 "fallback_html_length": len(html),
                 "fallback_title": normalize_text(soup.title.get_text(" ")) if soup.title else "",
                 "blocked_by_browser_check": browser_check,
@@ -126,6 +137,7 @@ class CameraConnector(BaseConnector):
                 "sample_text": text[:500],
             }
         )
+        diagnostics["overall_status"] = _camera_diagnostic_status(diagnostics)
         return diagnostics
 
 
@@ -280,6 +292,22 @@ def _camera_bill_links_by_identifier(soup: BeautifulSoup, page_url: str) -> dict
 def _is_camera_browser_check_text(text: str) -> bool:
     folded = normalize_text(text).lower()
     return "checking your browser before accessing" in folded or "your browser will redirect" in folded
+
+
+def _camera_diagnostic_status(diagnostics: dict[str, object]) -> str:
+    sparql_status = diagnostics.get("sparql_status")
+    fallback_status = diagnostics.get("fallback_status")
+    if sparql_status == "ok" and fallback_status == "blocked_by_browser_check":
+        return "ok: dati.camera.it SPARQL raggiungibile; fallback HTML www.camera.it bloccato ma non necessario"
+    if sparql_status == "ok":
+        return "ok: dati.camera.it SPARQL raggiungibile"
+    if sparql_status == "ok_empty":
+        return "attenzione: dati.camera.it SPARQL raggiungibile ma senza risultati per la query"
+    if sparql_status == "error" and fallback_status == "blocked_by_browser_check":
+        return "errore: SPARQL non raggiungibile e fallback HTML bloccato da browser-check"
+    if sparql_status == "error":
+        return "errore: dati.camera.it SPARQL non raggiungibile"
+    return "attenzione: diagnostica Camera incompleta"
 
 
 def _camera_latest_bill_document(

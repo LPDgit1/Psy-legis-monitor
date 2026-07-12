@@ -607,7 +607,14 @@ with st.sidebar:
             from app.connectors.camera import CameraConnector
 
             try:
-                st.json(CameraConnector().diagnose_fetch())
+                diagnostics = CameraConnector().diagnose_fetch()
+                if diagnostics.get("sparql_status") == "ok":
+                    st.success("Dati Camera SPARQL raggiungibile.")
+                elif diagnostics.get("sparql_status") == "error":
+                    st.error("Dati Camera SPARQL non raggiungibile.")
+                if diagnostics.get("fallback_status") == "blocked_by_browser_check":
+                    st.warning("La pagina HTML di fallback di www.camera.it mostra un browser-check; non incide sul recupero SPARQL.")
+                st.json(diagnostics)
             except Exception as exc:
                 st.error(f"Diagnostica Camera non riuscita: {compact_connector_error('camera', exc)}")
         left_button, right_button = st.columns(2)

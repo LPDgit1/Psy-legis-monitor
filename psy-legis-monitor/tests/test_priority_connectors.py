@@ -337,8 +337,12 @@ def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
 
     diagnostics = CameraConnector(fetch_method="httpx", limit=5).diagnose_fetch()
 
+    assert diagnostics["diagnostic_schema_version"] == 2
+    assert diagnostics["sparql_status"] == "ok"
     assert diagnostics["sparql_rows"] == 1
     assert diagnostics["sparql_sample_identifier"] == "3014"
+    assert diagnostics["fallback_status"] == "blocked_by_browser_check"
+    assert diagnostics["overall_status"].startswith("ok: dati.camera.it SPARQL raggiungibile")
     assert diagnostics["blocked_by_browser_check"] is True
     assert diagnostics["contains_ac_marker"] is False
     assert diagnostics["parsed_documents"] == 0
