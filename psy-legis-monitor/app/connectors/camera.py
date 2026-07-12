@@ -75,10 +75,6 @@ class CameraConnector(BaseConnector):
         )
         if documents:
             return documents
-        if sparql_error:
-            raise RuntimeError(
-                "Camera non interrogabile via SPARQL e fallback HTML senza risultati"
-            ) from sparql_error
         return []
 
 

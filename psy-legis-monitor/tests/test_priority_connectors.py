@@ -267,6 +267,19 @@ def test_camera_connector_falls_back_to_latest_bills_page(monkeypatch):
     assert "SPARQL in HTML" in documents[0].metadata["sparql_error"]
 
 
+def test_camera_connector_returns_empty_when_both_camera_paths_have_no_documents(monkeypatch):
+    def fake_sparql_query(*args, **kwargs):
+        raise RuntimeError("Risposta SPARQL in HTML invece che JSON")
+
+    def fake_fetch_text(url: str, *, method: str, timeout: float) -> str:
+        return "<html><body>Nessun progetto disponibile</body></html>"
+
+    monkeypatch.setattr("app.connectors.camera.sparql_query", fake_sparql_query)
+    monkeypatch.setattr("app.connectors.camera.fetch_text", fake_fetch_text)
+
+    assert CameraConnector(fetch_method="httpx", limit=5).fetch_documents() == []
+
+
 def test_senato_row_maps_to_legislative_document():
     document = _senato_row_to_document(
         {

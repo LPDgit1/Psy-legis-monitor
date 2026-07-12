@@ -132,6 +132,7 @@ def rows_by_document(rows: list[dict]) -> dict[int, list[dict]]:
 
 
 def refresh_data() -> None:
+    st.session_state["connector_issues"] = []
     st.cache_data.clear()
     st.rerun()
 
