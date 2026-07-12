@@ -109,6 +109,14 @@ def test_ministry_relevance_rejects_veterinary_false_positive():
     )
 
 
+def test_ministry_relevance_rejects_wild_boar_and_epizootic_false_positive():
+    assert not is_ministry_health_document_relevant(
+        "Ordinanza sulla peste suina africana",
+        "Misure veterinarie sui cinghiali, biosicurezza degli allevamenti e fauna selvatica",
+        search_term="salute mentale",
+    )
+
+
 def test_ministry_relevance_keeps_mental_health_related_act():
     assert is_ministry_health_document_relevant(
         "Riparto del Fondo per il contrasto dei disturbi della nutrizione e dell'alimentazione",

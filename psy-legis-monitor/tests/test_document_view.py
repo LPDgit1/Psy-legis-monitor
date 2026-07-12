@@ -102,6 +102,26 @@ def test_document_view_excludes_known_noise_from_potential_acts():
     assert not is_potential_primary_document(row)
 
 
+def test_document_view_excludes_veterinary_and_wild_boar_noise_from_potential_acts():
+    row = {
+        "source": "Gazzetta Ufficiale - Serie Generale",
+        "source_type": "html",
+        "act_type": "decreto_legge",
+        "found_terms": {
+            "clinica_sociale": ["emergenza"],
+            "sanita_welfare": ["servizi territoriali"],
+        },
+        "score": 4.1,
+        "title": "Misure urgenti per il contenimento della peste suina africana",
+        "summary": "Interventi sulla popolazione di cinghiali e attivita venatoria.",
+        "text": "Misure veterinarie, biosicurezza degli allevamenti e gestione della fauna selvatica.",
+    }
+
+    assert is_primary_document(row)
+    assert not is_relevant_primary_document(row)
+    assert not is_potential_primary_document(row)
+
+
 def test_document_view_hides_institutional_news_by_default():
     row = {
         "source": "ENPAP - Ente Nazionale Previdenza e Assistenza Psicologi",
