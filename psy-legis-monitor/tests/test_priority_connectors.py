@@ -7,7 +7,7 @@ from app.connectors.normattiva import (
 )
 from app.connectors.regions.veneto import parse_veneto_bur_latest
 from app.connectors.senato import _senato_row_to_document
-from app.connectors.sparql import parse_sparql_xml
+from app.connectors.sparql import parse_sparql_json, parse_sparql_xml, sparql_query
 
 
 def test_parse_sparql_xml_extracts_bindings():
@@ -26,6 +26,53 @@ def test_parse_sparql_xml_extracts_bindings():
     rows = parse_sparql_xml(payload)
 
     assert rows == [{"atto": "http://example.test/atto/1", "title": "Proposta su consultori"}]
+
+
+def test_parse_sparql_json_extracts_bindings():
+    payload = """
+    {
+      "head": {"vars": ["atto", "title"]},
+      "results": {
+        "bindings": [
+          {
+            "atto": {"type": "uri", "value": "http://example.test/atto/1"},
+            "title": {"type": "literal", "value": "Proposta su consultori"}
+          }
+        ]
+      }
+    }
+    """
+
+    rows = parse_sparql_json(payload)
+
+    assert rows == [{"atto": "http://example.test/atto/1", "title": "Proposta su consultori"}]
+
+
+def test_sparql_query_prefers_json(monkeypatch):
+    captured: dict[str, str] = {}
+
+    def fake_fetch_text(url: str, *, method: str, timeout: float) -> str:
+        captured["url"] = url
+        captured["method"] = method
+        captured["timeout"] = str(timeout)
+        return """
+        {
+          "results": {
+            "bindings": [
+              {"title": {"type": "literal", "value": "DDL psicologia scolastica"}}
+            ]
+          }
+        }
+        """
+
+    monkeypatch.setattr("app.connectors.sparql.fetch_text", fake_fetch_text)
+
+    rows = sparql_query("https://example.test/sparql", "SELECT ?title WHERE {}", method="httpx", timeout=12)
+
+    assert rows == [{"title": "DDL psicologia scolastica"}]
+    assert "format=json" in captured["url"]
+    assert captured["method"] == "httpx"
+    assert captured["timeout"] == "12"
 
 
 def test_camera_row_maps_to_legislative_document():
