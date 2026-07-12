@@ -12,7 +12,7 @@ from app.connectors.base import BaseConnector
 from app.connectors.http_fetch import fetch_text
 from app.connectors.parsing import infer_act_type, infer_status, parse_connector_date
 from app.core.schemas import LegislativeDocument
-from app.core.text_cleaning import normalize_text
+from app.core.text_cleaning import fold_for_search, normalize_text
 
 
 TROVANORME_HOME_URL = "https://www.trovanorme.salute.gov.it/norme/ricerca"
@@ -135,6 +135,7 @@ def parse_trovanorme_act_links(
         title = normalize_text(anchor.get_text(" "))
         if not title or title.lower() == "leggi tutto":
             continue
+        title = _enrich_act_title(title, _nearby_act_context(anchor))
         absolute_url = urljoin(page_url, href)
         if absolute_url in seen:
             continue
@@ -153,7 +154,12 @@ def build_trovanorme_act_document(
     fetched_at: datetime,
 ) -> LegislativeDocument:
     normalized_title = normalize_text(title)
-    summary = f"Risultato Trova Norme Salute per: {search_term}"
+    act_label = _act_label_from_enriched_title(normalized_title)
+    summary_parts = [
+        f"Atto: {act_label}" if act_label else None,
+        f"Risultato Trova Norme Salute per: {search_term}",
+    ]
+    summary = ". ".join(part for part in summary_parts if part)
     act_text = f"{normalized_title} {summary}"
     return LegislativeDocument(
         source="Ministero della Salute - Trova Norme Salute",
@@ -238,3 +244,73 @@ def _extract_news_summary(soup: BeautifulSoup, heading) -> str | None:
             parts.append(text)
     summary = normalize_text(" ".join(parts))
     return summary or None
+
+
+def _nearby_act_context(anchor) -> str:
+    for parent in anchor.parents:
+        if getattr(parent, "name", None) not in {"li", "article", "section", "div", "tr"}:
+            continue
+        text = normalize_text(parent.get_text(" "))
+        if text and len(text) <= 900:
+            return text
+    return ""
+
+
+def _enrich_act_title(title: str, context: str) -> str:
+    subject = _extract_act_subject(title, context)
+    if not subject:
+        return title
+    return f"{subject} ({title})"
+
+
+def _extract_act_subject(title: str, context: str) -> str | None:
+    text = normalize_text(context)
+    if not text:
+        return None
+
+    labeled = re.search(
+        r"\b(?:oggetto|titolo|descrizione|argomento|materia)\s*[:\-]\s*(?P<subject>.+)",
+        text,
+        flags=re.IGNORECASE,
+    )
+    candidate = labeled.group("subject") if labeled else text
+    candidate = re.sub(re.escape(title), " ", candidate, flags=re.IGNORECASE)
+    candidate = re.sub(
+        r"\b(?:leggi tutto|visualizza|dettaglio atto|dettaglio|scarica|pdf|html)\b",
+        " ",
+        candidate,
+        flags=re.IGNORECASE,
+    )
+    candidate = re.sub(r"\b(?:tipo atto|data pubblicazione|data|numero|atto)\s*[:\-]\s*", " ", candidate, flags=re.IGNORECASE)
+    candidate = normalize_text(candidate).strip(" -:;,.")
+
+    if not _is_informative_subject(candidate, title):
+        return None
+    return _shorten_subject(candidate)
+
+
+def _is_informative_subject(candidate: str, title: str) -> bool:
+    folded_candidate = fold_for_search(candidate)
+    folded_title = fold_for_search(title)
+    if not folded_candidate or folded_candidate == folded_title:
+        return False
+    if len(candidate) < 18:
+        return False
+    if folded_candidate in {"leggi tutto", "dettaglio", "dettaglio atto"}:
+        return False
+    return any(char.isalpha() for char in candidate)
+
+
+def _shorten_subject(value: str, *, max_length: int = 180) -> str:
+    text = normalize_text(value)
+    if len(text) <= max_length:
+        return text
+    truncated = text[: max_length + 1].rsplit(" ", 1)[0].rstrip(" -:;,.")
+    return f"{truncated}..."
+
+
+def _act_label_from_enriched_title(title: str) -> str | None:
+    match = re.search(r"\((?P<label>[^()]*\d{1,2}[/-]\d{1,2}[/-]\d{4}[^()]*)\)$", title)
+    if not match:
+        return None
+    return normalize_text(match.group("label"))

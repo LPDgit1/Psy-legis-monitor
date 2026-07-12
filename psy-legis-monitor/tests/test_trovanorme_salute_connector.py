@@ -58,9 +58,36 @@ def test_parse_trovanorme_act_links_skips_read_more_duplicates():
     ]
 
 
+def test_parse_trovanorme_act_links_enriches_title_from_result_context():
+    html = """
+    <ul>
+      <li>
+        <a href="dettaglioAtto?id=113094">Decreto ministeriale 23/06/2026</a>
+        <span>Oggetto: Riparto del Fondo per il contrasto dei disturbi della nutrizione e dell'alimentazione</span>
+        <a href="dettaglioAtto?id=113094">Leggi tutto</a>
+      </li>
+    </ul>
+    """
+
+    links = parse_trovanorme_act_links(
+        html,
+        "https://www.trovanorme.salute.gov.it/norme/ricercaAtti?word=salute+mentale",
+        max_items=5,
+    )
+
+    assert links == [
+        (
+            "Riparto del Fondo per il contrasto dei disturbi della nutrizione e dell'alimentazione "
+            "(Decreto ministeriale 23/06/2026)",
+            "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=113094",
+        )
+    ]
+
+
 def test_build_trovanorme_act_document_uses_result_metadata():
     document = build_trovanorme_act_document(
-        "Decreto ministeriale 23/06/2026",
+        "Riparto del Fondo per il contrasto dei disturbi della nutrizione e dell'alimentazione "
+        "(Decreto ministeriale 23/06/2026)",
         "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=113094",
         search_term="salute mentale",
         fetched_at=datetime(2026, 7, 12, 12, 0, tzinfo=UTC),
@@ -68,6 +95,8 @@ def test_build_trovanorme_act_document_uses_result_metadata():
 
     assert document.date_published.isoformat() == "2026-06-23"
     assert document.act_type == "altro"
+    assert document.title.startswith("Riparto del Fondo")
+    assert "Atto: Decreto ministeriale 23/06/2026" in document.summary
     assert document.metadata["search_term"] == "salute mentale"
 
 
