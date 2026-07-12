@@ -48,7 +48,43 @@ def test_parse_sparql_json_extracts_bindings():
     assert rows == [{"atto": "http://example.test/atto/1", "title": "Proposta su consultori"}]
 
 
-def test_sparql_query_prefers_json(monkeypatch):
+def test_sparql_query_uses_post_json_on_httpx(monkeypatch):
+    captured: dict[str, object] = {}
+
+    class FakeResponse:
+        text = """
+        {
+          "results": {
+            "bindings": [
+              {"title": {"type": "literal", "value": "DDL psicologia scolastica"}}
+            ]
+          }
+        }
+        """
+
+        def raise_for_status(self) -> None:
+            return None
+
+    def fake_post(url: str, **kwargs):
+        captured["url"] = url
+        captured["data"] = kwargs["data"]
+        captured["headers"] = kwargs["headers"]
+        return FakeResponse()
+
+    monkeypatch.setattr("app.connectors.sparql.httpx.post", fake_post)
+
+    rows = sparql_query("https://example.test/sparql", "SELECT ?title WHERE {}", method="httpx", timeout=12)
+
+    assert rows == [{"title": "DDL psicologia scolastica"}]
+    assert captured["url"] == "https://example.test/sparql"
+    assert captured["data"] == {
+        "query": "SELECT ?title WHERE {}",
+        "format": "application/sparql-results+json",
+    }
+    assert "application/sparql-results+json" in captured["headers"]["Accept"]
+
+
+def test_sparql_query_get_fallback_prefers_json(monkeypatch):
     captured: dict[str, str] = {}
 
     def fake_fetch_text(url: str, *, method: str, timeout: float) -> str:
@@ -67,12 +103,29 @@ def test_sparql_query_prefers_json(monkeypatch):
 
     monkeypatch.setattr("app.connectors.sparql.fetch_text", fake_fetch_text)
 
-    rows = sparql_query("https://example.test/sparql", "SELECT ?title WHERE {}", method="httpx", timeout=12)
+    rows = sparql_query("https://example.test/sparql", "SELECT ?title WHERE {}", method="powershell", timeout=12)
 
     assert rows == [{"title": "DDL psicologia scolastica"}]
     assert "format=json" in captured["url"]
-    assert captured["method"] == "httpx"
+    assert captured["method"] == "powershell"
     assert captured["timeout"] == "12"
+
+
+def test_parse_sparql_json_rejects_html_cache_page():
+    payload = """
+    <html>
+      <meta http-equiv="Pragma" content="no-cache"/>
+      <script type="text/javascript">window.location.reload()</script>
+    </html>
+    """
+
+    try:
+        parse_sparql_json(payload)
+    except ValueError as exc:
+        assert "Risposta SPARQL in HTML" in str(exc)
+        assert "pagina tecnica/cache" in str(exc)
+    else:
+        raise AssertionError("Expected HTML payload to be rejected")
 
 
 def test_camera_row_maps_to_legislative_document():

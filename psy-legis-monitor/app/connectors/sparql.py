@@ -3,8 +3,11 @@
 from __future__ import annotations
 
 import json
+import sys
 from urllib.parse import urlencode
 from xml.etree import ElementTree
+
+import httpx
 
 from app.connectors.http_fetch import fetch_text
 from app.core.text_cleaning import normalize_text
@@ -22,22 +25,62 @@ def sparql_query(
 ) -> list[dict[str, str]]:
     """Run a SPARQL SELECT query and parse W3C SPARQL results."""
 
-    params = urlencode({"query": query, "format": "json"})
-    separator = "&" if "?" in endpoint_url else "?"
-    payload = fetch_text(f"{endpoint_url}{separator}{params}", method=method, timeout=timeout)
-    try:
-        return parse_sparql_json(payload)
-    except ValueError:
-        # Some SPARQL endpoints ignore the requested format and still return XML.
+    errors: list[Exception] = []
+    if _should_try_httpx_post(method):
         try:
-            return parse_sparql_xml(payload)
-        except ValueError:
-            params = urlencode({"query": query, "format": "xml"})
-            payload = fetch_text(f"{endpoint_url}{separator}{params}", method=method, timeout=timeout)
-            return parse_sparql_xml(payload)
+            return _sparql_post_json(endpoint_url, query, timeout=timeout)
+        except Exception as exc:
+            errors.append(exc)
+
+    separator = "&" if "?" in endpoint_url else "?"
+
+    for response_format, parser in [
+        ("json", parse_sparql_json),
+        ("application/sparql-results+json", parse_sparql_json),
+        ("xml", parse_sparql_xml),
+    ]:
+        params = urlencode({"query": query, "format": response_format})
+        payload = fetch_text(f"{endpoint_url}{separator}{params}", method=method, timeout=timeout)
+        try:
+            return parser(payload)
+        except ValueError as exc:
+            errors.append(exc)
+
+    detail = "; ".join(str(error) for error in errors[-3:])
+    raise RuntimeError(f"Endpoint SPARQL non ha restituito risultati JSON/XML validi. {detail}")
+
+
+def _should_try_httpx_post(method: str) -> bool:
+    return method == "httpx" or (method == "auto" and not sys.platform.startswith("win"))
+
+
+def _sparql_post_json(endpoint_url: str, query: str, *, timeout: float) -> list[dict[str, str]]:
+    headers = {
+        "Accept": "application/sparql-results+json, application/json;q=0.9, */*;q=0.1",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "User-Agent": "psy-legis-monitor/0.1 (+institutional monitoring)",
+    }
+    errors: list[Exception] = []
+    for response_format in ("application/sparql-results+json", "json"):
+        response = httpx.post(
+            endpoint_url,
+            data={"query": query, "format": response_format},
+            headers=headers,
+            timeout=timeout,
+            follow_redirects=True,
+        )
+        response.raise_for_status()
+        try:
+            return parse_sparql_json(response.text)
+        except ValueError as exc:
+            errors.append(exc)
+    detail = "; ".join(str(error) for error in errors[-2:])
+    raise RuntimeError(f"POST SPARQL non ha restituito JSON valido. {detail}")
 
 
 def parse_sparql_json(payload: str) -> list[dict[str, str]]:
+    if _looks_like_html(payload):
+        raise ValueError(_html_payload_message(payload, "JSON"))
     try:
         data = json.loads(payload)
     except json.JSONDecodeError as exc:
@@ -67,6 +110,8 @@ def parse_sparql_json(payload: str) -> list[dict[str, str]]:
 
 
 def parse_sparql_xml(payload: str) -> list[dict[str, str]]:
+    if _looks_like_html(payload):
+        raise ValueError(_html_payload_message(payload, "XML"))
     try:
         root = ElementTree.fromstring(_strip_invalid_xml_chars(payload))
     except ElementTree.ParseError as exc:
@@ -86,6 +131,19 @@ def parse_sparql_xml(payload: str) -> list[dict[str, str]]:
         if row:
             rows.append(row)
     return rows
+
+
+def _looks_like_html(payload: str) -> bool:
+    prefix = payload.lstrip()[:200].lower()
+    return prefix.startswith("<!doctype html") or prefix.startswith("<html") or "<html" in prefix
+
+
+def _html_payload_message(payload: str, expected_format: str) -> str:
+    snippet = normalize_text(payload[:200])
+    return (
+        f"Risposta SPARQL in HTML invece che {expected_format}: "
+        f"probabile pagina tecnica/cache dell'endpoint. Inizio risposta: {snippet}"
+    )
 
 
 def _strip_invalid_xml_chars(value: str) -> str:
