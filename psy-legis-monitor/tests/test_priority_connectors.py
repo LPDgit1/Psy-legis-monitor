@@ -119,6 +119,52 @@ def test_sparql_query_auto_tries_post_before_get(monkeypatch):
     assert captured["data"]["format"] == "application/sparql-results+json"
 
 
+def test_sparql_query_auto_tries_powershell_post_after_httpx_html(monkeypatch):
+    captured: dict[str, object] = {}
+
+    class HtmlResponse:
+        text = "<html><script>window.location.reload()</script></html>"
+
+        def raise_for_status(self) -> None:
+            return None
+
+    class Completed:
+        stdout = """
+        {
+          "results": {
+            "bindings": [
+              {"title": {"type": "literal", "value": "A.C. psicologia"}}
+            ]
+          }
+        }
+        """
+
+    def fake_post(*args, **kwargs):
+        return HtmlResponse()
+
+    def fake_which(name: str):
+        return "powershell.exe" if name == "powershell.exe" else None
+
+    def fake_run(command, **kwargs):
+        captured["command"] = command
+        captured["input"] = kwargs["input"]
+        return Completed()
+
+    def fail_fetch_text(*args, **kwargs):
+        raise AssertionError("GET fallback should not run when PowerShell POST succeeds")
+
+    monkeypatch.setattr("app.connectors.sparql.httpx.post", fake_post)
+    monkeypatch.setattr("app.connectors.sparql.shutil.which", fake_which)
+    monkeypatch.setattr("app.connectors.sparql.subprocess.run", fake_run)
+    monkeypatch.setattr("app.connectors.sparql.fetch_text", fail_fetch_text)
+
+    rows = sparql_query("https://example.test/sparql", "SELECT ?title WHERE {}", method="auto", timeout=12)
+
+    assert rows == [{"title": "A.C. psicologia"}]
+    assert captured["input"] == "SELECT ?title WHERE {}"
+    assert captured["command"][0] == "powershell.exe"
+
+
 def test_sparql_query_get_fallback_prefers_json(monkeypatch):
     captured: dict[str, str] = {}
 
@@ -337,7 +383,7 @@ def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
 
     diagnostics = CameraConnector(fetch_method="httpx", limit=5).diagnose_fetch()
 
-    assert diagnostics["diagnostic_schema_version"] == 2
+    assert diagnostics["diagnostic_schema_version"] == 3
     assert diagnostics["sparql_status"] == "ok"
     assert diagnostics["sparql_rows"] == 1
     assert diagnostics["sparql_sample_identifier"] == "3014"

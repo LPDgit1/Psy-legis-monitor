@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import json
+import shutil
+import subprocess
 from urllib.parse import urlencode
 from xml.etree import ElementTree
 
@@ -30,6 +32,11 @@ def sparql_query(
             return _sparql_post_json(endpoint_url, query, timeout=timeout)
         except Exception as exc:
             errors.append(exc)
+    if _should_try_powershell_post(method):
+        try:
+            return _sparql_post_json_with_powershell(endpoint_url, query, timeout=timeout)
+        except Exception as exc:
+            errors.append(exc)
 
     separator = "&" if "?" in endpoint_url else "?"
 
@@ -45,12 +52,16 @@ def sparql_query(
         except ValueError as exc:
             errors.append(exc)
 
-    detail = "; ".join(str(error) for error in errors[-3:])
+    detail = "; ".join(str(error) for error in errors[-5:])
     raise RuntimeError(f"Endpoint SPARQL non ha restituito risultati JSON/XML validi. {detail}")
 
 
 def _should_try_httpx_post(method: str) -> bool:
     return method in {"auto", "httpx"}
+
+
+def _should_try_powershell_post(method: str) -> bool:
+    return method in {"auto", "powershell"} and _powershell_executable() is not None
 
 
 def _sparql_post_json(endpoint_url: str, query: str, *, timeout: float) -> list[dict[str, str]]:
@@ -75,6 +86,46 @@ def _sparql_post_json(endpoint_url: str, query: str, *, timeout: float) -> list[
             errors.append(exc)
     detail = "; ".join(str(error) for error in errors[-2:])
     raise RuntimeError(f"POST SPARQL non ha restituito JSON valido. {detail}")
+
+
+def _sparql_post_json_with_powershell(endpoint_url: str, query: str, *, timeout: float) -> list[dict[str, str]]:
+    executable = _powershell_executable()
+    if executable is None:
+        raise RuntimeError("PowerShell non disponibile per POST SPARQL")
+    escaped_url = endpoint_url.replace("'", "''")
+    timeout_seconds = max(1, int(timeout))
+    command = [
+        executable,
+        "-NoProfile",
+        "-Command",
+        "$ProgressPreference='SilentlyContinue'; "
+        "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; "
+        "[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new(); "
+        "$query=[Console]::In.ReadToEnd(); "
+        f"$url='{escaped_url}'; "
+        "$body=@{ query=$query; format='application/sparql-results+json' }; "
+        "$headers=@{ Accept='application/sparql-results+json, application/json;q=0.9'; "
+        "'User-Agent'='psy-legis-monitor/0.1 (+institutional monitoring)' }; "
+        f"$response=Invoke-WebRequest -UseBasicParsing -Uri $url -Method Post -Body $body -Headers $headers -TimeoutSec {timeout_seconds}; "
+        "if ($response.Content -is [byte[]]) { "
+        "[System.Text.Encoding]::UTF8.GetString($response.Content) "
+        "} else { [string]$response.Content }",
+    ]
+    completed = subprocess.run(
+        command,
+        input=query,
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        timeout=timeout,
+    )
+    return parse_sparql_json(completed.stdout)
+
+
+def _powershell_executable() -> str | None:
+    return shutil.which("powershell.exe") or shutil.which("powershell") or shutil.which("pwsh")
 
 
 def parse_sparql_json(payload: str) -> list[dict[str, str]]:
