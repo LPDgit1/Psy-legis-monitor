@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-import sys
 from urllib.parse import urlencode
 from xml.etree import ElementTree
 
@@ -51,7 +50,7 @@ def sparql_query(
 
 
 def _should_try_httpx_post(method: str) -> bool:
-    return method == "httpx" or (method == "auto" and not sys.platform.startswith("win"))
+    return method in {"auto", "httpx"}
 
 
 def _sparql_post_json(endpoint_url: str, query: str, *, timeout: float) -> list[dict[str, str]]:

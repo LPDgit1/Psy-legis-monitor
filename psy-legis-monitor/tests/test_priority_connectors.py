@@ -84,6 +84,41 @@ def test_sparql_query_uses_post_json_on_httpx(monkeypatch):
     assert "application/sparql-results+json" in captured["headers"]["Accept"]
 
 
+def test_sparql_query_auto_tries_post_before_get(monkeypatch):
+    captured: dict[str, object] = {}
+
+    class FakeResponse:
+        text = """
+        {
+          "results": {
+            "bindings": [
+              {"title": {"type": "literal", "value": "A.C. salute mentale"}}
+            ]
+          }
+        }
+        """
+
+        def raise_for_status(self) -> None:
+            return None
+
+    def fake_post(url: str, **kwargs):
+        captured["url"] = url
+        captured["data"] = kwargs["data"]
+        return FakeResponse()
+
+    def fail_fetch_text(*args, **kwargs):
+        raise AssertionError("GET fallback should not run when POST succeeds")
+
+    monkeypatch.setattr("app.connectors.sparql.httpx.post", fake_post)
+    monkeypatch.setattr("app.connectors.sparql.fetch_text", fail_fetch_text)
+
+    rows = sparql_query("https://example.test/sparql", "SELECT ?title WHERE {}", method="auto", timeout=12)
+
+    assert rows == [{"title": "A.C. salute mentale"}]
+    assert captured["url"] == "https://example.test/sparql"
+    assert captured["data"]["format"] == "application/sparql-results+json"
+
+
 def test_sparql_query_get_fallback_prefers_json(monkeypatch):
     captured: dict[str, str] = {}
 
@@ -281,6 +316,14 @@ def test_camera_connector_returns_empty_when_both_camera_paths_have_no_documents
 
 
 def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
+    def fake_sparql_query(*args, **kwargs):
+        return [
+            {
+                "identifier": "3014",
+                "title": "Disposizioni in materia di servizi psicologici",
+            }
+        ]
+
     def fake_fetch_text(url: str, *, method: str, timeout: float) -> str:
         return """
         <html><body>
@@ -289,10 +332,13 @@ def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
         </body></html>
         """
 
+    monkeypatch.setattr("app.connectors.camera.sparql_query", fake_sparql_query)
     monkeypatch.setattr("app.connectors.camera.fetch_text", fake_fetch_text)
 
     diagnostics = CameraConnector(fetch_method="httpx", limit=5).diagnose_fetch()
 
+    assert diagnostics["sparql_rows"] == 1
+    assert diagnostics["sparql_sample_identifier"] == "3014"
     assert diagnostics["blocked_by_browser_check"] is True
     assert diagnostics["contains_ac_marker"] is False
     assert diagnostics["parsed_documents"] == 0

@@ -84,6 +84,23 @@ class CameraConnector(BaseConnector):
             "fetch_method": self.fetch_method,
         }
         try:
+            rows = sparql_query(
+                self.endpoint_url,
+                _build_camera_query(self.legislature_uri, min(self.limit, 3)),
+                method=self.fetch_method,
+                timeout=self.timeout,
+            )
+            diagnostics.update(
+                {
+                    "sparql_rows": len(rows),
+                    "sparql_sample_title": normalize_text(rows[0].get("title")) if rows else "",
+                    "sparql_sample_identifier": compact_identifier(rows[0].get("identifier")) if rows else "",
+                }
+            )
+        except Exception as exc:
+            diagnostics["sparql_error"] = str(exc)
+
+        try:
             html = fetch_text(self.fallback_url, method=self.fetch_method, timeout=self.timeout)
         except Exception as exc:
             diagnostics["fallback_error"] = str(exc)
