@@ -82,6 +82,7 @@ def test_sparql_query_uses_post_json_on_httpx(monkeypatch):
         "format": "application/sparql-results+json",
     }
     assert "application/sparql-results+json" in captured["headers"]["Accept"]
+    assert captured["headers"]["User-Agent"] == "psy-legis-monitor/0.1"
 
 
 def test_sparql_query_auto_tries_post_before_get(monkeypatch):
@@ -163,6 +164,7 @@ def test_sparql_query_auto_tries_powershell_post_after_httpx_html(monkeypatch):
     assert rows == [{"title": "A.C. psicologia"}]
     assert captured["env_query"] == "SELECT ?title WHERE {}"
     assert captured["command"][0] == "powershell.exe"
+    assert "'User-Agent'='psy-legis-monitor/0.1'" in captured["command"][3]
 
 
 def test_sparql_query_get_fallback_prefers_json(monkeypatch):
@@ -383,7 +385,7 @@ def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
 
     diagnostics = CameraConnector(fetch_method="httpx", limit=5).diagnose_fetch()
 
-    assert diagnostics["diagnostic_schema_version"] == 4
+    assert diagnostics["diagnostic_schema_version"] == 5
     assert diagnostics["sparql_status"] == "ok"
     assert diagnostics["sparql_rows"] == 1
     assert diagnostics["sparql_sample_identifier"] == "3014"

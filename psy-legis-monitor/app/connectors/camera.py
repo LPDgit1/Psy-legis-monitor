@@ -79,7 +79,7 @@ class CameraConnector(BaseConnector):
 
     def diagnose_fetch(self) -> dict[str, object]:
         diagnostics: dict[str, object] = {
-            "diagnostic_schema_version": 4,
+            "diagnostic_schema_version": 5,
             "endpoint_url": self.endpoint_url,
             "fallback_url": self.fallback_url,
             "fetch_method": self.fetch_method,

@@ -16,6 +16,7 @@ from app.core.text_cleaning import normalize_text
 
 
 SPARQL_NS = {"sparql": "http://www.w3.org/2005/sparql-results#"}
+SPARQL_USER_AGENT = "psy-legis-monitor/0.1"
 
 
 def sparql_query(
@@ -69,7 +70,7 @@ def _sparql_post_json(endpoint_url: str, query: str, *, timeout: float) -> list[
     headers = {
         "Accept": "application/sparql-results+json, application/json;q=0.9, */*;q=0.1",
         "Content-Type": "application/x-www-form-urlencoded",
-        "User-Agent": "psy-legis-monitor/0.1 (+institutional monitoring)",
+        "User-Agent": SPARQL_USER_AGENT,
     }
     errors: list[Exception] = []
     for response_format in ("application/sparql-results+json", "json"):
@@ -106,7 +107,7 @@ def _sparql_post_json_with_powershell(endpoint_url: str, query: str, *, timeout:
         f"$url='{escaped_url}'; "
         "$body=@{ query=$query; format='application/sparql-results+json' }; "
         "$headers=@{ Accept='application/sparql-results+json, application/json;q=0.9'; "
-        "'User-Agent'='psy-legis-monitor/0.1 (+institutional monitoring)' }; "
+        f"'User-Agent'='{SPARQL_USER_AGENT}' }}; "
         f"$response=Invoke-WebRequest -UseBasicParsing -Uri $url -Method Post -Body $body -Headers $headers -TimeoutSec {timeout_seconds}; "
         "if ($response.Content -is [byte[]]) { "
         "[System.Text.Encoding]::UTF8.GetString($response.Content) "
