@@ -1,6 +1,11 @@
 from datetime import UTC, datetime
 
-from app.connectors.camera import CameraConnector, _camera_row_to_document, parse_camera_latest_bills
+from app.connectors.camera import (
+    CameraConnector,
+    _camera_row_to_document,
+    parse_camera_latest_bills,
+    parse_camera_resource_rdf,
+)
 from app.connectors.normattiva import (
     parse_approved_not_published_laws,
     parse_normattiva_home_updates,
@@ -342,7 +347,11 @@ def test_camera_connector_falls_back_to_latest_bills_page(monkeypatch):
     monkeypatch.setattr("app.connectors.camera.sparql_query", fake_sparql_query)
     monkeypatch.setattr("app.connectors.camera.fetch_text", fake_fetch_text)
 
-    documents = CameraConnector(fetch_method="httpx", limit=5).fetch_documents()
+    documents = CameraConnector(
+        fetch_method="httpx",
+        limit=5,
+        resource_fallback_enabled=False,
+    ).fetch_documents()
 
     assert len(documents) == 1
     assert documents[0].identifier == "A.C. 3006"
@@ -360,7 +369,110 @@ def test_camera_connector_returns_empty_when_both_camera_paths_have_no_documents
     monkeypatch.setattr("app.connectors.camera.sparql_query", fake_sparql_query)
     monkeypatch.setattr("app.connectors.camera.fetch_text", fake_fetch_text)
 
-    assert CameraConnector(fetch_method="httpx", limit=5).fetch_documents() == []
+    assert (
+        CameraConnector(
+            fetch_method="httpx",
+            limit=5,
+            resource_fallback_enabled=False,
+        ).fetch_documents()
+        == []
+    )
+
+
+def test_parse_camera_resource_rdf_maps_official_resource():
+    payload = """
+    <?xml version="1.0"?>
+    <rdf:RDF
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/">
+      <rdf:Description rdf:about="http://dati.camera.it/ocd/attocamera.rdf/ac19_3015">
+        <dc:title> LUPI: "Disposizioni concernenti l&amp;rsquo;attivita degli psicologi" (3015) </dc:title>
+        <dcterms:isReferencedBy rdf:resource="http://www.camera.it/uri-res/test-3015"/>
+        <dc:date>20260709</dc:date>
+        <dc:type>Progetto di Legge</dc:type>
+        <dc:identifier>3015</dc:identifier>
+        <dc:creator>LUPI Maurizio</dc:creator>
+      </rdf:Description>
+    </rdf:RDF>
+    """
+
+    document = parse_camera_resource_rdf(
+        payload,
+        "https://dati.camera.it/ocd/attocamera.rdf/ac19_3015",
+        fetched_at=datetime(2026, 7, 12, 12, 0, tzinfo=UTC),
+        sparql_error=RuntimeError("SPARQL blocked"),
+    )
+
+    assert document is not None
+    assert document.source_type == "official_api"
+    assert document.identifier == "3015"
+    assert document.date_presented.isoformat() == "2026-07-09"
+    assert "attivita degli psicologi" in document.title
+    assert document.metadata["fallback"] == "camera_resource_rdf"
+    assert "SPARQL blocked" in document.metadata["sparql_error"]
+
+
+def test_camera_connector_uses_rdf_resource_fallback_when_sparql_is_blocked(monkeypatch):
+    rdf_payloads = {
+        "2999": """
+        <rdf:RDF
+            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/">
+          <rdf:Description rdf:about="http://dati.camera.it/ocd/attocamera.rdf/ac19_2999">
+            <dc:title>Proposta meno recente</dc:title>
+            <dc:date>20260701</dc:date>
+            <dc:identifier>2999</dc:identifier>
+          </rdf:Description>
+        </rdf:RDF>
+        """,
+        "3000": """
+        <rdf:RDF
+            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/">
+          <rdf:Description rdf:about="http://dati.camera.it/ocd/attocamera.rdf/ac19_3000">
+            <dc:title>Disposizioni in materia di psicologia scolastica</dc:title>
+            <dc:date>20260710</dc:date>
+            <dc:identifier>3000</dc:identifier>
+          </rdf:Description>
+        </rdf:RDF>
+        """,
+    }
+
+    def fake_sparql_query(*args, **kwargs):
+        raise RuntimeError("Risposta SPARQL in HTML invece che JSON")
+
+    def fake_resource_text(url: str, *, timeout: float) -> str:
+        number = url.rsplit("_", 1)[-1]
+        return rdf_payloads.get(
+            number,
+            """
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="http://dati.camera.it/ocd/attocamera.rdf/ac19_empty"/>
+            </rdf:RDF>
+            """,
+        )
+
+    def fail_fetch_text(*args, **kwargs):
+        raise AssertionError("HTML fallback should not run when RDF fallback succeeds")
+
+    monkeypatch.setattr("app.connectors.camera.sparql_query", fake_sparql_query)
+    monkeypatch.setattr("app.connectors.camera._fetch_camera_resource_text", fake_resource_text)
+    monkeypatch.setattr("app.connectors.camera.fetch_text", fail_fetch_text)
+
+    documents = CameraConnector(
+        fetch_method="httpx",
+        limit=1,
+        resource_probe_start=2999,
+        resource_probe_max=5,
+        resource_probe_empty_stop=2,
+    ).fetch_documents()
+
+    assert len(documents) == 1
+    assert documents[0].identifier == "3000"
+    assert documents[0].metadata["fallback"] == "camera_resource_rdf"
 
 
 def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
@@ -385,7 +497,7 @@ def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
 
     diagnostics = CameraConnector(fetch_method="httpx", limit=5).diagnose_fetch()
 
-    assert diagnostics["diagnostic_schema_version"] == 5
+    assert diagnostics["diagnostic_schema_version"] == 7
     assert diagnostics["sparql_status"] == "ok"
     assert diagnostics["sparql_rows"] == 1
     assert diagnostics["sparql_sample_identifier"] == "3014"
@@ -394,6 +506,46 @@ def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
     assert diagnostics["blocked_by_browser_check"] is True
     assert diagnostics["contains_ac_marker"] is False
     assert diagnostics["parsed_documents"] == 0
+
+
+def test_camera_diagnostics_reports_rdf_resource_fallback(monkeypatch):
+    def fake_sparql_query(*args, **kwargs):
+        raise RuntimeError("Risposta SPARQL in HTML invece che JSON")
+
+    def fake_resource_documents(**kwargs):
+        return [
+            _camera_row_to_document(
+                {
+                    "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3000",
+                    "title": "Disposizioni in materia di psicologia scolastica",
+                    "date": "20260710",
+                    "identifier": "3000",
+                },
+                fetched_at=datetime(2026, 7, 12, 12, 0, tzinfo=UTC),
+            )
+        ]
+
+    def fake_fetch_text(url: str, *, method: str, timeout: float) -> str:
+        return """
+        <html><body>
+        Checking your browser before accessing www.camera.it
+        This process is automatic. Your browser will redirect to requested content shortly.
+        </body></html>
+        """
+
+    monkeypatch.setattr("app.connectors.camera.sparql_query", fake_sparql_query)
+    monkeypatch.setattr("app.connectors.camera.fetch_camera_resource_documents", fake_resource_documents)
+    monkeypatch.setattr("app.connectors.camera.fetch_text", fake_fetch_text)
+
+    diagnostics = CameraConnector(fetch_method="httpx", limit=5).diagnose_fetch()
+
+    assert diagnostics["diagnostic_schema_version"] == 7
+    assert diagnostics["sparql_status"] == "error"
+    assert diagnostics["resource_status"] == "ok"
+    assert diagnostics["resource_rows"] == 1
+    assert diagnostics["resource_sample_identifier"] == "3000"
+    assert diagnostics["fallback_status"] == "blocked_by_browser_check"
+    assert diagnostics["overall_status"].startswith("ok: SPARQL bloccato, ma fallback RDF ufficiale")
 
 
 def test_senato_row_maps_to_legislative_document():

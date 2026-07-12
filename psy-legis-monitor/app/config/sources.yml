@@ -24,6 +24,10 @@ camera:
   fetch_method: "auto"
   timeout: 30
   limit: 30
+  resource_fallback_enabled: true
+  resource_probe_start: 2950
+  resource_probe_max: 180
+  resource_probe_empty_stop: 35
 
 senato:
   enabled: true

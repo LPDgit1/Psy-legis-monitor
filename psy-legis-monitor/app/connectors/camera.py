@@ -3,16 +3,18 @@
 from __future__ import annotations
 
 import re
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from urllib.parse import urljoin
+from xml.etree import ElementTree
 
+import httpx
 from bs4 import BeautifulSoup, NavigableString, Tag
 
 from app.config.settings import load_yaml, settings
 from app.connectors.base import BaseConnector
 from app.connectors.http_fetch import fetch_text
 from app.connectors.parsing import compact_identifier, first_non_blank, parse_connector_date
-from app.connectors.sparql import sparql_query
+from app.connectors.sparql import SPARQL_USER_AGENT, sparql_query
 from app.core.schemas import LegislativeDocument
 from app.core.text_cleaning import normalize_text
 
@@ -20,6 +22,11 @@ from app.core.text_cleaning import normalize_text
 CAMERA_ENDPOINT = "https://dati.camera.it/sparql"
 CAMERA_LATEST_BILLS_URL = "https://www.camera.it/leg19/141"
 DEFAULT_LEGISLATURE_URI = "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19"
+RDF_NS = {
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+}
 
 
 class CameraConnector(BaseConnector):
@@ -37,6 +44,10 @@ class CameraConnector(BaseConnector):
         timeout: float | None = None,
         fallback_url: str | None = None,
         enabled: bool | None = None,
+        resource_fallback_enabled: bool | None = None,
+        resource_probe_start: int | None = None,
+        resource_probe_max: int | None = None,
+        resource_probe_empty_stop: int | None = None,
     ) -> None:
         config = load_yaml(settings.sources_path).get("camera", {})
         self.enabled = config.get("enabled", True) if enabled is None else enabled
@@ -46,6 +57,22 @@ class CameraConnector(BaseConnector):
         self.fetch_method = fetch_method or config.get("fetch_method", "auto")
         self.timeout = float(timeout if timeout is not None else config.get("timeout", 30))
         self.fallback_url = fallback_url or config.get("fallback_url", CAMERA_LATEST_BILLS_URL)
+        self.resource_fallback_enabled = (
+            config.get("resource_fallback_enabled", True)
+            if resource_fallback_enabled is None
+            else resource_fallback_enabled
+        )
+        self.resource_probe_start = _bounded_probe_number(
+            resource_probe_start if resource_probe_start is not None else config.get("resource_probe_start", 2950)
+        )
+        self.resource_probe_max = _bounded_limit(
+            resource_probe_max if resource_probe_max is not None else config.get("resource_probe_max", 180)
+        )
+        self.resource_probe_empty_stop = _bounded_limit(
+            resource_probe_empty_stop
+            if resource_probe_empty_stop is not None
+            else config.get("resource_probe_empty_stop", 35)
+        )
 
     def fetch_documents(self) -> list[LegislativeDocument]:
         if not self.enabled:
@@ -65,6 +92,23 @@ class CameraConnector(BaseConnector):
         except Exception as exc:
             sparql_error = exc
 
+        if self.resource_fallback_enabled:
+            try:
+                documents = fetch_camera_resource_documents(
+                    legislature_uri=self.legislature_uri,
+                    start=self.resource_probe_start,
+                    max_resources=self.resource_probe_max,
+                    empty_stop=self.resource_probe_empty_stop,
+                    limit=self.limit,
+                    timeout=self.timeout,
+                    fetched_at=fetched_at,
+                    sparql_error=sparql_error,
+                )
+                if documents:
+                    return documents
+            except Exception:
+                pass
+
         html = fetch_text(self.fallback_url, method=self.fetch_method, timeout=self.timeout)
         documents = parse_camera_latest_bills(
             html,
@@ -79,12 +123,13 @@ class CameraConnector(BaseConnector):
 
     def diagnose_fetch(self) -> dict[str, object]:
         diagnostics: dict[str, object] = {
-            "diagnostic_schema_version": 5,
+            "diagnostic_schema_version": 7,
             "endpoint_url": self.endpoint_url,
             "fallback_url": self.fallback_url,
             "fetch_method": self.fetch_method,
             "sparql_status": "not_checked",
             "fallback_status": "not_checked",
+            "resource_status": "not_checked",
             "overall_status": "diagnostica avviata",
         }
         try:
@@ -105,6 +150,34 @@ class CameraConnector(BaseConnector):
         except Exception as exc:
             diagnostics["sparql_status"] = "error"
             diagnostics["sparql_error"] = str(exc)
+
+        if diagnostics["sparql_status"] != "ok" and self.resource_fallback_enabled:
+            try:
+                resource_documents = fetch_camera_resource_documents(
+                    legislature_uri=self.legislature_uri,
+                    start=self.resource_probe_start,
+                    max_resources=min(self.resource_probe_max, 80),
+                    empty_stop=min(self.resource_probe_empty_stop, 20),
+                    limit=min(self.limit, 3),
+                    timeout=self.timeout,
+                    fetched_at=datetime.now(UTC),
+                    sparql_error=None,
+                )
+                diagnostics.update(
+                    {
+                        "resource_status": "ok" if resource_documents else "ok_empty",
+                        "resource_rows": len(resource_documents),
+                        "resource_probe_start": self.resource_probe_start,
+                        "resource_probe_max": min(self.resource_probe_max, 80),
+                        "resource_sample_identifier": resource_documents[0].identifier
+                        if resource_documents
+                        else "",
+                        "resource_sample_title": resource_documents[0].title if resource_documents else "",
+                    }
+                )
+            except Exception as exc:
+                diagnostics["resource_status"] = "error"
+                diagnostics["resource_error"] = str(exc)
 
         try:
             html = fetch_text(self.fallback_url, method=self.fetch_method, timeout=self.timeout)
@@ -204,6 +277,117 @@ def _camera_row_to_document(row: dict[str, str], *, fetched_at: datetime) -> Leg
     )
 
 
+def fetch_camera_resource_documents(
+    *,
+    legislature_uri: str,
+    start: int,
+    max_resources: int,
+    empty_stop: int,
+    limit: int,
+    timeout: float,
+    fetched_at: datetime,
+    sparql_error: Exception | None = None,
+) -> list[LegislativeDocument]:
+    legislature = _legislature_number(legislature_uri)
+    documents: list[LegislativeDocument] = []
+    empty_seen = 0
+    for number in range(start, start + max_resources):
+        resource_url = f"https://dati.camera.it/ocd/attocamera.rdf/ac{legislature}_{number}"
+        try:
+            payload = _fetch_camera_resource_text(resource_url, timeout=timeout)
+        except httpx.HTTPError:
+            empty_seen += 1
+            if documents and empty_seen >= empty_stop:
+                break
+            continue
+        document = parse_camera_resource_rdf(
+            payload,
+            resource_url,
+            fetched_at=fetched_at,
+            sparql_error=sparql_error,
+        )
+        if document is None:
+            empty_seen += 1
+            if documents and empty_seen >= empty_stop:
+                break
+            continue
+        documents.append(document)
+        empty_seen = 0
+
+    documents.sort(
+        key=lambda document: (
+            document.date_presented or document.date_published or date.min,
+            _identifier_number(document.identifier),
+        ),
+        reverse=True,
+    )
+    return documents[:limit]
+
+
+def parse_camera_resource_rdf(
+    payload: str,
+    resource_url: str,
+    *,
+    fetched_at: datetime,
+    sparql_error: Exception | None = None,
+) -> LegislativeDocument | None:
+    if _looks_like_html(payload):
+        raise RuntimeError("Risorsa RDF Camera ha restituito HTML invece che RDF/XML")
+    try:
+        root = ElementTree.fromstring(payload.strip())
+    except ElementTree.ParseError as exc:
+        raise RuntimeError(f"Risorsa RDF Camera non valida: {exc}") from exc
+
+    description = root.find(".//rdf:Description", RDF_NS)
+    if description is None:
+        return None
+    row = {
+        "atto": description.attrib.get(f"{{{RDF_NS['rdf']}}}about", resource_url),
+        "title": _rdf_text(description, "dc:title"),
+        "date": _rdf_text(description, "dc:date"),
+        "identifier": _rdf_text(description, "dc:identifier"),
+        "type": _rdf_text(description, "dc:type"),
+        "creator": _rdf_text(description, "dc:creator"),
+        "ref": _rdf_resource(description, "dcterms:isReferencedBy"),
+    }
+    if not row["title"] or not row["date"]:
+        return None
+    document = _camera_row_to_document(row, fetched_at=fetched_at)
+    document.metadata["fallback"] = "camera_resource_rdf"
+    document.metadata["resource_url"] = resource_url
+    if sparql_error:
+        document.metadata["sparql_error"] = str(sparql_error)
+    return document
+
+
+def _fetch_camera_resource_text(url: str, *, timeout: float) -> str:
+    response = httpx.get(
+        url,
+        headers={"Accept": "application/rdf+xml", "User-Agent": SPARQL_USER_AGENT},
+        timeout=timeout,
+        follow_redirects=True,
+    )
+    response.raise_for_status()
+    return response.text
+
+
+def _rdf_text(description: ElementTree.Element, path: str) -> str:
+    found = description.find(path, RDF_NS)
+    return normalize_text(found.text) if found is not None and found.text else ""
+
+
+def _rdf_resource(description: ElementTree.Element, path: str) -> str:
+    found = description.find(path, RDF_NS)
+    if found is None:
+        return ""
+    return normalize_text(found.attrib.get(f"{{{RDF_NS['rdf']}}}resource"))
+
+
+def _looks_like_html(payload: str) -> bool:
+    prefix = payload.lstrip()[:200].lower()
+    return prefix.startswith("<!doctype html") or prefix.startswith("<html") or "<html" in prefix
+
+
 def parse_camera_latest_bills(
     html: str,
     page_url: str,
@@ -296,11 +480,16 @@ def _is_camera_browser_check_text(text: str) -> bool:
 
 def _camera_diagnostic_status(diagnostics: dict[str, object]) -> str:
     sparql_status = diagnostics.get("sparql_status")
+    resource_status = diagnostics.get("resource_status")
     fallback_status = diagnostics.get("fallback_status")
     if sparql_status == "ok" and fallback_status == "blocked_by_browser_check":
         return "ok: dati.camera.it SPARQL raggiungibile; fallback HTML www.camera.it bloccato ma non necessario"
     if sparql_status == "ok":
         return "ok: dati.camera.it SPARQL raggiungibile"
+    if sparql_status == "error" and resource_status == "ok" and fallback_status == "blocked_by_browser_check":
+        return "ok: SPARQL bloccato, ma fallback RDF ufficiale dati.camera.it raggiungibile; fallback HTML bloccato"
+    if sparql_status == "error" and resource_status == "ok":
+        return "ok: SPARQL bloccato, ma fallback RDF ufficiale dati.camera.it raggiungibile"
     if sparql_status == "ok_empty":
         return "attenzione: dati.camera.it SPARQL raggiungibile ma senza risultati per la query"
     if sparql_status == "error" and fallback_status == "blocked_by_browser_check":
@@ -396,6 +585,26 @@ def _tail(value: str | None) -> str | None:
     if not value:
         return None
     return value.rstrip("/").rsplit("/", 1)[-1].replace(".rdf", "")
+
+
+def _legislature_number(legislature_uri: str) -> int:
+    match = re.search(r"repubblica_(\d+)", legislature_uri)
+    if not match:
+        return 19
+    return int(match.group(1))
+
+
+def _identifier_number(identifier: str | None) -> int:
+    match = re.search(r"\d+", identifier or "")
+    return int(match.group(0)) if match else 0
+
+
+def _bounded_probe_number(value: object) -> int:
+    try:
+        number = int(value)
+    except (TypeError, ValueError):
+        number = 2950
+    return max(1, min(number, 20000))
 
 
 def _bounded_limit(value: object) -> int:
