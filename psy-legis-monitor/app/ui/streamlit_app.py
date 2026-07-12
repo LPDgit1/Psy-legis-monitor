@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta
 from html import escape, unescape
@@ -9,6 +10,7 @@ from html import escape, unescape
 import streamlit as st
 from sqlalchemy import select
 
+from app.config.settings import load_yaml, settings
 from app.core import models
 from app.core.database import SessionLocal, init_db
 from app.services.export import export_markdown_report
@@ -206,7 +208,6 @@ def _fetch_priority_documents() -> list:
 
 def _fetch_normative_documents() -> list:
     documents = []
-    from app.connectors.camera import CameraConnector
     from app.connectors.eurlex import EurLexConnector
     from app.connectors.gazzetta import GazzettaConnector
     from app.connectors.ministero_salute import MinisteroSaluteConnector
@@ -215,16 +216,21 @@ def _fetch_normative_documents() -> list:
     from app.connectors.regions.veneto import VenetoConnector
     from app.connectors.senato import SenatoConnector
 
-    for connector in [
+    connectors = [
         GazzettaConnector(),
-        CameraConnector(),
         SenatoConnector(),
         NormattivaConnector(),
         MinisteroSaluteConnector(),
         EurLexConnector(),
         VenetoConnector(),
         LombardiaConnector(),
-    ]:
+    ]
+    if camera_auto_update_enabled():
+        from app.connectors.camera import CameraConnector
+
+        connectors.insert(1, CameraConnector())
+
+    for connector in connectors:
         try:
             documents.extend(connector.fetch_documents())
         except Exception as exc:
@@ -315,7 +321,6 @@ def _legacy_priority_fetch() -> list:
     documents = []
     try:
         from app.connectors.agenas import AgenasConnector
-        from app.connectors.camera import CameraConnector
         from app.connectors.eurlex import EurLexConnector
         from app.connectors.ministero_salute import MinisteroSaluteConnector
         from app.connectors.normattiva import NormattivaConnector
@@ -324,8 +329,7 @@ def _legacy_priority_fetch() -> list:
         from app.connectors.senato import SenatoConnector
 
         documents = []
-        for connector in [
-            CameraConnector(),
+        connectors = [
             SenatoConnector(),
             NormattivaConnector(),
             MinisteroSaluteConnector(),
@@ -333,7 +337,12 @@ def _legacy_priority_fetch() -> list:
             EurLexConnector(),
             VenetoConnector(),
             LombardiaConnector(),
-        ]:
+        ]
+        if camera_auto_update_enabled():
+            from app.connectors.camera import CameraConnector
+
+            connectors.insert(0, CameraConnector())
+        for connector in connectors:
             try:
                 documents.extend(connector.fetch_documents())
             except Exception as exc:
@@ -361,10 +370,45 @@ def compact_connector_error(connector_name: str, exc: Exception) -> str:
         "SPARQL" in text or "fallback HTML" in text or "pagina tecnica/cache" in text
     ):
         return (
-            "la fonte Camera non ha restituito dati utilizzabili in questa esecuzione. "
-            "Il connettore prova SPARQL e poi la pagina ufficiale dei progetti di legge."
+            "Camera non interrogabile in questa esecuzione. La fonte e opzionale: "
+            "l'aggiornamento ordinario usa Gazzetta, Senato, Normattiva e le altre fonti disponibili."
         )
     return text[:240] + "..." if len(text) > 240 else text
+
+
+def camera_auto_update_enabled() -> bool:
+    camera_config = load_yaml(settings.sources_path).get("camera", {})
+    return bool(camera_config.get("auto_update_enabled", False))
+
+
+def render_camera_diagnostics(diagnostics: dict[str, object]) -> None:
+    sparql_status = diagnostics.get("sparql_status")
+    resource_status = diagnostics.get("resource_status")
+    fallback_status = diagnostics.get("fallback_status")
+    if sparql_status == "ok":
+        st.success("Camera utilizzabile: SPARQL risponde correttamente.")
+    elif resource_status == "ok":
+        st.warning("SPARQL Camera non risponde, ma il fallback RDF ufficiale e utilizzabile.")
+    elif resource_status == "html_blocked" and fallback_status == "blocked_by_browser_check":
+        st.info(
+            "Camera non utilizzabile da questo ambiente: SPARQL e RDF restituiscono HTML tecnico, "
+            "mentre www.camera.it mostra un browser-check. L'app la tratta come fonte manuale/opzionale."
+        )
+    else:
+        st.warning("Camera non ha restituito dati utilizzabili in questa esecuzione.")
+    strategy = clean_display_text(diagnostics.get("recommended_strategy"))
+    if strategy:
+        st.caption(strategy)
+    detail_json = json.dumps(diagnostics, ensure_ascii=False, indent=2, default=str)
+    with st.expander("Dettagli tecnici Camera"):
+        st.json(diagnostics)
+        st.download_button(
+            "Scarica diagnostica JSON",
+            data=detail_json,
+            file_name="diagnostica-camera.json",
+            mime="application/json",
+            use_container_width=True,
+        )
 
 
 def render_table(rows: list[dict], *, max_rows: int = 100) -> None:
@@ -601,25 +645,14 @@ with st.sidebar:
         left_button, right_button = st.columns(2)
         if left_button.button("Gazzetta", use_container_width=True):
             ingest_individual("gazzetta", "Gazzetta")
-        if right_button.button("Camera", use_container_width=True):
+        if right_button.button("Camera manuale", use_container_width=True):
             ingest_individual("camera", "Camera")
         if st.button("Diagnostica Camera", use_container_width=True):
             from app.connectors.camera import CameraConnector
 
             try:
                 diagnostics = CameraConnector().diagnose_fetch()
-                if diagnostics.get("sparql_status") == "ok":
-                    st.success("Dati Camera SPARQL raggiungibile.")
-                elif diagnostics.get("sparql_status") == "error":
-                    if diagnostics.get("resource_status") == "ok":
-                        st.warning("Dati Camera SPARQL non raggiungibile; fallback RDF ufficiale attivo.")
-                    elif diagnostics.get("resource_status") == "html_blocked":
-                        st.error("Dati Camera SPARQL e fallback RDF restituiscono pagine HTML tecniche.")
-                    else:
-                        st.error("Dati Camera SPARQL non raggiungibile.")
-                if diagnostics.get("fallback_status") == "blocked_by_browser_check":
-                    st.warning("La pagina HTML di fallback di www.camera.it mostra un browser-check.")
-                st.json(diagnostics)
+                render_camera_diagnostics(diagnostics)
             except Exception as exc:
                 st.error(f"Diagnostica Camera non riuscita: {compact_connector_error('camera', exc)}")
         left_button, right_button = st.columns(2)

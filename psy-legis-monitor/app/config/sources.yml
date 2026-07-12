@@ -18,6 +18,7 @@ gazzetta:
 
 camera:
   enabled: true
+  auto_update_enabled: false
   endpoint_url: "https://dati.camera.it/sparql"
   fallback_url: "https://www.camera.it/leg19/141"
   legislature_uri: "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19"
@@ -28,6 +29,7 @@ camera:
   resource_probe_start: 2950
   resource_probe_max: 180
   resource_probe_empty_stop: 35
+  resource_probe_html_stop: 5
 
 senato:
   enabled: true

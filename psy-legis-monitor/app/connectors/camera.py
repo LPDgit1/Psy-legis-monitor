@@ -48,6 +48,7 @@ class CameraConnector(BaseConnector):
         resource_probe_start: int | None = None,
         resource_probe_max: int | None = None,
         resource_probe_empty_stop: int | None = None,
+        resource_probe_html_stop: int | None = None,
     ) -> None:
         config = load_yaml(settings.sources_path).get("camera", {})
         self.enabled = config.get("enabled", True) if enabled is None else enabled
@@ -72,6 +73,11 @@ class CameraConnector(BaseConnector):
             resource_probe_empty_stop
             if resource_probe_empty_stop is not None
             else config.get("resource_probe_empty_stop", 35)
+        )
+        self.resource_probe_html_stop = _bounded_limit(
+            resource_probe_html_stop
+            if resource_probe_html_stop is not None
+            else config.get("resource_probe_html_stop", 5)
         )
 
     def fetch_documents(self) -> list[LegislativeDocument]:
@@ -103,6 +109,7 @@ class CameraConnector(BaseConnector):
                     timeout=self.timeout,
                     fetched_at=fetched_at,
                     sparql_error=sparql_error,
+                    html_stop=self.resource_probe_html_stop,
                 )
                 if documents:
                     return documents
@@ -123,7 +130,7 @@ class CameraConnector(BaseConnector):
 
     def diagnose_fetch(self) -> dict[str, object]:
         diagnostics: dict[str, object] = {
-            "diagnostic_schema_version": 8,
+            "diagnostic_schema_version": 9,
             "endpoint_url": self.endpoint_url,
             "fallback_url": self.fallback_url,
             "fetch_method": self.fetch_method,
@@ -164,6 +171,7 @@ class CameraConnector(BaseConnector):
                     fetched_at=datetime.now(UTC),
                     sparql_error=None,
                     stats=resource_stats,
+                    html_stop=self.resource_probe_html_stop,
                 )
                 diagnostics.update(
                     {
@@ -171,6 +179,7 @@ class CameraConnector(BaseConnector):
                         "resource_rows": len(resource_documents),
                         "resource_probe_start": self.resource_probe_start,
                         "resource_probe_max": min(self.resource_probe_max, 80),
+                        "resource_probe_html_stop": self.resource_probe_html_stop,
                         "resource_probe_http_errors": resource_stats.get("http_errors", 0),
                         "resource_probe_html_payloads": resource_stats.get("html_payloads", 0),
                         "resource_probe_invalid_payloads": resource_stats.get("invalid_payloads", 0),
@@ -191,6 +200,7 @@ class CameraConnector(BaseConnector):
             diagnostics["fallback_status"] = "error"
             diagnostics["fallback_error"] = str(exc)
             diagnostics["overall_status"] = _camera_diagnostic_status(diagnostics)
+            diagnostics["recommended_strategy"] = _camera_recommended_strategy(diagnostics)
             return diagnostics
 
         soup = BeautifulSoup(html, "html.parser")
@@ -217,6 +227,7 @@ class CameraConnector(BaseConnector):
             }
         )
         diagnostics["overall_status"] = _camera_diagnostic_status(diagnostics)
+        diagnostics["recommended_strategy"] = _camera_recommended_strategy(diagnostics)
         return diagnostics
 
 
@@ -294,10 +305,13 @@ def fetch_camera_resource_documents(
     fetched_at: datetime,
     sparql_error: Exception | None = None,
     stats: dict[str, int] | None = None,
+    html_stop: int = 5,
 ) -> list[LegislativeDocument]:
     legislature = _legislature_number(legislature_uri)
     documents: list[LegislativeDocument] = []
     empty_seen = 0
+    html_seen = 0
+    html_stop = _bounded_limit(html_stop)
     stats = stats if stats is not None else {}
     for number in range(start, start + max_resources):
         resource_url = f"https://dati.camera.it/ocd/attocamera.rdf/ac{legislature}_{number}"
@@ -320,6 +334,9 @@ def fetch_camera_resource_documents(
         except CameraResourceHTMLPayload:
             stats["html_payloads"] = stats.get("html_payloads", 0) + 1
             empty_seen += 1
+            html_seen += 1
+            if not documents and html_seen >= html_stop:
+                break
             if documents and empty_seen >= empty_stop:
                 break
             continue
@@ -337,6 +354,7 @@ def fetch_camera_resource_documents(
             continue
         documents.append(document)
         empty_seen = 0
+        html_seen = 0
 
     documents.sort(
         key=lambda document: (
@@ -527,6 +545,22 @@ def _camera_diagnostic_status(diagnostics: dict[str, object]) -> str:
     if sparql_status == "error":
         return "errore: dati.camera.it SPARQL non raggiungibile"
     return "attenzione: diagnostica Camera incompleta"
+
+
+def _camera_recommended_strategy(diagnostics: dict[str, object]) -> str:
+    sparql_status = diagnostics.get("sparql_status")
+    resource_status = diagnostics.get("resource_status")
+    fallback_status = diagnostics.get("fallback_status")
+    if sparql_status == "ok" or resource_status == "ok":
+        return "Camera utilizzabile in questa esecuzione."
+    if sparql_status == "error" and resource_status == "html_blocked" and fallback_status == "blocked_by_browser_check":
+        return (
+            "Camera non utilizzabile da questo ambiente: trattarla come fonte manuale/opzionale "
+            "e non come blocco dell'aggiornamento ordinario."
+        )
+    if sparql_status == "error":
+        return "Camera non disponibile in questa esecuzione: conservare gli ultimi dati validi e riprovare manualmente."
+    return "Diagnostica incompleta: riprovare manualmente."
 
 
 def _camera_resource_status(documents: list[LegislativeDocument], stats: dict[str, int]) -> str:
