@@ -91,6 +91,7 @@ class CameraConnector(BaseConnector):
 
         soup = BeautifulSoup(html, "html.parser")
         text = normalize_text(soup.get_text(" "))
+        browser_check = _is_camera_browser_check_text(text)
         documents = parse_camera_latest_bills(
             html,
             self.fallback_url,
@@ -101,6 +102,7 @@ class CameraConnector(BaseConnector):
             {
                 "fallback_html_length": len(html),
                 "fallback_title": normalize_text(soup.title.get_text(" ")) if soup.title else "",
+                "blocked_by_browser_check": browser_check,
                 "contains_ac_marker": bool(re.search(r"\bA\.?\s*C\.?\s*\d+", text, flags=re.IGNORECASE)),
                 "ac_marker_count": len(re.findall(r"\bA\.?\s*C\.?\s*\d+", text, flags=re.IGNORECASE)),
                 "parsed_documents": len(documents),
@@ -256,6 +258,11 @@ def _camera_bill_links_by_identifier(soup: BeautifulSoup, page_url: str) -> dict
         if _is_camera_bill_identifier(identifier) and identifier:
             links[identifier] = urljoin(page_url, str(anchor["href"]))
     return links
+
+
+def _is_camera_browser_check_text(text: str) -> bool:
+    folded = normalize_text(text).lower()
+    return "checking your browser before accessing" in folded or "your browser will redirect" in folded
 
 
 def _camera_latest_bill_document(

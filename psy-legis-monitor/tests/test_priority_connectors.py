@@ -280,6 +280,24 @@ def test_camera_connector_returns_empty_when_both_camera_paths_have_no_documents
     assert CameraConnector(fetch_method="httpx", limit=5).fetch_documents() == []
 
 
+def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
+    def fake_fetch_text(url: str, *, method: str, timeout: float) -> str:
+        return """
+        <html><body>
+        Checking your browser before accessing www.camera.it
+        This process is automatic. Your browser will redirect to requested content shortly.
+        </body></html>
+        """
+
+    monkeypatch.setattr("app.connectors.camera.fetch_text", fake_fetch_text)
+
+    diagnostics = CameraConnector(fetch_method="httpx", limit=5).diagnose_fetch()
+
+    assert diagnostics["blocked_by_browser_check"] is True
+    assert diagnostics["contains_ac_marker"] is False
+    assert diagnostics["parsed_documents"] == 0
+
+
 def test_senato_row_maps_to_legislative_document():
     document = _senato_row_to_document(
         {
