@@ -214,6 +214,32 @@ def test_parse_camera_latest_bills_reads_text_after_anchor_without_list_item():
     assert documents[1].identifier == "A.C. 3006"
 
 
+def test_parse_camera_latest_bills_falls_back_to_full_page_text():
+    html = """
+    <main>
+      Ultimi Progetti di Legge stampati
+      A.C. 2952 MORRONE ed altri: "Modifiche al decreto legislativo 8 giugno 2001,
+      n. 231, in materia di responsabilita delle persone giuridiche" (2952)
+      Stampato il 10-07-2026
+      A.C. 2997 PROPOSTA DI LEGGE D'INIZIATIVA POPOLARE:
+      "Disposizioni in materia di governo dei flussi migratori" (2997)
+      Stampato il 10-07-2026
+    </main>
+    """
+
+    documents = parse_camera_latest_bills(
+        html,
+        "https://www.camera.it/leg19/141",
+        fetched_at=datetime(2026, 7, 12, 12, 0, tzinfo=UTC),
+        limit=10,
+    )
+
+    assert [document.identifier for document in documents] == ["A.C. 2952", "A.C. 2997"]
+    assert documents[0].url == "https://www.camera.it/leg19/141"
+    assert documents[0].date_published.isoformat() == "2026-07-10"
+    assert "responsabilita delle persone giuridiche" in documents[0].title
+
+
 def test_camera_connector_falls_back_to_latest_bills_page(monkeypatch):
     def fake_sparql_query(*args, **kwargs):
         raise RuntimeError("Risposta SPARQL in HTML invece che JSON")

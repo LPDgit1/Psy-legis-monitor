@@ -156,6 +156,7 @@ def parse_camera_latest_bills(
     soup = BeautifulSoup(html, "html.parser")
     documents: list[LegislativeDocument] = []
     seen: set[str] = set()
+    links_by_identifier = _camera_bill_links_by_identifier(soup, page_url)
 
     for anchor in soup.find_all("a", href=True):
         identifier = compact_identifier(anchor.get_text(" "))
@@ -165,48 +166,112 @@ def parse_camera_latest_bills(
         title = _camera_latest_bill_title(raw_text, identifier)
         if not title:
             continue
-        source_url = urljoin(page_url, str(anchor["href"]))
-        if source_url in seen:
+        source_url = links_by_identifier.get(identifier, urljoin(page_url, str(anchor["href"])))
+        dedupe_key = identifier or source_url
+        if dedupe_key in seen:
             continue
-        seen.add(source_url)
+        seen.add(dedupe_key)
         published = parse_connector_date(raw_text)
-        text = "\n\n".join(
-            part
-            for part in [
-                title,
-                f"Identificativo: {identifier}",
-                f"Stampato il: {published.isoformat()}" if published else None,
-            ]
-            if part
-        )
-        metadata = {
-            "connector": CameraConnector.name,
-            "fallback": "camera_latest_bills_html",
-            "container_url": page_url,
-            "accessed_at": fetched_at.isoformat(),
-        }
-        if sparql_error:
-            metadata["sparql_error"] = str(sparql_error)
         documents.append(
-            LegislativeDocument(
-                source="Camera dei deputati - Progetti di legge",
-                source_type="html",
-                level="nazionale",
-                act_type="proposta_di_legge",
+            _camera_latest_bill_document(
                 identifier=identifier,
                 title=title,
-                summary=None,
-                date_published=published,
-                last_update=fetched_at,
-                status="presentato",
-                url=source_url,
-                text=text,
-                metadata=metadata,
+                source_url=source_url,
+                page_url=page_url,
+                fetched_at=fetched_at,
+                published=published,
+                sparql_error=sparql_error,
+            )
+        )
+        if len(documents) >= limit:
+            break
+    if documents:
+        return documents
+
+    page_text = normalize_text(soup.get_text(" "))
+    for match in re.finditer(
+        r"(?P<identifier>A\.?\s*C\.?\s*\d+)\s+(?P<title>.*?)(?:Stampato\s+il\s+)(?P<date>\d{1,2}[-/]\d{1,2}[-/]\d{4})",
+        page_text,
+        flags=re.IGNORECASE | re.DOTALL,
+    ):
+        identifier = compact_identifier(match.group("identifier"))
+        if not identifier:
+            continue
+        source_url = links_by_identifier.get(identifier, page_url)
+        dedupe_key = identifier or source_url
+        if dedupe_key in seen:
+            continue
+        title = _camera_latest_bill_title(match.group("title"), identifier)
+        if not title:
+            continue
+        seen.add(dedupe_key)
+        documents.append(
+            _camera_latest_bill_document(
+                identifier=identifier,
+                title=title,
+                source_url=source_url,
+                page_url=page_url,
+                fetched_at=fetched_at,
+                published=parse_connector_date(match.group("date")),
+                sparql_error=sparql_error,
             )
         )
         if len(documents) >= limit:
             break
     return documents
+
+
+def _camera_bill_links_by_identifier(soup: BeautifulSoup, page_url: str) -> dict[str, str]:
+    links: dict[str, str] = {}
+    for anchor in soup.find_all("a", href=True):
+        identifier = compact_identifier(anchor.get_text(" "))
+        if _is_camera_bill_identifier(identifier) and identifier:
+            links[identifier] = urljoin(page_url, str(anchor["href"]))
+    return links
+
+
+def _camera_latest_bill_document(
+    *,
+    identifier: str,
+    title: str,
+    source_url: str,
+    page_url: str,
+    fetched_at: datetime,
+    published,
+    sparql_error: Exception | None,
+) -> LegislativeDocument:
+    text = "\n\n".join(
+        part
+        for part in [
+            title,
+            f"Identificativo: {identifier}",
+            f"Stampato il: {published.isoformat()}" if published else None,
+        ]
+        if part
+    )
+    metadata = {
+        "connector": CameraConnector.name,
+        "fallback": "camera_latest_bills_html",
+        "container_url": page_url,
+        "accessed_at": fetched_at.isoformat(),
+    }
+    if sparql_error:
+        metadata["sparql_error"] = str(sparql_error)
+    return LegislativeDocument(
+        source="Camera dei deputati - Progetti di legge",
+        source_type="html",
+        level="nazionale",
+        act_type="proposta_di_legge",
+        identifier=identifier,
+        title=title,
+        summary=None,
+        date_published=published,
+        last_update=fetched_at,
+        status="presentato",
+        url=source_url,
+        text=text,
+        metadata=metadata,
+    )
 
 
 def _is_camera_bill_identifier(value: str | None) -> bool:

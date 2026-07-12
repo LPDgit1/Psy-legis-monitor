@@ -33,6 +33,9 @@ from app.ui.document_view import (
 
 st.set_page_config(page_title="psy-legis-monitor", layout="wide")
 
+if "connector_issues" not in st.session_state:
+    st.session_state["connector_issues"] = []
+
 
 @st.cache_data(ttl=30)
 def load_data() -> tuple[list[dict], list[dict], list[dict], list[dict], list[dict]]:
@@ -133,8 +136,25 @@ def refresh_data() -> None:
     st.rerun()
 
 
+def register_connector_issue(connector_name: str, exc: Exception) -> None:
+    issue = {
+        "connector": connector_name,
+        "message": compact_connector_error(connector_name, exc),
+    }
+    st.session_state.setdefault("connector_issues", []).append(issue)
+
+
+def render_connector_issues() -> None:
+    issues = st.session_state.get("connector_issues", [])
+    if not issues:
+        return
+    names = ", ".join(sorted({clean_display_text(issue["connector"]) for issue in issues}))
+    st.caption(f"Fonti non aggiornate nell'ultima esecuzione: {names}.")
+
+
 def ingest_with_connector(connector_name: str) -> None:
     init_db()
+    st.session_state["connector_issues"] = []
     if connector_name == "gazzetta":
         from app.connectors.gazzetta import GazzettaConnector
 
@@ -276,6 +296,7 @@ def _fetch_individual_documents(connector_name: str) -> list:
 def ingest_individual(connector_name: str, label: str) -> None:
     try:
         init_db()
+        st.session_state["connector_issues"] = []
         documents = _fetch_individual_documents(connector_name)
         with SessionLocal() as session:
             summary = ingest_documents(session, documents)
@@ -330,7 +351,7 @@ def counter_chart_rows(counter: Counter) -> list[dict]:
 
 
 def show_connector_warning(connector_name: str, exc: Exception) -> None:
-    st.warning(f"{connector_name} saltato: {compact_connector_error(connector_name, exc)}")
+    register_connector_issue(connector_name, exc)
 
 
 def compact_connector_error(connector_name: str, exc: Exception) -> str:
@@ -552,6 +573,7 @@ documents = [row for row in documents if not is_mock_row(row)]
 
 
 st.title("psy-legis-monitor")
+render_connector_issues()
 
 with st.sidebar:
     st.header("Aggiornamento dati")
