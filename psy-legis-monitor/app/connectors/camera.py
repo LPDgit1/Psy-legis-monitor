@@ -2,10 +2,15 @@
 
 from __future__ import annotations
 
+import re
 from datetime import UTC, datetime
+from urllib.parse import urljoin
+
+from bs4 import BeautifulSoup
 
 from app.config.settings import load_yaml, settings
 from app.connectors.base import BaseConnector
+from app.connectors.http_fetch import fetch_text
 from app.connectors.parsing import compact_identifier, first_non_blank, parse_connector_date
 from app.connectors.sparql import sparql_query
 from app.core.schemas import LegislativeDocument
@@ -13,6 +18,7 @@ from app.core.text_cleaning import normalize_text
 
 
 CAMERA_ENDPOINT = "https://dati.camera.it/sparql"
+CAMERA_LATEST_BILLS_URL = "https://www.camera.it/leg19/141"
 DEFAULT_LEGISLATURE_URI = "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19"
 
 
@@ -29,6 +35,7 @@ class CameraConnector(BaseConnector):
         limit: int | None = None,
         fetch_method: str | None = None,
         timeout: float | None = None,
+        fallback_url: str | None = None,
         enabled: bool | None = None,
     ) -> None:
         config = load_yaml(settings.sources_path).get("camera", {})
@@ -38,18 +45,41 @@ class CameraConnector(BaseConnector):
         self.limit = _bounded_limit(limit if limit is not None else config.get("limit", 30))
         self.fetch_method = fetch_method or config.get("fetch_method", "auto")
         self.timeout = float(timeout if timeout is not None else config.get("timeout", 30))
+        self.fallback_url = fallback_url or config.get("fallback_url", CAMERA_LATEST_BILLS_URL)
 
     def fetch_documents(self) -> list[LegislativeDocument]:
         if not self.enabled:
             return []
-        rows = sparql_query(
-            self.endpoint_url,
-            _build_camera_query(self.legislature_uri, self.limit),
-            method=self.fetch_method,
-            timeout=self.timeout,
-        )
         fetched_at = datetime.now(UTC)
-        return [_camera_row_to_document(row, fetched_at=fetched_at) for row in rows if row.get("title")]
+        sparql_error: Exception | None = None
+        try:
+            rows = sparql_query(
+                self.endpoint_url,
+                _build_camera_query(self.legislature_uri, self.limit),
+                method=self.fetch_method,
+                timeout=self.timeout,
+            )
+            documents = [_camera_row_to_document(row, fetched_at=fetched_at) for row in rows if row.get("title")]
+            if documents:
+                return documents
+        except Exception as exc:
+            sparql_error = exc
+
+        html = fetch_text(self.fallback_url, method=self.fetch_method, timeout=self.timeout)
+        documents = parse_camera_latest_bills(
+            html,
+            self.fallback_url,
+            fetched_at=fetched_at,
+            limit=self.limit,
+            sparql_error=sparql_error,
+        )
+        if documents:
+            return documents
+        if sparql_error:
+            raise RuntimeError(
+                "Camera non interrogabile via SPARQL e fallback HTML senza risultati"
+            ) from sparql_error
+        return []
 
 
 def _build_camera_query(legislature_uri: str, limit: int) -> str:
@@ -113,6 +143,81 @@ def _camera_row_to_document(row: dict[str, str], *, fetched_at: datetime) -> Leg
             "accessed_at": fetched_at.isoformat(),
         },
     )
+
+
+def parse_camera_latest_bills(
+    html: str,
+    page_url: str,
+    *,
+    fetched_at: datetime,
+    limit: int,
+    sparql_error: Exception | None = None,
+) -> list[LegislativeDocument]:
+    soup = BeautifulSoup(html, "html.parser")
+    documents: list[LegislativeDocument] = []
+    seen: set[str] = set()
+
+    for anchor in soup.find_all("a", href=True):
+        identifier = compact_identifier(anchor.get_text(" "))
+        if not identifier or not re.match(r"^A\.?\s*C\.?\s*\d+", identifier, flags=re.IGNORECASE):
+            continue
+        container = anchor.find_parent("li") or anchor.parent
+        if container is None:
+            continue
+        raw_text = normalize_text(container.get_text(" "))
+        title = _camera_latest_bill_title(raw_text, identifier)
+        if not title:
+            continue
+        source_url = urljoin(page_url, str(anchor["href"]))
+        if source_url in seen:
+            continue
+        seen.add(source_url)
+        published = parse_connector_date(raw_text)
+        text = "\n\n".join(
+            part
+            for part in [
+                title,
+                f"Identificativo: {identifier}",
+                f"Stampato il: {published.isoformat()}" if published else None,
+            ]
+            if part
+        )
+        metadata = {
+            "connector": CameraConnector.name,
+            "fallback": "camera_latest_bills_html",
+            "container_url": page_url,
+            "accessed_at": fetched_at.isoformat(),
+        }
+        if sparql_error:
+            metadata["sparql_error"] = str(sparql_error)
+        documents.append(
+            LegislativeDocument(
+                source="Camera dei deputati - Progetti di legge",
+                source_type="html",
+                level="nazionale",
+                act_type="proposta_di_legge",
+                identifier=identifier,
+                title=title,
+                summary=None,
+                date_published=published,
+                last_update=fetched_at,
+                status="presentato",
+                url=source_url,
+                text=text,
+                metadata=metadata,
+            )
+        )
+        if len(documents) >= limit:
+            break
+    return documents
+
+
+def _camera_latest_bill_title(raw_text: str, identifier: str) -> str:
+    title = re.sub(re.escape(identifier), " ", raw_text, flags=re.IGNORECASE)
+    title = re.sub(r"\bStampato\s+il\s+\d{1,2}[-/]\d{1,2}[-/]\d{4}\b", " ", title, flags=re.IGNORECASE)
+    title = re.sub(r"\(\s*\d+\s*\)\s*$", "", title)
+    title = normalize_text(title).strip(" -:;,.")
+    return title
 
 
 def _tail(value: str | None) -> str | None:

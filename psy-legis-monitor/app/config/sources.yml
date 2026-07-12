@@ -19,6 +19,7 @@ gazzetta:
 camera:
   enabled: true
   endpoint_url: "https://dati.camera.it/sparql"
+  fallback_url: "https://www.camera.it/leg19/141"
   legislature_uri: "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19"
   fetch_method: "auto"
   timeout: 30

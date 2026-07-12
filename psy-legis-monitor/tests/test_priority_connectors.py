@@ -1,6 +1,6 @@
 from datetime import UTC, datetime
 
-from app.connectors.camera import _camera_row_to_document
+from app.connectors.camera import CameraConnector, _camera_row_to_document, parse_camera_latest_bills
 from app.connectors.normattiva import (
     parse_approved_not_published_laws,
     parse_normattiva_home_updates,
@@ -145,6 +145,69 @@ def test_camera_row_maps_to_legislative_document():
     assert document.identifier == "C.3014"
     assert document.date_presented.isoformat() == "2026-07-10"
     assert document.status == "presentato"
+
+
+def test_parse_camera_latest_bills_extracts_official_html_fallback():
+    html = """
+    <section>
+      <h5>Ultimi Progetti di Legge stampati</h5>
+      <ul>
+        <li>
+          <a href="https://documenti.camera.it/leg19/pdl/pdf/leg.19.pdl.camera.2937.19PDL0154760.pdf">
+            A.C. 2937
+          </a>
+          RAIMONDO ed altri: "Disposizioni per la semplificazione del procedimento di rinnovo
+          del contrassegno europeo di parcheggio per le persone con disabilità nei casi di
+          disabilità grave permanente e non rivedibile" (2937)
+          Stampato il 09-07-2026
+        </li>
+      </ul>
+    </section>
+    """
+
+    documents = parse_camera_latest_bills(
+        html,
+        "https://www.camera.it/leg19/141",
+        fetched_at=datetime(2026, 7, 12, 12, 0, tzinfo=UTC),
+        limit=10,
+        sparql_error=RuntimeError("cache html"),
+    )
+
+    assert len(documents) == 1
+    assert documents[0].source == "Camera dei deputati - Progetti di legge"
+    assert documents[0].source_type == "html"
+    assert documents[0].identifier == "A.C. 2937"
+    assert documents[0].date_published.isoformat() == "2026-07-09"
+    assert documents[0].metadata["fallback"] == "camera_latest_bills_html"
+    assert "semplificazione del procedimento" in documents[0].title
+    assert "A.C. 2937" not in documents[0].title
+
+
+def test_camera_connector_falls_back_to_latest_bills_page(monkeypatch):
+    def fake_sparql_query(*args, **kwargs):
+        raise RuntimeError("Risposta SPARQL in HTML invece che JSON")
+
+    def fake_fetch_text(url: str, *, method: str, timeout: float) -> str:
+        assert url == "https://www.camera.it/leg19/141"
+        return """
+        <ul>
+          <li>
+            <a href="/leg19/test">A.C. 3006</a>
+            "Disposizioni per l'assestamento del bilancio dello Stato per l'anno finanziario 2026" (3006)
+            Stampato il 10-07-2026
+          </li>
+        </ul>
+        """
+
+    monkeypatch.setattr("app.connectors.camera.sparql_query", fake_sparql_query)
+    monkeypatch.setattr("app.connectors.camera.fetch_text", fake_fetch_text)
+
+    documents = CameraConnector(fetch_method="httpx", limit=5).fetch_documents()
+
+    assert len(documents) == 1
+    assert documents[0].identifier == "A.C. 3006"
+    assert documents[0].metadata["fallback"] == "camera_latest_bills_html"
+    assert "SPARQL in HTML" in documents[0].metadata["sparql_error"]
 
 
 def test_senato_row_maps_to_legislative_document():
