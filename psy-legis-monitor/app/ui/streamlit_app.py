@@ -611,9 +611,14 @@ with st.sidebar:
                 if diagnostics.get("sparql_status") == "ok":
                     st.success("Dati Camera SPARQL raggiungibile.")
                 elif diagnostics.get("sparql_status") == "error":
-                    st.error("Dati Camera SPARQL non raggiungibile.")
+                    if diagnostics.get("resource_status") == "ok":
+                        st.warning("Dati Camera SPARQL non raggiungibile; fallback RDF ufficiale attivo.")
+                    elif diagnostics.get("resource_status") == "html_blocked":
+                        st.error("Dati Camera SPARQL e fallback RDF restituiscono pagine HTML tecniche.")
+                    else:
+                        st.error("Dati Camera SPARQL non raggiungibile.")
                 if diagnostics.get("fallback_status") == "blocked_by_browser_check":
-                    st.warning("La pagina HTML di fallback di www.camera.it mostra un browser-check; non incide sul recupero SPARQL.")
+                    st.warning("La pagina HTML di fallback di www.camera.it mostra un browser-check.")
                 st.json(diagnostics)
             except Exception as exc:
                 st.error(f"Diagnostica Camera non riuscita: {compact_connector_error('camera', exc)}")

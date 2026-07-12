@@ -475,6 +475,45 @@ def test_camera_connector_uses_rdf_resource_fallback_when_sparql_is_blocked(monk
     assert documents[0].metadata["fallback"] == "camera_resource_rdf"
 
 
+def test_camera_resource_fallback_skips_html_technical_payload(monkeypatch):
+    from app.connectors.camera import fetch_camera_resource_documents
+
+    valid_payload = """
+    <rdf:RDF
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="http://dati.camera.it/ocd/attocamera.rdf/ac19_3001">
+        <dc:title>Disposizioni in materia di servizi psicologici</dc:title>
+        <dc:date>20260711</dc:date>
+        <dc:identifier>3001</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+    """
+
+    def fake_resource_text(url: str, *, timeout: float) -> str:
+        if url.endswith("_3000"):
+            return "<html><script>window.location.reload()</script></html>"
+        return valid_payload
+
+    monkeypatch.setattr("app.connectors.camera._fetch_camera_resource_text", fake_resource_text)
+    stats: dict[str, int] = {}
+
+    documents = fetch_camera_resource_documents(
+        legislature_uri="http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
+        start=3000,
+        max_resources=2,
+        empty_stop=2,
+        limit=5,
+        timeout=10,
+        fetched_at=datetime(2026, 7, 12, 12, 0, tzinfo=UTC),
+        stats=stats,
+    )
+
+    assert len(documents) == 1
+    assert documents[0].identifier == "3001"
+    assert stats["html_payloads"] == 1
+
+
 def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
     def fake_sparql_query(*args, **kwargs):
         return [
@@ -497,7 +536,7 @@ def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
 
     diagnostics = CameraConnector(fetch_method="httpx", limit=5).diagnose_fetch()
 
-    assert diagnostics["diagnostic_schema_version"] == 7
+    assert diagnostics["diagnostic_schema_version"] == 8
     assert diagnostics["sparql_status"] == "ok"
     assert diagnostics["sparql_rows"] == 1
     assert diagnostics["sparql_sample_identifier"] == "3014"
@@ -539,13 +578,48 @@ def test_camera_diagnostics_reports_rdf_resource_fallback(monkeypatch):
 
     diagnostics = CameraConnector(fetch_method="httpx", limit=5).diagnose_fetch()
 
-    assert diagnostics["diagnostic_schema_version"] == 7
+    assert diagnostics["diagnostic_schema_version"] == 8
     assert diagnostics["sparql_status"] == "error"
     assert diagnostics["resource_status"] == "ok"
     assert diagnostics["resource_rows"] == 1
     assert diagnostics["resource_sample_identifier"] == "3000"
     assert diagnostics["fallback_status"] == "blocked_by_browser_check"
     assert diagnostics["overall_status"].startswith("ok: SPARQL bloccato, ma fallback RDF ufficiale")
+
+
+def test_camera_diagnostics_reports_rdf_html_block_without_crashing(monkeypatch):
+    def fake_sparql_query(*args, **kwargs):
+        raise RuntimeError("Risposta SPARQL in HTML invece che JSON")
+
+    def fake_resource_text(url: str, *, timeout: float) -> str:
+        return "<html><script>window.location.reload()</script></html>"
+
+    def fake_fetch_text(url: str, *, method: str, timeout: float) -> str:
+        return """
+        <html><body>
+        Checking your browser before accessing www.camera.it
+        This process is automatic. Your browser will redirect to requested content shortly.
+        </body></html>
+        """
+
+    monkeypatch.setattr("app.connectors.camera.sparql_query", fake_sparql_query)
+    monkeypatch.setattr("app.connectors.camera._fetch_camera_resource_text", fake_resource_text)
+    monkeypatch.setattr("app.connectors.camera.fetch_text", fake_fetch_text)
+
+    diagnostics = CameraConnector(
+        fetch_method="httpx",
+        limit=5,
+        resource_probe_start=3000,
+        resource_probe_max=3,
+        resource_probe_empty_stop=2,
+    ).diagnose_fetch()
+
+    assert diagnostics["diagnostic_schema_version"] == 8
+    assert diagnostics["sparql_status"] == "error"
+    assert diagnostics["resource_status"] == "html_blocked"
+    assert diagnostics["resource_probe_html_payloads"] == 3
+    assert diagnostics["fallback_status"] == "blocked_by_browser_check"
+    assert diagnostics["overall_status"].startswith("errore: SPARQL e risorse RDF Camera")
 
 
 def test_senato_row_maps_to_legislative_document():

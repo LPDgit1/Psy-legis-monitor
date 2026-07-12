@@ -123,7 +123,7 @@ class CameraConnector(BaseConnector):
 
     def diagnose_fetch(self) -> dict[str, object]:
         diagnostics: dict[str, object] = {
-            "diagnostic_schema_version": 7,
+            "diagnostic_schema_version": 8,
             "endpoint_url": self.endpoint_url,
             "fallback_url": self.fallback_url,
             "fetch_method": self.fetch_method,
@@ -153,6 +153,7 @@ class CameraConnector(BaseConnector):
 
         if diagnostics["sparql_status"] != "ok" and self.resource_fallback_enabled:
             try:
+                resource_stats: dict[str, int] = {}
                 resource_documents = fetch_camera_resource_documents(
                     legislature_uri=self.legislature_uri,
                     start=self.resource_probe_start,
@@ -162,13 +163,18 @@ class CameraConnector(BaseConnector):
                     timeout=self.timeout,
                     fetched_at=datetime.now(UTC),
                     sparql_error=None,
+                    stats=resource_stats,
                 )
                 diagnostics.update(
                     {
-                        "resource_status": "ok" if resource_documents else "ok_empty",
+                        "resource_status": _camera_resource_status(resource_documents, resource_stats),
                         "resource_rows": len(resource_documents),
                         "resource_probe_start": self.resource_probe_start,
                         "resource_probe_max": min(self.resource_probe_max, 80),
+                        "resource_probe_http_errors": resource_stats.get("http_errors", 0),
+                        "resource_probe_html_payloads": resource_stats.get("html_payloads", 0),
+                        "resource_probe_invalid_payloads": resource_stats.get("invalid_payloads", 0),
+                        "resource_probe_empty_payloads": resource_stats.get("empty_payloads", 0),
                         "resource_sample_identifier": resource_documents[0].identifier
                         if resource_documents
                         else "",
@@ -287,26 +293,44 @@ def fetch_camera_resource_documents(
     timeout: float,
     fetched_at: datetime,
     sparql_error: Exception | None = None,
+    stats: dict[str, int] | None = None,
 ) -> list[LegislativeDocument]:
     legislature = _legislature_number(legislature_uri)
     documents: list[LegislativeDocument] = []
     empty_seen = 0
+    stats = stats if stats is not None else {}
     for number in range(start, start + max_resources):
         resource_url = f"https://dati.camera.it/ocd/attocamera.rdf/ac{legislature}_{number}"
+        stats["probed"] = stats.get("probed", 0) + 1
         try:
             payload = _fetch_camera_resource_text(resource_url, timeout=timeout)
         except httpx.HTTPError:
+            stats["http_errors"] = stats.get("http_errors", 0) + 1
             empty_seen += 1
             if documents and empty_seen >= empty_stop:
                 break
             continue
-        document = parse_camera_resource_rdf(
-            payload,
-            resource_url,
-            fetched_at=fetched_at,
-            sparql_error=sparql_error,
-        )
+        try:
+            document = parse_camera_resource_rdf(
+                payload,
+                resource_url,
+                fetched_at=fetched_at,
+                sparql_error=sparql_error,
+            )
+        except CameraResourceHTMLPayload:
+            stats["html_payloads"] = stats.get("html_payloads", 0) + 1
+            empty_seen += 1
+            if documents and empty_seen >= empty_stop:
+                break
+            continue
+        except RuntimeError:
+            stats["invalid_payloads"] = stats.get("invalid_payloads", 0) + 1
+            empty_seen += 1
+            if documents and empty_seen >= empty_stop:
+                break
+            continue
         if document is None:
+            stats["empty_payloads"] = stats.get("empty_payloads", 0) + 1
             empty_seen += 1
             if documents and empty_seen >= empty_stop:
                 break
@@ -324,6 +348,10 @@ def fetch_camera_resource_documents(
     return documents[:limit]
 
 
+class CameraResourceHTMLPayload(RuntimeError):
+    """Raised when an RDF resource endpoint returns a technical HTML page."""
+
+
 def parse_camera_resource_rdf(
     payload: str,
     resource_url: str,
@@ -332,7 +360,7 @@ def parse_camera_resource_rdf(
     sparql_error: Exception | None = None,
 ) -> LegislativeDocument | None:
     if _looks_like_html(payload):
-        raise RuntimeError("Risorsa RDF Camera ha restituito HTML invece che RDF/XML")
+        raise CameraResourceHTMLPayload("Risorsa RDF Camera ha restituito HTML invece che RDF/XML")
     try:
         root = ElementTree.fromstring(payload.strip())
     except ElementTree.ParseError as exc:
@@ -490,6 +518,8 @@ def _camera_diagnostic_status(diagnostics: dict[str, object]) -> str:
         return "ok: SPARQL bloccato, ma fallback RDF ufficiale dati.camera.it raggiungibile; fallback HTML bloccato"
     if sparql_status == "error" and resource_status == "ok":
         return "ok: SPARQL bloccato, ma fallback RDF ufficiale dati.camera.it raggiungibile"
+    if sparql_status == "error" and resource_status == "html_blocked":
+        return "errore: SPARQL e risorse RDF Camera restituiscono HTML tecnico; fallback HTML bloccato"
     if sparql_status == "ok_empty":
         return "attenzione: dati.camera.it SPARQL raggiungibile ma senza risultati per la query"
     if sparql_status == "error" and fallback_status == "blocked_by_browser_check":
@@ -497,6 +527,16 @@ def _camera_diagnostic_status(diagnostics: dict[str, object]) -> str:
     if sparql_status == "error":
         return "errore: dati.camera.it SPARQL non raggiungibile"
     return "attenzione: diagnostica Camera incompleta"
+
+
+def _camera_resource_status(documents: list[LegislativeDocument], stats: dict[str, int]) -> str:
+    if documents:
+        return "ok"
+    if stats.get("html_payloads", 0) > 0:
+        return "html_blocked"
+    if stats.get("invalid_payloads", 0) > 0:
+        return "invalid_payloads"
+    return "ok_empty"
 
 
 def _camera_latest_bill_document(
