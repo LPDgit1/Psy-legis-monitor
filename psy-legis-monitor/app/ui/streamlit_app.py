@@ -24,6 +24,7 @@ from app.ui.document_view import (
     document_bucket,
     document_type_label,
     is_mock_row,
+    is_excluded_noise_document,
     is_potential_primary_document,
     is_primary_document,
     is_relevant_primary_document,
@@ -54,6 +55,7 @@ def load_data() -> tuple[list[dict], list[dict], list[dict], list[dict], list[di
             "id": document.id,
             "document_key": document.document_key,
             "title": clean_display_text(document.title),
+            "summary": clean_display_text(document.summary),
             "source": clean_display_text(document.source),
             "source_type": document.source_type,
             "level": document.level,
@@ -703,6 +705,7 @@ with st.sidebar:
     date_range = st.date_input("Data atto o pubblicazione", value=(min_date, max_date))
 
     with st.expander("Filtri avanzati"):
+        show_noise_documents = st.checkbox("Mostra esclusi per rumore", value=False)
         source_filter = st.multiselect("Fonte", sorted({row["source"] for row in documents}))
         level_filter = st.multiselect("Livello", sorted({row["level"] for row in documents}))
         region_filter = st.multiselect("Regione", sorted({row["region"] for row in documents if row["region"]}))
@@ -720,7 +723,12 @@ with st.sidebar:
         domain_filter = st.multiselect("Area tematica", all_domains)
 
 
-filtered = documents
+excluded_noise_count = sum(1 for row in documents if is_excluded_noise_document(row))
+visible_documents = documents if show_noise_documents else [
+    row for row in documents if not is_excluded_noise_document(row)
+]
+
+filtered = visible_documents
 if view_mode == "Atti di interesse + potenziali":
     filtered = [
         row
@@ -765,12 +773,11 @@ if isinstance(date_range, tuple) and len(date_range) == 2:
         if not row["primary_date"] or start <= row["primary_date"] <= end
     ]
 
-primary_documents = [row for row in documents if is_primary_document(row)]
-relevant_documents = [row for row in documents if is_relevant_primary_document(row)]
-potential_documents = [row for row in documents if is_potential_primary_document(row)]
-proposal_count = sum(1 for row in documents if document_bucket(row) == "proposta_legge")
-normative_count = sum(1 for row in documents if document_bucket(row) == "atto_normativo")
-informational_count = sum(1 for row in documents if document_bucket(row) == "informazione")
+primary_documents = [row for row in visible_documents if is_primary_document(row)]
+relevant_documents = [row for row in visible_documents if is_relevant_primary_document(row)]
+potential_documents = [row for row in visible_documents if is_potential_primary_document(row)]
+proposal_count = sum(1 for row in visible_documents if document_bucket(row) == "proposta_legge")
+normative_count = sum(1 for row in visible_documents if document_bucket(row) == "atto_normativo")
 
 metric_cols = st.columns(6)
 metric_cols[0].metric("In vista", len(filtered))
@@ -778,7 +785,7 @@ metric_cols[1].metric("Atti interesse", len(relevant_documents))
 metric_cols[2].metric("Potenziali", len(potential_documents))
 metric_cols[3].metric("Proposte / DDL", proposal_count)
 metric_cols[4].metric("Leggi / decreti", normative_count)
-metric_cols[5].metric("News nascoste", informational_count)
+metric_cols[5].metric("Esclusi", excluded_noise_count)
 
 st.subheader("Documenti")
 sorted_rows = sorted(
@@ -799,7 +806,7 @@ render_document_table(display_rows, max_rows=160)
 
 with st.expander("Composizione dei documenti"):
     st.write("Classi")
-    render_counter(Counter(row["bucket_label"] for row in documents))
+    render_counter(Counter(row["bucket_label"] for row in visible_documents))
     st.write("Inclusione")
     render_counter(
         Counter(

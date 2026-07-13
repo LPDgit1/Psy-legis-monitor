@@ -4,6 +4,7 @@ from app.ui.document_view import (
     display_region,
     document_bucket,
     document_type_label,
+    is_excluded_noise_document,
     is_mock_row,
     is_potential_primary_document,
     is_primary_document,
@@ -120,6 +121,23 @@ def test_document_view_excludes_veterinary_and_wild_boar_noise_from_potential_ac
     assert is_primary_document(row)
     assert not is_relevant_primary_document(row)
     assert not is_potential_primary_document(row)
+    assert is_excluded_noise_document(row)
+
+
+def test_document_view_keeps_noise_topics_when_direct_psychological_signal_exists():
+    row = {
+        "source": "Gazzetta Ufficiale - Serie Generale",
+        "source_type": "html",
+        "act_type": "decreto_legge",
+        "found_terms": {"servizi_psicologici": ["supporto psicologico"]},
+        "score": 10,
+        "title": "Misure per il supporto psicologico nelle emergenze sanitarie",
+        "summary": "Interventi anche nei territori colpiti dalla peste suina africana.",
+        "text": "Supporto psicologico agli operatori e alle comunita interessate.",
+    }
+
+    assert is_relevant_primary_document(row)
+    assert not is_excluded_noise_document(row)
 
 
 def test_document_view_hides_institutional_news_by_default():

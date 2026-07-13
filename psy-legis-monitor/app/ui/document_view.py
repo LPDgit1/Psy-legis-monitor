@@ -70,6 +70,28 @@ NOISE_PATTERNS = [
     "acquacoltura",
     "prodotti fitosanitari",
 ]
+DIRECT_RELEVANCE_PATTERNS = [
+    "psicolog",
+    "psicoterap",
+    "salute mentale",
+    "disagio psicologico",
+    "disagio psichico",
+    "sofferenza psicologica",
+    "professione psicologica",
+    "professioni psicologiche",
+    "prestazioni psicologiche",
+    "ordine degli psicologi",
+    "consiglio nazionale ordine psicologi",
+    "cnop",
+    "enpap",
+    "albo degli psicologi",
+    "neuropsic",
+    "psicodiagnosi",
+    "serd",
+    "dipendenze patologiche",
+    "disturbi alimentari",
+    "disturbo alimentare",
+]
 
 ACT_TYPE_LABELS = {
     "disegno_di_legge": "Disegno di legge",
@@ -170,14 +192,38 @@ def is_potential_primary_document(row: dict[str, Any]) -> bool:
     return float(row.get("score") or 0) >= 1
 
 
+def is_excluded_noise_document(row: dict[str, Any]) -> bool:
+    """Return whether a row should be hidden from normal document views."""
+
+    if not is_primary_document(row):
+        return False
+    if not _matches_noise_pattern(row):
+        return False
+    if _has_direct_relevance_signal(row):
+        return False
+    return True
+
+
+def _has_direct_relevance_signal(row: dict[str, Any]) -> bool:
+    found_categories = set(row.get("found_terms") or {})
+    if DIRECT_RELEVANCE_CATEGORIES & found_categories:
+        return True
+    searchable_text = _searchable_row_text(row)
+    return any(pattern in searchable_text for pattern in DIRECT_RELEVANCE_PATTERNS)
+
+
 def _matches_noise_pattern(row: dict[str, Any]) -> bool:
-    searchable_text = fold_for_search(
+    searchable_text = _searchable_row_text(row)
+    return any(pattern in searchable_text for pattern in NOISE_PATTERNS)
+
+
+def _searchable_row_text(row: dict[str, Any]) -> str:
+    return fold_for_search(
         " ".join(
             str(row.get(key) or "")
             for key in ["title", "summary", "text", "source"]
         )
     )
-    return any(pattern in searchable_text for pattern in NOISE_PATTERNS)
 
 
 def bucket_label(row: dict[str, Any]) -> str:
