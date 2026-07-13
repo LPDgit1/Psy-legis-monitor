@@ -24,7 +24,6 @@ from app.ui.document_view import (
     document_bucket,
     document_type_label,
     is_mock_row,
-    is_excluded_noise_document,
     is_potential_primary_document,
     is_primary_document,
     is_relevant_primary_document,
@@ -32,6 +31,26 @@ from app.ui.document_view import (
     sort_date_value,
     status_label,
 )
+
+
+try:
+    from app.ui.document_view import is_excluded_noise_document
+except ImportError:
+    def is_excluded_noise_document(row: dict) -> bool:
+        text = " ".join(
+            str(row.get(key) or "").lower()
+            for key in ["title", "summary", "text", "source"]
+        )
+        noise = [
+            "peste suina",
+            "cinghial",
+            "carcasse",
+            "veterinar",
+            "fauna selvatica",
+            "sanita animale",
+        ]
+        direct = ["psicolog", "psicoterap", "salute mentale", "enpap", "cnop"]
+        return any(term in text for term in noise) and not any(term in text for term in direct)
 
 
 st.set_page_config(page_title="psy-legis-monitor", layout="wide")
