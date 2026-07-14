@@ -57,6 +57,14 @@ MINISTRY_LOW_SIGNAL_TERMS = [
 ]
 
 MINISTRY_EXCLUSION_TERMS = [
+    "fitoterap",
+    "medicinale omeopatico",
+    "medicinali omeopatici",
+    "prodotto omeopatico",
+    "prodotti omeopatici",
+    "prodotto erboristico",
+    "prodotti erboristici",
+    "integratori alimentari",
     "veterinar",
     "animale",
     "animali",

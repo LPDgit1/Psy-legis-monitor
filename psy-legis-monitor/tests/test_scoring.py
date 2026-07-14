@@ -63,3 +63,25 @@ def test_score_document_does_not_promote_generic_work_mentions():
     result = score_document(document)
 
     assert result.relevance_class == "irrilevante"
+
+
+def test_score_document_does_not_treat_frati_minori_as_children():
+    document = LegislativeDocument(
+        source="Gazzetta Ufficiale - Serie Generale",
+        source_type="html",
+        level="nazionale",
+        act_type="altro",
+        identifier="26A02936",
+        title=(
+            "Fusione delle Province dell'Ordine dei Frati Minori Cappuccini "
+            "nella Provincia Frati Minori Cappuccini di Sicilia"
+        ),
+        status="pubblicato",
+        url="https://www.gazzettaufficiale.it/atto/26A02936",
+        text="Efficacia civile del provvedimento canonico di fusione.",
+    )
+
+    result = score_document(document)
+
+    assert result.relevance_class == "irrilevante"
+    assert "scuola_minori_famiglia" not in result.found_terms

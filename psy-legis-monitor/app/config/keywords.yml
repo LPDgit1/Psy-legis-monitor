@@ -3,6 +3,10 @@ thresholds:
   media: 8
   bassa: 1
 
+ignored_phrases:
+  # "Minori" qui indica l'ordine religioso, non bambini o adolescenti.
+  - frati minori
+
 categories:
   professione_diretta:
     weight: 3.0

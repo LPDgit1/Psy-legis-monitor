@@ -37,6 +37,16 @@ def _count_term(text: str, term: str) -> int:
     return len(pattern.findall(text))
 
 
+def _remove_ignored_phrases(text: str, phrases: Any) -> str:
+    for phrase in phrases if isinstance(phrases, list) else []:
+        folded_phrase = fold_for_search(str(phrase))
+        if not folded_phrase:
+            continue
+        pattern = re.compile(rf"(?<!\w){re.escape(folded_phrase)}(?!\w)")
+        text = pattern.sub(" ", text)
+    return text
+
+
 def _class_from_score(total_score: float, thresholds: dict[str, float]) -> str:
     if total_score >= thresholds.get("alta", DEFAULT_THRESHOLDS["alta"]):
         return "alta"
@@ -63,6 +73,10 @@ def score_document(
             if part
         )
     )
+    searchable_text = _remove_ignored_phrases(
+        searchable_text,
+        config.get("ignored_phrases", []),
+    )
 
     total_score = 0.0
     category_scores: dict[str, float] = {}
@@ -88,4 +102,3 @@ def score_document(
         found_terms=found_terms,
         relevance_class=_class_from_score(total_score, thresholds),
     )
-

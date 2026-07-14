@@ -117,6 +117,14 @@ def test_ministry_relevance_rejects_wild_boar_and_epizootic_false_positive():
     )
 
 
+def test_ministry_relevance_rejects_fitoterapici_false_positive():
+    assert not is_ministry_health_document_relevant(
+        "Decreto sui prodotti fitoterapici e omeopatici",
+        "Requisiti per la commercializzazione di integratori alimentari e prodotti erboristici",
+        search_term="dipendenze",
+    )
+
+
 def test_ministry_relevance_keeps_mental_health_related_act():
     assert is_ministry_health_document_relevant(
         "Riparto del Fondo per il contrasto dei disturbi della nutrizione e dell'alimentazione",

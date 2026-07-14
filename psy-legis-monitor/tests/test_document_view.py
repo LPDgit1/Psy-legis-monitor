@@ -140,6 +140,38 @@ def test_document_view_keeps_noise_topics_when_direct_psychological_signal_exist
     assert not is_excluded_noise_document(row)
 
 
+def test_document_view_excludes_frati_minori_false_positive():
+    row = {
+        "source": "Gazzetta Ufficiale - Serie Generale",
+        "source_type": "html",
+        "act_type": "altro",
+        "found_terms": {"scuola_minori_famiglia": ["minori"]},
+        "score": 1.12,
+        "title": "Fusione di Province dell'Ordine dei Frati Minori Cappuccini",
+        "summary": "Efficacia civile del provvedimento canonico.",
+    }
+
+    assert is_excluded_noise_document(row)
+    assert not is_relevant_primary_document(row)
+    assert not is_potential_primary_document(row)
+
+
+def test_document_view_excludes_fitoterapici_without_psychology_signal():
+    row = {
+        "source": "Ministero della Salute - Trova Norme Salute",
+        "source_type": "html",
+        "act_type": "altro",
+        "found_terms": {"sanita_welfare": ["servizi territoriali"]},
+        "score": 3.2,
+        "title": "Disciplina dei prodotti fitoterapici e degli integratori alimentari",
+        "summary": "Aggiornamento dei requisiti per la commercializzazione.",
+    }
+
+    assert is_excluded_noise_document(row)
+    assert not is_relevant_primary_document(row)
+    assert not is_potential_primary_document(row)
+
+
 def test_document_view_hides_institutional_news_by_default():
     row = {
         "source": "ENPAP - Ente Nazionale Previdenza e Assistenza Psicologi",

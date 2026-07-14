@@ -48,6 +48,10 @@ except ImportError:
             "veterinar",
             "fauna selvatica",
             "sanita animale",
+            "frati minori",
+            "ordine dei frati",
+            "fitoterap",
+            "prodotti fitosanitari",
         ]
         direct = ["psicolog", "psicoterap", "salute mentale", "enpap", "cnop"]
         return any(term in text for term in noise) and not any(term in text for term in direct)
