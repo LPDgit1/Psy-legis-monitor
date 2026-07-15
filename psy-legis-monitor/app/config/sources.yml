@@ -18,18 +18,21 @@ gazzetta:
 
 camera:
   enabled: true
-  auto_update_enabled: false
+  auto_update_enabled: true
   endpoint_url: "https://dati.camera.it/sparql"
   fallback_url: "https://www.camera.it/leg19/141"
   legislature_uri: "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19"
   fetch_method: "auto"
   timeout: 30
-  limit: 30
-  resource_fallback_enabled: true
-  resource_probe_start: 2950
-  resource_probe_max: 180
-  resource_probe_empty_stop: 35
-  resource_probe_html_stop: 5
+  limit: 200
+  snapshot_enabled: true
+  snapshot_path: "data/camera_snapshot.json"
+  snapshot_max_age_hours: 48
+  snapshot_minimum_result_count: 50
+  snapshot_minimum_retained_ratio: 0.8
+  live_fallback_enabled: false
+  live_retry_attempts: 3
+  resource_fallback_enabled: false
 
 senato:
   enabled: true

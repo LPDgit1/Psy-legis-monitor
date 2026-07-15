@@ -1,0 +1,61 @@
+name: Aggiorna snapshot Camera
+
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: camera-snapshot-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update-camera:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Fetch and validate Camera snapshot
+        working-directory: psy-legis-monitor
+        run: python -m app.cli.commands update-camera-snapshot
+
+      - name: Commit validated snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          snapshot="psy-legis-monitor/data/camera_snapshot.json"
+          git add "$snapshot"
+          if git diff --cached --quiet; then
+            echo "Snapshot Camera invariata."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: aggiorna snapshot Camera"
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}"
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            sleep $((attempt * 5))
+          done
+          echo "Push della snapshot non riuscito dopo 3 tentativi." >&2
+          exit 1

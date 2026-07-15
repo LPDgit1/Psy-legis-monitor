@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import re
 from datetime import UTC, date, datetime
+from pathlib import Path
+from time import sleep
 from urllib.parse import urljoin
 from xml.etree import ElementTree
 
@@ -12,9 +14,18 @@ from bs4 import BeautifulSoup, NavigableString, Tag
 
 from app.config.settings import load_yaml, settings
 from app.connectors.base import BaseConnector
+from app.connectors.camera_snapshot import (
+    CAMERA_QUERY_VERSION,
+    CAMERA_SNAPSHOT_SCHEMA_VERSION,
+    CameraSnapshotError,
+    camera_snapshot_status,
+    load_camera_snapshot,
+    parse_snapshot_generated_at,
+    write_camera_snapshot,
+)
 from app.connectors.http_fetch import fetch_text
 from app.connectors.parsing import compact_identifier, first_non_blank, parse_connector_date
-from app.connectors.sparql import SPARQL_USER_AGENT, sparql_query
+from app.connectors.sparql import SPARQL_USER_AGENT, sparql_post_json, sparql_query
 from app.core.schemas import LegislativeDocument
 from app.core.text_cleaning import normalize_text
 
@@ -22,6 +33,7 @@ from app.core.text_cleaning import normalize_text
 CAMERA_ENDPOINT = "https://dati.camera.it/sparql"
 CAMERA_LATEST_BILLS_URL = "https://www.camera.it/leg19/141"
 DEFAULT_LEGISLATURE_URI = "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19"
+DEFAULT_SNAPSHOT_PATH = Path(__file__).resolve().parents[2] / "data" / "camera_snapshot.json"
 RDF_NS = {
     "dc": "http://purl.org/dc/elements/1.1/",
     "dcterms": "http://purl.org/dc/terms/",
@@ -49,6 +61,13 @@ class CameraConnector(BaseConnector):
         resource_probe_max: int | None = None,
         resource_probe_empty_stop: int | None = None,
         resource_probe_html_stop: int | None = None,
+        snapshot_path: str | Path | None = None,
+        prefer_snapshot: bool | None = None,
+        live_fallback_enabled: bool | None = None,
+        snapshot_max_age_hours: float | None = None,
+        snapshot_minimum_result_count: int | None = None,
+        snapshot_minimum_retained_ratio: float | None = None,
+        live_retry_attempts: int | None = None,
     ) -> None:
         config = load_yaml(settings.sources_path).get("camera", {})
         self.enabled = config.get("enabled", True) if enabled is None else enabled
@@ -79,10 +98,115 @@ class CameraConnector(BaseConnector):
             if resource_probe_html_stop is not None
             else config.get("resource_probe_html_stop", 5)
         )
+        configured_snapshot_path = (
+            snapshot_path or config.get("snapshot_path") or DEFAULT_SNAPSHOT_PATH
+        )
+        self.snapshot_path = _resolve_camera_snapshot_path(configured_snapshot_path)
+        self.prefer_snapshot = (
+            config.get("snapshot_enabled", True) if prefer_snapshot is None else prefer_snapshot
+        )
+        self.live_fallback_enabled = (
+            config.get("live_fallback_enabled", False)
+            if live_fallback_enabled is None
+            else live_fallback_enabled
+        )
+        self.snapshot_max_age_hours = float(
+            snapshot_max_age_hours
+            if snapshot_max_age_hours is not None
+            else config.get("snapshot_max_age_hours", 48)
+        )
+        self.snapshot_minimum_result_count = int(
+            snapshot_minimum_result_count
+            if snapshot_minimum_result_count is not None
+            else config.get("snapshot_minimum_result_count", 50)
+        )
+        self.snapshot_minimum_retained_ratio = float(
+            snapshot_minimum_retained_ratio
+            if snapshot_minimum_retained_ratio is not None
+            else config.get("snapshot_minimum_retained_ratio", 0.8)
+        )
+        self.live_retry_attempts = min(
+            5,
+            _bounded_limit(
+                live_retry_attempts
+                if live_retry_attempts is not None
+                else config.get("live_retry_attempts", 3)
+            ),
+        )
 
     def fetch_documents(self) -> list[LegislativeDocument]:
         if not self.enabled:
             return []
+        if self.prefer_snapshot:
+            try:
+                return self.fetch_snapshot_documents()
+            except CameraSnapshotError:
+                if not self.live_fallback_enabled:
+                    raise
+        return self._fetch_legacy_live_documents()
+
+    def fetch_snapshot_documents(self) -> list[LegislativeDocument]:
+        """Read normalized documents from the validated repository snapshot."""
+
+        payload = load_camera_snapshot(self.snapshot_path)
+        fetched_at = parse_snapshot_generated_at(payload["generated_at"])
+        documents = [
+            _camera_row_to_document(row, fetched_at=fetched_at)
+            for row in payload["rows"]
+            if row.get("title")
+        ]
+        for document in documents:
+            document.metadata["snapshot_schema_version"] = CAMERA_SNAPSHOT_SCHEMA_VERSION
+            document.metadata["camera_query_version"] = CAMERA_QUERY_VERSION
+        return documents
+
+    def fetch_live_documents(self) -> list[LegislativeDocument]:
+        """Fetch Camera acts through one row-stable SPARQL discovery query."""
+
+        fetched_at = datetime.now(UTC)
+        rows = _fetch_camera_sparql_rows(
+            self.endpoint_url,
+            _build_camera_query(self.legislature_uri, self.limit),
+            timeout=self.timeout,
+            attempts=self.live_retry_attempts,
+        )
+        documents = [
+            _camera_row_to_document(row, fetched_at=fetched_at) for row in rows if row.get("title")
+        ]
+        if not documents:
+            raise RuntimeError("Camera SPARQL ha risposto senza atti utilizzabili.")
+        return documents
+
+    def update_snapshot(self, snapshot_path: str | Path | None = None) -> dict[str, object]:
+        """Fetch, validate, and atomically publish a new last-known-good snapshot."""
+
+        rows = _fetch_camera_sparql_rows(
+            self.endpoint_url,
+            _build_camera_query(self.legislature_uri, self.limit),
+            timeout=self.timeout,
+            attempts=self.live_retry_attempts,
+        )
+        target = _resolve_camera_snapshot_path(snapshot_path or self.snapshot_path)
+        return write_camera_snapshot(
+            rows,
+            target,
+            endpoint_url=self.endpoint_url,
+            legislature_uri=self.legislature_uri,
+            minimum_result_count=self.snapshot_minimum_result_count,
+            minimum_retained_ratio=self.snapshot_minimum_retained_ratio,
+        )
+
+    def diagnose_snapshot(self) -> dict[str, object]:
+        """Describe snapshot health without contacting Camera from Streamlit."""
+
+        return camera_snapshot_status(
+            self.snapshot_path,
+            max_age_hours=self.snapshot_max_age_hours,
+        )
+
+    def _fetch_legacy_live_documents(self) -> list[LegislativeDocument]:
+        """Retain explicit legacy fallbacks for local troubleshooting only."""
+
         fetched_at = datetime.now(UTC)
         sparql_error: Exception | None = None
         try:
@@ -235,29 +359,24 @@ def _build_camera_query(legislature_uri: str, limit: int) -> str:
     return f"""
 PREFIX ocd: <http://dati.camera.it/ocd/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX dct: <http://purl.org/dc/terms/>
 
-SELECT DISTINCT ?atto ?title ?description ?date ?identifier ?type ?creator ?ref WHERE {{
+SELECT DISTINCT ?atto ?title ?date ?identifier WHERE {{
   ?atto a ocd:atto ;
         dc:title ?title ;
         dc:date ?date ;
+        dc:identifier ?identifier ;
         ocd:rif_leg <{legislature_uri}> .
-  OPTIONAL {{ ?atto dc:description ?description }}
-  OPTIONAL {{ ?atto dc:identifier ?identifier }}
-  OPTIONAL {{ ?atto dc:type ?type }}
-  OPTIONAL {{ ?atto dc:creator ?creator }}
-  OPTIONAL {{ ?atto dct:isReferencedBy ?ref }}
 }}
-ORDER BY DESC(?date)
+ORDER BY DESC(?date) DESC(?identifier)
 LIMIT {limit}
 """.strip()
 
 
 def _camera_row_to_document(row: dict[str, str], *, fetched_at: datetime) -> LegislativeDocument:
-    title = normalize_text(row["title"])
-    description = normalize_text(row.get("description"))
+    title = _clean_camera_text(row["title"])
+    description = _clean_camera_text(row.get("description"))
     identifier = compact_identifier(first_non_blank(row.get("identifier"), _tail(row.get("atto"))))
-    source_url = first_non_blank(row.get("ref"), row.get("atto"))
+    source_url = first_non_blank(row.get("ref"), _camera_public_url(identifier), row.get("atto"))
     presented = parse_connector_date(row.get("date"))
     text = "\n\n".join(
         part
@@ -289,9 +408,59 @@ def _camera_row_to_document(row: dict[str, str], *, fetched_at: datetime) -> Leg
             "raw_date": row.get("date"),
             "camera_type": row.get("type"),
             "creator": row.get("creator"),
-            "accessed_at": fetched_at.isoformat(),
+            "camera_query_version": CAMERA_QUERY_VERSION,
         },
     )
+
+
+def _fetch_camera_sparql_rows(
+    endpoint_url: str,
+    query: str,
+    *,
+    timeout: float,
+    attempts: int,
+) -> list[dict[str, str]]:
+    errors: list[Exception] = []
+    for attempt in range(attempts):
+        try:
+            rows = sparql_post_json(endpoint_url, query, timeout=timeout)
+            if not rows:
+                raise RuntimeError("Camera SPARQL ha restituito zero righe.")
+            return rows
+        except Exception as exc:
+            errors.append(exc)
+            if _is_camera_html_error(exc) or attempt + 1 >= attempts:
+                break
+            sleep(min(30, 2 * (4**attempt)))
+    detail = normalize_text(str(errors[-1]))[:400] if errors else "errore sconosciuto"
+    raise RuntimeError(f"Camera SPARQL non disponibile; snapshot precedente conservata. {detail}")
+
+
+def _is_camera_html_error(exc: Exception) -> bool:
+    text = str(exc).lower()
+    return "sparql in html" in text or "json valido. risposta sparql in html" in text
+
+
+def _camera_public_url(identifier: str | None) -> str | None:
+    if not identifier:
+        return None
+    matches = re.findall(r"\d+", identifier)
+    if not matches:
+        return None
+    number = matches[-1]
+    return f"https://www.camera.it/leg19/126?leg=19&idDocumento={number}"
+
+
+def _clean_camera_text(value: str | None) -> str:
+    decoded = normalize_text(value)
+    return normalize_text(re.sub(r"</?[^>]+>", "", decoded))
+
+
+def _resolve_camera_snapshot_path(value: str | Path) -> Path:
+    path = Path(value)
+    if path.is_absolute():
+        return path
+    return Path(__file__).resolve().parents[2] / path
 
 
 def fetch_camera_resource_documents(

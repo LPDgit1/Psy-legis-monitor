@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta
 from html import escape, unescape
@@ -160,7 +159,7 @@ def rows_by_document(rows: list[dict]) -> dict[int, list[dict]]:
 
 def refresh_data() -> None:
     st.session_state["connector_issues"] = []
-    st.cache_data.clear()
+    load_data.clear()
     st.rerun()
 
 
@@ -391,13 +390,13 @@ def show_connector_warning(connector_name: str, exc: Exception) -> None:
 
 def compact_connector_error(connector_name: str, exc: Exception) -> str:
     text = clean_display_text(str(exc))
-    if connector_name == "camera" and (
-        "SPARQL" in text or "fallback HTML" in text or "pagina tecnica/cache" in text
-    ):
+    if connector_name == "camera" and "Snapshot Camera" in text:
         return (
-            "Camera non interrogabile in questa esecuzione. La fonte e opzionale: "
-            "l'aggiornamento ordinario usa Gazzetta, Senato, Normattiva e le altre fonti disponibili."
+            "Snapshot Camera non ancora disponibile o non valida. "
+            "Eseguire il workflow GitHub 'Aggiorna snapshot Camera'."
         )
+    if connector_name == "camera" and "SPARQL" in text:
+        return "Camera non aggiornata; l'ultima snapshot valida e stata conservata."
     return text[:240] + "..." if len(text) > 240 else text
 
 
@@ -407,33 +406,24 @@ def camera_auto_update_enabled() -> bool:
 
 
 def render_camera_diagnostics(diagnostics: dict[str, object]) -> None:
-    sparql_status = diagnostics.get("sparql_status")
-    resource_status = diagnostics.get("resource_status")
-    fallback_status = diagnostics.get("fallback_status")
-    if sparql_status == "ok":
-        st.success("Camera utilizzabile: SPARQL risponde correttamente.")
-    elif resource_status == "ok":
-        st.warning("SPARQL Camera non risponde, ma il fallback RDF ufficiale e utilizzabile.")
-    elif resource_status == "html_blocked" and fallback_status == "blocked_by_browser_check":
-        st.info(
-            "Camera non utilizzabile da questo ambiente: SPARQL e RDF restituiscono HTML tecnico, "
-            "mentre www.camera.it mostra un browser-check. L'app la tratta come fonte manuale/opzionale."
+    status = diagnostics.get("snapshot_status")
+    if status == "ok":
+        st.success(
+            f"Snapshot Camera disponibile: {diagnostics.get('result_count', 0)} atti, "
+            f"aggiornata il {diagnostics.get('generated_at', '')}."
+        )
+    elif status == "stale":
+        st.warning(
+            f"Snapshot Camera disponibile ma non recente: "
+            f"{diagnostics.get('age_hours', 0)} ore. I dati restano consultabili."
         )
     else:
-        st.warning("Camera non ha restituito dati utilizzabili in questa esecuzione.")
-    strategy = clean_display_text(diagnostics.get("recommended_strategy"))
-    if strategy:
-        st.caption(strategy)
-    detail_json = json.dumps(diagnostics, ensure_ascii=False, indent=2, default=str)
-    with st.expander("Dettagli tecnici Camera"):
-        st.json(diagnostics)
-        st.download_button(
-            "Scarica diagnostica JSON",
-            data=detail_json,
-            file_name="diagnostica-camera.json",
-            mime="application/json",
-            use_container_width=True,
-        )
+        message = clean_display_text(diagnostics.get("message"))
+        st.warning(message or "Snapshot Camera non disponibile.")
+    st.caption(
+        "La Camera viene acquisita fuori dalla sessione Streamlit e letta "
+        "dall'ultima snapshot valida."
+    )
 
 
 def render_table(rows: list[dict], *, max_rows: int = 100) -> None:
@@ -670,16 +660,16 @@ with st.sidebar:
         left_button, right_button = st.columns(2)
         if left_button.button("Gazzetta", use_container_width=True):
             ingest_individual("gazzetta", "Gazzetta")
-        if right_button.button("Camera manuale", use_container_width=True):
+        if right_button.button("Camera", use_container_width=True):
             ingest_individual("camera", "Camera")
-        if st.button("Diagnostica Camera", use_container_width=True):
+        if st.button("Stato Camera", use_container_width=True):
             from app.connectors.camera import CameraConnector
 
             try:
-                diagnostics = CameraConnector().diagnose_fetch()
+                diagnostics = CameraConnector().diagnose_snapshot()
                 render_camera_diagnostics(diagnostics)
             except Exception as exc:
-                st.error(f"Diagnostica Camera non riuscita: {compact_connector_error('camera', exc)}")
+                st.error(f"Stato Camera non disponibile: {compact_connector_error('camera', exc)}")
         left_button, right_button = st.columns(2)
         if left_button.button("Senato", use_container_width=True):
             ingest_individual("senato", "Senato")

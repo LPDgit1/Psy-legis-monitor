@@ -58,6 +58,12 @@ def sparql_query(
     raise RuntimeError(f"Endpoint SPARQL non ha restituito risultati JSON/XML validi. {detail}")
 
 
+def sparql_post_json(endpoint_url: str, query: str, *, timeout: float = 30) -> list[dict[str, str]]:
+    """Run one standards-compliant SPARQL POST without same-endpoint format fallbacks."""
+
+    return _sparql_post_json(endpoint_url, query, timeout=timeout)
+
+
 def _should_try_httpx_post(method: str) -> bool:
     return method in {"auto", "httpx"}
 
@@ -72,22 +78,18 @@ def _sparql_post_json(endpoint_url: str, query: str, *, timeout: float) -> list[
         "Content-Type": "application/x-www-form-urlencoded",
         "User-Agent": SPARQL_USER_AGENT,
     }
-    errors: list[Exception] = []
-    for response_format in ("application/sparql-results+json", "json"):
-        response = httpx.post(
-            endpoint_url,
-            data={"query": query, "format": response_format},
-            headers=headers,
-            timeout=timeout,
-            follow_redirects=True,
-        )
-        response.raise_for_status()
-        try:
-            return parse_sparql_json(response.text)
-        except ValueError as exc:
-            errors.append(exc)
-    detail = "; ".join(str(error) for error in errors[-2:])
-    raise RuntimeError(f"POST SPARQL non ha restituito JSON valido. {detail}")
+    response = httpx.post(
+        endpoint_url,
+        data={"query": query, "format": "application/sparql-results+json"},
+        headers=headers,
+        timeout=timeout,
+        follow_redirects=True,
+    )
+    response.raise_for_status()
+    try:
+        return parse_sparql_json(response.text)
+    except ValueError as exc:
+        raise RuntimeError(f"POST SPARQL non ha restituito JSON valido. {exc}") from exc
 
 
 def _sparql_post_json_with_powershell(endpoint_url: str, query: str, *, timeout: float) -> list[dict[str, str]]:

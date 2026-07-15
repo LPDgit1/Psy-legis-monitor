@@ -103,6 +103,7 @@ psy-legis ingest-gazzetta --max-issues 2
 psy-legis ingest-rss
 psy-legis ingest-pages
 psy-legis ingest-camera
+psy-legis update-camera-snapshot
 psy-legis ingest-senato
 psy-legis ingest-normattiva
 psy-legis ingest-ministero-salute
@@ -143,7 +144,7 @@ black --check .
 
 * Gazzetta Ufficiale - Serie Generale, ultimi 30 giorni.
 * Gazzetta Ufficiale - 3a Serie Speciale Regioni, ultimi 30 giorni.
-* Camera dei deputati - Dati Camera, via endpoint SPARQL.
+* Camera dei deputati - Dati Camera, via snapshot SPARQL validata e last-known-good.
 * Senato della Repubblica - dati.senato.it, via endpoint SPARQL.
 * Normattiva, aggiornamenti in multivigenza e pagina Parlamento delle leggi approvate non ancora pubblicate.
 * Ministero della Salute - Norme e atti, connettore HTML; la prova live dalla shell puo' essere bloccata dalla validazione browser Gcore del sito.
@@ -158,6 +159,24 @@ black --check .
 * Garante per la protezione dei dati personali, pagina news/provvedimenti.
 
 Su Windows i connettori web usano `fetch_method: auto`, che ricorre a PowerShell per aggirare limiti TLS/OpenSSL di alcuni runtime Python embedded.
+
+### Aggiornamento Camera
+
+La dashboard non interroga `dati.camera.it` durante il refresh interattivo. Legge invece
+`data/camera_snapshot.json`, prodotto con una query SPARQL essenziale e validato prima della
+sostituzione. Se l'endpoint restituisce HTML tecnico o una risposta incompleta, il file precedente
+non viene modificato.
+
+Il repository GitHub esegue ogni giorno il workflow `Aggiorna snapshot Camera`. Per aggiornare
+manualmente la snapshot in un ambiente con accesso all'endpoint:
+
+```bash
+python -m app.cli.commands update-camera-snapshot
+```
+
+Il workflow richiede il permesso GitHub Actions `Read and write permissions` per committare la
+snapshot aggiornata. L'autore automatico e `github-actions[bot]`, quindi non usa l'indirizzo email
+privato dell'account GitHub.
 
 Dettaglio operativo e backlog fonti: `docs/sources.md`.
 

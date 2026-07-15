@@ -351,6 +351,7 @@ def test_camera_connector_falls_back_to_latest_bills_page(monkeypatch):
         fetch_method="httpx",
         limit=5,
         resource_fallback_enabled=False,
+        prefer_snapshot=False,
     ).fetch_documents()
 
     assert len(documents) == 1
@@ -374,6 +375,7 @@ def test_camera_connector_returns_empty_when_both_camera_paths_have_no_documents
             fetch_method="httpx",
             limit=5,
             resource_fallback_enabled=False,
+            prefer_snapshot=False,
         ).fetch_documents()
         == []
     )
@@ -465,9 +467,11 @@ def test_camera_connector_uses_rdf_resource_fallback_when_sparql_is_blocked(monk
     documents = CameraConnector(
         fetch_method="httpx",
         limit=1,
+        resource_fallback_enabled=True,
         resource_probe_start=2999,
         resource_probe_max=5,
         resource_probe_empty_stop=2,
+        prefer_snapshot=False,
     ).fetch_documents()
 
     assert len(documents) == 1
@@ -560,7 +564,11 @@ def test_camera_diagnostics_detects_browser_check_page(monkeypatch):
     monkeypatch.setattr("app.connectors.camera.sparql_query", fake_sparql_query)
     monkeypatch.setattr("app.connectors.camera.fetch_text", fake_fetch_text)
 
-    diagnostics = CameraConnector(fetch_method="httpx", limit=5).diagnose_fetch()
+    diagnostics = CameraConnector(
+        fetch_method="httpx",
+        limit=5,
+        resource_fallback_enabled=True,
+    ).diagnose_fetch()
 
     assert diagnostics["diagnostic_schema_version"] == 9
     assert diagnostics["sparql_status"] == "ok"
@@ -602,7 +610,11 @@ def test_camera_diagnostics_reports_rdf_resource_fallback(monkeypatch):
     monkeypatch.setattr("app.connectors.camera.fetch_camera_resource_documents", fake_resource_documents)
     monkeypatch.setattr("app.connectors.camera.fetch_text", fake_fetch_text)
 
-    diagnostics = CameraConnector(fetch_method="httpx", limit=5).diagnose_fetch()
+    diagnostics = CameraConnector(
+        fetch_method="httpx",
+        limit=5,
+        resource_fallback_enabled=True,
+    ).diagnose_fetch()
 
     assert diagnostics["diagnostic_schema_version"] == 9
     assert diagnostics["sparql_status"] == "error"
@@ -635,6 +647,7 @@ def test_camera_diagnostics_reports_rdf_html_block_without_crashing(monkeypatch)
     diagnostics = CameraConnector(
         fetch_method="httpx",
         limit=5,
+        resource_fallback_enabled=True,
         resource_probe_start=3000,
         resource_probe_max=3,
         resource_probe_empty_stop=2,

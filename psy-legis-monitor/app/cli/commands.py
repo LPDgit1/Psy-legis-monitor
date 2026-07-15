@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
 from collections import Counter
@@ -66,6 +67,26 @@ def cmd_ingest_camera(_: argparse.Namespace) -> None:
     from app.connectors.camera import CameraConnector
 
     _ingest_connector("Camera", CameraConnector().fetch_documents())
+
+
+def cmd_update_camera_snapshot(args: argparse.Namespace) -> None:
+    from app.connectors.camera import CameraConnector
+
+    connector = CameraConnector(prefer_snapshot=False, live_fallback_enabled=False)
+    payload = connector.update_snapshot(args.output)
+    print(
+        json.dumps(
+            {
+                "status": "ok",
+                "snapshot": str(connector.snapshot_path if args.output is None else args.output),
+                "generated_at": payload["generated_at"],
+                "result_count": payload["result_count"],
+                "newest_identifier": payload["newest_identifier"],
+                "newest_date": payload["newest_date"],
+            },
+            ensure_ascii=False,
+        )
+    )
 
 
 def cmd_ingest_senato(_: argparse.Namespace) -> None:
@@ -454,6 +475,10 @@ def build_parser() -> argparse.ArgumentParser:
 
     ingest_camera = subparsers.add_parser("ingest-camera")
     ingest_camera.set_defaults(func=cmd_ingest_camera)
+
+    update_camera_snapshot = subparsers.add_parser("update-camera-snapshot")
+    update_camera_snapshot.add_argument("--output")
+    update_camera_snapshot.set_defaults(func=cmd_update_camera_snapshot)
 
     ingest_senato = subparsers.add_parser("ingest-senato")
     ingest_senato.set_defaults(func=cmd_ingest_senato)
