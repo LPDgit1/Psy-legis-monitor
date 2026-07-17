@@ -1,7 +1,10 @@
+import json
+from argparse import Namespace
 from datetime import UTC, datetime, timedelta
 
 import pytest
 
+from app.cli.commands import cmd_update_camera_snapshot
 from app.connectors.camera import CameraConnector, _build_camera_query
 from app.connectors.camera_snapshot import (
     CameraSnapshotError,
@@ -198,3 +201,49 @@ def test_camera_query_requires_one_complete_row_per_act():
     assert "SELECT DISTINCT ?atto ?title ?date ?identifier" in query
     assert "dc:identifier ?identifier" in query
     assert "OPTIONAL" not in query
+
+
+def test_camera_snapshot_cli_retains_valid_snapshot_on_fetch_error(
+    monkeypatch, tmp_path, capsys
+):
+    path = tmp_path / "camera.json"
+    write_camera_snapshot(
+        ROWS,
+        path,
+        endpoint_url="https://dati.camera.it/sparql",
+        legislature_uri="http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
+        generated_at=datetime(2026, 7, 16, 8, 0, tzinfo=UTC),
+    )
+    previous = path.read_bytes()
+
+    def blocked_update(self, snapshot_path=None):
+        raise RuntimeError("Risposta SPARQL in HTML invece che JSON")
+
+    monkeypatch.setattr(CameraConnector, "update_snapshot", blocked_update)
+
+    cmd_update_camera_snapshot(
+        Namespace(output=str(path), keep_last_good_on_error=True)
+    )
+
+    captured = capsys.readouterr()
+    result = json.loads(captured.out)
+    assert result["status"] == "retained"
+    assert result["generated_at"] == "2026-07-16T08:00:00Z"
+    assert result["result_count"] == 2
+    assert "::warning title=Snapshot Camera non aggiornata::" in captured.err
+    assert path.read_bytes() == previous
+
+
+def test_camera_snapshot_cli_fails_without_valid_snapshot(monkeypatch, tmp_path):
+    def blocked_update(self, snapshot_path=None):
+        raise RuntimeError("Risposta SPARQL in HTML invece che JSON")
+
+    monkeypatch.setattr(CameraConnector, "update_snapshot", blocked_update)
+
+    with pytest.raises(RuntimeError, match="nessuna snapshot valida"):
+        cmd_update_camera_snapshot(
+            Namespace(
+                output=str(tmp_path / "missing.json"),
+                keep_last_good_on_error=True,
+            )
+        )

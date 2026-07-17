@@ -174,6 +174,11 @@ manualmente la snapshot in un ambiente con accesso all'endpoint:
 python -m app.cli.commands update-camera-snapshot
 ```
 
+Il workflow schedulato usa anche `--keep-last-good-on-error`: se `dati.camera.it`
+è temporaneamente indisponibile, mantiene la snapshot già validata e segnala un
+warning senza interrompere il deployment. L'assenza di una snapshot valida resta
+invece un errore bloccante.
+
 Il workflow richiede il permesso GitHub Actions `Read and write permissions` per committare la
 snapshot aggiornata. L'autore automatico e `github-actions[bot]`, quindi non usa l'indirizzo email
 privato dell'account GitHub.

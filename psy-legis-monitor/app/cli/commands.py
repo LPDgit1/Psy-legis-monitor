@@ -71,22 +71,49 @@ def cmd_ingest_camera(_: argparse.Namespace) -> None:
 
 def cmd_update_camera_snapshot(args: argparse.Namespace) -> None:
     from app.connectors.camera import CameraConnector
+    from app.connectors.camera_snapshot import CameraSnapshotError, load_camera_snapshot
 
     connector = CameraConnector(prefer_snapshot=False, live_fallback_enabled=False)
-    payload = connector.update_snapshot(args.output)
+    target = connector.snapshot_path if args.output is None else Path(args.output)
+    try:
+        payload = connector.update_snapshot(args.output)
+        status = "ok"
+        update_error = None
+    except (RuntimeError, CameraSnapshotError) as exc:
+        if not getattr(args, "keep_last_good_on_error", False):
+            raise
+        try:
+            payload = load_camera_snapshot(target)
+        except CameraSnapshotError:
+            raise RuntimeError(
+                "Aggiornamento Camera fallito e nessuna snapshot valida e disponibile."
+            ) from exc
+        status = "retained"
+        update_error = " ".join(str(exc).split())[:500]
+        warning = _github_actions_escape(
+            f"Fonte Camera temporaneamente non disponibile; conservata la snapshot valida "
+            f"del {payload['generated_at']}. {update_error}"
+        )
+        print(f"::warning title=Snapshot Camera non aggiornata::{warning}", file=sys.stderr)
+
     print(
         json.dumps(
             {
-                "status": "ok",
-                "snapshot": str(connector.snapshot_path if args.output is None else args.output),
+                "status": status,
+                "snapshot": str(target),
                 "generated_at": payload["generated_at"],
                 "result_count": payload["result_count"],
                 "newest_identifier": payload["newest_identifier"],
                 "newest_date": payload["newest_date"],
+                **({"update_error": update_error} if update_error else {}),
             },
             ensure_ascii=False,
         )
     )
+
+
+def _github_actions_escape(value: str) -> str:
+    return value.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
 
 
 def cmd_ingest_senato(_: argparse.Namespace) -> None:
@@ -478,6 +505,11 @@ def build_parser() -> argparse.ArgumentParser:
 
     update_camera_snapshot = subparsers.add_parser("update-camera-snapshot")
     update_camera_snapshot.add_argument("--output")
+    update_camera_snapshot.add_argument(
+        "--keep-last-good-on-error",
+        action="store_true",
+        help="Conserva una snapshot esistente e valida se la fonte non risponde.",
+    )
     update_camera_snapshot.set_defaults(func=cmd_update_camera_snapshot)
 
     ingest_senato = subparsers.add_parser("ingest-senato")
