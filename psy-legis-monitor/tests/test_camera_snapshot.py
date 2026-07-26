@@ -4,7 +4,7 @@ from datetime import UTC, datetime, timedelta
 
 import pytest
 
-from app.cli.commands import cmd_update_camera_snapshot
+from app.cli.commands import cmd_check_camera_snapshot, cmd_update_camera_snapshot
 from app.connectors.camera import CameraConnector, _build_camera_query
 from app.connectors.camera_snapshot import (
     CameraSnapshotError,
@@ -151,6 +151,27 @@ def test_camera_snapshot_update_uses_row_stable_query(monkeypatch, tmp_path):
     assert "LIMIT 200" in captured["query"]
 
 
+def test_camera_snapshot_update_can_use_curl_transport(monkeypatch, tmp_path):
+    captured: dict[str, object] = {}
+
+    def fake_curl_post(endpoint_url: str, query: str, *, timeout: float):
+        captured.update(endpoint_url=endpoint_url, query=query, timeout=timeout)
+        return ROWS
+
+    monkeypatch.setattr("app.connectors.camera.sparql_post_json_with_curl", fake_curl_post)
+    connector = CameraConnector(
+        snapshot_path=tmp_path / "camera.json",
+        prefer_snapshot=False,
+        snapshot_minimum_result_count=1,
+    )
+
+    payload = connector.update_snapshot(transport="curl")
+
+    assert payload["result_count"] == 2
+    assert captured["endpoint_url"] == "https://dati.camera.it/sparql"
+    assert "LIMIT 200" in captured["query"]
+
+
 def test_camera_html_response_stops_without_retry(monkeypatch):
     calls = 0
 
@@ -216,13 +237,18 @@ def test_camera_snapshot_cli_retains_valid_snapshot_on_fetch_error(
     )
     previous = path.read_bytes()
 
-    def blocked_update(self, snapshot_path=None):
+    def blocked_update(self, snapshot_path=None, *, transport="httpx"):
         raise RuntimeError("Risposta SPARQL in HTML invece che JSON")
 
     monkeypatch.setattr(CameraConnector, "update_snapshot", blocked_update)
 
     cmd_update_camera_snapshot(
-        Namespace(output=str(path), keep_last_good_on_error=True)
+        Namespace(
+            output=str(path),
+            transport="httpx",
+            keep_last_good_on_error=True,
+            quiet_retained=False,
+        )
     )
 
     captured = capsys.readouterr()
@@ -235,7 +261,7 @@ def test_camera_snapshot_cli_retains_valid_snapshot_on_fetch_error(
 
 
 def test_camera_snapshot_cli_fails_without_valid_snapshot(monkeypatch, tmp_path):
-    def blocked_update(self, snapshot_path=None):
+    def blocked_update(self, snapshot_path=None, *, transport="httpx"):
         raise RuntimeError("Risposta SPARQL in HTML invece che JSON")
 
     monkeypatch.setattr(CameraConnector, "update_snapshot", blocked_update)
@@ -244,6 +270,44 @@ def test_camera_snapshot_cli_fails_without_valid_snapshot(monkeypatch, tmp_path)
         cmd_update_camera_snapshot(
             Namespace(
                 output=str(tmp_path / "missing.json"),
+                transport="httpx",
                 keep_last_good_on_error=True,
+                quiet_retained=False,
             )
         )
+
+
+def test_camera_snapshot_freshness_check_rejects_old_snapshot(tmp_path, capsys):
+    path = tmp_path / "camera.json"
+    write_camera_snapshot(
+        ROWS,
+        path,
+        endpoint_url="https://dati.camera.it/sparql",
+        legislature_uri="http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
+        generated_at=datetime.now(UTC) - timedelta(days=8),
+    )
+
+    with pytest.raises(SystemExit) as exc_info:
+        cmd_check_camera_snapshot(Namespace(snapshot=str(path), max_age_hours=168))
+
+    captured = capsys.readouterr()
+    assert exc_info.value.code == 1
+    assert '"snapshot_status": "stale"' in captured.out
+    assert "::error title=Snapshot Camera troppo vecchia::" in captured.err
+
+
+def test_camera_snapshot_freshness_check_accepts_recent_snapshot(tmp_path, capsys):
+    path = tmp_path / "camera.json"
+    write_camera_snapshot(
+        ROWS,
+        path,
+        endpoint_url="https://dati.camera.it/sparql",
+        legislature_uri="http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
+        generated_at=datetime.now(UTC) - timedelta(hours=12),
+    )
+
+    cmd_check_camera_snapshot(Namespace(snapshot=str(path), max_age_hours=168))
+
+    captured = capsys.readouterr()
+    assert '"snapshot_status": "ok"' in captured.out
+    assert captured.err == ""

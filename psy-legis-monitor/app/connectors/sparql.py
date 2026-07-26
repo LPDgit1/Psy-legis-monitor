@@ -64,6 +64,60 @@ def sparql_post_json(endpoint_url: str, query: str, *, timeout: float = 30) -> l
     return _sparql_post_json(endpoint_url, query, timeout=timeout)
 
 
+def sparql_post_json_with_curl(
+    endpoint_url: str,
+    query: str,
+    *,
+    timeout: float = 30,
+) -> list[dict[str, str]]:
+    """Run the same SPARQL POST through curl as an independent transport."""
+
+    executable = _curl_executable()
+    if executable is None:
+        raise RuntimeError("curl non disponibile per il trasporto SPARQL alternativo.")
+
+    command = [
+        executable,
+        "--location",
+        "--fail-with-body",
+        "--silent",
+        "--show-error",
+        "--max-time",
+        str(max(1, int(timeout))),
+        "--header",
+        "Accept: application/sparql-results+json",
+        "--header",
+        "Content-Type: application/x-www-form-urlencoded",
+        "--user-agent",
+        SPARQL_USER_AGENT,
+        "--data-urlencode",
+        f"query={query}",
+        "--data-urlencode",
+        "format=application/sparql-results+json",
+        endpoint_url,
+    ]
+    if os.name == "nt":
+        command.insert(1, "--ssl-no-revoke")
+
+    try:
+        completed = subprocess.run(
+            command,
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=max(1.0, timeout + 5),
+        )
+    except subprocess.CalledProcessError as exc:
+        detail = normalize_text(exc.stderr or exc.stdout)[:300]
+        raise RuntimeError(f"curl SPARQL non riuscito. {detail}") from exc
+    except subprocess.TimeoutExpired as exc:
+        raise RuntimeError("curl SPARQL ha superato il tempo massimo.") from exc
+
+    return parse_sparql_json(completed.stdout)
+
+
 def _should_try_httpx_post(method: str) -> bool:
     return method in {"auto", "httpx"}
 
@@ -132,6 +186,10 @@ def _sparql_post_json_with_powershell(endpoint_url: str, query: str, *, timeout:
 
 def _powershell_executable() -> str | None:
     return shutil.which("powershell.exe") or shutil.which("powershell") or shutil.which("pwsh")
+
+
+def _curl_executable() -> str | None:
+    return shutil.which("curl") or shutil.which("curl.exe")
 
 
 def parse_sparql_json(payload: str) -> list[dict[str, str]]:

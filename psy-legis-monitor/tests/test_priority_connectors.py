@@ -12,7 +12,12 @@ from app.connectors.normattiva import (
 )
 from app.connectors.regions.veneto import parse_veneto_bur_latest
 from app.connectors.senato import _senato_row_to_document
-from app.connectors.sparql import parse_sparql_json, parse_sparql_xml, sparql_query
+from app.connectors.sparql import (
+    parse_sparql_json,
+    parse_sparql_xml,
+    sparql_post_json_with_curl,
+    sparql_query,
+)
 
 
 def test_parse_sparql_xml_extracts_bindings():
@@ -51,6 +56,44 @@ def test_parse_sparql_json_extracts_bindings():
     rows = parse_sparql_json(payload)
 
     assert rows == [{"atto": "http://example.test/atto/1", "title": "Proposta su consultori"}]
+
+
+def test_sparql_curl_transport_parses_json(monkeypatch):
+    captured: dict[str, object] = {}
+    payload = """
+    {
+      "head": {"vars": ["atto", "title"]},
+      "results": {
+        "bindings": [
+          {
+            "atto": {"type": "uri", "value": "http://example.test/atto/1"},
+            "title": {"type": "literal", "value": "Proposta su consultori"}
+          }
+        ]
+      }
+    }
+    """
+
+    class Completed:
+        stdout = payload
+        stderr = ""
+
+    def fake_run(command, **kwargs):
+        captured.update(command=command, kwargs=kwargs)
+        return Completed()
+
+    monkeypatch.setattr("app.connectors.sparql._curl_executable", lambda: "curl")
+    monkeypatch.setattr("app.connectors.sparql.subprocess.run", fake_run)
+
+    rows = sparql_post_json_with_curl(
+        "https://example.test/sparql",
+        "SELECT * WHERE { ?s ?p ?o } LIMIT 1",
+        timeout=12,
+    )
+
+    assert rows == [{"atto": "http://example.test/atto/1", "title": "Proposta su consultori"}]
+    assert "query=SELECT * WHERE { ?s ?p ?o } LIMIT 1" in captured["command"]
+    assert captured["kwargs"]["check"] is True
 
 
 def test_sparql_query_uses_post_json_on_httpx(monkeypatch):

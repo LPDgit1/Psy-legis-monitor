@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from collections.abc import Callable
 from datetime import UTC, date, datetime
 from pathlib import Path
 from time import sleep
@@ -25,7 +26,12 @@ from app.connectors.camera_snapshot import (
 )
 from app.connectors.http_fetch import fetch_text
 from app.connectors.parsing import compact_identifier, first_non_blank, parse_connector_date
-from app.connectors.sparql import SPARQL_USER_AGENT, sparql_post_json, sparql_query
+from app.connectors.sparql import (
+    SPARQL_USER_AGENT,
+    sparql_post_json,
+    sparql_post_json_with_curl,
+    sparql_query,
+)
 from app.core.schemas import LegislativeDocument
 from app.core.text_cleaning import normalize_text
 
@@ -169,6 +175,7 @@ class CameraConnector(BaseConnector):
             _build_camera_query(self.legislature_uri, self.limit),
             timeout=self.timeout,
             attempts=self.live_retry_attempts,
+            post_json=sparql_post_json,
         )
         documents = [
             _camera_row_to_document(row, fetched_at=fetched_at) for row in rows if row.get("title")
@@ -177,14 +184,29 @@ class CameraConnector(BaseConnector):
             raise RuntimeError("Camera SPARQL ha risposto senza atti utilizzabili.")
         return documents
 
-    def update_snapshot(self, snapshot_path: str | Path | None = None) -> dict[str, object]:
+    def update_snapshot(
+        self,
+        snapshot_path: str | Path | None = None,
+        *,
+        transport: str = "httpx",
+    ) -> dict[str, object]:
         """Fetch, validate, and atomically publish a new last-known-good snapshot."""
+
+        normalized_transport = normalize_text(transport).lower()
+        fetchers: dict[str, Callable[..., list[dict[str, str]]]] = {
+            "httpx": sparql_post_json,
+            "curl": sparql_post_json_with_curl,
+        }
+        post_json = fetchers.get(normalized_transport)
+        if post_json is None:
+            raise ValueError(f"Trasporto Camera non supportato: {transport}")
 
         rows = _fetch_camera_sparql_rows(
             self.endpoint_url,
             _build_camera_query(self.legislature_uri, self.limit),
             timeout=self.timeout,
             attempts=self.live_retry_attempts,
+            post_json=post_json,
         )
         target = _resolve_camera_snapshot_path(snapshot_path or self.snapshot_path)
         return write_camera_snapshot(
@@ -419,11 +441,12 @@ def _fetch_camera_sparql_rows(
     *,
     timeout: float,
     attempts: int,
+    post_json: Callable[..., list[dict[str, str]]],
 ) -> list[dict[str, str]]:
     errors: list[Exception] = []
     for attempt in range(attempts):
         try:
-            rows = sparql_post_json(endpoint_url, query, timeout=timeout)
+            rows = post_json(endpoint_url, query, timeout=timeout)
             if not rows:
                 raise RuntimeError("Camera SPARQL ha restituito zero righe.")
             return rows

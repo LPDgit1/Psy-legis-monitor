@@ -32,11 +32,38 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --disable-pip-version-check -r requirements.txt
 
-      - name: Fetch and validate Camera snapshot
+      - name: Fetch Camera snapshot with HTTP client
+        id: camera_httpx
+        shell: bash
+        working-directory: psy-legis-monitor
+        run: |
+          set -euo pipefail
+          result="$(
+            python -m app.cli.commands update-camera-snapshot \
+              --transport httpx \
+              --keep-last-good-on-error \
+              --quiet-retained
+          )"
+          echo "$result"
+          status="$(
+            CAMERA_RESULT="$result" python -c \
+              'import json, os; print(json.loads(os.environ["CAMERA_RESULT"])["status"])'
+          )"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+
+      - name: Retry Camera snapshot with curl
+        if: steps.camera_httpx.outputs.status == 'retained'
         working-directory: psy-legis-monitor
         run: >-
           python -m app.cli.commands update-camera-snapshot
+          --transport curl
           --keep-last-good-on-error
+
+      - name: Check Camera snapshot freshness
+        working-directory: psy-legis-monitor
+        run: >-
+          python -m app.cli.commands check-camera-snapshot
+          --max-age-hours 168
 
       - name: Commit validated snapshot
         shell: bash

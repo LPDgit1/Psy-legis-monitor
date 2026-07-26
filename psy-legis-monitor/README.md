@@ -179,6 +179,11 @@ Il workflow schedulato usa anche `--keep-last-good-on-error`: se `dati.camera.it
 warning senza interrompere il deployment. L'assenza di una snapshot valida resta
 invece un errore bloccante.
 
+Il job prova prima il trasporto HTTP Python e, se la fonte restituisce la pagina
+HTML tecnica, ripete la stessa query tramite `curl`. Al termine esegue
+`check-camera-snapshot --max-age-hours 168`: una snapshot più vecchia di sette
+giorni è considerata un errore reale e non viene nascosta dal last-known-good.
+
 Il workflow richiede il permesso GitHub Actions `Read and write permissions` per committare la
 snapshot aggiornata. L'autore automatico e `github-actions[bot]`, quindi non usa l'indirizzo email
 privato dell'account GitHub.

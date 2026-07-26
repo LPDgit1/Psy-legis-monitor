@@ -4,11 +4,173 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-07-15T22:39:23.199706Z",
+  "generated_at": "2026-07-26T12:29:43.391222Z",
   "result_count": 200,
-  "newest_identifier": "3018",
-  "newest_date": "20260713",
+  "newest_identifier": "3043",
+  "newest_date": "20260723",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3043",
+      "title": "\"Conversione in legge del decreto-legge 23 luglio 2026, n. 127, recante misure urgenti e indifferibili per lo svolgimento dei procedimenti civili e penali a seguito del crollo dell’immobile degli uffici giudiziari di Bolzano\" (3043)",
+      "date": "20260723",
+      "identifier": "3043"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2713-B",
+      "title": "S. 1826. - \"Proroga del termine per l’esercizio della delega prevista dall’articolo 35 della legge 25 novembre 2024, n. 177\" <i>(approvato dalla Camera e modificato dal Senato) </i>(2713-B)",
+      "date": "20260723",
+      "identifier": "2713-B"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3042",
+      "title": "S. 775. - POTENTI ed altri: \"Modifica all’articolo 79 del testo unico delle disposizioni legislative e regolamentari in materia di spese di giustizia, di cui al decreto del Presidente della Repubblica 30 maggio 2002, n. 115, in materia di comunicazione delle variazioni di reddito rilevanti ai fini dell’ammissione al patrocinio a spese dello Stato\" <i>(approvata dal Senato) </i>(3042)",
+      "date": "20260722",
+      "identifier": "3042"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3041",
+      "title": "L'ABBATE: \"Disposizioni per la semplificazione e il potenziamento della filiera nazionale di gestione dei moduli fotovoltaici dismessi e per lo sviluppo del riciclo avanzato delle materie prime critiche\" (3041)",
+      "date": "20260722",
+      "identifier": "3041"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3040",
+      "title": "L'ABBATE: \"Disposizioni per la realizzazione e la riqualificazione dei parchi pubblici secondo criteri di accessibilità universale, inclusione sociale, adattamento ai cambiamenti climatici e tutela della salute\" (3040)",
+      "date": "20260722",
+      "identifier": "3040"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3039",
+      "title": "IEZZI: \"Disposizioni concernenti la prescrizione di misure organizzative per prevenire e ridurre il rischio di disordini e di danneggiamenti in occasione di manifestazioni pubbliche nonché la prestazione di garanzie per il risarcimento dei danni eventualmente arrecati\" (3039)",
+      "date": "20260722",
+      "identifier": "3039"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3038",
+      "title": "\"Ratifica ed esecuzione dell’Accordo concernente l’interpretazione e l’applicazione del Trattato sulla Carta dell’energia, fatto a Bruxelles il 18 febbraio 2026\" (3038)",
+      "date": "20260721",
+      "identifier": "3038"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3037",
+      "title": "ZIELLO ed altri: \"Modifiche all’articolo 335-<i>quinquies</i> del codice di procedura penale, in materia di attività di indagine e archiviazione accelerata in presenza di cause di giustificazione, e all’articolo 53 del codice penale, in materia di uso legittimo delle armi e di altri mezzi di coazione fisica\" (3037)",
+      "date": "20260720",
+      "identifier": "3037"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3036",
+      "title": "PRESTIPINO ed altri: \"Abrogazione dell’articolo 70 del codice della strada, di cui al decreto legislativo 30 aprile 1992, n. 285, e altre disposizioni concernenti il divieto dell’utilizzazione di animali per la trazione di veicoli per il servizio di piazza, il trasporto pubblico non di linea nonché per fini turistici, ricreativi e di rappresentanza\" (3036)",
+      "date": "20260720",
+      "identifier": "3036"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3035",
+      "title": "ZIELLO: \"Modifiche agli articoli 52 e 55 del codice penale, in materia di legittima difesa, eccesso colposo della medesima ed esclusione della responsabilità civile e patrimoniale, nonché all’articolo 47-<i>ter</i> della legge 26 luglio 1975, n. 354, in materia di applicabilità della detenzione domiciliare ai condannati ultrasettantenni\" (3035)",
+      "date": "20260720",
+      "identifier": "3035"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3034",
+      "title": "MICHELOTTI: \"Istituzione di un fondo per l’indennizzo delle vittime dei fatti accaduti presso la comunità “Il Forteto”\" (3034)",
+      "date": "20260717",
+      "identifier": "3034"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3033",
+      "title": "GALLO: \"Abrogazione del comma 3 dell’articolo 8 della legge 23 marzo 2001, n. 93, concernente l’istituzione del Parco nazionale “Costa dei Trabocchi e Teatina”\" (3033)",
+      "date": "20260716",
+      "identifier": "3033"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3032",
+      "title": "CECCHETTI: \"Modifiche alla legge 13 luglio 1967, n. 584, in materia di benefìci fiscali sostitutivi in favore dei donatori di sangue titolari di redditi di lavoro autonomo che non fruiscono delle agevolazioni previste dalla medesima legge\" (3032)",
+      "date": "20260716",
+      "identifier": "3032"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3031",
+      "title": "CECCHETTI: \"Disposizioni concernenti l’impiego di materiali ambientalmente sostenibili e aventi proprietà di riduzione degli inquinanti atmosferici per la costruzione e la ristrutturazione degli edifici pubblici statali\" (3031)",
+      "date": "20260716",
+      "identifier": "3031"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3030",
+      "title": "TASSINARI: \"Istituzione del Piano nazionale per la climatizzazione, la ventilazione e la sostenibilità energetica degli edifici scolastici\" (3030)",
+      "date": "20260715",
+      "identifier": "3030"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3029",
+      "title": "PENZA e CARMINA: \"Disposizioni per la stabilizzazione della sede di servizio del personale militare delle Forze armate fruitore dei benefìci di cui alla legge 5 febbraio 1992, n. 104, per l’assistenza a familiari con disabilità grave\" (3029)",
+      "date": "20260715",
+      "identifier": "3029"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3028",
+      "title": "PENZA e CARMINA: \"Disposizioni per la stabilizzazione della sede di servizio del personale militare delle Forze armate che abbia ricoperto incarichi elettivi negli enti locali\" (3028)",
+      "date": "20260715",
+      "identifier": "3028"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3027",
+      "title": "CAFIERO DE RAHO ed altri: \"Istituzione dell'Anagrafe informatica centralizzata dei detenuti soggetti a regime di alta sicurezza assegnati al lavoro all’esterno o beneficiari di permesso premio o di misure alternative alla detenzione\" (3027)",
+      "date": "20260715",
+      "identifier": "3027"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3026",
+      "title": "CAFIERO DE RAHO: \"Modifiche agli articoli 81 del codice penale, in materia di concorso formale di reati e di reato continuato, e 438 del codice di procedura penale, in materia di giudizio abbreviato nei procedimenti per delitti di criminalità organizzata\" (3026)",
+      "date": "20260715",
+      "identifier": "3026"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3025",
+      "title": "CAFIERO DE RAHO ed altri: \"Modifica all’articolo 270 del codice di procedura penale in materia di utilizzo dei risultati delle intercettazioni in altri procedimenti\" (3025)",
+      "date": "20260715",
+      "identifier": "3025"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3024",
+      "title": "CAFIERO DE RAHO ed altri: \"Introduzione dell’articolo 41-<i>ter</i> della legge 26 luglio 1975, n. 354, e altre disposizioni per il rafforzamento della sicurezza negli istituti penitenziari e la prevenzione del ripristino di collegamenti con organizzazioni criminali durante l’esecuzione della pena\" (3024)",
+      "date": "20260715",
+      "identifier": "3024"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3023",
+      "title": "CAFIERO DE RAHO ed altri: \"Modifiche all’articolo 4-<i>bis</i> della legge 26 luglio 1975, n. 354, e all’articolo 2 del decreto-legge 13 maggio 1991, n. 152, convertito, con modificazioni, dalla legge 12 luglio 1991, n. 203, in materia di limiti alla concessione e misure di controllo e prevenzione nell’applicazione di benefìci penitenziari ai condannati per delitti di criminalità organizzata non collaboranti con la giustizia\" (3023)",
+      "date": "20260715",
+      "identifier": "3023"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3022",
+      "title": "SERGIO COSTA: \"Modifiche alla legge 14 gennaio 2013, n. 10, e altre disposizioni per la tutela e lo sviluppo della vegetazione negli spazi urbani pubblici e privati\" (3022)",
+      "date": "20260715",
+      "identifier": "3022"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_1074-B",
+      "title": "S. 1588. - BAGNAI ed altri: \"Modifiche all’articolo 132 del codice in materia di protezione dei dati personali, di cui al decreto legislativo 30 giugno 2003, n. 196, concernenti l’acquisizione di dati relativi al traffico telefonico e telematico per esigenze di tutela della vita e dell’integrità fisica del soggetto interessato, nonché istituzione della Giornata nazionale dedicata alle persone scomparse\" <i>(approvata dalla Camera e modificata dal Senato)</i> (1074-B)",
+      "date": "20260715",
+      "identifier": "1074-B"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3021",
+      "title": "S. 1748. - Senatore POTENTI: \"Dichiarazione di monumento nazionale della miniera di Montecatini Val di Cecina e disposizioni per il riconoscimento dei siti minerari di interesse storico e identitario\" <i>(approvata dal Senato)</i> (3021)",
+      "date": "20260714",
+      "identifier": "3021"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3020",
+      "title": "RAFFA: \"Disposizioni di riforma del trattamento fiscale e del regime previdenziale dei lavoratori autonomi\" (3020)",
+      "date": "20260714",
+      "identifier": "3020"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3019",
+      "title": "AMBROSI: \"Disposizioni concernenti la riserva di quote generazionali in favore di giovani nella composizione degli organi di amministrazione e controllo delle società a partecipazione pubblica\" (3019)",
+      "date": "20260714",
+      "identifier": "3019"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3018",
       "title": "CECCHETTI: \"Modifiche all’articolo 1129 del codice civile, concernenti l’obbligo di assicurazione per l’assunzione dell’incarico di amministratore di condominio, e introduzione del capo V-<i>bis </i>del titolo XVII del codice delle assicurazioni private, di cui al decreto legislativo 7 settembre 2005, n. 209, in materia di istituzione di un fondo di garanzia per l’indennizzo dei danni cagionati nell’esercizio dell’attività di amministrazione condominiale\" (3018)",
@@ -215,7 +377,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2984",
-      "title": "S. 1552. - MALAN ed altri: \"Modifiche alla legge 11 febbraio 1992, n. 157, recante norme per la protezione della fauna selvatica omeoterma e per il prelievo venatorio\"<em>(approvata dal Senato)</em> (2984)",
+      "title": "S. 1552. - Senatori MALAN ed altri: \"Modifiche alla legge 11 febbraio 1992, n. 157, recante norme per la protezione della fauna selvatica omeoterma e per il prelievo venatorio\"<i>(approvata dal Senato)</i> (2984)",
       "date": "20260624",
       "identifier": "2984"
     },
@@ -233,7 +395,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2981",
-      "title": "PROPOSTA DI LEGGE COSTITUZIONALE CAVANDOLI: \"Introduzione del giuramento dei membri del Parlamento\" (2981)",
+      "title": "PROPOSTA DI LEGGE COSTITUZIONALE CAVANDOLI ed altri: \"Modifica all’articolo 67 della Costituzione, concernente l’introduzione del giuramento dei membri del Parlamento\" (2981)",
       "date": "20260624",
       "identifier": "2981"
     },
@@ -341,7 +503,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2963",
-      "title": "MAFFIOLI: \"Disposizioni concernenti la stipulazione di convenzioni tra i comuni e le istituzioni scolastiche per lo svolgimento di attività didattiche extracurricolari presso biblioteche e altri spazi pubblici di proprietà comunale\" (2963)",
+      "title": "MAFFIOLI ed altri: \"Disposizioni concernenti la stipulazione di convenzioni tra i comuni e le istituzioni scolastiche per lo svolgimento di attività didattiche extracurricolari presso biblioteche e altri spazi pubblici di proprietà comunale\" (2963)",
       "date": "20260611",
       "identifier": "2963"
     },
@@ -443,7 +605,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2946",
-      "title": "MORRONE: \"Modifiche alle leggi 4 aprile 1956, n. 212, e 10 dicembre 1993, n. 515, in materia di impiego della lingua italiana nella propaganda e nelle campagne elettorali\" (2946)",
+      "title": "MORRONE ed altri: \"Modifiche alle leggi 4 aprile 1956, n. 212, e 10 dicembre 1993, n. 515, in materia di impiego della lingua italiana nella propaganda e nelle campagne elettorali\" (2946)",
       "date": "20260529",
       "identifier": "2946"
     },
@@ -455,7 +617,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2944",
-      "title": "DI RUBBA: \"Disposizioni generali in materia di provvedimenti limitativi della circolazione veicolare, per la tutela del diritto alla mobilità\" (2944)",
+      "title": "DI RUBBA ed altri: \"Disposizioni generali in materia di provvedimenti limitativi della circolazione veicolare, per la tutela del diritto alla mobilità\" (2944)",
       "date": "20260528",
       "identifier": "2944"
     },
@@ -701,7 +863,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2903",
-      "title": "BICCHIELLI: \"Introduzione della sezione III-<em>bis</em> del capo III del titolo I della parte seconda del codice dei beni culturali e del paesaggio, di cui al decreto legislativo 22 gennaio 2004, n. 42, concernente l’impiego dei metodi e degli strumenti di gestione informativa digitale per la tutela del patrimonio culturale immobiliare situato in aree soggette a rischio idrogeologico o sismico\" (2903)",
+      "title": "BICCHIELLI ed altri: \"Introduzione della sezione III-<em>bis</em> del capo III del titolo I della parte seconda del codice dei beni culturali e del paesaggio, di cui al decreto legislativo 22 gennaio 2004, n. 42, concernente l’impiego dei metodi e degli strumenti di gestione informativa digitale per la tutela del patrimonio culturale immobiliare situato in aree soggette a rischio idrogeologico o sismico\" (2903)",
       "date": "20260424",
       "identifier": "2903"
     },
@@ -1046,168 +1208,6 @@
       "title": "PITTALIS ed altri: \"Modifiche al codice di procedura penale e alle norme di attuazione, di coordinamento e transitorie del medesimo codice, in materia di provvedimenti in favore delle persone sottoposte a ingiusta detenzione\" (2846)",
       "date": "20260318",
       "identifier": "2846"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2845",
-      "title": "L'ABBATE: \"Istituzione di un fondo per il finanziamento di interventi volti a potenziare la raccolta, la rigenerazione e la tracciabilità degli oli vegetali esausti\" (2845)",
-      "date": "20260317",
-      "identifier": "2845"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2844",
-      "title": "FEDE: \"Disciplina dello <em>status</em> di comune concapoluogo di provincia e disposizioni concernenti l’attribuzione di esso mediante criteri automatici su base demografica e la ridenominazione delle circoscrizioni provinciali\" (2844)",
-      "date": "20260313",
-      "identifier": "2844"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2843",
-      "title": "MALAVASI: \"Disposizioni concernenti l’istituzione e l’organizzazione delle reti pediatriche regionali nonché la continuità assistenziale in materia pediatrica\" (2843)",
-      "date": "20260312",
-      "identifier": "2843"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2842",
-      "title": "MARIANNA RICCIARDI: \"Disposizioni in materia di determinazione dell’aliquota dell’imposta sul reddito delle società per le imprese la cui attività sia gestita prevalentemente attraverso sistemi di intelligenza artificiale e destinazione dei proventi all’erogazione di prestazioni socio-assistenziali e di sostegno del reddito in favore dei lavoratori rimasti disoccupati a causa dell’introduzione di tali sistemi\" (2842)",
-      "date": "20260312",
-      "identifier": "2842"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2841",
-      "title": "PROPOSTA DI LEGGE D'INIZIATIVA POPOLARE: \"Modifiche all’articolo 64 del decreto-legge 25 giugno 2008, n. 112, convertito, con modificazioni, dalla legge 6 agosto 2008, n. 133, e altre disposizioni concernenti la formazione delle classi nelle scuole di ogni ordine e grado e rideterminazione del numero di alunni dell’istituzione scolastica necessario per l’assegnazione di un dirigente scolastico con incarico a tempo indeterminato\" (2841)",
-      "date": "20260311",
-      "identifier": "2841"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2840",
-      "title": "AIELLO ed altri: \"Disposizioni in materia di gestione della transizione occupazionale e di servizi di supporto alla ricollocazione professionale dei lavoratori nei processi di riorganizzazione aziendale o delocalizzazione dell’attività produttiva\" (2840)",
-      "date": "20260311",
-      "identifier": "2840"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2839",
-      "title": "QUARTINI ed altri: \"Disposizioni concernenti la formazione e lo stato giuridico ed economico dei medici di medicina generale nonché l’organizzazione dell’assistenza sanitaria territoriale\" (2839)",
-      "date": "20260311",
-      "identifier": "2839"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2838",
-      "title": "BRAMBILLA ed altri: \"Modifiche al codice di procedura civile e altre disposizioni per il rafforzamento della tutela dei minori nei procedimenti di allontanamento dal nucleo familiare\" (2838)",
-      "date": "20260310",
-      "identifier": "2838"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2837",
-      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Disposizioni in materia di promozione della partecipazione popolare alle attività delle associazioni e delle società sportive dilettantistiche, nonché delega al Governo per l’introduzione di agevolazioni per la gestione di strutture sportive a vocazione sociale\" (2837)",
-      "date": "20260309",
-      "identifier": "2837"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2836",
-      "title": "SCOTTO: \"Modifiche alla legge 23 giugno 1927, n. 1188, in materia di divieto di intitolazione di strade, monumenti, edifici e spazi pubblici o aperti al pubblico a persone che abbiano sostenuto o propagandato l’antisemitismo e l’odio razziale\" (2836)",
-      "date": "20260309",
-      "identifier": "2836"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2835",
-      "title": "CASU e BRAGA: \"Disposizioni in materia di domicilio digitale degli intestatari di veicoli iscritti nel pubblico registro automobilistico\" (2835)",
-      "date": "20260309",
-      "identifier": "2835"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2834",
-      "title": "MOLLICONE ed altri: \"Delega al Governo per la disciplina dei procedimenti di restituzione di opere d’arte sottratte o alienate a causa di persecuzione razziale\" (2834)",
-      "date": "20260309",
-      "identifier": "2834"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2833",
-      "title": "MALAVASI: \"Istituzione della Giornata nazionale della maculopatia\" (2833)",
-      "date": "20260306",
-      "identifier": "2833"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2832",
-      "title": "BARBAGALLO: \"Agevolazione fiscale per gli interventi di incremento della sicurezza antisismica degli immobili adibiti ad abitazione principale nelle zone sismiche 1 e 2 delle province di Catania, Messina, Ragusa e Siracusa\" (2832)",
-      "date": "20260306",
-      "identifier": "2832"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2831",
-      "title": "S. 1692. - Senatore RAPANI: \"Modifiche alla legge 8 aprile 1983, n. 113, in materia di cessione di territori del demanio marittimo al comune di Praia a Mare\" <em>(approvata dal Senato) </em>(2831)",
-      "date": "20260305",
-      "identifier": "2831"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2830",
-      "title": "S. 1004. - Senatori ROMEO ed altri: \"Disposizioni per il contrasto all’antisemitismo e per l’adozione della definizione operativa di antisemitismo\" <em>(approvata dal Senato) </em>(2830)",
-      "date": "20260305",
-      "identifier": "2830"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2829",
-      "title": "BONETTI ed altri: \"Delega al Governo per l’adozione di disposizioni in materia di prevenzione dei rischi sanitari e di tutela della salute sessuale e riproduttiva degli adolescenti\" (2829)",
-      "date": "20260305",
-      "identifier": "2829"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2828",
-      "title": "BARBAGALLO: \"Disposizioni e delega al Governo in materia di introduzione di un sistema elettronico per l’espressione del voto per via telematica\" (2828)",
-      "date": "20260305",
-      "identifier": "2828"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2827",
-      "title": "BOSCHI ed altri: \"Disposizioni concernenti le prestazioni di valutazione e assistenza nutrizionale in favore dei pazienti affetti da malattie oncologiche nell’ambito del Servizio sanitario nazionale\" (2827)",
-      "date": "20260304",
-      "identifier": "2827"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2826",
-      "title": "\"Delega al Governo per l’adozione del codice dell’edilizia e delle costruzioni\" (2826)",
-      "date": "20260227",
-      "identifier": "2826"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2825",
-      "title": "\"Disposizioni in materia di giovani e servizio civile universale e deleghe al Governo per il riordino della materia\" (2825)",
-      "date": "20260227",
-      "identifier": "2825"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2824",
-      "title": "MAGI: \"Modifiche alla legge 5 febbraio 1992, n. 91, in materia di acquisto della cittadinanza\" (2824)",
-      "date": "20260227",
-      "identifier": "2824"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2823",
-      "title": "\"Conversione in legge del decreto-legge 27 febbraio 2026, n. 25, recante interventi urgenti per fronteggiare l’emergenza provocata dagli eccezionali eventi meteorologici che, a partire dal giorno 18 gennaio 2026, hanno colpito il territorio della regione Calabria, della regione autonoma della Sardegna e della Regione siciliana, nonché ulteriori misure urgenti per fronteggiare la frana di Niscemi e di protezione civile\" (2823)",
-      "date": "20260227",
-      "identifier": "2823"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2822",
-      "title": "BIGNAMI ed altri: \"Modifiche al testo unico di cui al decreto del Presidente della Repubblica 30 marzo 1957, n. 361, in materia di elezione della Camera dei deputati, e al testo unico di cui al decreto legislativo 20 dicembre 1993, n. 533, in materia di elezione del Senato della Repubblica\" (2822)",
-      "date": "20260226",
-      "identifier": "2822"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2821",
-      "title": "FARAONE: \"Delega al Governo per la disciplina dell’accredito contributivo e del conseguimento del trattamento pensionistico in favore dei lavoratori impiegati in progetti o attività socialmente utili o di pubblica utilità\" (2821)",
-      "date": "20260226",
-      "identifier": "2821"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2820",
-      "title": "DE PALMA: \"Riapertura del termine per la trasformazione delle rivendite speciali di generi di monopolio in rivendite ordinarie\" (2820)",
-      "date": "20260225",
-      "identifier": "2820"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2819",
-      "title": "BARABOTTI ed altri: \"Istituzione dell’Ufficio per la gestione della fauna selvatica e del territorio presso il Ministero dell’agricoltura, della sovranità alimentare e delle foreste\" (2819)",
-      "date": "20260225",
-      "identifier": "2819"
     }
   ]
 }

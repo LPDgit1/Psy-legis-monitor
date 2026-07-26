@@ -75,8 +75,9 @@ def cmd_update_camera_snapshot(args: argparse.Namespace) -> None:
 
     connector = CameraConnector(prefer_snapshot=False, live_fallback_enabled=False)
     target = connector.snapshot_path if args.output is None else Path(args.output)
+    transport = getattr(args, "transport", "httpx")
     try:
-        payload = connector.update_snapshot(args.output)
+        payload = connector.update_snapshot(args.output, transport=transport)
         status = "ok"
         update_error = None
     except (RuntimeError, CameraSnapshotError) as exc:
@@ -94,12 +95,14 @@ def cmd_update_camera_snapshot(args: argparse.Namespace) -> None:
             f"Fonte Camera temporaneamente non disponibile; conservata la snapshot valida "
             f"del {payload['generated_at']}. {update_error}"
         )
-        print(f"::warning title=Snapshot Camera non aggiornata::{warning}", file=sys.stderr)
+        if not getattr(args, "quiet_retained", False):
+            print(f"::warning title=Snapshot Camera non aggiornata::{warning}", file=sys.stderr)
 
     print(
         json.dumps(
             {
                 "status": status,
+                "transport": transport,
                 "snapshot": str(target),
                 "generated_at": payload["generated_at"],
                 "result_count": payload["result_count"],
@@ -114,6 +117,28 @@ def cmd_update_camera_snapshot(args: argparse.Namespace) -> None:
 
 def _github_actions_escape(value: str) -> str:
     return value.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+
+
+def cmd_check_camera_snapshot(args: argparse.Namespace) -> None:
+    from app.connectors.camera import CameraConnector
+    from app.connectors.camera_snapshot import camera_snapshot_status
+
+    connector = CameraConnector(snapshot_path=args.snapshot) if args.snapshot else CameraConnector()
+    status = camera_snapshot_status(
+        connector.snapshot_path,
+        max_age_hours=args.max_age_hours,
+    )
+    print(json.dumps(status, ensure_ascii=False))
+    if status.get("snapshot_status") == "ok":
+        return
+
+    message = _github_actions_escape(
+        f"Snapshot Camera non utilizzabile entro la soglia di {args.max_age_hours:g} ore. "
+        f"Stato: {status.get('snapshot_status')}. "
+        f"Ultimo aggiornamento: {status.get('generated_at', 'non disponibile')}."
+    )
+    print(f"::error title=Snapshot Camera troppo vecchia::{message}", file=sys.stderr)
+    raise SystemExit(1)
 
 
 def cmd_ingest_senato(_: argparse.Namespace) -> None:
@@ -506,11 +531,26 @@ def build_parser() -> argparse.ArgumentParser:
     update_camera_snapshot = subparsers.add_parser("update-camera-snapshot")
     update_camera_snapshot.add_argument("--output")
     update_camera_snapshot.add_argument(
+        "--transport",
+        choices=("httpx", "curl"),
+        default="httpx",
+    )
+    update_camera_snapshot.add_argument(
         "--keep-last-good-on-error",
         action="store_true",
         help="Conserva una snapshot esistente e valida se la fonte non risponde.",
     )
+    update_camera_snapshot.add_argument(
+        "--quiet-retained",
+        action="store_true",
+        help="Non emette un'annotazione se viene conservata la snapshot esistente.",
+    )
     update_camera_snapshot.set_defaults(func=cmd_update_camera_snapshot)
+
+    check_camera_snapshot = subparsers.add_parser("check-camera-snapshot")
+    check_camera_snapshot.add_argument("--snapshot")
+    check_camera_snapshot.add_argument("--max-age-hours", type=float, default=168)
+    check_camera_snapshot.set_defaults(func=cmd_check_camera_snapshot)
 
     ingest_senato = subparsers.add_parser("ingest-senato")
     ingest_senato.set_defaults(func=cmd_ingest_senato)
