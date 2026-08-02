@@ -4,11 +4,41 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-07-31T08:10:18.401355Z",
+  "generated_at": "2026-08-02T07:41:40.190562Z",
   "result_count": 200,
-  "newest_identifier": "3048",
-  "newest_date": "20260728",
+  "newest_identifier": "3053",
+  "newest_date": "20260730",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3053",
+      "title": "S. 1939. - \"Conversione in legge del decreto-legge 12 giugno 2026, n. 100, recante misure urgenti in materia di giustizia e per l'attuazione del Patto dell'Unione europea sulla migrazione e l'asilo del 14 maggio 2024\" <i>(approvato dal Senato)</i> (3053)",
+      "date": "20260730",
+      "identifier": "3053"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3052",
+      "title": "MATTIA: \"Disposizioni per la celebrazione del quindicesimo centenario della fondazione dell’abbazia di Montecassino\" (3052)",
+      "date": "20260729",
+      "identifier": "3052"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3051",
+      "title": "L'ABBATE: \"Modifiche all’articolo 14 del decreto legislativo 13 gennaio 2003, n. 36, in materia di garanzie finanziarie per la gestione operativa e post-operativa delle discariche\" (3051)",
+      "date": "20260729",
+      "identifier": "3051"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3050",
+      "title": "BERRUTO: \"Disposizioni concernenti l’introduzione dell’insegnamento dell’educazione motoria nella scuola dell’infanzia e nei primi tre anni dei corsi della scuola primaria, l’istituzione di un fondo nazionale per i gruppi sportivi scolastici e la realizzazione di strutture sportive leggere nelle pertinenze esterne degli edifici scolastici\" (3050)",
+      "date": "20260729",
+      "identifier": "3050"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3049",
+      "title": "BERRUTO ed altri: \"Disposizioni per il rilancio del sistema italiano del calcio\" (3049)",
+      "date": "20260729",
+      "identifier": "3049"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3048",
       "title": "GALLO: \"Modifica all’articolo 948 del codice civile in materia di ripartizione dell’onere della prova nell’azione di rivendicazione\" (3048)",
@@ -335,7 +365,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2996",
-      "title": "MOLINARI: \"Introduzione del capo III-<em>bis</em> del decreto-legge 19 settembre 2023, n. 124, convertito, con modificazioni, dalla legge 13 novembre 2023, n. 162, concernente l’istituzione della Zona economica speciale per le aree transfrontaliere dell’Italia settentrionale – ZES Nord\" (2996)",
+      "title": "MOLINARI ed altri: \"Introduzione del capo III-<em>bis</em> del decreto-legge 19 settembre 2023, n. 124, convertito, con modificazioni, dalla legge 13 novembre 2023, n. 162, concernente l’istituzione della Zona economica speciale per le aree transfrontaliere dell’Italia settentrionale – ZES Nord\" (2996)",
       "date": "20260630",
       "identifier": "2996"
     },
@@ -749,7 +779,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2927",
-      "title": "ASCANI: \"Disposizioni per la tutela dell’identità personale contro la diffusione di immagini e contenuti audio o video prodotti o modificati mediante programmi informatici, applicazioni digitali o sistemi di intelligenza artificiale\" (2927)",
+      "title": "ASCANI ed altri: \"Disposizioni per la tutela dell’identità personale contro la diffusione di immagini e contenuti audio o video prodotti o modificati mediante programmi informatici, applicazioni digitali o sistemi di intelligenza artificiale\" (2927)",
       "date": "20260511",
       "identifier": "2927"
     },
@@ -1178,36 +1208,6 @@
       "title": "ORRICO ed altri: \"Disposizioni per la promozione e la valorizzazione della tornanza e per la rigenerazione delle aree ad alto potenziale inespresso\" (2856)",
       "date": "20260326",
       "identifier": "2856"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2855",
-      "title": "S. 1624. - \"Valorizzazione della risorsa mare\" <em>(approvato dal Senato)</em> (2855)",
-      "date": "20260325",
-      "identifier": "2855"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2854",
-      "title": "ALFONSO COLUCCI: \"Disposizioni in materia di tutela dell’indipendenza dell’informazione e di trasparenza degli assetti proprietari dei fornitori di servizi di media\" (2854)",
-      "date": "20260324",
-      "identifier": "2854"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2853",
-      "title": "CESA: \"Istituzione dell’onorificenza al merito di donatore di sangue volontario militare\" (2853)",
-      "date": "20260324",
-      "identifier": "2853"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2852",
-      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Disposizioni in materia di nomina degli enti del Terzo settore, delle fondazioni di comunità e delle aziende pubbliche di servizi alla persona quali amministratori di sostegno\" (2852)",
-      "date": "20260323",
-      "identifier": "2852"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2851",
-      "title": "ANDREA ROSSI ed altri: \"Istituzione della Giornata nazionale contro la violenza sui minori\" (2851)",
-      "date": "20260320",
-      "identifier": "2851"
     }
   ]
 }
