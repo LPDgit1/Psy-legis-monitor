@@ -4,11 +4,35 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-08-06T07:49:30.993133Z",
+  "generated_at": "2026-08-07T06:20:06.327328Z",
   "result_count": 200,
-  "newest_identifier": "3073",
-  "newest_date": "20260803",
+  "newest_identifier": "3077",
+  "newest_date": "20260805",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3077",
+      "title": "\"Conversione in legge del decreto-legge 5 agosto 2026, n. 139, recante disposizioni urgenti in materia di prezzi petroliferi connessi al protrarsi della nuova crisi dei mercati internazionali\" (3077)",
+      "date": "20260805",
+      "identifier": "3077"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3076",
+      "title": "S. 1779. - \"Disposizioni in materia di protezione civile\"<i>(approvato dal Senato)</i> (3076)",
+      "date": "20260804",
+      "identifier": "3076"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3075",
+      "title": "ROSSELLO ed altri: \"Disposizioni concernenti l’obbligo di verifica dell’età degli utenti delle piattaforme di reti sociali telematiche e altre disposizioni per la tutela dei minori nella fruizione dei servizi digitali\" (3075)",
+      "date": "20260804",
+      "identifier": "3075"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3074",
+      "title": "SOUMAHORO: \"Disposizioni concernenti l’introduzione di tariffe agevolate per i servizi di trasporto pubblico locale, regionale e interregionale in favore dei lavoratori agricoli\" (3074)",
+      "date": "20260804",
+      "identifier": "3074"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3073",
       "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Disposizioni per il contenimento del consumo di suolo, la rigenerazione territoriale e la tutela del suolo agricolo e delle aree interne\" (3073)",
@@ -503,7 +527,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2993",
-      "title": "L'ABBATE: \"Concessione di agevolazioni previdenziali per la maternità e per la prestazione di assistenza continuativa a familiari disabili\" (2993)",
+      "title": "L'ABBATE: \"Concessione di agevolazioni previdenziali per la maternità e per la prestazione di assistenza continuativa a familiari con disabilità\" (2993)",
       "date": "20260629",
       "identifier": "2993"
     },
@@ -845,7 +869,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2936",
-      "title": "CECCHETTI: \"Introduzione della valutazione di impatto occupazionale dei sistemi di intelligenza artificiale incidenti sull’organizzazione e sullo svolgimento di prestazioni lavorative nonché disposizioni per la tutela del lavoro umano e dell’occupazione\" (2936)",
+      "title": "CECCHETTI ed altri: \"Introduzione della valutazione di impatto occupazionale dei sistemi di intelligenza artificiale incidenti sull’organizzazione e sullo svolgimento di prestazioni lavorative nonché disposizioni per la tutela del lavoro umano e dell’occupazione\" (2936)",
       "date": "20260515",
       "identifier": "2936"
     },
@@ -1184,30 +1208,6 @@
       "title": "\"Disposizioni in materia di organizzazione e funzionamento della Commissione centrale per gli esercenti le professioni sanitarie\" (2880)",
       "date": "20260415",
       "identifier": "2880"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2879",
-      "title": "MALAVASI: \"Disposizioni in materia di partecipazione degli ospiti e dei loro familiari alle attività di organizzazione e valutazione dei servizi delle residenze sanitarie assistenziali\" (2879)",
-      "date": "20260415",
-      "identifier": "2879"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2878",
-      "title": "AMATO ed altri: \"Introduzione degli articoli 27-<em>bis</em>, 27-<em>ter </em>e 27-<em>quater</em> della legge 14 novembre 2016, n. 220, concernenti l’istituzione della Commissione per la valutazione delle opere e dei progetti cinematografici e audiovisivi e del Fondo per la crescita del cinema e dell’audiovisivo nonché limiti alla trasmissione e alla diffusione anticipate di opere audiovisive prodotte con finanziamenti pubblici\" (2878)",
-      "date": "20260415",
-      "identifier": "2878"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2877",
-      "title": "AMATO ed altri: \"Modifiche alla legge 14 novembre 2016, n. 220, in materia di credito d’imposta per le imprese di produzione, di contributi selettivi per la produzione di opere cinematografiche e audiovisive e di istituzione della Commissione per la valutazione delle opere e dei progetti cinematografici e audiovisivi\" (2877)",
-      "date": "20260415",
-      "identifier": "2877"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2876",
-      "title": "SASSO: \"Disciplina della stipulazione, certificazione e registrazione dei contratti collettivi nazionali di lavoro del settore privato e istituzione dell’Autorità per la contrattazione collettiva presso il Consiglio nazionale dell’economia e del lavoro\" (2876)",
-      "date": "20260415",
-      "identifier": "2876"
     }
   ]
 }
