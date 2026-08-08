@@ -4,11 +4,41 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-08-07T06:20:06.327328Z",
+  "generated_at": "2026-08-08T05:57:19.345699Z",
   "result_count": 200,
-  "newest_identifier": "3077",
-  "newest_date": "20260805",
+  "newest_identifier": "3082",
+  "newest_date": "20260806",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3082",
+      "title": "PRETTO: \"Disposizioni in materia di riscatto, ai fini previdenziali, del periodo di mandato elettivo dei sindaci \" (3082)",
+      "date": "20260806",
+      "identifier": "3082"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3081",
+      "title": "PRETTO: \"Modifica all’articolo 253 del codice dell’ordinamento militare, di cui al decreto legislativo 15 marzo 2010, n. 66, concernente la delimitazione della zona monumentale di guerra del monte Pasubio, e dichiarazione di monumento nazionale della Strada delle 52 gallerie del monte Pasubio o Strada della Prima Armata\" (3081)",
+      "date": "20260806",
+      "identifier": "3081"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3080",
+      "title": "\"Modifiche in materia di imputabilità del minore \" (3080)",
+      "date": "20260805",
+      "identifier": "3080"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3079",
+      "title": "GIRELLI: \"Disposizioni per la promozione della salute digitale dei minori e la prevenzione della dipendenza da strumenti e piattaforme digitali \" (3079)",
+      "date": "20260805",
+      "identifier": "3079"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3078",
+      "title": "GUSMEROLI: \"Disposizioni per la diffusione dell’autoproduzione domestica di energia elettrica con impianti fotovoltaici e per il contenimento del consumo di suolo nonché istituzione del Fondo nazionale per l’autonomia energetica delle famiglie\" (3078)",
+      "date": "20260805",
+      "identifier": "3078"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3077",
       "title": "\"Conversione in legge del decreto-legge 5 agosto 2026, n. 139, recante disposizioni urgenti in materia di prezzi petroliferi connessi al protrarsi della nuova crisi dei mercati internazionali\" (3077)",
@@ -1178,36 +1208,6 @@
       "title": "GIORGIANNI ed altri: \"Modifiche al codice della crisi d’impresa e dell’insolvenza, di cui al decreto legislativo 12 gennaio 2019, n. 14, in materia di procedure di composizione delle crisi da sovraindebitamento e di tutela del debitore meritevole\" (2885)",
       "date": "20260416",
       "identifier": "2885"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2884",
-      "title": "BERRUTO ed altri: \"Disposizioni concernenti la riserva di quote generazionali in favore di infratrentacinquenni nella composizione degli organi di indirizzo, amministrazione e controllo degli enti e delle società inseriti nel conto economico consolidato delle amministrazioni pubbliche, nonché delle fondazioni di origine bancaria e degli enti del sistema sportivo nazionale\" (2884)",
-      "date": "20260416",
-      "identifier": "2884"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2883",
-      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Delega al Governo in materia di promozione di stili di vita sani, attivi e responsabili\" (2883)",
-      "date": "20260415",
-      "identifier": "2883"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2882",
-      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Delega al Governo per l’istituzione del sistema unico nazionale di sostegno all’accesso alla pratica sportiva\" (2882)",
-      "date": "20260415",
-      "identifier": "2882"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2881",
-      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Modifica all’articolo 1 del decreto legislativo 14 settembre 2015, n. 151, in materia di accordi territoriali per il collocamento mirato delle persone con disabilità\" (2881)",
-      "date": "20260415",
-      "identifier": "2881"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2880",
-      "title": "\"Disposizioni in materia di organizzazione e funzionamento della Commissione centrale per gli esercenti le professioni sanitarie\" (2880)",
-      "date": "20260415",
-      "identifier": "2880"
     }
   ]
 }
