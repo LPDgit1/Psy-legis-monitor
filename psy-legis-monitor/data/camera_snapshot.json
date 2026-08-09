@@ -4,11 +4,17 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-08-08T05:57:19.345699Z",
+  "generated_at": "2026-08-09T05:58:40.851327Z",
   "result_count": 200,
-  "newest_identifier": "3082",
-  "newest_date": "20260806",
+  "newest_identifier": "3083",
+  "newest_date": "20260807",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3083",
+      "title": "\"Conversione in legge del decreto-legge 7 agosto 2026, n. 144, recante disposizioni urgenti per la funzionalità della pubblica amministrazione e degli enti territoriali, nonché in materia di protezione civile\" (3083)",
+      "date": "20260807",
+      "identifier": "3083"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3082",
       "title": "PRETTO: \"Disposizioni in materia di riscatto, ai fini previdenziali, del periodo di mandato elettivo dei sindaci \" (3082)",
@@ -527,7 +533,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2998",
-      "title": "PRETTO: \"Istituzione di una Commissione parlamentare di inchiesta sulla strage di Vergarolla del 18 agosto 1946, sulle relative responsabilità e sulle circostanze che impedirono il completo accertamento dei fatti\" (2998)",
+      "title": "PRETTO ed altri: \"Istituzione di una Commissione parlamentare di inchiesta sulla strage di Vergarolla del 18 agosto 1946, sulle relative responsabilità e sulle circostanze che impedirono il completo accertamento dei fatti\" (2998)",
       "date": "20260701",
       "identifier": "2998"
     },
@@ -1202,12 +1208,6 @@
       "title": "S. 1818. - \"Conversione in legge, con modificazioni, del decreto-legge 24 febbraio 2026, n. 23, recante disposizioni urgenti in materia di sicurezza pubblica, di attività di indagine dell'autorità giudiziaria in presenza di cause di giustificazione, di funzionalità delle forze di polizia e del Ministero dell'interno, nonché di immigrazione e protezione internazionale\" <em>(approvato dal Senato)</em> (2886)",
       "date": "20260417",
       "identifier": "2886"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2885",
-      "title": "GIORGIANNI ed altri: \"Modifiche al codice della crisi d’impresa e dell’insolvenza, di cui al decreto legislativo 12 gennaio 2019, n. 14, in materia di procedure di composizione delle crisi da sovraindebitamento e di tutela del debitore meritevole\" (2885)",
-      "date": "20260416",
-      "identifier": "2885"
     }
   ]
 }
