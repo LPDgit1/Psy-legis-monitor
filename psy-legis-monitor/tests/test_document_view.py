@@ -172,6 +172,57 @@ def test_document_view_excludes_fitoterapici_without_psychology_signal():
     assert not is_potential_primary_document(row)
 
 
+def test_document_view_excludes_stored_olive_export_false_positive():
+    row = {
+        "source": "Ministero della Salute - Trova Norme Salute",
+        "source_type": "html",
+        "act_type": "altro",
+        "found_terms": {"sanita_welfare": ["salute"]},
+        "score": 2.0,
+        "title": "Revoca della nota DGISAN sulla certificazione per l'esportazione di olive da tavola",
+        "summary": "Procedura per l'esportazione verso il Giappone.",
+    }
+
+    assert is_excluded_noise_document(row)
+    assert not is_relevant_primary_document(row)
+    assert not is_potential_primary_document(row)
+
+
+def test_document_view_hides_girelli_digital_health_proposal_without_psychology_signal():
+    row = {
+        "source": "Camera dei deputati - Dati Camera",
+        "source_type": "official_api",
+        "act_type": "proposta_di_legge",
+        "found_terms": {
+            "scuola_minori_famiglia": ["minori"],
+            "tecnologia_ai_privacy": ["salute digitale"],
+        },
+        "score": 6.0,
+        "title": (
+            "GIRELLI: Disposizioni per la promozione della salute digitale dei minori "
+            "e la prevenzione della dipendenza da strumenti e piattaforme digitali (3079)"
+        ),
+    }
+
+    assert not is_relevant_primary_document(row)
+    assert not is_potential_primary_document(row)
+    assert is_excluded_noise_document(row)
+
+
+def test_document_view_keeps_digital_health_act_with_explicit_psychology_role():
+    row = {
+        "source": "Camera dei deputati - Dati Camera",
+        "source_type": "official_api",
+        "act_type": "proposta_di_legge",
+        "found_terms": {"servizi_psicologici": ["supporto psicologico"]},
+        "score": 9.0,
+        "title": "Salute digitale dei minori e servizi di supporto psicologico",
+    }
+
+    assert is_relevant_primary_document(row)
+    assert not is_excluded_noise_document(row)
+
+
 def test_document_view_hides_institutional_news_by_default():
     row = {
         "source": "ENPAP - Ente Nazionale Previdenza e Assistenza Psicologi",

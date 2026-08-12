@@ -80,6 +80,13 @@ NOISE_PATTERNS = [
     "mangimi",
     "acquacoltura",
     "prodotti fitosanitari",
+    "olive da tavola",
+    "certificazione per l esportazione",
+    "esportazione di olive",
+    "dgisan",
+    "sicurezza alimentare",
+    "salute digitale dei minori",
+    "dipendenza da strumenti e piattaforme digitali",
 ]
 DIRECT_RELEVANCE_PATTERNS = [
     "psicolog",

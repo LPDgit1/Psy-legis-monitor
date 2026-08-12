@@ -51,6 +51,10 @@ except ImportError:
             "ordine dei frati",
             "fitoterap",
             "prodotti fitosanitari",
+            "olive da tavola",
+            "esportazione di olive",
+            "certificazione per l'esportazione",
+            "dgisan",
         ]
         direct = ["psicolog", "psicoterap", "salute mentale", "enpap", "cnop"]
         return any(term in text for term in noise) and not any(term in text for term in direct)
@@ -236,8 +240,7 @@ def _fetch_normative_documents() -> list:
     from app.connectors.gazzetta import GazzettaConnector
     from app.connectors.ministero_salute import MinisteroSaluteConnector
     from app.connectors.normattiva import NormattivaConnector
-    from app.connectors.regions.lombardia import LombardiaConnector
-    from app.connectors.regions.veneto import VenetoConnector
+    from app.connectors.regions.bur import RegionalBurConnector
     from app.connectors.senato import SenatoConnector
 
     connectors = [
@@ -246,8 +249,7 @@ def _fetch_normative_documents() -> list:
         NormattivaConnector(),
         MinisteroSaluteConnector(),
         EurLexConnector(),
-        VenetoConnector(),
-        LombardiaConnector(),
+        RegionalBurConnector(),
     ]
     if camera_auto_update_enabled():
         from app.connectors.camera import CameraConnector
@@ -256,7 +258,9 @@ def _fetch_normative_documents() -> list:
 
     for connector in connectors:
         try:
-            documents.extend(connector.fetch_documents())
+            connector_documents = connector.fetch_documents()
+            documents.extend(connector_documents)
+            _register_regional_bur_failures(connector)
         except Exception as exc:
             show_connector_warning(connector.name, exc)
     return documents
@@ -313,14 +317,13 @@ def _fetch_individual_documents(connector_name: str) -> list:
         from app.connectors.eurlex import EurLexConnector
 
         return EurLexConnector().fetch_documents()
-    if connector_name == "veneto":
-        from app.connectors.regions.veneto import VenetoConnector
+    if connector_name == "regional_burs":
+        from app.connectors.regions.bur import RegionalBurConnector
 
-        return VenetoConnector().fetch_documents()
-    if connector_name == "lombardia":
-        from app.connectors.regions.lombardia import LombardiaConnector
-
-        return LombardiaConnector().fetch_documents()
+        connector = RegionalBurConnector()
+        documents = connector.fetch_documents()
+        _register_regional_bur_failures(connector)
+        return documents
     raise ValueError(f"Connettore non supportato: {connector_name}")
 
 
@@ -348,8 +351,7 @@ def _legacy_priority_fetch() -> list:
         from app.connectors.eurlex import EurLexConnector
         from app.connectors.ministero_salute import MinisteroSaluteConnector
         from app.connectors.normattiva import NormattivaConnector
-        from app.connectors.regions.lombardia import LombardiaConnector
-        from app.connectors.regions.veneto import VenetoConnector
+        from app.connectors.regions.bur import RegionalBurConnector
         from app.connectors.senato import SenatoConnector
 
         documents = []
@@ -359,8 +361,7 @@ def _legacy_priority_fetch() -> list:
             MinisteroSaluteConnector(),
             AgenasConnector(),
             EurLexConnector(),
-            VenetoConnector(),
-            LombardiaConnector(),
+            RegionalBurConnector(),
         ]
         if camera_auto_update_enabled():
             from app.connectors.camera import CameraConnector
@@ -368,7 +369,9 @@ def _legacy_priority_fetch() -> list:
             connectors.insert(0, CameraConnector())
         for connector in connectors:
             try:
-                documents.extend(connector.fetch_documents())
+                connector_documents = connector.fetch_documents()
+                documents.extend(connector_documents)
+                _register_regional_bur_failures(connector)
             except Exception as exc:
                 show_connector_warning(connector.name, exc)
     except Exception:
@@ -386,6 +389,14 @@ def counter_chart_rows(counter: Counter) -> list[dict]:
 
 def show_connector_warning(connector_name: str, exc: Exception) -> None:
     register_connector_issue(connector_name, exc)
+
+
+def _register_regional_bur_failures(connector) -> None:
+    if getattr(connector, "name", "") != "regional_burs":
+        return
+    for status in getattr(connector, "last_statuses", []):
+        if status.status == "error":
+            register_connector_issue(f"BUR {status.region}", RuntimeError(status.error or "errore"))
 
 
 def compact_connector_error(connector_name: str, exc: Exception) -> str:
@@ -424,6 +435,27 @@ def render_camera_diagnostics(diagnostics: dict[str, object]) -> None:
         "La Camera viene acquisita fuori dalla sessione Streamlit e letta "
         "dall'ultima snapshot valida."
     )
+
+
+def render_camera_snapshot_status() -> None:
+    """Show passive Camera freshness without a diagnostic action button."""
+
+    from app.connectors.camera import CameraConnector
+
+    try:
+        diagnostics = CameraConnector().diagnose_snapshot()
+    except Exception:
+        st.caption("Camera: snapshot non disponibile.")
+        return
+    status = diagnostics.get("snapshot_status")
+    generated_at = clean_display_text(diagnostics.get("generated_at"))
+    result_count = diagnostics.get("result_count", 0)
+    if status == "ok":
+        st.caption(f"Camera: {result_count} atti, snapshot {generated_at}.")
+    elif status == "stale":
+        st.caption(f"Camera: snapshot da aggiornare ({generated_at}).")
+    else:
+        st.caption("Camera: snapshot non disponibile.")
 
 
 def render_table(rows: list[dict], *, max_rows: int = 100) -> None:
@@ -662,14 +694,7 @@ with st.sidebar:
             ingest_individual("gazzetta", "Gazzetta")
         if right_button.button("Camera", use_container_width=True):
             ingest_individual("camera", "Camera")
-        if st.button("Stato Camera", use_container_width=True):
-            from app.connectors.camera import CameraConnector
-
-            try:
-                diagnostics = CameraConnector().diagnose_snapshot()
-                render_camera_diagnostics(diagnostics)
-            except Exception as exc:
-                st.error(f"Stato Camera non disponibile: {compact_connector_error('camera', exc)}")
+        render_camera_snapshot_status()
         left_button, right_button = st.columns(2)
         if left_button.button("Senato", use_container_width=True):
             ingest_individual("senato", "Senato")
@@ -683,14 +708,12 @@ with st.sidebar:
         left_button, right_button = st.columns(2)
         if left_button.button("AGENAS", use_container_width=True):
             ingest_individual("agenas", "AGENAS")
-        if right_button.button("Veneto", use_container_width=True):
-            ingest_individual("veneto", "Regione Veneto")
+        if right_button.button("BUR Regioni", use_container_width=True):
+            ingest_individual("regional_burs", "BUR regionali")
         left_button, right_button = st.columns(2)
-        if left_button.button("Lombardia", use_container_width=True):
-            ingest_individual("lombardia", "Regione Lombardia")
-        if right_button.button("RSS", use_container_width=True):
+        if left_button.button("RSS", use_container_width=True):
             ingest_individual("rss", "RSS")
-        if st.button("Pagine istituzionali", use_container_width=True):
+        if right_button.button("Pagine", use_container_width=True):
             ingest_individual("pages", "Pagine")
 
     st.header("Vista")

@@ -172,7 +172,7 @@ def cmd_ingest_eurlex(_: argparse.Namespace) -> None:
 
 
 def cmd_ingest_regions(_: argparse.Namespace) -> None:
-    _ingest_connector("Regioni prioritarie", _fetch_regions())
+    _ingest_connector("BUR regionali", _fetch_regions())
 
 
 def cmd_ingest_priority(_: argparse.Namespace) -> None:
@@ -211,8 +211,7 @@ def cmd_verify_connectors(_: argparse.Namespace) -> None:
         ("Ministero Salute", _fetch_ministero_salute),
         ("AGENAS", _fetch_agenas),
         ("EUR-Lex", _fetch_eurlex),
-        ("Regione Veneto", _fetch_veneto),
-        ("Regione Lombardia", _fetch_lombardia),
+        ("BUR regionali", _fetch_regions),
         ("RSS CNOP/ENPAP", _fetch_rss),
         ("Pagine istituzionali", _fetch_pages),
     ]
@@ -227,6 +226,8 @@ def cmd_verify_connectors(_: argparse.Namespace) -> None:
         source_counts = Counter(document.source for document in documents)
         sources = "; ".join(f"{source}: {count}" for source, count in source_counts.most_common())
         print(f"OK {label}: {len(documents)} documenti" + (f" ({sources})" if sources else ""))
+        if label == "BUR regionali":
+            _print_regional_bur_statuses()
     if failures:
         print(f"Verifica completata con {failures} fonti in errore.")
     else:
@@ -314,8 +315,7 @@ def _fetch_priority_documents() -> list[LegislativeDocument]:
     _safe_extend(documents, "Ministero Salute", _fetch_ministero_salute)
     _safe_extend(documents, "AGENAS", _fetch_agenas)
     _safe_extend(documents, "EUR-Lex", _fetch_eurlex)
-    _safe_extend(documents, "Regione Veneto", _fetch_veneto)
-    _safe_extend(documents, "Regione Lombardia", _fetch_lombardia)
+    _safe_extend(documents, "BUR regionali", _fetch_regions)
     return documents
 
 
@@ -387,10 +387,26 @@ def _fetch_eurlex() -> list[LegislativeDocument]:
 
 
 def _fetch_regions() -> list[LegislativeDocument]:
-    documents: list[LegislativeDocument] = []
-    _safe_extend(documents, "Regione Veneto", _fetch_veneto)
-    _safe_extend(documents, "Regione Lombardia", _fetch_lombardia)
+    from app.connectors.regions.bur import RegionalBurConnector
+
+    connector = RegionalBurConnector()
+    documents = connector.fetch_documents()
+    _fetch_regions.last_statuses = connector.last_statuses
     return documents
+
+
+_fetch_regions.last_statuses = []
+
+
+def _print_regional_bur_statuses() -> None:
+    for status in _fetch_regions.last_statuses:
+        if status.status == "error":
+            print(f"  ERRORE {status.region} [{status.adapter}]: {status.error}")
+        else:
+            print(
+                f"  {status.status.upper()} {status.region} [{status.adapter}]: "
+                f"{status.document_count} atti pertinenti"
+            )
 
 
 def _fetch_veneto() -> list[LegislativeDocument]:

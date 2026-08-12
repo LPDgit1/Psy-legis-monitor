@@ -147,11 +147,10 @@ black --check .
 * Camera dei deputati - Dati Camera, via snapshot SPARQL validata e last-known-good.
 * Senato della Repubblica - dati.senato.it, via endpoint SPARQL.
 * Normattiva, aggiornamenti in multivigenza e pagina Parlamento delle leggi approvate non ancora pubblicate.
-* Ministero della Salute - Norme e atti, connettore HTML; la prova live dalla shell puo' essere bloccata dalla validazione browser Gcore del sito.
+* Ministero della Salute - Norme e atti e Trova Norme Salute, con filtro tematico conservativo.
 * AGENAS, home e aree tematiche istituzionali.
-* EUR-Lex, accesso alla Gazzetta ufficiale UE e sezioni normative.
-* Regione Lombardia, pagina normativa.
-* Regione Veneto, parser per ultime uscite BUR; nella prova live la connessione al portale BUR dalla shell locale non era raggiungibile.
+* EUR-Lex, feed RSS ufficiali per legislazione Parlamento/Consiglio e atti della GU serie L.
+* Bollettini ufficiali di tutte le 20 Regioni, con navigazione HTML e PDF limitata per fonte.
 * CNOP - News, feed RSS.
 * ENPAP - News page, estrazione HTML dalla home istituzionale.
 * ENPAP - News, feed RSS raggiungibile ma attualmente senza item.
@@ -198,7 +197,7 @@ La tabella principale privilegia titolo, tipo di atto, stato, data, livello, fon
 
 ## Limiti dell'MVP
 
-* Alcune fonti istituzionali pubbliche usano pagine dinamiche o protezioni browser: Ministero Salute e BURL Lombardia richiedono un connettore browser/sessione o un endpoint piu' stabile se disponibile.
+* Alcuni BUR sono applicazioni JavaScript: il connettore registra la fonte come raggiungibile anche quando l'indice non espone link server-side, mentre Gazzetta 3a Serie Regioni conserva una copertura normativa nazionale complementare.
 * Lo scoring e' preliminare e rule-based: propone priorita', non sostituisce la valutazione umana.
 * La classificazione LLM e' opzionale e disattivata senza `OPENAI_API_KEY`.
 * I connettori HTML generici sono utili per monitorare pagine pubbliche, ma per fonti complesse dovrebbero essere sostituiti da API/feed ufficiali quando disponibili.
@@ -206,8 +205,7 @@ La tabella principale privilegia titolo, tipo di atto, stato, data, livello, fon
 
 ## Roadmap breve
 
-1. Migliorare connettori Ministero Salute e BURL Lombardia con sessione browser o endpoint ufficiali alternativi.
-2. Estendere connettori BUR/DGR regionali oltre Veneto e Lombardia.
-3. Migliorare deduplica, tipologie atto e canonical URL.
-4. Abilitare classificazione LLM con validazione umana.
-5. Raffinare dashboard, audit trail e correzione degli alert.
+1. Aggiungere adapter API specifici quando i portali BUR dinamici pubblicheranno endpoint documentati.
+2. Migliorare deduplica, tipologie atto e canonical URL.
+3. Abilitare classificazione LLM con validazione umana.
+4. Raffinare dashboard, audit trail e correzione degli alert.

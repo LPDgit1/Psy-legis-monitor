@@ -125,6 +125,22 @@ def test_ministry_relevance_rejects_fitoterapici_false_positive():
     )
 
 
+def test_ministry_relevance_rejects_olive_export_false_positive():
+    assert not is_ministry_health_document_relevant(
+        "Revoca della nota DGISAN sulla certificazione per l'esportazione di olive da tavola",
+        "Procedura per l'esportazione verso il Giappone",
+        search_term="dipendenze",
+    )
+
+
+def test_ministry_relevance_does_not_trust_search_provenance_alone():
+    assert not is_ministry_health_document_relevant(
+        "Revoca di una procedura amministrativa",
+        "Atto privo di riferimenti alla professione o ai temi monitorati",
+        search_term="psicologo",
+    )
+
+
 def test_ministry_relevance_keeps_mental_health_related_act():
     assert is_ministry_health_document_relevant(
         "Riparto del Fondo per il contrasto dei disturbi della nutrizione e dell'alimentazione",

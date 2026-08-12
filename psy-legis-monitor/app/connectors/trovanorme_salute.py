@@ -95,6 +95,13 @@ MINISTRY_EXCLUSION_TERMS = [
     "biosicurezza",
     "zootecnic",
     "prodotti fitosanitari",
+    "olive da tavola",
+    "certificazione per l esportazione",
+    "esportazione di olive",
+    "dgisan",
+    "sicurezza alimentare",
+    "salute digitale dei minori",
+    "dipendenza da strumenti e piattaforme digitali",
 ]
 
 
@@ -301,11 +308,11 @@ def is_ministry_health_document_relevant(
     title_text = fold_for_search(" ".join(part for part in [title, text] if part))
     has_direct_relevance = any(term in title_text for term in MINISTRY_DIRECT_RELEVANCE_TERMS)
     has_low_signal_relevance = any(term in title_text for term in MINISTRY_LOW_SIGNAL_TERMS)
-    came_from_direct_search = bool(search_term and fold_for_search(search_term) in MINISTRY_DIRECT_RELEVANCE_TERMS)
     has_exclusion = any(term in folded for term in MINISTRY_EXCLUSION_TERMS)
     if has_exclusion and not has_direct_relevance:
         return False
-    return has_direct_relevance or has_low_signal_relevance or came_from_direct_search
+    # Search provenance is not evidence of relevance: the portal can return broad matches.
+    return has_direct_relevance or has_low_signal_relevance
 
 
 def _find_news_heading(soup: BeautifulSoup):

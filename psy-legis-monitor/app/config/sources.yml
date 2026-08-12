@@ -123,6 +123,11 @@ ministero_salute:
         - "biosicurezza"
         - "zootecnic"
         - "prodotti fitosanitari"
+        - "olive da tavola"
+        - "certificazione per l.esportazione"
+        - "esportazione di olive"
+        - "DGISAN"
+        - "sicurezza alimentare"
 
 agenas:
   enabled: true
@@ -163,47 +168,22 @@ agenas:
 
 eurlex:
   enabled: true
-  sources:
-    - name: "EUR-Lex - Gazzetta ufficiale UE"
-      enabled: true
-      source: "EUR-Lex - Gazzetta ufficiale dell'Unione europea"
-      level: "europeo"
-      region:
-      act_type: "altro"
-      status: "pubblicato"
-      url: "https://eur-lex.europa.eu/homepage.html?locale=it"
-      source_type: "html"
+  feeds:
+    - name: "EUR-Lex - legislazione Parlamento e Consiglio"
+      source: "EUR-Lex - legislazione Parlamento e Consiglio"
+      url: "https://eur-lex.europa.eu/IT/display-feed.rss?rssId=162"
       fetch_method: "auto"
-      max_items: 30
-      include_patterns:
-        - "Serie L della GU"
-        - "Serie C della GU"
-        - "Atti giuridici"
-        - "Documenti preparatori"
-        - "Procedure normative"
-        - "Regolamento"
-        - "Direttiva"
-        - "Decisione"
-        - "salute"
-        - "salute mentale"
-        - "mental health"
-        - "psicolog"
-        - "psicoterapia"
-        - "professioni sanitarie"
-        - "dati"
-        - "dati sanitari"
-        - "sanita digitale"
-        - "minori"
-        - "AI"
-      exclude_patterns:
-        - "Cookie"
-        - "Connettersi"
-        - "Registrarsi"
-        - "Aiuto"
+      timeout: 30
+
+    - name: "EUR-Lex - atti Gazzetta ufficiale L"
+      source: "EUR-Lex - Gazzetta ufficiale dell'Unione europea"
+      url: "https://eur-lex.europa.eu/IT/display-feed.rss?rssId=165"
+      fetch_method: "auto"
+      timeout: 30
 
 regione_veneto:
   enabled: true
-  url: "https://bur.regione.veneto.it/"
+  url: "https://bur.regione.veneto.it/BurvServices/pubblica/HomeBollettini.aspx"
   fetch_method: "auto"
   timeout: 30
 
@@ -294,6 +274,126 @@ regione_lombardia:
       exclude_patterns:
         - "Cookie"
         - "Privacy"
+
+regional_burs:
+  enabled: true
+  sources:
+    - name: "Regione Abruzzo - BURA"
+      region: "Abruzzo"
+      url: "https://bura.regione.abruzzo.it/"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Basilicata - BUR"
+      region: "Basilicata"
+      url: "https://burweb.regione.basilicata.it/bur/ricercaBollettini.zul"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Calabria - BURC"
+      region: "Calabria"
+      url: "https://burc.regione.calabria.it/"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Campania - BURC"
+      region: "Campania"
+      url: "https://burc.regione.campania.it/eBurcWeb/publicContent/home/index.iface"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Emilia-Romagna - BURERT"
+      region: "Emilia-Romagna"
+      url: "https://bur.regione.emilia-romagna.it/anno"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Friuli Venezia Giulia - BUR"
+      region: "Friuli Venezia Giulia"
+      url: "https://bur.regione.fvg.it/newbur/visionaBUR"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Lazio - BUR"
+      region: "Lazio"
+      url: "https://www.regione.lazio.it/bur?vw=ultimibur"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Liguria - BURL"
+      region: "Liguria"
+      url: "https://www.burl.it/"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Lombardia - BURL"
+      region: "Lombardia"
+      url: "https://www.consultazioniburl.servizirl.it/ConsultazioneBurl/"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Marche - BUR"
+      region: "Marche"
+      url: "https://www.regione.marche.it/Entra-in-Regione/BUR"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Molise - BURM"
+      region: "Molise"
+      url: "https://www.regione.molise.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/18"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Piemonte - BURP"
+      region: "Piemonte"
+      url: "https://www.regione.piemonte.it/governo/bollettino/registra.htm"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Puglia - BURP"
+      region: "Puglia"
+      url: "https://burp.regione.puglia.it/bollettini"
+      adapter: "html"
+
+    - name: "Regione Sardegna - BURAS"
+      region: "Sardegna"
+      url: "https://buras.regione.sardegna.it/"
+      adapter: "html"
+
+    - name: "Regione Siciliana - GURS"
+      region: "Sicilia"
+      url: "https://www.gursonline.regione.sicilia.it/"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Toscana - BURT"
+      region: "Toscana"
+      url: "https://www.regione.toscana.it/burt"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Trentino-Alto Adige - BUR"
+      region: "Trentino-Alto Adige"
+      url: "https://bollettino.regione.taa.it/"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Umbria - BUR"
+      region: "Umbria"
+      url: "https://bur.regione.umbria.it/"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Valle d'Aosta - BURVA"
+      region: "Valle d'Aosta"
+      url: "https://www.regione.vda.it/affari_legislativi/bollettino_ufficiale/default_i.asp"
+      adapter: "html_pdf"
+      max_pdf_pages: 12
+
+    - name: "Regione Veneto - BURVET"
+      region: "Veneto"
+      url: "https://bur.regione.veneto.it/BurvServices/pubblica/HomeBollettini.aspx"
+      adapter: "veneto"
 
 rss_sources:
   - name: "CNOP - News"
