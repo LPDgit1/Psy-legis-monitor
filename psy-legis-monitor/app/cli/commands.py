@@ -234,6 +234,79 @@ def cmd_verify_connectors(_: argparse.Namespace) -> None:
         print("Verifica completata senza errori.")
 
 
+def cmd_export_public_snapshot(args: argparse.Namespace) -> None:
+    """Export every relevant or potentially relevant primary act for Sites."""
+
+    from app.services.public_snapshot import (
+        build_public_snapshot,
+        load_public_snapshot,
+        write_public_snapshot,
+    )
+
+    output = Path(args.output)
+    previous_path = Path(args.previous) if args.previous else output
+    previous_payload = load_public_snapshot(previous_path)
+    source_statuses: list[dict[str, object]] = []
+
+    if args.fetch_live:
+        documents: list[LegislativeDocument] = []
+        checks = [
+            ("Gazzetta Ufficiale", _fetch_gazzetta),
+            ("Camera", _fetch_camera),
+            ("Senato", _fetch_senato),
+            ("Normattiva", _fetch_normattiva),
+            ("Ministero Salute", _fetch_ministero_salute),
+            ("AGENAS", _fetch_agenas),
+            ("EUR-Lex", _fetch_eurlex),
+            ("BUR regionali", _fetch_regions),
+            ("RSS CNOP/ENPAP", _fetch_rss),
+            ("Pagine istituzionali", _fetch_pages),
+        ]
+        for label, fetcher in checks:
+            try:
+                fetched = fetcher()
+            except Exception as exc:
+                source_statuses.append(
+                    {"source": label, "status": "error", "document_count": 0, "error": str(exc)[:500]}
+                )
+                continue
+            documents.extend(fetched)
+            source_statuses.append(
+                {"source": label, "status": "ok", "document_count": len(fetched), "error": ""}
+            )
+    else:
+        init_db()
+        with SessionLocal() as session:
+            orm_documents = session.execute(select(models.Document)).scalars().all()
+            documents = [_schema_from_document(document) for document in orm_documents]
+        source_statuses.append(
+            {"source": "Database locale", "status": "ok", "document_count": len(documents), "error": ""}
+        )
+
+    payload = build_public_snapshot(
+        documents,
+        previous_payload=previous_payload,
+        source_statuses=source_statuses,
+    )
+    if not payload["published_document_count"]:
+        raise RuntimeError("La snapshot pubblica non contiene atti di interesse.")
+    write_public_snapshot(payload, output)
+    print(
+        json.dumps(
+            {
+                "output": str(output),
+                "fetched_document_count": payload["fetched_document_count"],
+                "published_document_count": payload["published_document_count"],
+                "high_relevance_count": payload["high_relevance_count"],
+                "potential_relevance_count": payload["potential_relevance_count"],
+                "published_source_count": payload["published_source_count"],
+                "source_errors": sum(status["status"] == "error" for status in source_statuses),
+            },
+            ensure_ascii=False,
+        )
+    )
+
+
 def cmd_ingest_gazzetta(args: argparse.Namespace) -> None:
     init_db()
     config = load_yaml(settings.sources_path).get("gazzetta", {})
@@ -594,6 +667,23 @@ def build_parser() -> argparse.ArgumentParser:
 
     verify_connectors = subparsers.add_parser("verify-connectors")
     verify_connectors.set_defaults(func=cmd_verify_connectors)
+
+    export_public_snapshot = subparsers.add_parser("export-public-snapshot")
+    export_public_snapshot.add_argument(
+        "--output",
+        default="data/public_documents.json",
+        help="Percorso JSON della snapshot pubblica.",
+    )
+    export_public_snapshot.add_argument(
+        "--previous",
+        help="Snapshot precedente da conservare e aggiornare; per default usa --output.",
+    )
+    export_public_snapshot.add_argument(
+        "--fetch-live",
+        action="store_true",
+        help="Interroga i connettori; senza questa opzione esporta il database configurato.",
+    )
+    export_public_snapshot.set_defaults(func=cmd_export_public_snapshot)
 
     ingest_gazzetta = subparsers.add_parser("ingest-gazzetta")
     ingest_gazzetta.add_argument("--fetch-act-text", action="store_true")

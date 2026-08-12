@@ -15,7 +15,7 @@ concurrency:
 jobs:
   update-camera:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repository
@@ -65,19 +65,28 @@ jobs:
           python -m app.cli.commands check-camera-snapshot
           --max-age-hours 168
 
-      - name: Commit validated snapshot
+      - name: Build complete public catalogue
+        working-directory: psy-legis-monitor
+        run: >-
+          python -m app.cli.commands export-public-snapshot
+          --fetch-live
+          --output data/public_documents.json
+          --previous data/public_documents.json
+
+      - name: Commit validated snapshots
         shell: bash
         run: |
           set -euo pipefail
-          snapshot="psy-legis-monitor/data/camera_snapshot.json"
-          git add "$snapshot"
+          git add \
+            "psy-legis-monitor/data/camera_snapshot.json" \
+            "psy-legis-monitor/data/public_documents.json"
           if git diff --cached --quiet; then
-            echo "Snapshot Camera invariata."
+            echo "Snapshot normative invariate."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "data: aggiorna snapshot Camera"
+          git commit -m "data: aggiorna catalogo normativo"
           for attempt in 1 2 3; do
             git fetch origin "${GITHUB_REF_NAME}"
             git rebase "origin/${GITHUB_REF_NAME}"
