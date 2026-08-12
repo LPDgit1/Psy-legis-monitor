@@ -28,6 +28,10 @@ def test_regional_bur_registry_covers_all_twenty_regions():
     assert len(sources) == 20
     assert len({source.region for source in sources}) == 20
     assert {source.adapter for source in sources} <= {"html", "html_pdf", "veneto"}
+    assert all(source.max_items == 20 for source in sources)
+    assert all(source.max_detail_links == 3 for source in sources)
+    assert all(source.max_pdf_links == 2 for source in sources)
+    assert all(source.max_pdf_pages == 16 for source in sources)
 
 
 def test_regional_html_parser_keeps_relevant_normative_act():

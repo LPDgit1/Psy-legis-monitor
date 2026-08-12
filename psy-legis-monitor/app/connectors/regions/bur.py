@@ -239,8 +239,9 @@ def load_regional_bur_sources() -> list[RegionalBurSource]:
     section = load_yaml(settings.sources_path).get("regional_burs", {})
     if section and not section.get("enabled", True):
         return []
+    defaults = section.get("defaults", {})
     return [
-        RegionalBurSource.model_validate(item)
+        RegionalBurSource.model_validate({**defaults, **item})
         for item in section.get("sources", [])
         if item.get("enabled", True)
     ]

@@ -1,7 +1,7 @@
 gazzetta:
   enabled: true
   fetch_method: "auto"
-  max_issues_per_series: 1
+  max_issues_per_series: 10
   fetch_act_text: false
   series:
     - name: "Serie Generale"
@@ -9,12 +9,14 @@ gazzetta:
       source: "Gazzetta Ufficiale - Serie Generale"
       level: "nazionale"
       list_url: "https://www.gazzettaufficiale.it/30giorni/serie_generale"
+      max_issues: 10
 
     - name: "3a Serie Speciale - Regioni"
       enabled: true
       source: "Gazzetta Ufficiale - 3a Serie Speciale Regioni"
       level: "regionale"
       list_url: "https://www.gazzettaufficiale.it/30giorni/regioni"
+      max_issues: 6
 
 camera:
   enabled: true
@@ -40,7 +42,7 @@ senato:
   legislature: 19
   fetch_method: "auto"
   timeout: 30
-  limit: 30
+  limit: 60
 
 normattiva:
   enabled: true
@@ -277,78 +279,83 @@ regione_lombardia:
 
 regional_burs:
   enabled: true
+  defaults:
+    max_items: 20
+    max_detail_links: 3
+    max_pdf_links: 2
+    max_pdf_pages: 16
   sources:
     - name: "Regione Abruzzo - BURA"
       region: "Abruzzo"
       url: "https://bura.regione.abruzzo.it/"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Basilicata - BUR"
       region: "Basilicata"
       url: "https://burweb.regione.basilicata.it/bur/ricercaBollettini.zul"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Calabria - BURC"
       region: "Calabria"
       url: "https://burc.regione.calabria.it/"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Campania - BURC"
       region: "Campania"
       url: "https://burc.regione.campania.it/eBurcWeb/publicContent/home/index.iface"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Emilia-Romagna - BURERT"
       region: "Emilia-Romagna"
       url: "https://bur.regione.emilia-romagna.it/anno"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Friuli Venezia Giulia - BUR"
       region: "Friuli Venezia Giulia"
       url: "https://bur.regione.fvg.it/newbur/visionaBUR"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Lazio - BUR"
       region: "Lazio"
       url: "https://www.regione.lazio.it/bur?vw=ultimibur"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Liguria - BURL"
       region: "Liguria"
       url: "https://www.burl.it/"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Lombardia - BURL"
       region: "Lombardia"
       url: "https://www.consultazioniburl.servizirl.it/ConsultazioneBurl/"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Marche - BUR"
       region: "Marche"
       url: "https://www.regione.marche.it/Entra-in-Regione/BUR"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Molise - BURM"
       region: "Molise"
       url: "https://www.regione.molise.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/18"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Piemonte - BURP"
       region: "Piemonte"
       url: "https://www.regione.piemonte.it/governo/bollettino/registra.htm"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Puglia - BURP"
       region: "Puglia"
@@ -364,31 +371,31 @@ regional_burs:
       region: "Sicilia"
       url: "https://www.gursonline.regione.sicilia.it/"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Toscana - BURT"
       region: "Toscana"
       url: "https://www.regione.toscana.it/burt"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Trentino-Alto Adige - BUR"
       region: "Trentino-Alto Adige"
       url: "https://bollettino.regione.taa.it/"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Umbria - BUR"
       region: "Umbria"
       url: "https://bur.regione.umbria.it/"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Valle d'Aosta - BURVA"
       region: "Valle d'Aosta"
       url: "https://www.regione.vda.it/affari_legislativi/bollettino_ufficiale/default_i.asp"
       adapter: "html_pdf"
-      max_pdf_pages: 12
+      max_pdf_pages: 16
 
     - name: "Regione Veneto - BURVET"
       region: "Veneto"
