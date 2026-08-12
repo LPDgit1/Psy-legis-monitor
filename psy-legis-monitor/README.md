@@ -38,6 +38,12 @@ I launcher Windows inclusi sono portabili e usano Python disponibile nel `PATH`:
 
 Il batch avvia Streamlit su `http://localhost:8501/`.
 
+### Standalone locale leggero
+
+Per una consultazione rapida senza installare Python o Streamlit, aprire
+`standalone/open-standalone.cmd`. La versione standalone è statica, usa dati
+dimostrativi e mantiene ricerca, filtro multiselezione e dettaglio dell'atto.
+
 ## Deploy su Streamlit Community Cloud
 
 Il repository e' pronto per il deploy dalla root.
