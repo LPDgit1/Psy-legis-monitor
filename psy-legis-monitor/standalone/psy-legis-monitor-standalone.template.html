@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Psy Legis Monitor - standalone</title>
+  <style>
+    :root{--ink:#203038;--muted:#66767b;--line:#d7e1e2;--teal:#087f79;--soft:#e8f5f3;--navy:#183b4b}*{box-sizing:border-box}body{margin:0;background:#f5f8f7;color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}header{display:flex;justify-content:space-between;gap:20px;padding:18px 5vw;background:#fff;border-bottom:1px solid var(--line)}.brand{display:flex;gap:10px;align-items:center;color:var(--navy);font-weight:800}.mark{display:grid;place-items:center;width:34px;height:34px;background:var(--teal);color:#fff;font-size:12px}.brand small{display:block;color:var(--muted);font-weight:500}.status{color:var(--teal);font-size:12px;font-weight:700}main{width:min(1160px,90vw);margin:auto;padding:42px 0 60px}.intro{display:flex;justify-content:space-between;gap:30px;align-items:end}.eyebrow{margin:0 0 8px;color:var(--teal);font-size:11px;font-weight:800;letter-spacing:.08em}h1{max-width:680px;margin:0;color:var(--navy);font-size:clamp(28px,4vw,48px);line-height:1.05}.intro p:last-child{max-width:640px;margin:14px 0 0;color:var(--muted)}.updated{min-width:220px;padding:16px;border-left:3px solid var(--teal);background:#fff}.updated strong,.updated span{display:block}.updated strong{margin:4px 0;color:var(--navy);font-size:18px}.updated span{color:var(--muted);font-size:12px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}.metric{padding:14px;border:1px solid var(--line);background:#fff}.metric span,.metric strong{display:block}.metric span{color:var(--muted);font-size:11px}.metric strong{color:var(--navy);font-size:25px}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:18px;margin-top:18px}aside,.results{border:1px solid var(--line);background:#fff}aside{padding:18px}.label{display:block;margin:18px 0 7px;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.04em}input[type=search]{width:100%;min-height:38px;padding:0 10px;border:1px solid var(--line);color:var(--ink);font:inherit}details{position:relative}summary{display:flex;justify-content:space-between;align-items:center;min-height:38px;padding:0 10px;border:1px solid var(--line);background:#fbfcfc;cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--teal);font-size:17px}details[open] summary:after{content:"−"}.menu{position:absolute;z-index:5;top:43px;left:0;width:330px;max-height:420px;overflow:auto;border:1px solid #b8c9ca;background:#fff;box-shadow:0 14px 30px #1f303826}.actions{display:flex;gap:7px;padding:9px;border-bottom:1px solid var(--line)}button{border:1px solid var(--line);background:#fff;color:var(--teal);cursor:pointer;font:inherit}.actions button{padding:6px 8px;font-size:11px;font-weight:800}fieldset{margin:0;padding:8px 10px;border:0;border-bottom:1px solid var(--line)}legend{color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}.check{display:grid;grid-template-columns:16px 1fr;gap:7px;padding:5px 0;color:var(--ink);font-size:11px}.check input{accent-color:var(--teal)}.views{display:grid;gap:4px;margin-top:24px}.views button{display:flex;justify-content:space-between;padding:9px;border-color:transparent;color:var(--muted);text-align:left}.views button.active{border-color:#bfe2dd;background:var(--soft);color:var(--teal);font-weight:800}.results{padding:20px}.results-head{display:flex;justify-content:space-between;gap:12px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:14px}h2{margin:0;color:var(--navy);font-size:22px}.count{color:var(--muted);font-size:12px}.row{display:grid;grid-template-columns:minmax(0,1fr) 150px 92px;gap:14px;align-items:center;width:100%;padding:15px 8px;border:0;border-bottom:1px solid var(--line);color:var(--ink);text-align:left}.row:hover,.row.selected{background:#f2f8f7}.row strong,.row small{display:block}.row strong{font-size:13px}.row small,.source,.date{color:var(--muted);font-size:11px}.source{color:var(--teal)}.detail{margin-top:20px;padding:18px;border-left:3px solid var(--teal);background:#f7fbfa}.detail h3{margin:8px 0;color:var(--navy);font-size:20px;line-height:1.2}.detail p{color:var(--muted)}.detail a{color:var(--teal);font-weight:800}.topics{display:flex;flex-wrap:wrap;gap:5px}.topics span{padding:3px 6px;border:1px solid var(--line);background:#fff;color:var(--muted);font-size:10px}.empty{padding:30px 0;color:var(--muted)}footer{display:flex;justify-content:space-between;gap:20px;padding:18px 5vw;border-top:1px solid var(--line);background:#fff;color:var(--muted);font-size:11px}footer strong{color:var(--navy)}@media(max-width:800px){header,.intro,footer{align-items:flex-start;flex-direction:column}.updated{width:100%}.metrics{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:1fr}.row{grid-template-columns:minmax(0,1fr) 78px}.row .source{display:none}.menu{width:min(330px,80vw)}}
+  </style>
+</head>
+<body>
+  <header><div class="brand"><span class="mark">PL</span><span>Psy Legis Monitor<small>Monitoraggio normativo per psicologi</small></span></div><span class="status">Standalone locale</span></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">QUADRO DI SINTESI</p><h1>Normativa da tenere sotto controllo</h1><p>Versione locale autosufficiente con tutti gli atti classificati di interesse o di potenziale interesse nell'ultimo catalogo incorporato.</p></div><div class="updated"><span class="eyebrow">ULTIMO AGGIORNAMENTO COMPLESSIVO</span><strong id="updated-at"></strong><span>Snapshot offline; verificare sempre la fonte ufficiale</span></div></section>
+    <section class="metrics" aria-label="Metriche del catalogo"><article class="metric"><span>Atti di interesse</span><strong id="total-count"></strong></article><article class="metric"><span>Alta rilevanza</span><strong id="high-count"></strong></article><article class="metric"><span>Potenziale interesse</span><strong id="potential-count"></strong></article><article class="metric"><span>Documenti esaminati</span><strong id="fetched-count"></strong></article></section>
+    <section class="layout">
+      <aside><p class="eyebrow">RICERCA</p><label class="label" for="search">Cerca titolo, tema o fonte</label><input id="search" type="search" placeholder="es. minori, salute mentale"><span class="label">Fonti</span><details id="source-filter"><summary id="source-label">Tutte le fonti</summary><div class="menu" id="source-menu"><div class="actions"><button id="select-all" type="button">Seleziona tutte</button><button id="clear-all" type="button">Azzera</button></div></div></details><div class="views" role="tablist"><button class="active" data-view="acts" type="button">Atti normativi <span id="acts-tab-count"></span></button><button data-view="high" type="button">Alta rilevanza <span id="high-tab-count"></span></button><button data-view="updates" type="button">Aggiornamenti <span>3</span></button></div></aside>
+      <section class="results"><div class="results-head"><div><p class="eyebrow" id="results-eyebrow">CATALOGO DEGLI ATTI</p><h2 id="results-title">Tutti gli atti di interesse</h2></div><span class="count" id="count"></span></div><div id="rows"></div><article class="detail" id="detail"></article></section>
+    </section>
+  </main>
+  <footer><span><strong>Psy Legis Monitor</strong> · By Luca Pezzullo, 2026</span><span>Non si assume responsabilità per completezza, aggiornamento o correttezza; verificare sempre la fonte ufficiale.</span></footer>
+  <script>
+    const snapshot=__PUBLIC_SNAPSHOT_JSON__;
+    const groups={
+      Normativa:["Camera dei deputati","Gazzetta Ufficiale","Senato della Repubblica","Normattiva","Ministero della Salute","EUR-Lex"],
+      Istituzioni:["AGENAS","CNOP","ENPAP","Conferenza Stato-Regioni","Garante per la protezione dei dati personali"],
+      "Bollettini regionali":["Regione Abruzzo - BURA","Regione Basilicata - BUR","Regione Calabria - BURC","Regione Campania - BURC","Regione Emilia-Romagna - BURERT","Regione Friuli Venezia Giulia - BUR","Regione Lazio - BUR","Regione Liguria - BURL","Regione Lombardia - BURL","Regione Marche - BUR","Regione Molise - BURM","Regione Piemonte - BURP","Regione Puglia - BURP","Regione Sardegna - BURAS","Regione Siciliana - GURS","Regione Toscana - BURT","Regione Trentino-Alto Adige - BUR","Regione Umbria - BUR","Regione Valle d'Aosta - BURVA","Regione Veneto - BURVET"]
+    };
+    const sources=Object.values(groups).flat();
+    const acts=snapshot.documents;
+    const updates=[
+      {key:"cnop",id:"cnop",title:"Comunicati e aggiornamenti istituzionali del CNOP",source:"CNOP",kind:"Feed informativo",date:"Monitoraggio",relevance:"Potenziale",topics:["Ordine professionale"],summary:"Fonte informativa da consultare separatamente dagli atti normativi.",href:"https://www.psy.it/"},
+      {key:"enpap",id:"enpap",title:"News e comunicazioni per gli iscritti ENPAP",source:"ENPAP",kind:"Feed informativo",date:"Monitoraggio",relevance:"Potenziale",topics:["Previdenza"],summary:"Aggiornamenti dell'ente previdenziale.",href:"https://www.enpap.it/"},
+      {key:"salute",id:"salute",title:"News e provvedimenti del Ministero della Salute",source:"Ministero della Salute",kind:"Feed informativo",date:"Monitoraggio",relevance:"Potenziale",topics:["Salute"],summary:"Fonte ministeriale con contenuti normativi e informativi.",href:"https://www.salute.gov.it/"}
+    ];
+    const filter=document.querySelector("#source-filter"),menu=document.querySelector("#source-menu"),selected=new Set(sources);
+    let view="acts",selectedKey=acts[0]?.key||"";
+
+    function escapeHtml(value){return String(value??"").replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[char])}
+    function formatDate(value){if(!/^\d{4}-\d{2}-\d{2}$/.test(value||""))return value||"";const [year,month,day]=value.split("-");return `${day}/${month}/${year}`}
+    function formatLongDate(value){const date=new Date(value);return Number.isNaN(date.getTime())?"Data non disponibile":new Intl.DateTimeFormat("it-IT",{day:"numeric",month:"long",year:"numeric"}).format(date)}
+    function safeHref(value){try{const url=new URL(value);return ["http:","https:"].includes(url.protocol)?url.href:""}catch{return ""}}
+
+    document.querySelector("#updated-at").textContent=formatLongDate(snapshot.generated_at);
+    document.querySelector("#total-count").textContent=String(snapshot.published_document_count);
+    document.querySelector("#high-count").textContent=String(snapshot.high_relevance_count);
+    document.querySelector("#potential-count").textContent=String(snapshot.potential_relevance_count);
+    document.querySelector("#fetched-count").textContent=String(snapshot.fetched_document_count);
+    document.querySelector("#acts-tab-count").textContent=String(acts.length);
+    document.querySelector("#high-tab-count").textContent=String(snapshot.high_relevance_count);
+
+    for(const [group,names] of Object.entries(groups)){
+      const fieldset=document.createElement("fieldset"),legend=document.createElement("legend");legend.textContent=group;fieldset.append(legend);
+      for(const name of names){const label=document.createElement("label"),input=document.createElement("input"),span=document.createElement("span");label.className="check";input.type="checkbox";input.checked=true;input.value=name;span.textContent=name;input.addEventListener("change",()=>{input.checked?selected.add(name):selected.delete(name);updateLabel();render()});label.append(input,span);fieldset.append(label)}
+      menu.append(fieldset)
+    }
+    function updateLabel(){document.querySelector("#source-label").textContent=selected.size===sources.length?"Tutte le fonti":selected.size===0?"Nessuna fonte":`${selected.size} fonti selezionate`}
+    function current(){return view==="updates"?updates:view==="high"?acts.filter(item=>item.relevance==="Alta"):acts}
+    function render(){
+      const query=document.querySelector("#search").value.trim().toLocaleLowerCase("it-IT");
+      const items=current().filter(item=>selected.has(item.source)&&(!query||[item.title,item.source,item.kind,item.summary,...(item.topics||[])].join(" ").toLocaleLowerCase("it-IT").includes(query)));
+      document.querySelector("#results-eyebrow").textContent=view==="updates"?"FONTI INFORMATIVE":"CATALOGO DEGLI ATTI";
+      document.querySelector("#results-title").textContent=view==="updates"?"Aggiornamenti separati dalla normativa":"Tutti gli atti di interesse";
+      document.querySelector("#count").textContent=`${items.length} risultati`;
+      const rows=document.querySelector("#rows");rows.replaceChildren();
+      for(const item of items){const button=document.createElement("button");button.className=`row${item.key===selectedKey?" selected":""}`;button.type="button";button.dataset.documentKey=item.key;button.innerHTML=`<span><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.kind)}</small></span><span class="source">${escapeHtml(item.source)}</span><span class="date">${escapeHtml(formatDate(item.date))}</span>`;button.addEventListener("click",()=>{selectedKey=item.key;render()});rows.append(button)}
+      const item=items.find(candidate=>candidate.key===selectedKey)||items[0],detail=document.querySelector("#detail");
+      if(!item){detail.innerHTML="<strong>Nessun risultato con questi filtri</strong>";return}
+      selectedKey=item.key;const href=safeHref(item.href),topics=(item.topics||[]).map(topic=>`<span>${escapeHtml(topic)}</span>`).join("");
+      detail.innerHTML=`<strong>${escapeHtml(item.relevance)} rilevanza · Atto ${escapeHtml(item.identifier||item.id)}</strong><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.kind)} · ${escapeHtml(item.source)} · ${escapeHtml(formatDate(item.date))}</p><div class="topics">${topics}</div><p>${escapeHtml(item.summary)}</p>${href?`<a href="${escapeHtml(href)}" target="_blank" rel="noreferrer">Apri la fonte ufficiale ↗</a>`:""}`
+    }
+    document.querySelector("#search").addEventListener("input",render);
+    document.querySelector("#select-all").addEventListener("click",()=>{sources.forEach(name=>selected.add(name));menu.querySelectorAll("input").forEach(input=>input.checked=true);updateLabel();render()});
+    document.querySelector("#clear-all").addEventListener("click",()=>{selected.clear();menu.querySelectorAll("input").forEach(input=>input.checked=false);updateLabel();render()});
+    document.querySelectorAll("[data-view]").forEach(button=>button.addEventListener("click",()=>{view=button.dataset.view;selectedKey=current()[0]?.key||"";document.querySelectorAll("[data-view]").forEach(item=>item.classList.toggle("active",item===button));render()}));
+    document.addEventListener("pointerdown",event=>{if(filter.open&&!filter.contains(event.target))filter.open=false});document.addEventListener("keydown",event=>{if(event.key==="Escape")filter.open=false});render();
+  </script>
+</body>
+</html>
