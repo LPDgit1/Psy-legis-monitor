@@ -1,26 +1,693 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-12T15:04:42.086736Z",
-  "fetched_document_count": 493,
-  "published_document_count": 38,
-  "high_relevance_count": 11,
-  "potential_relevance_count": 27,
-  "published_source_count": 4,
+  "generated_at": "2026-08-13T06:52:21.867321Z",
+  "fetched_document_count": 629,
+  "published_document_count": 67,
+  "high_relevance_count": 18,
+  "potential_relevance_count": 49,
+  "published_source_count": 8,
   "published_sources": [
     "Camera dei deputati",
     "Gazzetta Ufficiale",
+    "Ministero della Salute",
     "Normattiva",
+    "Regione Emilia-Romagna - BURERT",
+    "Regione Toscana - BURT",
+    "Regione Valle d'Aosta - BURVA",
     "Senato della Repubblica"
   ],
   "source_statuses": [
     {
-      "source": "Database locale",
+      "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 493,
+      "document_count": 270,
+      "error": ""
+    },
+    {
+      "source": "Camera",
+      "status": "ok",
+      "document_count": 200,
+      "error": ""
+    },
+    {
+      "source": "Senato",
+      "status": "ok",
+      "document_count": 60,
+      "error": ""
+    },
+    {
+      "source": "Normattiva",
+      "status": "ok",
+      "document_count": 13,
+      "error": ""
+    },
+    {
+      "source": "Ministero Salute",
+      "status": "ok",
+      "document_count": 1,
+      "error": ""
+    },
+    {
+      "source": "AGENAS",
+      "status": "ok",
+      "document_count": 7,
+      "error": ""
+    },
+    {
+      "source": "EUR-Lex",
+      "status": "ok",
+      "document_count": 0,
+      "error": ""
+    },
+    {
+      "source": "BUR regionali",
+      "status": "ok",
+      "document_count": 48,
+      "error": ""
+    },
+    {
+      "source": "RSS CNOP/ENPAP",
+      "status": "ok",
+      "document_count": 10,
+      "error": ""
+    },
+    {
+      "source": "Pagine istituzionali",
+      "status": "ok",
+      "document_count": 20,
       "error": ""
     }
   ],
   "documents": [
+    {
+      "key": "7dbaa741e0ef5b6f59b227ac825201301b7fb886d1520398e5c7e6385b6a1218",
+      "id": "26R00162",
+      "identifier": "26R00162",
+      "title": "DECRETO DEL PRESIDENTE DELLA PROVINCIA 8 settembre 2025 , n. 23 - Modifica del regolamento di esecuzione relativo agli interventi di assistenza economica sociale e al pagamento delle tariffe nei servizi sociali. (26R00162) Pag. 27",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
+      "kind": "Atto normativo",
+      "date": "2026-08-08",
+      "updated_at": "2026-08-13T06:46:55.212111Z",
+      "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-08&atto.codiceRedazionale=26R00162",
+      "relevance": "Potenziale",
+      "topics": [],
+      "summary": "Modifica del regolamento di esecuzione relativo agli interventi di assistenza economica sociale e al pagamento delle tariffe nei servizi sociali. (26R00162) Pag. 27",
+      "level": "regionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 4.8,
+      "found_terms": {
+        "sanita_welfare": [
+          "servizi sociali"
+        ]
+      }
+    },
+    {
+      "key": "c9ad86fa4f07ac36fa0be57d6affb42b79f97eed7b5821ad1ac16ef2cbcb0f56",
+      "id": "C.3075",
+      "identifier": "C.3075",
+      "title": "Disposizioni concernenti l’obbligo di verifica dell’età degli utenti delle piattaforme di reti sociali telematiche e altre disposizioni per la tutela dei minori nella fruizione dei servizi digitali",
+      "source": "Senato della Repubblica",
+      "source_detail": "Senato della Repubblica - dati.senato.it",
+      "kind": "Disegno di legge",
+      "date": "2026-08-04",
+      "updated_at": "2026-08-13T06:47:01.609122Z",
+      "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60409.htm",
+      "relevance": "Potenziale",
+      "topics": [
+        "Minori e famiglia"
+      ],
+      "summary": "Stato: da assegn. a commis. Natura: ordinaria Presentazione: 2026-08-04 Ultimo stato: 2026-08-04",
+      "level": "nazionale",
+      "region": "",
+      "status": "assegnato",
+      "score": 2.24,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "minori"
+        ]
+      }
+    },
+    {
+      "key": "13b5f0959b4d7da7a220c283840c1190af4118aa4cc55fe8a38d0eb4e3bd0cdd",
+      "id": "3075",
+      "identifier": "3075",
+      "title": "ROSSELLO ed altri: “Disposizioni concernenti l’obbligo di verifica dell’età degli utenti delle piattaforme di reti sociali telematiche e altre disposizioni per la tutela dei minori nella fruizione dei servizi digitali” (3075)",
+      "source": "Camera dei deputati",
+      "source_detail": "Camera dei deputati - Dati Camera",
+      "kind": "Proposta di legge",
+      "date": "2026-08-04",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3075",
+      "relevance": "Potenziale",
+      "topics": [
+        "Minori e famiglia"
+      ],
+      "summary": "Identificativo: 3075 Data: 20260804",
+      "level": "nazionale",
+      "region": "",
+      "status": "presentato",
+      "score": 2.24,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "minori"
+        ]
+      }
+    },
+    {
+      "key": "d2c90076f9d4ad4ec727aa15141d14fb666784f58cb7544c7ccd6a47917ad4cf",
+      "id": "S.1999",
+      "identifier": "S.1999",
+      "title": "Disposizioni per la tutela dei minori nell’ambiente",
+      "source": "Senato della Repubblica",
+      "source_detail": "Senato della Repubblica - dati.senato.it",
+      "kind": "Disegno di legge",
+      "date": "2026-08-03",
+      "updated_at": "2026-08-13T06:47:01.609122Z",
+      "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60370.htm",
+      "relevance": "Potenziale",
+      "topics": [
+        "Minori e famiglia"
+      ],
+      "summary": "Stato: da assegn. a commis. Natura: ordinaria Presentazione: 2026-08-03 Ultimo stato: 2026-08-03",
+      "level": "nazionale",
+      "region": "",
+      "status": "assegnato",
+      "score": 2.24,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "minori"
+        ]
+      }
+    },
+    {
+      "key": "671550cb2b8180393b9484c163d5614dfbaf302cb42afec00484e818a3b622f4",
+      "id": "26R00199",
+      "identifier": "26R00199",
+      "title": "LEGGE REGIONALE 20 giugno 2025 , n. 18 - Modificazioni alla legge regionale 16 luglio 2024, n. 11 (Disciplina dell’organizzazione dei servizi al lavoro e del sistema della formazione professionale nella Regione autonoma Valle d’Aosta/Vallee d’Aoste. Abrogazione della legge regionale 31 marzo 2003, n. 7 (Disposizioni in materia di politiche regionali del lavoro, di formazione professionale e di riorganizzazione dei servizi per l’impiego), e di altre disposizioni in materia di lavoro e formazione professionale). (26R00199) Pag. 1",
+      "source": "Regione Valle d'Aosta - BURVA",
+      "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
+      "kind": "Legge regionale",
+      "date": "2026-08-01",
+      "updated_at": "2026-08-13T06:46:54.449462Z",
+      "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-01&atto.codiceRedazionale=26R00199",
+      "relevance": "Potenziale",
+      "topics": [
+        "Lavoro e burnout"
+      ],
+      "summary": "Modificazioni alla legge regionale 16 luglio 2024, n. 11 (Disciplina dell’organizzazione dei servizi al lavoro e del sistema della formazione professionale nella Regione autonoma Valle d’Aosta/Vallee d’Aoste. Abrogazione della legge regionale 31 marzo 2003, n. 7 (Disposizioni in materia di politiche regionali del lavoro, di formazione professionale e di riorganizzazione dei servizi per l’impiego), e di altre disposizioni in materia di lavoro e formazione professionale). (26R00199) Pag. 1",
+      "level": "regionale",
+      "region": "Valle d’Aosta",
+      "status": "pubblicato",
+      "score": 2.34,
+      "found_terms": {
+        "anziani_lavoro_organizzazioni": [
+          "lavoro"
+        ]
+      }
+    },
+    {
+      "key": "6d4b47315957d55d316418b155db7bb971a829aabf72900485ba8ad4dfaf1dcc",
+      "id": "S.1990",
+      "identifier": "S.1990",
+      "title": "Disposizioni in materia di sicurezza e per la prevenzione del disagio giovanile, nonché di ordinamento, organizzazione e funzionamento delle Forze di polizia e del Ministero dell’interno",
+      "source": "Senato della Repubblica",
+      "source_detail": "Senato della Repubblica - dati.senato.it",
+      "kind": "Disegno di legge",
+      "date": "2026-07-30",
+      "updated_at": "2026-08-13T06:47:01.609122Z",
+      "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60357.htm",
+      "relevance": "Potenziale",
+      "topics": [],
+      "summary": "Stato: da assegn. a commis. Natura: ordinaria Presentazione: 2026-07-30 Ultimo stato: 2026-07-30",
+      "level": "nazionale",
+      "region": "",
+      "status": "assegnato",
+      "score": 5.6,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "disagio giovanile"
+        ]
+      }
+    },
+    {
+      "key": "1506f1f2b1233d0908b647540a08702da98f47dd416aaa48d3732c97af7d4e18",
+      "id": "C.3053",
+      "identifier": "C.3053",
+      "title": "Conversione in legge del decreto-legge 12 giugno 2026, n. 100, recante misure urgenti in materia di giustizia e per l’attuazione del Patto dell’Unione europea sulla migrazione e l’asilo del 14 maggio 2024",
+      "source": "Senato della Repubblica",
+      "source_detail": "Senato della Repubblica - dati.senato.it",
+      "kind": "Disegno di legge",
+      "date": "2026-07-30",
+      "updated_at": "2026-08-13T06:47:01.609122Z",
+      "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60355.htm",
+      "relevance": "Potenziale",
+      "topics": [
+        "Giustizia",
+        "Inclusione"
+      ],
+      "summary": "Stato: appr. definit. Legge Natura: di conversione di decreto-legge Presentazione: 2026-07-30 Ultimo stato: 2026-08-05",
+      "level": "nazionale",
+      "region": "",
+      "status": "presentato",
+      "score": 1.7,
+      "found_terms": {
+        "clinica_sociale": [
+          "migrazione"
+        ]
+      }
+    },
+    {
+      "key": "6cf5dd5ebabd16bde4aa22118d946e1cb66a08f16319120fdaadc74cb749f850",
+      "id": "3053",
+      "identifier": "3053",
+      "title": "S. 1939. - “Conversione in legge del decreto-legge 12 giugno 2026, n. 100, recante misure urgenti in materia di giustizia e per l’attuazione del Patto dell’Unione europea sulla migrazione e l’asilo del 14 maggio 2024” (approvato dal Senato) (3053)",
+      "source": "Camera dei deputati",
+      "source_detail": "Camera dei deputati - Dati Camera",
+      "kind": "Proposta di legge",
+      "date": "2026-07-30",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3053",
+      "relevance": "Potenziale",
+      "topics": [
+        "Giustizia",
+        "Inclusione"
+      ],
+      "summary": "Identificativo: 3053 Data: 20260730",
+      "level": "nazionale",
+      "region": "",
+      "status": "presentato",
+      "score": 1.7,
+      "found_terms": {
+        "clinica_sociale": [
+          "migrazione"
+        ]
+      }
+    },
+    {
+      "key": "966aaafe518d6c662953bf009af37553a65baecce79a7e4bafe98e2d571953d9",
+      "id": "3050",
+      "identifier": "3050",
+      "title": "BERRUTO: “Disposizioni concernenti l’introduzione dell’insegnamento dell’educazione motoria nella scuola dell’infanzia e nei primi tre anni dei corsi della scuola primaria, l’istituzione di un fondo nazionale per i gruppi sportivi scolastici e la realizzazione di strutture sportive leggere nelle pertinenze esterne degli edifici scolastici” (3050)",
+      "source": "Camera dei deputati",
+      "source_detail": "Camera dei deputati - Dati Camera",
+      "kind": "Proposta di legge",
+      "date": "2026-07-29",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3050",
+      "relevance": "Potenziale",
+      "topics": [
+        "Scuola"
+      ],
+      "summary": "Identificativo: 3050 Data: 20260729",
+      "level": "nazionale",
+      "region": "",
+      "status": "presentato",
+      "score": 7.28,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "infanzia",
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "9fda82a3a60a94704d86f8bc28372e649174a1c46e155446ddce7b71300abd3b",
+      "id": "26A03779",
+      "identifier": "26A03779",
+      "title": "COMUNICATO - Avviso relativo ai buoni fruttiferi postali, al Libretto smart e al Libretto dedicato ai minori di età. (26A03779) Pag. 66",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-07-24",
+      "updated_at": "2026-08-13T06:46:47.846821Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-24&atto.codiceRedazionale=26A03779&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Minori e famiglia"
+      ],
+      "summary": "Avviso relativo ai buoni fruttiferi postali, al Libretto smart e al Libretto dedicato ai minori di età. (26A03779) Pag. 66",
+      "level": "nazionale",
+      "region": "Basilicata",
+      "status": "pubblicato",
+      "score": 3.36,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "minori"
+        ]
+      }
+    },
+    {
+      "key": "6bed3d1537baa196aef2073d351ea3f616bec2ae729a534fba96e68649d40439",
+      "id": "26A03705",
+      "identifier": "26A03705",
+      "title": "DELIBERA DEL CONSIGLIO DEI MINISTRI 14 luglio 2026 - Dichiarazione dello stato di emergenza in conseguenza degli eccezionali eventi metereologici verificatisi nei mesi di gennaio e febbraio 2026 nella Provincia di Frosinone e nella Città metropolitana di Roma Capitale. (26A03705) Pag. 37",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "DGR / delibera regionale",
+      "date": "2026-07-24",
+      "updated_at": "2026-08-13T06:46:47.846821Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-24&atto.codiceRedazionale=26A03705&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [],
+      "summary": "Dichiarazione dello stato di emergenza in conseguenza degli eccezionali eventi metereologici verificatisi nei mesi di gennaio e febbraio 2026 nella Provincia di Frosinone e nella Città metropolitana di Roma Capitale. (26A03705) Pag. 37",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 2.55,
+      "found_terms": {
+        "clinica_sociale": [
+          "emergenza"
+        ]
+      }
+    },
+    {
+      "key": "583dc62817016a6fc59ab8616e56de1533900925358ebbe1aae6e61556689a23",
+      "id": "26A03662",
+      "identifier": "26A03662",
+      "title": "DECRETO 7 luglio 2026 - Autorizzazione al distacco della Scuola superiore per mediatori linguistici di Firenze dalla Scuola superiore per mediatori linguistici «SSML Unicollege» di Mantova. (26A03662) Pag. 38",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-07-24",
+      "updated_at": "2026-08-13T06:46:47.846821Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-24&atto.codiceRedazionale=26A03662&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Scuola"
+      ],
+      "summary": "Autorizzazione al distacco della Scuola superiore per mediatori linguistici di Firenze dalla Scuola superiore per mediatori linguistici «SSML Unicollege» di Mantova. (26A03662) Pag. 38",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 6.72,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "9fb55183d12c32080083b724a5bfd3ab56812c8b6bdc59986dbde92537c15395",
+      "id": "3044",
+      "identifier": "3044",
+      "title": "MESSINA: “Introduzione di percorsi didattici di educazione al mare presso le scuole del primo e del secondo ciclo di istruzione situate nei comuni costieri e istituzione della patente del mare per studenti delle scuole secondarie di primo e di secondo grado” (3044)",
+      "source": "Camera dei deputati",
+      "source_detail": "Camera dei deputati - Dati Camera",
+      "kind": "Proposta di legge",
+      "date": "2026-07-24",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3044",
+      "relevance": "Potenziale",
+      "topics": [
+        "Scuola"
+      ],
+      "summary": "Identificativo: 3044 Data: 20260724",
+      "level": "nazionale",
+      "region": "",
+      "status": "presentato",
+      "score": 5.88,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "scuole",
+          "studenti"
+        ]
+      }
+    },
+    {
+      "key": "a2efabf3ce62fedba2051694a5037f35ad65c77753496146d2c652e94ce7c8ee",
+      "id": "26A03660",
+      "identifier": "26A03660",
+      "title": "DECRETO 7 luglio 2026 - Autorizzazione alla Scuola superiore per mediatori linguistici «Alto Monferrato», in Torino, ad assumere la denominazione di «Unicollege - Scuola superiore per mediatori linguistici di Torino». (26A03660) Pag. 32",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-07-23",
+      "updated_at": "2026-08-13T06:46:45.471231Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-23&atto.codiceRedazionale=26A03660&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Scuola"
+      ],
+      "summary": "Autorizzazione alla Scuola superiore per mediatori linguistici «Alto Monferrato», in Torino, ad assumere la denominazione di «Unicollege - Scuola superiore per mediatori linguistici di Torino». (26A03660) Pag. 32",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 6.72,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "0153623a13ed0248f11070e53c38455f3c18ead4e5bc704095b91fb225760396",
+      "id": "26A03659",
+      "identifier": "26A03659",
+      "title": "DECRETO 7 luglio 2026 - Autorizzazione al distacco dalla Scuola superiore per mediatori linguistici «San Domenico di Roma» della sede periferica di Foggia e contestuale autorizzazione ad assumere la denominazione di «Scuola superiore per mediatori linguistici Marco Polo». (26A03659) Pag. 31",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-07-23",
+      "updated_at": "2026-08-13T06:46:45.471231Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-23&atto.codiceRedazionale=26A03659&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Scuola"
+      ],
+      "summary": "Autorizzazione al distacco dalla Scuola superiore per mediatori linguistici «San Domenico di Roma» della sede periferica di Foggia e contestuale autorizzazione ad assumere la denominazione di «Scuola superiore per mediatori linguistici Marco Polo». (26A03659) Pag. 31",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 6.72,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "2328cc32211e953a0884f7dbe5f0148b19b7c13af33b6dddb841454caa2975e6",
+      "id": "26A03658",
+      "identifier": "26A03658",
+      "title": "DECRETO 7 luglio 2026 - Autorizzazione alla Scuola superiore per mediatori linguistici «Nelson Mandela» a trasferire la sede di Matera. (26A03658) Pag. 30",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-07-23",
+      "updated_at": "2026-08-13T06:46:45.471231Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-23&atto.codiceRedazionale=26A03658&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Scuola"
+      ],
+      "summary": "Autorizzazione alla Scuola superiore per mediatori linguistici «Nelson Mandela» a trasferire la sede di Matera. (26A03658) Pag. 30",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 3.36,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "a498a7427a3f534ac5d25ad405227602d3f84f7aa5968c9d2133f72b3a6797c9",
+      "id": "26A03642",
+      "identifier": "26A03642",
+      "title": "DECRETO 6 luglio 2026 - Autorizzazione alla Scuola superiore per mediatori linguistici «Don Domenico Calarco» a trasferire la propria sede da Catona a Gioia Tauro. (26A03642) Pag. 8",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-07-22",
+      "updated_at": "2026-08-13T06:46:43.117950Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03642&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Scuola"
+      ],
+      "summary": "Autorizzazione alla Scuola superiore per mediatori linguistici «Don Domenico Calarco» a trasferire la propria sede da Catona a Gioia Tauro. (26A03642) Pag. 8",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 3.36,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "c2d8d0c29cf4d49e9ced88ed2aa552054943084e3716ed1e809c729da0f91ef6",
+      "id": "26A03641",
+      "identifier": "26A03641",
+      "title": "DECRETO 6 luglio 2026 - Autorizzazione alla Scuola superiore per mediatori linguistici «CIELS» di Bologna a trasferire la propria sede. (26A03641) Pag. 6",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-07-22",
+      "updated_at": "2026-08-13T06:46:43.117950Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03641&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Scuola"
+      ],
+      "summary": "Autorizzazione alla Scuola superiore per mediatori linguistici «CIELS» di Bologna a trasferire la propria sede. (26A03641) Pag. 6",
+      "level": "nazionale",
+      "region": "Basilicata",
+      "status": "pubblicato",
+      "score": 3.36,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "0f2e5cbb28c9b0b642a0d999f0731d95c5e71f16516b22c87b2d7c08f911bb19",
+      "id": "26A03640",
+      "identifier": "26A03640",
+      "title": "DECRETO 6 luglio 2026 - Autorizzazione alla Scuola superiore per mediatori linguistici «Cesare Brescia» di Salerno ad istituire e ad attivare corsi di studi superiori per mediatori linguistici di primo ciclo di durata triennale e a rilasciare i relativi titoli e contestuale autorizzazione ad assumere la denominazione di Scuola superiore per mediatori linguistici «Globe». (26A03640) Pag. 5",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-07-22",
+      "updated_at": "2026-08-13T06:46:43.117950Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03640&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Scuola"
+      ],
+      "summary": "Autorizzazione alla Scuola superiore per mediatori linguistici «Cesare Brescia» di Salerno ad istituire e ad attivare corsi di studi superiori per mediatori linguistici di primo ciclo di durata triennale e a rilasciare i relativi titoli e contestuale autorizzazione ad assumere la denominazione di Scuola superiore per mediatori linguistici «Globe». (26A03640) Pag. 5",
+      "level": "nazionale",
+      "region": "Basilicata",
+      "status": "pubblicato",
+      "score": 6.72,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "f2ad3d398497f40ae4e5332582065d903ab1e10b0de82ba91e7cdc2c2638ad8f",
+      "id": "26A03639",
+      "identifier": "26A03639",
+      "title": "DECRETO 6 luglio 2026 - Autorizzazione alla Scuola superiore per mediatori linguistici «Limec» di Milano a trasferire la propria sede e contestualmente ad aumentare il numero dei posti ammissibili fino a 200 studenti per il primo anno e, per l’intero ciclo, fino a 600 studenti. (26A03639) Pag. 4",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-07-22",
+      "updated_at": "2026-08-13T06:46:43.117950Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03639&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Scuola"
+      ],
+      "summary": "Autorizzazione alla Scuola superiore per mediatori linguistici «Limec» di Milano a trasferire la propria sede e contestualmente ad aumentare il numero dei posti ammissibili fino a 200 studenti per il primo anno e, per l’intero ciclo, fino a 600 studenti. (26A03639) Pag. 4",
+      "level": "nazionale",
+      "region": "Basilicata",
+      "status": "pubblicato",
+      "score": 7.56,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "scuola",
+          "studenti"
+        ]
+      }
+    },
+    {
+      "key": "ff52533b62e898ec16e9fdd5b7c433405b6da854affe32dd64ae1265683c8279",
+      "id": "26A03615",
+      "identifier": "26A03615",
+      "title": "DECRETO 5 maggio 2026 - Fondo sanitario nazionale 2025. Ripartizione delle risorse destinate all’assunzione di psicologi a tempo indeterminato per il supporto psicologico nell’ambito dell’assistenza oncoematologica pediatrica. (26A03615) Pag. 5",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-07-20",
+      "updated_at": "2026-08-13T06:46:40.288146Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-20&atto.codiceRedazionale=26A03615&elenco30giorni=true",
+      "relevance": "Alta",
+      "topics": [
+        "Professione psicologica",
+        "Supporto psicologico",
+        "Violenza e trauma"
+      ],
+      "summary": "Fondo sanitario nazionale 2025. Ripartizione delle risorse destinate all’assunzione di psicologi a tempo indeterminato per il supporto psicologico nell’ambito dell’assistenza oncoematologica pediatrica. (26A03615) Pag. 5",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 68.4,
+      "found_terms": {
+        "professione_diretta": [
+          "psicologi",
+          "psicologico"
+        ],
+        "servizi_psicologici": [
+          "supporto psicologico"
+        ]
+      }
+    },
+    {
+      "key": "2b55ec79c5ef50daa9c577c07cee3534369f017fc85517561296cbd7db018ff3",
+      "id": "25R00295",
+      "identifier": "25R00295",
+      "title": "LEGGE REGIONALE 22 agosto 2025 , n. 55 - Disposizioni per la promozione ed il riconoscimento della figura del caregiver familiare. (25R00295) Pag. 12",
+      "source": "Regione Toscana - BURT",
+      "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
+      "kind": "Legge regionale",
+      "date": "2026-07-18",
+      "updated_at": "2026-08-13T06:46:51.820642Z",
+      "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-18&atto.codiceRedazionale=25R00295",
+      "relevance": "Alta",
+      "topics": [
+        "Anziani e non autosufficienza"
+      ],
+      "summary": "Disposizioni per la promozione ed il riconoscimento della figura del caregiver familiare. (25R00295) Pag. 12",
+      "level": "regionale",
+      "region": "Toscana",
+      "status": "pubblicato",
+      "score": 12.6,
+      "found_terms": {
+        "sanita_welfare": [
+          "caregiver"
+        ],
+        "anziani_lavoro_organizzazioni": [
+          "caregiver"
+        ]
+      }
+    },
+    {
+      "key": "c804dfdfbc79b7329b0c371c21f73baa8b389d4f9e5743046dfc2a1e510363b2",
+      "id": "3029",
+      "identifier": "3029",
+      "title": "PENZA e CARMINA: “Disposizioni per la stabilizzazione della sede di servizio del personale militare delle Forze armate fruitore dei benefìci di cui alla legge 5 febbraio 1992, n. 104, per l’assistenza a familiari con disabilità grave” (3029)",
+      "source": "Camera dei deputati",
+      "source_detail": "Camera dei deputati - Dati Camera",
+      "kind": "Proposta di legge",
+      "date": "2026-07-15",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3029",
+      "relevance": "Alta",
+      "topics": [
+        "Disabilita e autismo"
+      ],
+      "summary": "Identificativo: 3029 Data: 20260715",
+      "level": "nazionale",
+      "region": "",
+      "status": "presentato",
+      "score": 10.0,
+      "found_terms": {
+        "sanita_welfare": [
+          "disabilita"
+        ],
+        "clinica_sociale": [
+          "disabilita"
+        ]
+      }
+    },
     {
       "key": "c3d065d3c83d75cc4be7b8ecc9ac665750575144ebb90b66d9b2d2b056e173ed",
       "id": "3017",
@@ -30,7 +697,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-13",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3017",
       "relevance": "Alta",
       "topics": [
@@ -59,7 +726,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-10",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3016",
       "relevance": "Potenziale",
       "topics": [
@@ -85,7 +752,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-09",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3011",
       "relevance": "Potenziale",
       "topics": [
@@ -137,7 +804,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-03",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3003",
       "relevance": "Potenziale",
       "topics": [
@@ -181,6 +848,35 @@
       }
     },
     {
+      "key": "e97cf523d74de63a9c4c017a08f20d10452f9aa9d9c338a168e7c896a8a44a92",
+      "id": "2993",
+      "identifier": "2993",
+      "title": "L’ABBATE: “Concessione di agevolazioni previdenziali per la maternità e per la prestazione di assistenza continuativa a familiari con disabilità” (2993)",
+      "source": "Camera dei deputati",
+      "source_detail": "Camera dei deputati - Dati Camera",
+      "kind": "Proposta di legge",
+      "date": "2026-06-29",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2993",
+      "relevance": "Alta",
+      "topics": [
+        "Disabilita e autismo"
+      ],
+      "summary": "Identificativo: 2993 Data: 20260629",
+      "level": "nazionale",
+      "region": "",
+      "status": "presentato",
+      "score": 10.0,
+      "found_terms": {
+        "sanita_welfare": [
+          "disabilita"
+        ],
+        "clinica_sociale": [
+          "disabilita"
+        ]
+      }
+    },
+    {
       "key": "0e5cb7edbb1704a8d5933fde983aa8c6f37592bd65f3258ff23e782a8a640997",
       "id": "2992",
       "identifier": "2992",
@@ -189,7 +885,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-29",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2992",
       "relevance": "Alta",
       "topics": [
@@ -239,6 +935,35 @@
       }
     },
     {
+      "key": "42f8773aa4dc0b78b4ab71e6dbf5422526aa46d597231c1b5eb19c97fbc11607",
+      "id": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2024-02-5;20",
+      "identifier": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2024-02-5;20",
+      "title": "GARANTE PER I DIRITTI DELLE PERSONE CON DISABILITÀ - DISPOSIZIONI INTEGRATIVE",
+      "source": "Normattiva",
+      "source_detail": "Normattiva - aggiornamenti in multivigenza",
+      "kind": "Decreto legislativo",
+      "date": "2026-06-18",
+      "updated_at": "2026-08-13T06:47:01.640439Z",
+      "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2024-02-5;20",
+      "relevance": "Alta",
+      "topics": [
+        "Disabilita e autismo"
+      ],
+      "summary": "La Banca Dati è aggiornata in multivigenza con le modifiche apportate al D.Lgs. 5 febbraio 2024, n. 20 dal D.Lgs. 18 giugno 2026, n. 123 .",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 10.0,
+      "found_terms": {
+        "sanita_welfare": [
+          "disabilita"
+        ],
+        "clinica_sociale": [
+          "disabilita"
+        ]
+      }
+    },
+    {
       "key": "6bc6f7c6587b541cd0370c868e2b2cacb243c40eaa126a76963feb00915322b9",
       "id": "2973",
       "identifier": "2973",
@@ -247,7 +972,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-17",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2973",
       "relevance": "Potenziale",
       "topics": [],
@@ -271,7 +996,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-15",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2967",
       "relevance": "Potenziale",
       "topics": [],
@@ -295,7 +1020,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-12",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2966",
       "relevance": "Potenziale",
       "topics": [
@@ -401,7 +1126,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2951",
       "relevance": "Potenziale",
       "topics": [],
@@ -425,7 +1150,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "topics": [
@@ -451,7 +1176,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "topics": [
@@ -484,7 +1209,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-20",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2937",
       "relevance": "Alta",
       "topics": [
@@ -508,12 +1233,12 @@
       "key": "ee59ad49fbe31b68a39a527989821ca91b783ad651efdcac4ef1442d4aaf509e",
       "id": "2936",
       "identifier": "2936",
-      "title": "CECCHETTI: “Introduzione della valutazione di impatto occupazionale dei sistemi di intelligenza artificiale incidenti sull’organizzazione e sullo svolgimento di prestazioni lavorative nonché disposizioni per la tutela del lavoro umano e dell’occupazione” (2936)",
+      "title": "CECCHETTI ed altri: “Introduzione della valutazione di impatto occupazionale dei sistemi di intelligenza artificiale incidenti sull’organizzazione e sullo svolgimento di prestazioni lavorative nonché disposizioni per la tutela del lavoro umano e dell’occupazione” (2936)",
       "source": "Camera dei deputati",
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-15",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2936",
       "relevance": "Alta",
       "topics": [
@@ -543,7 +1268,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-12",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2928",
       "relevance": "Potenziale",
       "topics": [
@@ -564,12 +1289,12 @@
       "key": "f055badbc388d00d8e373ddf1ed45fc46345e8509a6df26608baaa86faface06",
       "id": "2927",
       "identifier": "2927",
-      "title": "ASCANI: “Disposizioni per la tutela dell’identità personale contro la diffusione di immagini e contenuti audio o video prodotti o modificati mediante programmi informatici, applicazioni digitali o sistemi di intelligenza artificiale” (2927)",
+      "title": "ASCANI ed altri: “Disposizioni per la tutela dell’identità personale contro la diffusione di immagini e contenuti audio o video prodotti o modificati mediante programmi informatici, applicazioni digitali o sistemi di intelligenza artificiale” (2927)",
       "source": "Camera dei deputati",
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-11",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2927",
       "relevance": "Potenziale",
       "topics": [
@@ -595,7 +1320,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-07",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2922",
       "relevance": "Alta",
       "topics": [
@@ -624,7 +1349,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-05",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2918",
       "relevance": "Alta",
       "topics": [
@@ -654,7 +1379,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-27",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2907",
       "relevance": "Alta",
       "topics": [
@@ -685,7 +1410,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-27",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2906",
       "relevance": "Potenziale",
       "topics": [
@@ -711,7 +1436,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-23",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2902",
       "relevance": "Potenziale",
       "topics": [
@@ -737,7 +1462,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-22",
-      "updated_at": "2026-07-15T22:39:23.199706Z",
+      "updated_at": "2026-08-13T06:46:27.816335Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2892",
       "relevance": "Potenziale",
       "topics": [
@@ -1047,6 +1772,118 @@
       "found_terms": {
         "clinica_sociale": [
           "emergenza"
+        ]
+      }
+    },
+    {
+      "key": "c4dbba34562b446b1ccf7801b74e3dbd9a8f9530efc7a4c339f8fbc307f15f6b",
+      "id": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
+      "identifier": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
+      "title": "Ripartizione delle risorse relative al cd. «bonus psicologo» per le annualità 2024 e 2025, nonchè introduzione di correttivi volti all’efficiente utilizzo del contributo... (Decreto 10/07/2025)",
+      "source": "Ministero della Salute",
+      "source_detail": "Ministero della Salute - Trova Norme Salute",
+      "kind": "Atto normativo",
+      "date": "2025-07-10",
+      "updated_at": "2026-08-13T06:47:04.826245Z",
+      "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
+      "relevance": "Alta",
+      "topics": [
+        "Professione psicologica"
+      ],
+      "summary": "Atto: Decreto 10/07/2025. Risultato Trova Norme Salute per: psicologo",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 36.0,
+      "found_terms": {
+        "professione_diretta": [
+          "psicologo"
+        ]
+      }
+    },
+    {
+      "key": "3d092800edf20eec7fc01fd19412084c0b207de0dbcfd2547e7f27b90a8db37d",
+      "id": "BUR-Valle d’Aosta-d7566f1a22e31486f8f5",
+      "identifier": "BUR-Valle d’Aosta-d7566f1a22e31486f8f5",
+      "title": "legge regionale 13 febbraio 2013, n.",
+      "source": "Regione Valle d'Aosta - BURVA",
+      "source_detail": "Regione Valle d’Aosta - BURVA",
+      "kind": "Legge regionale",
+      "date": "2013-02-13",
+      "updated_at": "2026-08-13T06:51:41.207332Z",
+      "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026.pdf",
+      "relevance": "Potenziale",
+      "topics": [
+        "Minori e famiglia"
+      ],
+      "summary": "3, che risulta così composta: • La Dr.ssa Emanuela Alessandra Maria Lorenza GER- MANO, Presidente di Sezione della Corte di Appello di Torino, con funzioni di Presidente, designato dal Presidente del Tribunale di Aosta limitatamente sino al 31/12/2025; • Il presidente dell’ARER, o suo delegato, con funzio- ni di vice presidente; • Il dirigente della Struttura regionale competente in materia di famiglia e politiche s...",
+      "level": "regionale",
+      "region": "Valle d’Aosta",
+      "status": "pubblicato",
+      "score": 1.4,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "famiglia"
+        ]
+      }
+    },
+    {
+      "key": "826988d11b05ea73f6947b2fa61ea85f3c2723dd1d77d625714f6fc011ea8a73",
+      "id": "BUR-Valle d’Aosta-3a011edd726be9e3c72b",
+      "identifier": "BUR-Valle d’Aosta-3a011edd726be9e3c72b",
+      "title": "legge regionale 13 febbraio 2013, n.",
+      "source": "Regione Valle d'Aosta - BURVA",
+      "source_detail": "Regione Valle d’Aosta - BURVA",
+      "kind": "Legge regionale",
+      "date": "2013-02-13",
+      "updated_at": "2026-08-13T06:51:41.207332Z",
+      "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026_signed.pdf",
+      "relevance": "Potenziale",
+      "topics": [
+        "Minori e famiglia"
+      ],
+      "summary": "3, che risulta così composta: • La Dr.ssa Emanuela Alessandra Maria Lorenza GER- MANO, Presidente di Sezione della Corte di Appello di Torino, con funzioni di Presidente, designato dal Presidente del Tribunale di Aosta limitatamente sino al 31/12/2025; • Il presidente dell’ARER, o suo delegato, con funzio- ni di vice presidente; • Il dirigente della Struttura regionale competente in materia di famiglia e politiche s...",
+      "level": "regionale",
+      "region": "Valle d’Aosta",
+      "status": "pubblicato",
+      "score": 1.4,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "famiglia"
+        ]
+      }
+    },
+    {
+      "key": "fe1b6468868dd0a54530c63092b571d66af99b2a330e7f54953c1199337d38d9",
+      "id": "BUR-Emilia-Romagna-d1bc45fead9a81252692",
+      "identifier": "BUR-Emilia-Romagna-d1bc45fead9a81252692",
+      "title": "deliberazione per l’approvazione e la revisione dello statuto e ne determina la sua efficacia normativa.",
+      "source": "Regione Emilia-Romagna - BURERT",
+      "source_detail": "Regione Emilia-Romagna - BURERT",
+      "kind": "Legge regionale",
+      "date": "",
+      "updated_at": "2026-08-13T06:49:22.290849Z",
+      "href": "https://bur.regione.emilia-romagna.it/area-bollettini/n-221-del-10-08-2026-parte-seconda/bollettino_view/++widget++form.widgets.pdf_firmato/@@download",
+      "relevance": "Alta",
+      "topics": [
+        "Minori e famiglia",
+        "Lavoro e burnout",
+        "Competenze professionali"
+      ],
+      "summary": "ARTICOLO 6 Autonomia Finanziaria 1. Il Comune ha autonomia finanziaria nell’ambito della finanza pubblica, fondata su certezze di risorse proprie o trasferite. ARTICOLO 7 Potestà Regolamentare 1. Il Comune ha potestà regolamentare nei casi, secondo le modalità e nel rispetto dei limiti previsti dalla legge e dallo statuto. ARTICOLO 8 Funzioni 1. Il Comune è titolare di funzioni proprie e di funzioni amministrative a...",
+      "level": "regionale",
+      "region": "Emilia-Romagna",
+      "status": "pubblicato",
+      "score": 4.16,
+      "found_terms": {
+        "sanita_welfare": [
+          "servizi sociali"
+        ],
+        "scuola_minori_famiglia": [
+          "famiglia"
+        ],
+        "anziani_lavoro_organizzazioni": [
+          "lavoro"
         ]
       }
     }
