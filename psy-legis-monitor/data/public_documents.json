@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-14T06:49:18.540854Z",
-  "fetched_document_count": 350,
-  "published_document_count": 67,
+  "generated_at": "2026-08-15T05:49:39.688267Z",
+  "fetched_document_count": 615,
+  "published_document_count": 69,
   "high_relevance_count": 18,
-  "potential_relevance_count": 49,
+  "potential_relevance_count": 51,
   "published_source_count": 8,
   "published_sources": [
     "Camera dei deputati",
@@ -19,9 +19,9 @@
   "source_statuses": [
     {
       "source": "Gazzetta Ufficiale",
-      "status": "error",
-      "document_count": 0,
-      "error": "timed out"
+      "status": "ok",
+      "document_count": 250,
+      "error": ""
     },
     {
       "source": "Camera",
@@ -37,15 +37,15 @@
     },
     {
       "source": "Normattiva",
-      "status": "error",
-      "document_count": 0,
-      "error": "timed out"
+      "status": "ok",
+      "document_count": 13,
+      "error": ""
     },
     {
       "source": "Ministero Salute",
-      "status": "error",
-      "document_count": 0,
-      "error": "Ministero Salute non interrogabile dalle fonti configurate"
+      "status": "ok",
+      "document_count": 1,
+      "error": ""
     },
     {
       "source": "AGENAS",
@@ -55,14 +55,14 @@
     },
     {
       "source": "EUR-Lex",
-      "status": "ok",
+      "status": "error",
       "document_count": 0,
-      "error": ""
+      "error": "EUR-Lex non interrogabile tramite i feed RSS ufficiali"
     },
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 53,
+      "document_count": 54,
       "error": ""
     },
     {
@@ -88,7 +88,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Atto normativo",
       "date": "2026-08-08",
-      "updated_at": "2026-08-13T06:46:55.212111Z",
+      "updated_at": "2026-08-15T05:43:04.631026Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-08&atto.codiceRedazionale=26R00162",
       "relevance": "Potenziale",
       "topics": [],
@@ -112,7 +112,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-08-04",
-      "updated_at": "2026-08-14T06:44:14.864273Z",
+      "updated_at": "2026-08-15T05:43:19.707059Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60409.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -138,7 +138,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-08-04",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3075",
       "relevance": "Potenziale",
       "topics": [
@@ -164,7 +164,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-08-03",
-      "updated_at": "2026-08-14T06:44:14.864273Z",
+      "updated_at": "2026-08-15T05:43:19.707059Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60370.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -190,7 +190,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-08-01",
-      "updated_at": "2026-08-13T06:46:54.449462Z",
+      "updated_at": "2026-08-15T05:43:02.509587Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-01&atto.codiceRedazionale=26R00199",
       "relevance": "Potenziale",
       "topics": [
@@ -216,7 +216,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-14T06:44:14.864273Z",
+      "updated_at": "2026-08-15T05:43:19.707059Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60357.htm",
       "relevance": "Potenziale",
       "topics": [],
@@ -240,7 +240,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-14T06:44:14.864273Z",
+      "updated_at": "2026-08-15T05:43:19.707059Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60355.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -267,7 +267,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3053",
       "relevance": "Potenziale",
       "topics": [
@@ -294,7 +294,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-29",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3050",
       "relevance": "Potenziale",
       "topics": [
@@ -313,6 +313,32 @@
       }
     },
     {
+      "key": "7eb6e314ef00aede2571afe4866c7bd48a176462b7027c7675f0cfde3f0636b6",
+      "id": "26A03732",
+      "identifier": "26A03732",
+      "title": "COMUNICATO - Ripartizione per l’anno 2024 del fondo per il ristoro ai comuni delle minori entrate derivanti dall’esenzione IMU per gli immobili occupati abusivamente. (26A03732) Pag. 31",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-07-28",
+      "updated_at": "2026-08-15T05:42:56.122744Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-28&atto.codiceRedazionale=26A03732&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Minori e famiglia"
+      ],
+      "summary": "Ripartizione per l’anno 2024 del fondo per il ristoro ai comuni delle minori entrate derivanti dall’esenzione IMU per gli immobili occupati abusivamente. (26A03732) Pag. 31",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 3.36,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "minori"
+        ]
+      }
+    },
+    {
       "key": "9fda82a3a60a94704d86f8bc28372e649174a1c46e155446ddce7b71300abd3b",
       "id": "26A03779",
       "identifier": "26A03779",
@@ -321,7 +347,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-24",
-      "updated_at": "2026-08-13T06:46:47.846821Z",
+      "updated_at": "2026-08-15T05:42:52.850911Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-24&atto.codiceRedazionale=26A03779&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -347,7 +373,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "DGR / delibera regionale",
       "date": "2026-07-24",
-      "updated_at": "2026-08-13T06:46:47.846821Z",
+      "updated_at": "2026-08-15T05:42:52.850911Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-24&atto.codiceRedazionale=26A03705&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [],
@@ -371,7 +397,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-24",
-      "updated_at": "2026-08-13T06:46:47.846821Z",
+      "updated_at": "2026-08-15T05:42:52.850911Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-24&atto.codiceRedazionale=26A03662&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -397,7 +423,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-24",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3044",
       "relevance": "Potenziale",
       "topics": [
@@ -424,7 +450,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-08-13T06:46:45.471231Z",
+      "updated_at": "2026-08-15T05:42:51.713890Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-23&atto.codiceRedazionale=26A03660&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -450,7 +476,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-08-13T06:46:45.471231Z",
+      "updated_at": "2026-08-15T05:42:51.713890Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-23&atto.codiceRedazionale=26A03659&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -476,7 +502,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-08-13T06:46:45.471231Z",
+      "updated_at": "2026-08-15T05:42:51.713890Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-23&atto.codiceRedazionale=26A03658&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -502,7 +528,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-22",
-      "updated_at": "2026-08-13T06:46:43.117950Z",
+      "updated_at": "2026-08-15T05:42:50.544907Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03642&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -528,7 +554,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-22",
-      "updated_at": "2026-08-13T06:46:43.117950Z",
+      "updated_at": "2026-08-15T05:42:50.544907Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03641&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -554,7 +580,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-22",
-      "updated_at": "2026-08-13T06:46:43.117950Z",
+      "updated_at": "2026-08-15T05:42:50.544907Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03640&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -580,7 +606,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-22",
-      "updated_at": "2026-08-13T06:46:43.117950Z",
+      "updated_at": "2026-08-15T05:42:50.544907Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03639&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -607,7 +633,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-20",
-      "updated_at": "2026-08-13T06:46:40.288146Z",
+      "updated_at": "2026-08-15T05:42:44.976229Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-20&atto.codiceRedazionale=26A03615&elenco30giorni=true",
       "relevance": "Alta",
       "topics": [
@@ -639,7 +665,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-07-18",
-      "updated_at": "2026-08-13T06:46:51.820642Z",
+      "updated_at": "2026-08-15T05:42:59.318712Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-18&atto.codiceRedazionale=25R00295",
       "relevance": "Alta",
       "topics": [
@@ -660,6 +686,32 @@
       }
     },
     {
+      "key": "f8941a8258a385d844b2c98727a35707e07a541ec2a57d797aba2aec4bd8b923",
+      "id": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2026-07-17;131",
+      "identifier": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2026-07-17;131",
+      "title": "MINORI NEI CONTESTI DI CRIMINALITÀ ORGANIZZATA - MISURE DI PROTEZIONE E ASSISTENZA",
+      "source": "Normattiva",
+      "source_detail": "Normattiva - aggiornamenti in multivigenza",
+      "kind": "Legge",
+      "date": "2026-07-17",
+      "updated_at": "2026-08-15T05:43:19.737876Z",
+      "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2026-07-17;131",
+      "relevance": "Potenziale",
+      "topics": [
+        "Minori e famiglia"
+      ],
+      "summary": "La Banca Dati è aggiornata in multivigenza con le modifiche apportate dalla Legge 17 luglio 2026, n. 131 .",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 2.24,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "minori"
+        ]
+      }
+    },
+    {
       "key": "c804dfdfbc79b7329b0c371c21f73baa8b389d4f9e5743046dfc2a1e510363b2",
       "id": "3029",
       "identifier": "3029",
@@ -668,7 +720,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-15",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3029",
       "relevance": "Alta",
       "topics": [
@@ -697,7 +749,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-13",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3017",
       "relevance": "Alta",
       "topics": [
@@ -726,7 +778,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-10",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3016",
       "relevance": "Potenziale",
       "topics": [
@@ -752,7 +804,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-09",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3011",
       "relevance": "Potenziale",
       "topics": [
@@ -804,7 +856,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-03",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3003",
       "relevance": "Potenziale",
       "topics": [
@@ -856,7 +908,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-29",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2993",
       "relevance": "Alta",
       "topics": [
@@ -885,7 +937,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-29",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2992",
       "relevance": "Alta",
       "topics": [
@@ -943,7 +995,7 @@
       "source_detail": "Normattiva - aggiornamenti in multivigenza",
       "kind": "Decreto legislativo",
       "date": "2026-06-18",
-      "updated_at": "2026-08-13T06:47:01.640439Z",
+      "updated_at": "2026-08-15T05:43:19.737876Z",
       "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2024-02-5;20",
       "relevance": "Alta",
       "topics": [
@@ -972,7 +1024,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-17",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2973",
       "relevance": "Potenziale",
       "topics": [],
@@ -996,7 +1048,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-15",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2967",
       "relevance": "Potenziale",
       "topics": [],
@@ -1020,7 +1072,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-12",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2966",
       "relevance": "Potenziale",
       "topics": [
@@ -1126,7 +1178,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2951",
       "relevance": "Potenziale",
       "topics": [],
@@ -1150,7 +1202,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "topics": [
@@ -1176,7 +1228,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "topics": [
@@ -1209,7 +1261,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-20",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2937",
       "relevance": "Alta",
       "topics": [
@@ -1238,7 +1290,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-15",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2936",
       "relevance": "Alta",
       "topics": [
@@ -1268,7 +1320,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-12",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2928",
       "relevance": "Potenziale",
       "topics": [
@@ -1294,7 +1346,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-11",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2927",
       "relevance": "Potenziale",
       "topics": [
@@ -1320,7 +1372,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-07",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2922",
       "relevance": "Alta",
       "topics": [
@@ -1349,7 +1401,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-05",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2918",
       "relevance": "Alta",
       "topics": [
@@ -1379,7 +1431,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-27",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2907",
       "relevance": "Alta",
       "topics": [
@@ -1410,7 +1462,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-27",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2906",
       "relevance": "Potenziale",
       "topics": [
@@ -1436,7 +1488,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-23",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2902",
       "relevance": "Potenziale",
       "topics": [
@@ -1462,7 +1514,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-22",
-      "updated_at": "2026-08-13T06:46:27.816335Z",
+      "updated_at": "2026-08-15T05:42:32.228078Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2892",
       "relevance": "Potenziale",
       "topics": [
@@ -1784,7 +1836,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-08-13T06:47:04.826245Z",
+      "updated_at": "2026-08-15T05:43:25.401312Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "topics": [
@@ -1810,7 +1862,7 @@
       "source_detail": "Regione Valle d’Aosta - BURVA",
       "kind": "Legge regionale",
       "date": "2013-02-13",
-      "updated_at": "2026-08-14T06:48:50.495067Z",
+      "updated_at": "2026-08-15T05:48:58.421357Z",
       "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026.pdf",
       "relevance": "Potenziale",
       "topics": [
@@ -1836,7 +1888,7 @@
       "source_detail": "Regione Valle d’Aosta - BURVA",
       "kind": "Legge regionale",
       "date": "2013-02-13",
-      "updated_at": "2026-08-14T06:48:50.495067Z",
+      "updated_at": "2026-08-15T05:48:58.421357Z",
       "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026_signed.pdf",
       "relevance": "Potenziale",
       "topics": [
