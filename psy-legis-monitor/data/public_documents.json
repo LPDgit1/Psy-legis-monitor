@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-15T05:49:39.688267Z",
-  "fetched_document_count": 615,
+  "generated_at": "2026-08-16T05:50:45.092341Z",
+  "fetched_document_count": 619,
   "published_document_count": 69,
   "high_relevance_count": 18,
   "potential_relevance_count": 51,
@@ -20,7 +20,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 250,
+      "document_count": 254,
       "error": ""
     },
     {
@@ -88,7 +88,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Atto normativo",
       "date": "2026-08-08",
-      "updated_at": "2026-08-15T05:43:04.631026Z",
+      "updated_at": "2026-08-16T05:45:27.762253Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-08&atto.codiceRedazionale=26R00162",
       "relevance": "Potenziale",
       "topics": [],
@@ -112,7 +112,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-08-04",
-      "updated_at": "2026-08-15T05:43:19.707059Z",
+      "updated_at": "2026-08-16T05:45:40.943414Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60409.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -164,7 +164,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-08-03",
-      "updated_at": "2026-08-15T05:43:19.707059Z",
+      "updated_at": "2026-08-16T05:45:40.943414Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60370.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -190,7 +190,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-08-01",
-      "updated_at": "2026-08-15T05:43:02.509587Z",
+      "updated_at": "2026-08-16T05:45:26.916293Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-01&atto.codiceRedazionale=26R00199",
       "relevance": "Potenziale",
       "topics": [
@@ -216,7 +216,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-15T05:43:19.707059Z",
+      "updated_at": "2026-08-16T05:45:40.943414Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60357.htm",
       "relevance": "Potenziale",
       "topics": [],
@@ -240,7 +240,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-15T05:43:19.707059Z",
+      "updated_at": "2026-08-16T05:45:40.943414Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60355.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -321,7 +321,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-28",
-      "updated_at": "2026-08-15T05:42:56.122744Z",
+      "updated_at": "2026-08-16T05:45:22.028649Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-28&atto.codiceRedazionale=26A03732&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -347,7 +347,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-24",
-      "updated_at": "2026-08-15T05:42:52.850911Z",
+      "updated_at": "2026-08-16T05:45:19.094482Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-24&atto.codiceRedazionale=26A03779&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -373,7 +373,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "DGR / delibera regionale",
       "date": "2026-07-24",
-      "updated_at": "2026-08-15T05:42:52.850911Z",
+      "updated_at": "2026-08-16T05:45:19.094482Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-24&atto.codiceRedazionale=26A03705&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [],
@@ -397,7 +397,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-24",
-      "updated_at": "2026-08-15T05:42:52.850911Z",
+      "updated_at": "2026-08-16T05:45:19.094482Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-24&atto.codiceRedazionale=26A03662&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -450,7 +450,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-08-15T05:42:51.713890Z",
+      "updated_at": "2026-08-16T05:45:17.727016Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-23&atto.codiceRedazionale=26A03660&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -476,7 +476,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-08-15T05:42:51.713890Z",
+      "updated_at": "2026-08-16T05:45:17.727016Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-23&atto.codiceRedazionale=26A03659&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -502,7 +502,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-08-15T05:42:51.713890Z",
+      "updated_at": "2026-08-16T05:45:17.727016Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-23&atto.codiceRedazionale=26A03658&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -528,7 +528,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-22",
-      "updated_at": "2026-08-15T05:42:50.544907Z",
+      "updated_at": "2026-08-16T05:45:14.699833Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03642&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -554,7 +554,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-22",
-      "updated_at": "2026-08-15T05:42:50.544907Z",
+      "updated_at": "2026-08-16T05:45:14.699833Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03641&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -580,7 +580,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-22",
-      "updated_at": "2026-08-15T05:42:50.544907Z",
+      "updated_at": "2026-08-16T05:45:14.699833Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03640&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -606,7 +606,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-22",
-      "updated_at": "2026-08-15T05:42:50.544907Z",
+      "updated_at": "2026-08-16T05:45:14.699833Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03639&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -633,7 +633,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-20",
-      "updated_at": "2026-08-15T05:42:44.976229Z",
+      "updated_at": "2026-08-16T05:45:11.754941Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-20&atto.codiceRedazionale=26A03615&elenco30giorni=true",
       "relevance": "Alta",
       "topics": [
@@ -665,7 +665,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-07-18",
-      "updated_at": "2026-08-15T05:42:59.318712Z",
+      "updated_at": "2026-08-16T05:45:24.768647Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-18&atto.codiceRedazionale=25R00295",
       "relevance": "Alta",
       "topics": [
@@ -694,7 +694,7 @@
       "source_detail": "Normattiva - aggiornamenti in multivigenza",
       "kind": "Legge",
       "date": "2026-07-17",
-      "updated_at": "2026-08-15T05:43:19.737876Z",
+      "updated_at": "2026-08-16T05:45:40.968286Z",
       "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2026-07-17;131",
       "relevance": "Potenziale",
       "topics": [
@@ -995,7 +995,7 @@
       "source_detail": "Normattiva - aggiornamenti in multivigenza",
       "kind": "Decreto legislativo",
       "date": "2026-06-18",
-      "updated_at": "2026-08-15T05:43:19.737876Z",
+      "updated_at": "2026-08-16T05:45:40.968286Z",
       "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2024-02-5;20",
       "relevance": "Alta",
       "topics": [
@@ -1836,7 +1836,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-08-15T05:43:25.401312Z",
+      "updated_at": "2026-08-16T05:45:43.856043Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "topics": [
@@ -1862,7 +1862,7 @@
       "source_detail": "Regione Valle d’Aosta - BURVA",
       "kind": "Legge regionale",
       "date": "2013-02-13",
-      "updated_at": "2026-08-15T05:48:58.421357Z",
+      "updated_at": "2026-08-16T05:50:08.711624Z",
       "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026.pdf",
       "relevance": "Potenziale",
       "topics": [
@@ -1888,7 +1888,7 @@
       "source_detail": "Regione Valle d’Aosta - BURVA",
       "kind": "Legge regionale",
       "date": "2013-02-13",
-      "updated_at": "2026-08-15T05:48:58.421357Z",
+      "updated_at": "2026-08-16T05:50:08.711624Z",
       "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026_signed.pdf",
       "relevance": "Potenziale",
       "topics": [
