@@ -4,7 +4,7 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-08-15T05:42:32.228078Z",
+  "generated_at": "2026-08-17T05:51:30.301326Z",
   "result_count": 200,
   "newest_identifier": "3083",
   "newest_date": "20260807",
@@ -131,7 +131,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3063",
-      "title": "CARMINA: \"Istituzione della Rete nazionale delle strade della cultura\" (3063)",
+      "title": "CARMINA e L'ABBATE: \"Istituzione della Rete nazionale delle strade della cultura\" (3063)",
       "date": "20260731",
       "identifier": "3063"
     },
