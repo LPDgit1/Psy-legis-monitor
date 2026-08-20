@@ -1,16 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-19T05:53:14.179807Z",
-  "fetched_document_count": 581,
-  "published_document_count": 69,
-  "high_relevance_count": 18,
-  "potential_relevance_count": 51,
-  "published_source_count": 8,
+  "generated_at": "2026-08-20T05:52:48.133568Z",
+  "fetched_document_count": 558,
+  "published_document_count": 74,
+  "high_relevance_count": 22,
+  "potential_relevance_count": 52,
+  "published_source_count": 9,
   "published_sources": [
     "Camera dei deputati",
     "Gazzetta Ufficiale",
     "Ministero della Salute",
     "Normattiva",
+    "Regione Abruzzo - BURA",
     "Regione Emilia-Romagna - BURERT",
     "Regione Toscana - BURT",
     "Regione Valle d'Aosta - BURVA",
@@ -20,7 +21,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 220,
+      "document_count": 212,
       "error": ""
     },
     {
@@ -62,7 +63,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 50,
+      "document_count": 55,
       "error": ""
     },
     {
@@ -73,12 +74,39 @@
     },
     {
       "source": "Pagine istituzionali",
-      "status": "ok",
-      "document_count": 20,
-      "error": ""
+      "status": "error",
+      "document_count": 0,
+      "error": "timed out"
     }
   ],
   "documents": [
+    {
+      "key": "2f4a90954d287303ca1a5d64337f0176424781c47ac612b4ae14014538dddbde",
+      "id": "BUR-Emilia-Romagna-087b678be192a4f04946",
+      "identifier": "BUR-Emilia-Romagna-087b678be192a4f04946",
+      "title": "Parte terza - N.",
+      "source": "Regione Emilia-Romagna - BURERT",
+      "source_detail": "Regione Emilia-Romagna - BURERT",
+      "kind": "Decreto regionale",
+      "date": "2026-08-19",
+      "updated_at": "2026-08-20T05:49:36.555037Z",
+      "href": "https://bur.regione.emilia-romagna.it/area-bollettini/agosto-periodico-parte-terza-2a-quindicina-4/bollettino_view/++widget++form.widgets.pdf_firmato/@@download",
+      "relevance": "Potenziale",
+      "topics": [
+        "Lavoro e burnout",
+        "Competenze professionali"
+      ],
+      "summary": "19 Anno 57 19 agosto 2026 N. 226 PROCEDURE CONCORSUALI DETERMINAZIONI DIRETTORE GENERALE STRATEGIE TERRITORIALI ED EUROPEE, PROGRAMMAZIONE, INNOVAZIONE E ORGANIZZAZIONE 6 N.15565/2026 - Avviso di indizione procedura selettiva pubblica, per titoli ed esami, per l’assunzione con contratto di lavoro a tempo pieno e indeterminato di 5 Dirigenti - “Manager dell’Agricoltura” (CP-DIR-2026-1). Approvazione 35 N.15566/2026 -...",
+      "level": "regionale",
+      "region": "Emilia-Romagna",
+      "status": "pubblicato",
+      "score": 2.08,
+      "found_terms": {
+        "anziani_lavoro_organizzazioni": [
+          "lavoro"
+        ]
+      }
+    },
     {
       "key": "7dbaa741e0ef5b6f59b227ac825201301b7fb886d1520398e5c7e6385b6a1218",
       "id": "26R00162",
@@ -88,7 +116,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Atto normativo",
       "date": "2026-08-08",
-      "updated_at": "2026-08-19T05:48:05.742637Z",
+      "updated_at": "2026-08-20T05:47:40.067566Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-08&atto.codiceRedazionale=26R00162",
       "relevance": "Potenziale",
       "topics": [],
@@ -104,6 +132,39 @@
       }
     },
     {
+      "key": "3e8730b1491e0da6ea42a7851f7ecb94b47db54a82f178c48fe1615e5642d6e6",
+      "id": "BUR-Abruzzo-aa5ed465e5c0d2ce93bf",
+      "identifier": "BUR-Abruzzo-aa5ed465e5c0d2ce93bf",
+      "title": "DETERMINAZIONE N.",
+      "source": "Regione Abruzzo - BURA",
+      "source_detail": "Regione Abruzzo - BURA",
+      "kind": "DGR / delibera regionale",
+      "date": "2026-08-04",
+      "updated_at": "2026-08-20T05:48:49.860606Z",
+      "href": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-08-11/bollettino-ordinario-numero-33-del-19-08-2026.pdf",
+      "relevance": "Alta",
+      "topics": [
+        "Salute mentale",
+        "Disabilita e autismo",
+        "Welfare e servizi",
+        "Competenze professionali"
+      ],
+      "summary": "DPE015/161 DEL 04/08/2026 Metanodotto Cellino Attanasio – Bussi. Rifacimento del primo tratto Cellino Attanasio – Pineto DN200 (8”) DP 75 bar ed opere connesse. Tratto in Comune di Atri (TE). Società proponente: Società Gasdotti Italia S.p.A. (S.G.I.) con sede legale in Milano Via della Moscova n. 3 ed uffici tecnico amministrativi in via dei Salci, n. 25 – 03100 Frosinone (FR). Ordine di deposito presso il MEF – Ra...",
+      "level": "regionale",
+      "region": "Abruzzo",
+      "status": "pubblicato",
+      "score": 16.4,
+      "found_terms": {
+        "sanita_welfare": [
+          "LEA",
+          "presa in carico"
+        ],
+        "clinica_sociale": [
+          "disturbo dello spettro autistico"
+        ]
+      }
+    },
+    {
       "key": "c9ad86fa4f07ac36fa0be57d6affb42b79f97eed7b5821ad1ac16ef2cbcb0f56",
       "id": "C.3075",
       "identifier": "C.3075",
@@ -112,7 +173,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-08-04",
-      "updated_at": "2026-08-19T05:48:17.360181Z",
+      "updated_at": "2026-08-20T05:47:50.379330Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60409.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -164,7 +225,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-08-03",
-      "updated_at": "2026-08-19T05:48:17.360181Z",
+      "updated_at": "2026-08-20T05:47:50.379330Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60370.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -190,7 +251,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-08-01",
-      "updated_at": "2026-08-19T05:48:04.966225Z",
+      "updated_at": "2026-08-20T05:47:39.193455Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-01&atto.codiceRedazionale=26R00199",
       "relevance": "Potenziale",
       "topics": [
@@ -216,7 +277,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-19T05:48:17.360181Z",
+      "updated_at": "2026-08-20T05:47:50.379330Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60357.htm",
       "relevance": "Potenziale",
       "topics": [],
@@ -240,7 +301,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-19T05:48:17.360181Z",
+      "updated_at": "2026-08-20T05:47:50.379330Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60355.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -321,7 +382,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-28",
-      "updated_at": "2026-08-19T05:47:57.703005Z",
+      "updated_at": "2026-08-20T05:47:32.047399Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-28&atto.codiceRedazionale=26A03732&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -347,7 +408,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-24",
-      "updated_at": "2026-08-19T05:47:53.025267Z",
+      "updated_at": "2026-08-20T05:47:28.348372Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-24&atto.codiceRedazionale=26A03779&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -373,7 +434,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "DGR / delibera regionale",
       "date": "2026-07-24",
-      "updated_at": "2026-08-19T05:47:53.025267Z",
+      "updated_at": "2026-08-20T05:47:28.348372Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-24&atto.codiceRedazionale=26A03705&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [],
@@ -397,7 +458,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-24",
-      "updated_at": "2026-08-19T05:47:53.025267Z",
+      "updated_at": "2026-08-20T05:47:28.348372Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-24&atto.codiceRedazionale=26A03662&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -450,7 +511,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-08-19T05:47:50.349159Z",
+      "updated_at": "2026-08-20T05:47:27.387510Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-23&atto.codiceRedazionale=26A03660&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -476,7 +537,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-08-19T05:47:50.349159Z",
+      "updated_at": "2026-08-20T05:47:27.387510Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-23&atto.codiceRedazionale=26A03659&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -502,7 +563,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-08-19T05:47:50.349159Z",
+      "updated_at": "2026-08-20T05:47:27.387510Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-23&atto.codiceRedazionale=26A03658&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -528,7 +589,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-22",
-      "updated_at": "2026-08-19T05:47:48.947005Z",
+      "updated_at": "2026-08-20T05:47:25.088973Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03642&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -554,7 +615,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-22",
-      "updated_at": "2026-08-19T05:47:48.947005Z",
+      "updated_at": "2026-08-20T05:47:25.088973Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03641&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -580,7 +641,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-22",
-      "updated_at": "2026-08-19T05:47:48.947005Z",
+      "updated_at": "2026-08-20T05:47:25.088973Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03640&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -606,7 +667,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-22",
-      "updated_at": "2026-08-19T05:47:48.947005Z",
+      "updated_at": "2026-08-20T05:47:25.088973Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-22&atto.codiceRedazionale=26A03639&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -694,7 +755,7 @@
       "source_detail": "Normattiva - aggiornamenti in multivigenza",
       "kind": "Legge",
       "date": "2026-07-17",
-      "updated_at": "2026-08-19T05:48:17.391509Z",
+      "updated_at": "2026-08-20T05:47:50.405771Z",
       "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2026-07-17;131",
       "relevance": "Potenziale",
       "topics": [
@@ -995,7 +1056,7 @@
       "source_detail": "Normattiva - aggiornamenti in multivigenza",
       "kind": "Decreto legislativo",
       "date": "2026-06-18",
-      "updated_at": "2026-08-19T05:48:17.391509Z",
+      "updated_at": "2026-08-20T05:47:50.405771Z",
       "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2024-02-5;20",
       "relevance": "Alta",
       "topics": [
@@ -1166,6 +1227,40 @@
       "found_terms": {
         "anziani_lavoro_organizzazioni": [
           "non autosufficienza"
+        ]
+      }
+    },
+    {
+      "key": "ff4c07cec04577b7e93a1f31cd40d17f4dfd3ba7fe3bb9f53cc5658c19467540",
+      "id": "BUR-Abruzzo-df18b92a6b3fe25c86af",
+      "identifier": "BUR-Abruzzo-df18b92a6b3fe25c86af",
+      "title": "DPF DIPARTIMENTO SANITÀ PESCARA DPF018 SERVIZIO ACCREDITAMENTO E ACCORDI CONTRATTUALI DPF018003 Ufficio Contratti e Tetti Erogatori Privati della Rete Territoriale DGR n.",
+      "source": "Regione Abruzzo - BURA",
+      "source_detail": "Regione Abruzzo - BURA",
+      "kind": "DGR / delibera regionale",
+      "date": "2026-06-09",
+      "updated_at": "2026-08-20T05:48:49.860606Z",
+      "href": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-08-11/dgr-336-2026.pdf",
+      "relevance": "Alta",
+      "topics": [
+        "Salute mentale",
+        "Disabilita e autismo",
+        "Welfare e servizi",
+        "Competenze professionali"
+      ],
+      "summary": "336 del 09/06/2026 OGGETTO: DDGGRR 407 E 408 DEL 30/06/2025 E DGR 614 DEL 22/09/2025 -DISPOSIZIONI IN MATERIA DI CONTRATTAZIONE EX ART. 8 QUINQUIES DELLE PRESTAZIONI SANITARIE DI TRATTAMENTO DEL DISTURBO DELLO SPETTRO AUTISTICO. Powered by TCPDF (www.tcpdf.org) Pagina 1 di 1Giunta Regione Abruzzo. FOGLIO NUMERAZIONE DELIBERA DPA DIPARTIMENTO PRESIDENZA PROGRAMMAZIONE TURISMO DPA016 Servizio Assistenza Atti del Presi...",
+      "level": "regionale",
+      "region": "Abruzzo",
+      "status": "pubblicato",
+      "score": 26.6,
+      "found_terms": {
+        "sanita_welfare": [
+          "LEA",
+          "presa in carico"
+        ],
+        "clinica_sociale": [
+          "autismo",
+          "disturbo dello spettro autistico"
         ]
       }
     },
@@ -1836,7 +1931,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-08-19T05:48:20.236868Z",
+      "updated_at": "2026-08-20T05:47:53.643259Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "topics": [
@@ -1862,7 +1957,7 @@
       "source_detail": "Regione Valle d’Aosta - BURVA",
       "kind": "Legge regionale",
       "date": "2013-02-13",
-      "updated_at": "2026-08-19T05:52:37.405673Z",
+      "updated_at": "2026-08-20T05:51:46.664753Z",
       "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026.pdf",
       "relevance": "Potenziale",
       "topics": [
@@ -1888,7 +1983,7 @@
       "source_detail": "Regione Valle d’Aosta - BURVA",
       "kind": "Legge regionale",
       "date": "2013-02-13",
-      "updated_at": "2026-08-19T05:52:37.405673Z",
+      "updated_at": "2026-08-20T05:51:46.664753Z",
       "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026_signed.pdf",
       "relevance": "Potenziale",
       "topics": [
@@ -1902,6 +1997,80 @@
       "found_terms": {
         "scuola_minori_famiglia": [
           "famiglia"
+        ]
+      }
+    },
+    {
+      "key": "583f7329230293699d9386305664da96c5cc8143f6e4c78b070dd50b12cd87d8",
+      "id": "BUR-Abruzzo-e8f91f52a1b974be2e54",
+      "identifier": "BUR-Abruzzo-e8f91f52a1b974be2e54",
+      "title": "deliberazione, il Dirigente del Servizio e il Direttore del Dipartimento competente ne attestano la legittimità e la regolarità tecnico-amministrativa;",
+      "source": "Regione Abruzzo - BURA",
+      "source_detail": "Regione Abruzzo - BURA",
+      "kind": "Legge regionale",
+      "date": "",
+      "updated_at": "2026-08-20T05:48:49.860606Z",
+      "href": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-08-11/bollettino-ordinario-numero-33-del-19-08-2026.pdf",
+      "relevance": "Alta",
+      "topics": [
+        "Salute mentale",
+        "Minori e famiglia",
+        "Disabilita e autismo",
+        "Welfare e servizi",
+        "Competenze professionali"
+      ],
+      "summary": "DATO ATTO che il Direttore del Dipartimento Sanità con la sottoscrizione del presente atto ne attesta altresì la conformità agli indirizzi, funzioni ed obiettivi assegnati al Dipartimento medesimo; A VOTI ESPRESSI NELLE FORME DI LEGGE DE L I B E R A per le motivazioni specificate in premessa, che qui si intendono integralmente trascritte e approvate DI PRENDERE ATTO E DI PORRE A CARICO DEL SSR l’esigenza assistenzia...",
+      "level": "regionale",
+      "region": "Abruzzo",
+      "status": "pubblicato",
+      "score": 13.9,
+      "found_terms": {
+        "sanita_welfare": [
+          "LEA",
+          "presa in carico"
+        ],
+        "scuola_minori_famiglia": [
+          "famiglia"
+        ],
+        "clinica_sociale": [
+          "autismo"
+        ]
+      }
+    },
+    {
+      "key": "4fb0d047b08d3f6e0ee626202faa7545b72cb8300ff827e0c321d99470466f26",
+      "id": "BUR-Abruzzo-0260f40f027e28e91d2b",
+      "identifier": "BUR-Abruzzo-0260f40f027e28e91d2b",
+      "title": "deliberazione, il Dirigente del Servizio e il Direttore del Dipartimento competente ne attestano la legittimità e la regolarità tecnico-amministrativa;",
+      "source": "Regione Abruzzo - BURA",
+      "source_detail": "Regione Abruzzo - BURA",
+      "kind": "Legge regionale",
+      "date": "",
+      "updated_at": "2026-08-20T05:48:49.860606Z",
+      "href": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-08-11/dgr-336-2026.pdf",
+      "relevance": "Alta",
+      "topics": [
+        "Salute mentale",
+        "Minori e famiglia",
+        "Disabilita e autismo",
+        "Welfare e servizi",
+        "Competenze professionali"
+      ],
+      "summary": "DATO ATTO che il Direttore del Dipartimento Sanità con la sottoscrizione del presente atto ne attesta altresì la conformità agli indirizzi, funzioni ed obiettivi assegnati al Dipartimento medesimo; A VOTI ESPRESSI NELLE FORME DI LEGGE DE L I B E R A per le motivazioni specificate in premessa, che qui si intendono integralmente trascritte e approvate DI PRENDERE ATTO E DI PORRE A CARICO DEL SSR l’esigenza assistenzia...",
+      "level": "regionale",
+      "region": "Abruzzo",
+      "status": "pubblicato",
+      "score": 13.9,
+      "found_terms": {
+        "sanita_welfare": [
+          "LEA",
+          "presa in carico"
+        ],
+        "scuola_minori_famiglia": [
+          "famiglia"
+        ],
+        "clinica_sociale": [
+          "autismo"
         ]
       }
     },
