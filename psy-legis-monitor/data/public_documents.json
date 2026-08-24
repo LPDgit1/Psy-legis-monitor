@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-23T05:52:52.627985Z",
-  "fetched_document_count": 553,
-  "published_document_count": 75,
+  "generated_at": "2026-08-24T06:00:25.756953Z",
+  "fetched_document_count": 554,
+  "published_document_count": 76,
   "high_relevance_count": 22,
-  "potential_relevance_count": 53,
+  "potential_relevance_count": 54,
   "published_source_count": 9,
   "published_sources": [
     "Camera dei deputati",
@@ -21,7 +21,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 208,
+      "document_count": 209,
       "error": ""
     },
     {
@@ -63,7 +63,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 35,
+      "document_count": 55,
       "error": ""
     },
     {
@@ -74,9 +74,9 @@
     },
     {
       "source": "Pagine istituzionali",
-      "status": "ok",
-      "document_count": 20,
-      "error": ""
+      "status": "error",
+      "document_count": 0,
+      "error": "timed out"
     }
   ],
   "documents": [
@@ -116,7 +116,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Atto normativo",
       "date": "2026-08-08",
-      "updated_at": "2026-08-23T05:46:44.333343Z",
+      "updated_at": "2026-08-24T05:54:44.335165Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-08&atto.codiceRedazionale=26R00162",
       "relevance": "Potenziale",
       "topics": [],
@@ -132,6 +132,32 @@
       }
     },
     {
+      "key": "f73255dd6f642b9fb84ea927757d4502625051919b4e2ea37b70196af3f0f9e1",
+      "id": "26A03818",
+      "identifier": "26A03818",
+      "title": "DECRETO 24 luglio 2026 - Rinnovo della designazione al Laboratorio enochimico Ex allievi Scuola enologica Conegliano soc. coop., in Refrontolo, al rilascio dei certificati di analisi nel settore vitivinicolo. (26A03818) Pag. 10",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-08-06",
+      "updated_at": "2026-08-24T05:54:41.116374Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-06&atto.codiceRedazionale=26A03818&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Scuola"
+      ],
+      "summary": "Rinnovo della designazione al Laboratorio enochimico Ex allievi Scuola enologica Conegliano soc. coop., in Refrontolo, al rilascio dei certificati di analisi nel settore vitivinicolo. (26A03818) Pag. 10",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 3.36,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
       "key": "3e8730b1491e0da6ea42a7851f7ecb94b47db54a82f178c48fe1615e5642d6e6",
       "id": "BUR-Abruzzo-aa5ed465e5c0d2ce93bf",
       "identifier": "BUR-Abruzzo-aa5ed465e5c0d2ce93bf",
@@ -140,7 +166,7 @@
       "source_detail": "Regione Abruzzo - BURA",
       "kind": "DGR / delibera regionale",
       "date": "2026-08-04",
-      "updated_at": "2026-08-23T05:48:00.820648Z",
+      "updated_at": "2026-08-24T05:55:54.874519Z",
       "href": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-08-11/bollettino-ordinario-numero-33-del-19-08-2026.pdf",
       "relevance": "Alta",
       "topics": [
@@ -173,7 +199,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-08-04",
-      "updated_at": "2026-08-23T05:46:58.496599Z",
+      "updated_at": "2026-08-24T05:54:55.415895Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60409.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -225,7 +251,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-08-03",
-      "updated_at": "2026-08-23T05:46:58.496599Z",
+      "updated_at": "2026-08-24T05:54:55.415895Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60370.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -251,7 +277,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "DGR / delibera regionale",
       "date": "2026-08-03",
-      "updated_at": "2026-08-23T05:46:38.579133Z",
+      "updated_at": "2026-08-24T05:54:38.180215Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-03&atto.codiceRedazionale=26A03904&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [],
@@ -275,7 +301,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-08-01",
-      "updated_at": "2026-08-23T05:46:43.590654Z",
+      "updated_at": "2026-08-24T05:54:43.369806Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-01&atto.codiceRedazionale=26R00199",
       "relevance": "Potenziale",
       "topics": [
@@ -301,7 +327,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-23T05:46:58.496599Z",
+      "updated_at": "2026-08-24T05:54:55.415895Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60357.htm",
       "relevance": "Potenziale",
       "topics": [],
@@ -325,7 +351,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-23T05:46:58.496599Z",
+      "updated_at": "2026-08-24T05:54:55.415895Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60355.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -406,7 +432,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-07-28",
-      "updated_at": "2026-08-23T05:46:31.769232Z",
+      "updated_at": "2026-08-24T05:54:32.271769Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-07-28&atto.codiceRedazionale=26A03732&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -779,7 +805,7 @@
       "source_detail": "Normattiva - aggiornamenti in multivigenza",
       "kind": "Legge",
       "date": "2026-07-17",
-      "updated_at": "2026-08-23T05:46:58.519496Z",
+      "updated_at": "2026-08-24T05:54:55.449380Z",
       "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2026-07-17;131",
       "relevance": "Potenziale",
       "topics": [
@@ -1080,7 +1106,7 @@
       "source_detail": "Normattiva - aggiornamenti in multivigenza",
       "kind": "Decreto legislativo",
       "date": "2026-06-18",
-      "updated_at": "2026-08-23T05:46:58.519496Z",
+      "updated_at": "2026-08-24T05:54:55.449380Z",
       "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2024-02-5;20",
       "relevance": "Alta",
       "topics": [
@@ -1263,7 +1289,7 @@
       "source_detail": "Regione Abruzzo - BURA",
       "kind": "DGR / delibera regionale",
       "date": "2026-06-09",
-      "updated_at": "2026-08-23T05:48:00.820648Z",
+      "updated_at": "2026-08-24T05:55:54.874519Z",
       "href": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-08-11/dgr-336-2026.pdf",
       "relevance": "Alta",
       "topics": [
@@ -1955,7 +1981,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-08-23T05:47:01.180258Z",
+      "updated_at": "2026-08-24T05:54:59.096973Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "topics": [
@@ -1981,7 +2007,7 @@
       "source_detail": "Regione Valle d’Aosta - BURVA",
       "kind": "Legge regionale",
       "date": "2013-02-13",
-      "updated_at": "2026-08-23T05:51:51.063396Z",
+      "updated_at": "2026-08-24T05:59:21.306624Z",
       "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026.pdf",
       "relevance": "Potenziale",
       "topics": [
@@ -2007,7 +2033,7 @@
       "source_detail": "Regione Valle d’Aosta - BURVA",
       "kind": "Legge regionale",
       "date": "2013-02-13",
-      "updated_at": "2026-08-23T05:51:51.063396Z",
+      "updated_at": "2026-08-24T05:59:21.306624Z",
       "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026_signed.pdf",
       "relevance": "Potenziale",
       "topics": [
@@ -2033,7 +2059,7 @@
       "source_detail": "Regione Abruzzo - BURA",
       "kind": "Legge regionale",
       "date": "",
-      "updated_at": "2026-08-23T05:48:00.820648Z",
+      "updated_at": "2026-08-24T05:55:54.874519Z",
       "href": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-08-11/bollettino-ordinario-numero-33-del-19-08-2026.pdf",
       "relevance": "Alta",
       "topics": [
@@ -2070,7 +2096,7 @@
       "source_detail": "Regione Abruzzo - BURA",
       "kind": "Legge regionale",
       "date": "",
-      "updated_at": "2026-08-23T05:48:00.820648Z",
+      "updated_at": "2026-08-24T05:55:54.874519Z",
       "href": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-08-11/dgr-336-2026.pdf",
       "relevance": "Alta",
       "topics": [
