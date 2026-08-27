@@ -57,6 +57,35 @@ CONTEXT_TERM_GROUPS = (
     ("prevenzione", "presa in carico", "riabilitazione", "assistenza territoriale"),
 )
 
+# Generic words such as "scuola" or "famiglia" are intentionally not
+# sufficient for the contextual fallback without a concrete service signal.
+CONTEXT_ANCHOR_TERMS = (
+    "servizi",
+    "assistenza",
+    "presa in carico",
+    "intervento",
+    "supporto",
+    "prevenzione",
+    "riabilitazione",
+    "salute",
+    "sanita",
+    "welfare",
+    "sociale",
+    "disabilita",
+    "fragilita",
+    "violenza",
+    "maltrattamento",
+    "vittime",
+    "trauma",
+    "minori",
+    "adolescent",
+    "infanzia",
+    "consultor",
+    "dipendenze",
+    "autismo",
+    "non autosufficien",
+)
+
 NOISE_TERMS = (
     "veterinar",
     "sanita animale",
@@ -74,6 +103,13 @@ NOISE_TERMS = (
     "certificazione per l esportazione",
     "salute digitale dei minori",
     "dipendenza da strumenti e piattaforme digitali",
+    "vitivinicol",
+    "enologic",
+    "istituto agrario",
+    "istituto tecnico agrario",
+    "istituto professionale agrario",
+    "azienda vitivinicola",
+    "mercato del vino",
 )
 
 NORMATIVE_MARKERS = (
@@ -264,7 +300,7 @@ def parse_regional_bur_html(
         title = normalize_text(anchor.get_text(" "))
         context = _nearby_context(anchor)
         candidate = normalize_text(" ".join(part for part in [title, context] if part))
-        if not candidate or not is_relevant_regional_act(candidate):
+        if not candidate or not is_relevant_regional_candidate(title, context):
             continue
         if not _has_normative_marker(candidate, absolute_url):
             continue
@@ -362,11 +398,16 @@ def parse_regional_bur_pdf(
     chunks = [normalize_text(chunk) for chunk in PDF_ACT_START.split(normalized)]
     documents: list[LegislativeDocument] = []
     for chunk in chunks:
-        if not chunk or not is_relevant_regional_act(chunk):
+        if not chunk:
+            continue
+        # Ignore the bulletin cover/index before the first actual act.
+        if not PDF_ACT_START.match(chunk):
+            continue
+        title = _pdf_chunk_title(chunk)
+        if not title or not is_relevant_regional_candidate(title, chunk):
             continue
         if not _has_normative_marker(chunk, pdf_url):
             continue
-        title = _pdf_chunk_title(chunk)
         documents.append(
             _build_document(
                 title,
@@ -383,14 +424,39 @@ def parse_regional_bur_pdf(
 
 
 def is_relevant_regional_act(value: str) -> bool:
-    folded = fold_for_search(value)
+    return _is_relevant_regional_text(fold_for_search(normalize_text(value)))
+
+
+def is_relevant_regional_candidate(title: str, context: str) -> bool:
+    """Evaluate a bounded title/context window instead of a full BUR PDF."""
+
+    normalized_title = normalize_text(title)
+    normalized_context = normalize_text(context)
+    bounded = normalize_text(f"{normalized_title} {normalized_context[:2400]}")
+    folded = fold_for_search(bounded)
+    if not _is_relevant_regional_text(folded):
+        return False
+
+    if any(term in folded for term in DIRECT_RELEVANCE_TERMS):
+        return True
+
+    # Context-only matches must be anchored near the heading. This prevents a
+    # single incidental keyword on a distant page from qualifying a long PDF.
+    anchored = fold_for_search(
+        normalize_text(f"{normalized_title} {normalized_context[:700]}")
+    )
+    return _is_relevant_regional_text(anchored)
+
+
+def _is_relevant_regional_text(folded: str) -> bool:
     has_direct = any(term in folded for term in DIRECT_RELEVANCE_TERMS)
     if any(term in folded for term in NOISE_TERMS) and not has_direct:
         return False
     if has_direct:
         return True
     matched_groups = sum(any(term in folded for term in group) for group in CONTEXT_TERM_GROUPS)
-    return matched_groups >= 2
+    has_context_anchor = any(term in folded for term in CONTEXT_ANCHOR_TERMS)
+    return matched_groups >= 2 and has_context_anchor
 
 
 def _build_document(

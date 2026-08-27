@@ -57,6 +57,38 @@ def test_public_snapshot_rejects_known_ministry_noise():
     assert document_to_public_item(noise) is None
 
 
+def test_public_snapshot_rejects_regional_enology_school_noise():
+    noise = _document(
+        source="Abruzzo BUR",
+        source_type="pdf",
+        level="regionale",
+        region="Abruzzo",
+        act_type="dgr",
+        identifier="BUR-Abruzzo-1",
+        title="Criteri per l'accreditamento di un istituto scolastico enologico e vitivinicolo",
+        summary="Requisiti organizzativi dell'istituto scolastico.",
+        text="Accreditamento e requisiti organizzativi dell'istituto scolastico.",
+    )
+
+    assert document_to_public_item(noise) is None
+
+
+def test_public_snapshot_rejects_regional_weak_repetition():
+    weak = _document(
+        source="Abruzzo BUR",
+        source_type="pdf",
+        level="regionale",
+        region="Abruzzo",
+        act_type="dgr",
+        identifier="BUR-Abruzzo-2",
+        title="Bollettino ufficiale regionale - PSIC",
+        summary="Scuola e famiglia.",
+        text="Scuola e famiglia. " * 40,
+    )
+
+    assert document_to_public_item(weak) is None
+
+
 def test_public_snapshot_rejects_ministry_search_provenance_without_title_signal():
     generic = _document(
         source="Ministero della Salute - Trova Norme Salute",

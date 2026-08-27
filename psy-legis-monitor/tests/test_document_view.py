@@ -124,6 +124,58 @@ def test_document_view_excludes_veterinary_and_wild_boar_noise_from_potential_ac
     assert is_excluded_noise_document(row)
 
 
+def test_document_view_excludes_regional_enology_school_noise():
+    row = {
+        "source": "Abruzzo BUR",
+        "source_type": "pdf",
+        "level": "regionale",
+        "act_type": "dgr",
+        "found_terms": {"scuola_minori_famiglia": ["scuola"]},
+        "score": 2.0,
+        "title": "Criteri per l'accreditamento di un istituto scolastico enologico e vitivinicolo",
+        "text": "Accreditamento e requisiti organizzativi dell'istituto scolastico.",
+    }
+
+    assert is_excluded_noise_document(row)
+    assert not is_relevant_primary_document(row)
+    assert not is_potential_primary_document(row)
+
+
+def test_document_view_does_not_promote_weak_regional_repetition():
+    row = {
+        "source": "Abruzzo BUR",
+        "source_type": "pdf",
+        "level": "regionale",
+        "act_type": "dgr",
+        "found_terms": {"scuola_minori_famiglia": ["scuola"]},
+        "score": 20.0,
+        "title": "Bollettino ufficiale regionale - PSIC",
+        "text": "Scuola e famiglia. " * 40,
+    }
+
+    assert not is_relevant_primary_document(row)
+    assert not is_potential_primary_document(row)
+
+
+def test_document_view_keeps_two_context_regional_act():
+    row = {
+        "source": "Abruzzo BUR",
+        "source_type": "pdf",
+        "level": "regionale",
+        "act_type": "dgr",
+        "found_terms": {
+            "sanita_welfare": ["servizi sanitari"],
+            "scuola_minori_famiglia": ["minori"],
+        },
+        "score": 5.0,
+        "title": "Servizi sanitari regionali per minori e famiglie",
+        "text": "Presa in carico dei minori e delle famiglie nei servizi territoriali.",
+    }
+
+    assert is_relevant_primary_document(row)
+    assert not is_potential_primary_document(row)
+
+
 def test_document_view_keeps_noise_topics_when_direct_psychological_signal_exists():
     row = {
         "source": "Gazzetta Ufficiale - Serie Generale",

@@ -54,6 +54,13 @@ NOISE_PATTERNS = [
     "prodotti omeopatici",
     "prodotti erboristici",
     "integratori alimentari",
+    "vitivinicol",
+    "enologic",
+    "istituto agrario",
+    "istituto tecnico agrario",
+    "istituto professionale agrario",
+    "azienda vitivinicola",
+    "mercato del vino",
     "veterinar",
     "sanita animale",
     "malattie animali",
@@ -187,7 +194,7 @@ def is_relevant_primary_document(row: dict[str, Any]) -> bool:
         return False
     found_terms = row.get("found_terms") or {}
     found_categories = set(found_terms)
-    if DIRECT_RELEVANCE_CATEGORIES & found_categories:
+    if DIRECT_RELEVANCE_CATEGORIES & found_categories or _has_direct_relevance_signal(row):
         return True
 
     if _matches_noise_pattern(row):
@@ -195,6 +202,8 @@ def is_relevant_primary_document(row: dict[str, Any]) -> bool:
 
     score = float(row.get("score") or 0)
     contextual_categories = CONTEXTUAL_RELEVANCE_CATEGORIES & found_categories
+    if _is_regional_document(row):
+        return score >= 4 and len(contextual_categories) >= 2
     if score >= 15:
         return True
     if score >= 4 and len(contextual_categories) >= 2:
@@ -207,7 +216,15 @@ def is_potential_primary_document(row: dict[str, Any]) -> bool:
         return False
     if _matches_noise_pattern(row):
         return False
+    if _is_regional_document(row):
+        found_categories = set(row.get("found_terms") or {})
+        contextual_categories = CONTEXTUAL_RELEVANCE_CATEGORIES & found_categories
+        return float(row.get("score") or 0) >= 2 and len(contextual_categories) >= 2
     return float(row.get("score") or 0) >= 1
+
+
+def _is_regional_document(row: dict[str, Any]) -> bool:
+    return str(row.get("level") or "").strip().lower() == "regionale"
 
 
 def is_excluded_noise_document(row: dict[str, Any]) -> bool:

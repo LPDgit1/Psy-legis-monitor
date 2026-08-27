@@ -7,9 +7,11 @@ from app.connectors.regions.bur import (
     RegionalBurSource,
     find_recent_detail_links,
     find_recent_pdf_links,
+    is_relevant_regional_candidate,
     is_relevant_regional_act,
     load_regional_bur_sources,
     parse_regional_bur_html,
+    parse_regional_bur_pdf,
 )
 
 
@@ -79,6 +81,81 @@ def test_regional_relevance_requires_direct_signal_or_two_contexts():
     assert is_relevant_regional_act("Legge regionale sullo psicologo di base")
     assert is_relevant_regional_act("Servizi sanitari per minori e famiglie")
     assert not is_relevant_regional_act("Disciplina generale della viabilita regionale")
+
+
+def test_regional_relevance_rejects_educational_wine_and_viticulture_noise():
+    assert not is_relevant_regional_act(
+        "Criteri per l'accreditamento di un istituto scolastico enologico e vitivinicolo"
+    )
+
+
+def test_regional_candidate_does_not_use_distant_incidental_text():
+    distant = "Bollettino ufficiale regionale. " + ("testo amministrativo " * 180)
+    distant += " psicologia "
+    assert not is_relevant_regional_candidate(
+        "Criteri per l'accreditamento di un istituto scolastico", distant
+    )
+
+
+def test_regional_candidate_keeps_a_relevant_act_heading():
+    assert is_relevant_regional_candidate(
+        "Servizi di supporto psicologico nei consultori regionali",
+        "Deliberazione regionale per la presa in carico e il supporto alle persone.",
+    )
+
+
+def test_regional_pdf_parser_ignores_cover_and_distant_incidental_keyword(monkeypatch):
+    class FakePage:
+        def __init__(self, text):
+            self.text = text
+
+        def extract_text(self):
+            return self.text
+
+    class FakeReader:
+        def __init__(self, _stream):
+            self.pages = [
+                FakePage("Indice del Bollettino regionale. PSIC"),
+                FakePage(
+                    "DELIBERAZIONE DELLA GIUNTA REGIONALE 1/2026 "
+                    + ("testo amministrativo " * 180)
+                    + " psicologia"
+                ),
+            ]
+
+    monkeypatch.setattr("app.connectors.regions.bur.PdfReader", FakeReader)
+
+    assert parse_regional_bur_pdf(
+        b"pdf",
+        "https://example.test/bur/numero-1.pdf",
+        source=_source(),
+        fetched_at=datetime(2026, 8, 12, tzinfo=UTC),
+    ) == []
+
+
+def test_regional_pdf_parser_keeps_relevant_act_after_cover(monkeypatch):
+    class FakePage:
+        def extract_text(self):
+            return (
+                "DELIBERAZIONE DELLA GIUNTA REGIONALE 2/2026 "
+                "Servizi di supporto psicologico nei consultori familiari."
+            )
+
+    class FakeReader:
+        def __init__(self, _stream):
+            self.pages = [FakePage()]
+
+    monkeypatch.setattr("app.connectors.regions.bur.PdfReader", FakeReader)
+
+    documents = parse_regional_bur_pdf(
+        b"pdf",
+        "https://example.test/bur/numero-2.pdf",
+        source=_source(),
+        fetched_at=datetime(2026, 8, 12, tzinfo=UTC),
+    )
+
+    assert len(documents) == 1
+    assert "supporto psicologico" in documents[0].title.lower()
 
 
 def test_recent_pdf_links_are_absolute_and_deduplicated():

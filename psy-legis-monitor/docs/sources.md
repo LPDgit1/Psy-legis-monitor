@@ -64,8 +64,15 @@ per i portali BUR lato-client che non espongono titoli o URL nel primo HTML.
 
 Gli atti sono inclusi se presentano un riferimento diretto a psicologia, psicoterapia,
 servizi psicologici o salute mentale, oppure almeno due contesti coerenti tra sanita,
-minori/famiglia, disabilita, violenza, digitale sanitario e presa in carico. La provenienza
-da una ricerca per parola chiave non basta piu da sola.
+minori/famiglia, disabilita, violenza, digitale sanitario e presa in carico, con un
+segnale concreto di servizio, assistenza, salute o vulnerabilita. La provenienza da una
+ricerca per parola chiave non basta piu da sola.
+
+Per i BUR il controllo viene applicato al titolo e a una finestra iniziale dell'atto,
+non all'intero PDF: questo evita che un acronimo o una parola isolata in un bollettino
+molto lungo promuova il documento. Sono inoltre esclusi, salvo un riferimento
+psicologico diretto, i contenuti su istituti agrari/enologici e sul comparto
+vitivinicolo.
 
 Sono esclusi, in assenza di un segnale psicologico diretto, temi veterinari, fauna e
 allevamenti, fitoterapici/integratori, sicurezza alimentare ed esportazioni alimentari.
