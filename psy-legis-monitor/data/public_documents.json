@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-26T05:58:17.826636Z",
+  "generated_at": "2026-08-27T21:34:56.796023Z",
   "fetched_document_count": 556,
-  "published_document_count": 76,
+  "published_document_count": 70,
   "high_relevance_count": 22,
-  "potential_relevance_count": 54,
-  "published_source_count": 9,
+  "potential_relevance_count": 48,
+  "published_source_count": 8,
   "published_sources": [
     "Camera dei deputati",
     "Gazzetta Ufficiale",
@@ -14,7 +14,6 @@
     "Regione Abruzzo - BURA",
     "Regione Emilia-Romagna - BURERT",
     "Regione Toscana - BURT",
-    "Regione Valle d'Aosta - BURVA",
     "Senato della Repubblica"
   ],
   "source_statuses": [
@@ -80,83 +79,6 @@
     }
   ],
   "documents": [
-    {
-      "key": "2f4a90954d287303ca1a5d64337f0176424781c47ac612b4ae14014538dddbde",
-      "id": "BUR-Emilia-Romagna-087b678be192a4f04946",
-      "identifier": "BUR-Emilia-Romagna-087b678be192a4f04946",
-      "title": "Parte terza - N.",
-      "source": "Regione Emilia-Romagna - BURERT",
-      "source_detail": "Regione Emilia-Romagna - BURERT",
-      "kind": "Decreto regionale",
-      "date": "2026-08-19",
-      "updated_at": "2026-08-21T05:51:36.434319Z",
-      "href": "https://bur.regione.emilia-romagna.it/area-bollettini/agosto-periodico-parte-terza-2a-quindicina-4/bollettino_view/++widget++form.widgets.pdf_firmato/@@download",
-      "relevance": "Potenziale",
-      "topics": [
-        "Lavoro e burnout",
-        "Competenze professionali"
-      ],
-      "summary": "19 Anno 57 19 agosto 2026 N. 226 PROCEDURE CONCORSUALI DETERMINAZIONI DIRETTORE GENERALE STRATEGIE TERRITORIALI ED EUROPEE, PROGRAMMAZIONE, INNOVAZIONE E ORGANIZZAZIONE 6 N.15565/2026 - Avviso di indizione procedura selettiva pubblica, per titoli ed esami, per l’assunzione con contratto di lavoro a tempo pieno e indeterminato di 5 Dirigenti - “Manager dell’Agricoltura” (CP-DIR-2026-1). Approvazione 35 N.15566/2026 -...",
-      "level": "regionale",
-      "region": "Emilia-Romagna",
-      "status": "pubblicato",
-      "score": 2.08,
-      "found_terms": {
-        "anziani_lavoro_organizzazioni": [
-          "lavoro"
-        ]
-      }
-    },
-    {
-      "key": "7dbaa741e0ef5b6f59b227ac825201301b7fb886d1520398e5c7e6385b6a1218",
-      "id": "26R00162",
-      "identifier": "26R00162",
-      "title": "DECRETO DEL PRESIDENTE DELLA PROVINCIA 8 settembre 2025 , n. 23 - Modifica del regolamento di esecuzione relativo agli interventi di assistenza economica sociale e al pagamento delle tariffe nei servizi sociali. (26R00162) Pag. 27",
-      "source": "Gazzetta Ufficiale",
-      "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
-      "kind": "Atto normativo",
-      "date": "2026-08-08",
-      "updated_at": "2026-08-26T05:51:40.151508Z",
-      "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-08&atto.codiceRedazionale=26R00162",
-      "relevance": "Potenziale",
-      "topics": [],
-      "summary": "Modifica del regolamento di esecuzione relativo agli interventi di assistenza economica sociale e al pagamento delle tariffe nei servizi sociali. (26R00162) Pag. 27",
-      "level": "regionale",
-      "region": "",
-      "status": "pubblicato",
-      "score": 4.8,
-      "found_terms": {
-        "sanita_welfare": [
-          "servizi sociali"
-        ]
-      }
-    },
-    {
-      "key": "f73255dd6f642b9fb84ea927757d4502625051919b4e2ea37b70196af3f0f9e1",
-      "id": "26A03818",
-      "identifier": "26A03818",
-      "title": "DECRETO 24 luglio 2026 - Rinnovo della designazione al Laboratorio enochimico Ex allievi Scuola enologica Conegliano soc. coop., in Refrontolo, al rilascio dei certificati di analisi nel settore vitivinicolo. (26A03818) Pag. 10",
-      "source": "Gazzetta Ufficiale",
-      "source_detail": "Gazzetta Ufficiale - Serie Generale",
-      "kind": "Atto normativo",
-      "date": "2026-08-06",
-      "updated_at": "2026-08-26T05:51:34.073613Z",
-      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-06&atto.codiceRedazionale=26A03818&elenco30giorni=true",
-      "relevance": "Potenziale",
-      "topics": [
-        "Scuola"
-      ],
-      "summary": "Rinnovo della designazione al Laboratorio enochimico Ex allievi Scuola enologica Conegliano soc. coop., in Refrontolo, al rilascio dei certificati di analisi nel settore vitivinicolo. (26A03818) Pag. 10",
-      "level": "nazionale",
-      "region": "",
-      "status": "pubblicato",
-      "score": 3.36,
-      "found_terms": {
-        "scuola_minori_famiglia": [
-          "scuola"
-        ]
-      }
-    },
     {
       "key": "3e8730b1491e0da6ea42a7851f7ecb94b47db54a82f178c48fe1615e5642d6e6",
       "id": "BUR-Abruzzo-aa5ed465e5c0d2ce93bf",
@@ -289,32 +211,6 @@
       "found_terms": {
         "clinica_sociale": [
           "emergenza"
-        ]
-      }
-    },
-    {
-      "key": "671550cb2b8180393b9484c163d5614dfbaf302cb42afec00484e818a3b622f4",
-      "id": "26R00199",
-      "identifier": "26R00199",
-      "title": "LEGGE REGIONALE 20 giugno 2025 , n. 18 - Modificazioni alla legge regionale 16 luglio 2024, n. 11 (Disciplina dell’organizzazione dei servizi al lavoro e del sistema della formazione professionale nella Regione autonoma Valle d’Aosta/Vallee d’Aoste. Abrogazione della legge regionale 31 marzo 2003, n. 7 (Disposizioni in materia di politiche regionali del lavoro, di formazione professionale e di riorganizzazione dei servizi per l’impiego), e di altre disposizioni in materia di lavoro e formazione professionale). (26R00199) Pag. 1",
-      "source": "Regione Valle d'Aosta - BURVA",
-      "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
-      "kind": "Legge regionale",
-      "date": "2026-08-01",
-      "updated_at": "2026-08-26T05:51:39.018371Z",
-      "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-01&atto.codiceRedazionale=26R00199",
-      "relevance": "Potenziale",
-      "topics": [
-        "Lavoro e burnout"
-      ],
-      "summary": "Modificazioni alla legge regionale 16 luglio 2024, n. 11 (Disciplina dell’organizzazione dei servizi al lavoro e del sistema della formazione professionale nella Regione autonoma Valle d’Aosta/Vallee d’Aoste. Abrogazione della legge regionale 31 marzo 2003, n. 7 (Disposizioni in materia di politiche regionali del lavoro, di formazione professionale e di riorganizzazione dei servizi per l’impiego), e di altre disposizioni in materia di lavoro e formazione professionale). (26R00199) Pag. 1",
-      "level": "regionale",
-      "region": "Valle d’Aosta",
-      "status": "pubblicato",
-      "score": 2.34,
-      "found_terms": {
-        "anziani_lavoro_organizzazioni": [
-          "lavoro"
         ]
       }
     },
@@ -1995,58 +1891,6 @@
       "found_terms": {
         "professione_diretta": [
           "psicologo"
-        ]
-      }
-    },
-    {
-      "key": "3d092800edf20eec7fc01fd19412084c0b207de0dbcfd2547e7f27b90a8db37d",
-      "id": "BUR-Valle d’Aosta-d7566f1a22e31486f8f5",
-      "identifier": "BUR-Valle d’Aosta-d7566f1a22e31486f8f5",
-      "title": "legge regionale 13 febbraio 2013, n.",
-      "source": "Regione Valle d'Aosta - BURVA",
-      "source_detail": "Regione Valle d’Aosta - BURVA",
-      "kind": "Legge regionale",
-      "date": "2013-02-13",
-      "updated_at": "2026-08-26T05:57:05.359253Z",
-      "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026.pdf",
-      "relevance": "Potenziale",
-      "topics": [
-        "Minori e famiglia"
-      ],
-      "summary": "3, che risulta così composta: • La Dr.ssa Emanuela Alessandra Maria Lorenza GER- MANO, Presidente di Sezione della Corte di Appello di Torino, con funzioni di Presidente, designato dal Presidente del Tribunale di Aosta limitatamente sino al 31/12/2025; • Il presidente dell’ARER, o suo delegato, con funzio- ni di vice presidente; • Il dirigente della Struttura regionale competente in materia di famiglia e politiche s...",
-      "level": "regionale",
-      "region": "Valle d’Aosta",
-      "status": "pubblicato",
-      "score": 1.4,
-      "found_terms": {
-        "scuola_minori_famiglia": [
-          "famiglia"
-        ]
-      }
-    },
-    {
-      "key": "826988d11b05ea73f6947b2fa61ea85f3c2723dd1d77d625714f6fc011ea8a73",
-      "id": "BUR-Valle d’Aosta-3a011edd726be9e3c72b",
-      "identifier": "BUR-Valle d’Aosta-3a011edd726be9e3c72b",
-      "title": "legge regionale 13 febbraio 2013, n.",
-      "source": "Regione Valle d'Aosta - BURVA",
-      "source_detail": "Regione Valle d’Aosta - BURVA",
-      "kind": "Legge regionale",
-      "date": "2013-02-13",
-      "updated_at": "2026-08-26T05:57:05.359253Z",
-      "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026_signed.pdf",
-      "relevance": "Potenziale",
-      "topics": [
-        "Minori e famiglia"
-      ],
-      "summary": "3, che risulta così composta: • La Dr.ssa Emanuela Alessandra Maria Lorenza GER- MANO, Presidente di Sezione della Corte di Appello di Torino, con funzioni di Presidente, designato dal Presidente del Tribunale di Aosta limitatamente sino al 31/12/2025; • Il presidente dell’ARER, o suo delegato, con funzio- ni di vice presidente; • Il dirigente della Struttura regionale competente in materia di famiglia e politiche s...",
-      "level": "regionale",
-      "region": "Valle d’Aosta",
-      "status": "pubblicato",
-      "score": 1.4,
-      "found_terms": {
-        "scuola_minori_famiglia": [
-          "famiglia"
         ]
       }
     },

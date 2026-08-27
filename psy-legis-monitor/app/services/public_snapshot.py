@@ -12,6 +12,7 @@ from app.core.hashing import document_identity_key
 from app.core.schemas import LegislativeDocument
 from app.core.scoring import score_document
 from app.core.taxonomy import classify_taxonomy
+from app.core.text_cleaning import fold_for_search
 from app.ui.document_view import (
     clean_display_text,
     document_type_label,
@@ -82,7 +83,9 @@ def build_public_snapshot(
     items_by_key = {
         str(item["key"]): dict(item)
         for item in previous_items
-        if isinstance(item, Mapping) and item.get("key")
+        if isinstance(item, Mapping)
+        and item.get("key")
+        and _is_publishable_public_item(item)
     }
 
     fetched_count = 0
@@ -164,6 +167,7 @@ def document_to_public_item(document: LegislativeDocument) -> dict[str, object] 
         "updated_at": _format_datetime(document.last_update),
         "href": str(document.url or ""),
         "relevance": "Alta" if relevant else "Potenziale",
+        "act_type": document.act_type,
         "topics": [TOPIC_LABELS.get(topic, topic.replace("_", " ").title()) for topic in taxonomy.domains],
         "summary": summary,
         "level": document.level,
@@ -172,6 +176,88 @@ def document_to_public_item(document: LegislativeDocument) -> dict[str, object] 
         "score": score.total_score,
         "found_terms": score.found_terms,
     }
+
+
+def _is_publishable_public_item(item: Mapping[str, object]) -> bool:
+    if not item.get("title"):
+        return False
+    row = _public_item_to_row(item)
+    if is_excluded_noise_document(row):
+        return False
+    return is_relevant_primary_document(row) or is_potential_primary_document(row)
+
+
+def _public_item_to_row(item: Mapping[str, object]) -> dict[str, object]:
+    return {
+        "title": item.get("title", ""),
+        "summary": item.get("summary", ""),
+        "text": item.get("summary", ""),
+        "source": item.get("source_detail") or item.get("source") or "",
+        "source_type": item.get("source_type") or "snapshot",
+        "level": item.get("level") or "",
+        "region": item.get("region") or "",
+        "act_type": item.get("act_type") or _act_type_from_public_item(item),
+        "score": item.get("score") or 0,
+        "found_terms": item.get("found_terms") or {},
+    }
+
+
+def _act_type_from_public_item(item: Mapping[str, object]) -> str:
+    kind = fold_for_search(str(item.get("kind") or "")).replace("-", " ")
+    if "proposta di legge" in kind:
+        return "proposta_di_legge"
+    if "disegno di legge" in kind:
+        return "disegno_di_legge"
+    if "decreto legge" in kind:
+        return "decreto_legge"
+    if "decreto legislativo" in kind:
+        return "decreto_legislativo"
+    if "regolamento" in kind:
+        return "regolamento"
+    if str(item.get("level") or "").strip().lower() == "regionale":
+        if "legge" in kind:
+            return "legge"
+        if "decreto" in kind:
+            return "decreto_legislativo"
+        if "dgr" in kind or "delibera" in kind:
+            return "dgr"
+        return "bur"
+    if "bollettino" in kind:
+        return "bur"
+    return "altro"
+
+
+def revalidate_public_snapshot(
+    payload: Mapping[str, object],
+    *,
+    generated_at: datetime | None = None,
+) -> dict[str, object]:
+    """Reapply current publication rules to an existing static snapshot."""
+
+    items = [
+        dict(item)
+        for item in payload.get("documents", [])
+        if isinstance(item, Mapping) and _is_publishable_public_item(item)
+    ]
+    items.sort(key=_public_item_sort_key, reverse=True)
+    generated = (generated_at or datetime.now(UTC)).astimezone(UTC)
+    high_count = sum(item.get("relevance") == "Alta" for item in items)
+    potential_count = sum(item.get("relevance") == "Potenziale" for item in items)
+    source_names = sorted({str(item.get("source")) for item in items if item.get("source")})
+
+    result = dict(payload)
+    result.update(
+        {
+            "generated_at": generated.isoformat().replace("+00:00", "Z"),
+            "published_document_count": len(items),
+            "high_relevance_count": high_count,
+            "potential_relevance_count": potential_count,
+            "published_source_count": len(source_names),
+            "published_sources": source_names,
+            "documents": items,
+        }
+    )
+    return result
 
 
 def load_public_snapshot(path: str | Path) -> dict[str, object] | None:

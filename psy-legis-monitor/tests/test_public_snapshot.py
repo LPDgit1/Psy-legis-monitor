@@ -1,7 +1,11 @@
 from datetime import UTC, date, datetime
 
 from app.core.schemas import LegislativeDocument
-from app.services.public_snapshot import build_public_snapshot, document_to_public_item
+from app.services.public_snapshot import (
+    build_public_snapshot,
+    document_to_public_item,
+    revalidate_public_snapshot,
+)
 
 
 def _document(**overrides) -> LegislativeDocument:
@@ -87,6 +91,39 @@ def test_public_snapshot_rejects_regional_weak_repetition():
     )
 
     assert document_to_public_item(weak) is None
+
+
+def test_public_snapshot_revalidates_previous_noise_items():
+    stale = {
+        "key": "stale-enology",
+        "id": "26A03818",
+        "identifier": "26A03818",
+        "title": (
+            "DECRETO 24 luglio 2026 - Rinnovo della designazione al Laboratorio "
+            "enochimico Ex allievi Scuola enologica Conegliano nel settore vitivinicolo"
+        ),
+        "source": "Gazzetta Ufficiale",
+        "source_detail": "Gazzetta Ufficiale - Serie Generale",
+        "kind": "Atto normativo",
+        "relevance": "Potenziale",
+        "level": "nazionale",
+        "region": "",
+        "score": 3.36,
+        "found_terms": {"scuola_minori_famiglia": ["scuola"]},
+    }
+
+    payload = revalidate_public_snapshot(
+        {
+            "schema_version": 1,
+            "fetched_document_count": 76,
+            "documents": [stale],
+        },
+        generated_at=datetime(2026, 8, 27, tzinfo=UTC),
+    )
+
+    assert payload["fetched_document_count"] == 76
+    assert payload["published_document_count"] == 0
+    assert payload["documents"] == []
 
 
 def test_public_snapshot_rejects_ministry_search_provenance_without_title_signal():
