@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-26T05:58:17.826636Z",
-  "fetched_document_count": 556,
-  "published_document_count": 76,
+  "generated_at": "2026-08-27T16:39:20.019260Z",
+  "fetched_document_count": 571,
+  "published_document_count": 78,
   "high_relevance_count": 22,
-  "potential_relevance_count": 54,
+  "potential_relevance_count": 56,
   "published_source_count": 9,
   "published_sources": [
     "Camera dei deputati",
@@ -21,7 +21,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 210,
+      "document_count": 208,
       "error": ""
     },
     {
@@ -63,7 +63,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 56,
+      "document_count": 53,
       "error": ""
     },
     {
@@ -74,9 +74,9 @@
     },
     {
       "source": "Pagine istituzionali",
-      "status": "error",
-      "document_count": 0,
-      "error": "timed out"
+      "status": "ok",
+      "document_count": 20,
+      "error": ""
     }
   ],
   "documents": [
@@ -116,7 +116,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Atto normativo",
       "date": "2026-08-08",
-      "updated_at": "2026-08-26T05:51:40.151508Z",
+      "updated_at": "2026-08-27T16:33:21.794853Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-08&atto.codiceRedazionale=26R00162",
       "relevance": "Potenziale",
       "topics": [],
@@ -132,6 +132,60 @@
       }
     },
     {
+      "key": "a2bb6beffc45058fd0538643a21ec9d2da11c8e71713a7558d071b7efcdeed23",
+      "id": "26G00164",
+      "identifier": "26G00164",
+      "title": "LEGGE 7 agosto 2026, n. 145 - Conversione in legge del decreto-legge 12 giugno 2026, n. 100, recante misure urgenti in materia di giustizia e per l’attuazione del Patto dell’Unione europea sulla migrazione e l’asilo del 14 maggio 2024. (26G00164) Pag. 1",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Legge",
+      "date": "2026-08-08",
+      "updated_at": "2026-08-27T16:33:08.811815Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-08&atto.codiceRedazionale=26G00164&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Giustizia",
+        "Inclusione"
+      ],
+      "summary": "Conversione in legge del decreto-legge 12 giugno 2026, n. 100, recante misure urgenti in materia di giustizia e per l’attuazione del Patto dell’Unione europea sulla migrazione e l’asilo del 14 maggio 2024. (26G00164) Pag. 1",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 2.55,
+      "found_terms": {
+        "clinica_sociale": [
+          "migrazione"
+        ]
+      }
+    },
+    {
+      "key": "709572987b10af33d48b96208e585d5b73534a6cb1655f068a467547da9c7e82",
+      "id": "26A04115",
+      "identifier": "26A04115",
+      "title": "TESTO COORDINATO DEL DECRETO-LEGGE 12 giugno 2026, n. 100 - Ripubblicazione del testo del decreto-legge 12 giugno 2026, n. 100 (in Gazzetta Ufficiale - Serie generale - n. 134 del 12 giugno 2026), convertito, senza modificazioni, dalla legge 7 agosto 2026, n. 145 (in questa stessa Gazzetta Ufficiale alla pag. 1), recante: «Misure urgenti in materia di giustizia e per l’attuazione del Patto dell’Unione europea sulla migrazione e l’asilo del 14 maggio 2024.». (26A04115) Pag. 23",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Decreto-legge",
+      "date": "2026-08-08",
+      "updated_at": "2026-08-27T16:33:08.811815Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-08&atto.codiceRedazionale=26A04115&elenco30giorni=true",
+      "relevance": "Potenziale",
+      "topics": [
+        "Giustizia",
+        "Inclusione"
+      ],
+      "summary": "Ripubblicazione del testo del decreto-legge 12 giugno 2026, n. 100 (in Gazzetta Ufficiale - Serie generale - n. 134 del 12 giugno 2026), convertito, senza modificazioni, dalla legge 7 agosto 2026, n. 145 (in questa stessa Gazzetta Ufficiale alla pag. 1), recante: «Misure urgenti in materia di giustizia e per l’attuazione del Patto dell’Unione europea sulla migrazione e l’asilo del 14 maggio 2024.». (26A04115) Pag. 23",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 2.55,
+      "found_terms": {
+        "clinica_sociale": [
+          "migrazione"
+        ]
+      }
+    },
+    {
       "key": "f73255dd6f642b9fb84ea927757d4502625051919b4e2ea37b70196af3f0f9e1",
       "id": "26A03818",
       "identifier": "26A03818",
@@ -140,7 +194,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-08-06",
-      "updated_at": "2026-08-26T05:51:34.073613Z",
+      "updated_at": "2026-08-27T16:33:01.198991Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-06&atto.codiceRedazionale=26A03818&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [
@@ -154,6 +208,58 @@
       "found_terms": {
         "scuola_minori_famiglia": [
           "scuola"
+        ]
+      }
+    },
+    {
+      "key": "c9ad86fa4f07ac36fa0be57d6affb42b79f97eed7b5821ad1ac16ef2cbcb0f56",
+      "id": "C.3075",
+      "identifier": "C.3075",
+      "title": "Disposizioni concernenti l’obbligo di verifica dell’età degli utenti delle piattaforme di reti sociali telematiche e altre disposizioni per la tutela dei minori nella fruizione dei servizi digitali",
+      "source": "Senato della Repubblica",
+      "source_detail": "Senato della Repubblica - dati.senato.it",
+      "kind": "Disegno di legge",
+      "date": "2026-08-04",
+      "updated_at": "2026-08-27T16:33:35.959487Z",
+      "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60409.htm",
+      "relevance": "Potenziale",
+      "topics": [
+        "Minori e famiglia"
+      ],
+      "summary": "Stato: da assegn. a commis. Natura: ordinaria Presentazione: 2026-08-04 Ultimo stato: 2026-08-04",
+      "level": "nazionale",
+      "region": "",
+      "status": "assegnato",
+      "score": 2.24,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "minori"
+        ]
+      }
+    },
+    {
+      "key": "13b5f0959b4d7da7a220c283840c1190af4118aa4cc55fe8a38d0eb4e3bd0cdd",
+      "id": "3075",
+      "identifier": "3075",
+      "title": "ROSSELLO ed altri: “Disposizioni concernenti l’obbligo di verifica dell’età degli utenti delle piattaforme di reti sociali telematiche e altre disposizioni per la tutela dei minori nella fruizione dei servizi digitali” (3075)",
+      "source": "Camera dei deputati",
+      "source_detail": "Camera dei deputati - Dati Camera",
+      "kind": "Proposta di legge",
+      "date": "2026-08-04",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
+      "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3075",
+      "relevance": "Potenziale",
+      "topics": [
+        "Minori e famiglia"
+      ],
+      "summary": "Identificativo: 3075 Data: 20260804",
+      "level": "nazionale",
+      "region": "",
+      "status": "presentato",
+      "score": 2.24,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "minori"
         ]
       }
     },
@@ -191,58 +297,6 @@
       }
     },
     {
-      "key": "c9ad86fa4f07ac36fa0be57d6affb42b79f97eed7b5821ad1ac16ef2cbcb0f56",
-      "id": "C.3075",
-      "identifier": "C.3075",
-      "title": "Disposizioni concernenti l’obbligo di verifica dell’età degli utenti delle piattaforme di reti sociali telematiche e altre disposizioni per la tutela dei minori nella fruizione dei servizi digitali",
-      "source": "Senato della Repubblica",
-      "source_detail": "Senato della Repubblica - dati.senato.it",
-      "kind": "Disegno di legge",
-      "date": "2026-08-04",
-      "updated_at": "2026-08-26T05:51:49.800651Z",
-      "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60409.htm",
-      "relevance": "Potenziale",
-      "topics": [
-        "Minori e famiglia"
-      ],
-      "summary": "Stato: da assegn. a commis. Natura: ordinaria Presentazione: 2026-08-04 Ultimo stato: 2026-08-04",
-      "level": "nazionale",
-      "region": "",
-      "status": "assegnato",
-      "score": 2.24,
-      "found_terms": {
-        "scuola_minori_famiglia": [
-          "minori"
-        ]
-      }
-    },
-    {
-      "key": "13b5f0959b4d7da7a220c283840c1190af4118aa4cc55fe8a38d0eb4e3bd0cdd",
-      "id": "3075",
-      "identifier": "3075",
-      "title": "ROSSELLO ed altri: “Disposizioni concernenti l’obbligo di verifica dell’età degli utenti delle piattaforme di reti sociali telematiche e altre disposizioni per la tutela dei minori nella fruizione dei servizi digitali” (3075)",
-      "source": "Camera dei deputati",
-      "source_detail": "Camera dei deputati - Dati Camera",
-      "kind": "Proposta di legge",
-      "date": "2026-08-04",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
-      "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3075",
-      "relevance": "Potenziale",
-      "topics": [
-        "Minori e famiglia"
-      ],
-      "summary": "Identificativo: 3075 Data: 20260804",
-      "level": "nazionale",
-      "region": "",
-      "status": "presentato",
-      "score": 2.24,
-      "found_terms": {
-        "scuola_minori_famiglia": [
-          "minori"
-        ]
-      }
-    },
-    {
       "key": "d2c90076f9d4ad4ec727aa15141d14fb666784f58cb7544c7ccd6a47917ad4cf",
       "id": "S.1999",
       "identifier": "S.1999",
@@ -251,7 +305,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-08-03",
-      "updated_at": "2026-08-26T05:51:49.800651Z",
+      "updated_at": "2026-08-27T16:33:35.959487Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60370.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -277,7 +331,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "DGR / delibera regionale",
       "date": "2026-08-03",
-      "updated_at": "2026-08-26T05:51:27.993812Z",
+      "updated_at": "2026-08-27T16:32:47.606809Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-03&atto.codiceRedazionale=26A03904&elenco30giorni=true",
       "relevance": "Potenziale",
       "topics": [],
@@ -301,7 +355,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-08-01",
-      "updated_at": "2026-08-26T05:51:39.018371Z",
+      "updated_at": "2026-08-27T16:33:18.271411Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-01&atto.codiceRedazionale=26R00199",
       "relevance": "Potenziale",
       "topics": [
@@ -327,7 +381,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-26T05:51:49.800651Z",
+      "updated_at": "2026-08-27T16:33:35.959487Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60357.htm",
       "relevance": "Potenziale",
       "topics": [],
@@ -351,7 +405,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-26T05:51:49.800651Z",
+      "updated_at": "2026-08-27T16:33:35.959487Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60355.htm",
       "relevance": "Potenziale",
       "topics": [
@@ -378,7 +432,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3053",
       "relevance": "Potenziale",
       "topics": [
@@ -405,7 +459,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-29",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3050",
       "relevance": "Potenziale",
       "topics": [
@@ -458,7 +512,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-24",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3044",
       "relevance": "Potenziale",
       "topics": [
@@ -805,7 +859,7 @@
       "source_detail": "Normattiva - aggiornamenti in multivigenza",
       "kind": "Legge",
       "date": "2026-07-17",
-      "updated_at": "2026-08-26T05:51:49.835347Z",
+      "updated_at": "2026-08-27T16:33:35.983069Z",
       "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2026-07-17;131",
       "relevance": "Potenziale",
       "topics": [
@@ -831,7 +885,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-15",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3029",
       "relevance": "Alta",
       "topics": [
@@ -860,7 +914,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-13",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3017",
       "relevance": "Alta",
       "topics": [
@@ -889,7 +943,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-10",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3016",
       "relevance": "Potenziale",
       "topics": [
@@ -915,7 +969,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-09",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3011",
       "relevance": "Potenziale",
       "topics": [
@@ -967,7 +1021,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-07-03",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=3003",
       "relevance": "Potenziale",
       "topics": [
@@ -1019,7 +1073,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-29",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2993",
       "relevance": "Alta",
       "topics": [
@@ -1048,7 +1102,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-29",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2992",
       "relevance": "Alta",
       "topics": [
@@ -1106,7 +1160,7 @@
       "source_detail": "Normattiva - aggiornamenti in multivigenza",
       "kind": "Decreto legislativo",
       "date": "2026-06-18",
-      "updated_at": "2026-08-26T05:51:49.835347Z",
+      "updated_at": "2026-08-27T16:33:35.983069Z",
       "href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2024-02-5;20",
       "relevance": "Alta",
       "topics": [
@@ -1135,7 +1189,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-17",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2973",
       "relevance": "Potenziale",
       "topics": [],
@@ -1159,7 +1213,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-15",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2967",
       "relevance": "Potenziale",
       "topics": [],
@@ -1183,7 +1237,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-12",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2966",
       "relevance": "Potenziale",
       "topics": [
@@ -1323,7 +1377,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2951",
       "relevance": "Potenziale",
       "topics": [],
@@ -1347,7 +1401,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "topics": [
@@ -1373,7 +1427,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "topics": [
@@ -1406,7 +1460,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-20",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2937",
       "relevance": "Alta",
       "topics": [
@@ -1435,7 +1489,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-15",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2936",
       "relevance": "Alta",
       "topics": [
@@ -1465,7 +1519,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-12",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2928",
       "relevance": "Potenziale",
       "topics": [
@@ -1491,7 +1545,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-11",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2927",
       "relevance": "Potenziale",
       "topics": [
@@ -1517,7 +1571,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-07",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2922",
       "relevance": "Alta",
       "topics": [
@@ -1546,7 +1600,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-05",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2918",
       "relevance": "Alta",
       "topics": [
@@ -1576,7 +1630,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-27",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2907",
       "relevance": "Alta",
       "topics": [
@@ -1607,7 +1661,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-27",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2906",
       "relevance": "Potenziale",
       "topics": [
@@ -1633,7 +1687,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-23",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2902",
       "relevance": "Potenziale",
       "topics": [
@@ -1659,7 +1713,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-22",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-27T16:32:23.475470Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2892",
       "relevance": "Potenziale",
       "topics": [
@@ -1981,7 +2035,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-08-26T05:51:53.005097Z",
+      "updated_at": "2026-08-27T16:33:39.980463Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "topics": [
@@ -2007,7 +2061,7 @@
       "source_detail": "Regione Valle d’Aosta - BURVA",
       "kind": "Legge regionale",
       "date": "2013-02-13",
-      "updated_at": "2026-08-26T05:57:05.359253Z",
+      "updated_at": "2026-08-27T16:38:43.024421Z",
       "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026.pdf",
       "relevance": "Potenziale",
       "topics": [
@@ -2033,7 +2087,7 @@
       "source_detail": "Regione Valle d’Aosta - BURVA",
       "kind": "Legge regionale",
       "date": "2013-02-13",
-      "updated_at": "2026-08-26T05:57:05.359253Z",
+      "updated_at": "2026-08-27T16:38:43.024421Z",
       "href": "https://www.regione.vda.it/amministrazione/leggi/bollettino_ufficiale_new/archive/2026/1-2026_signed.pdf",
       "relevance": "Potenziale",
       "topics": [
