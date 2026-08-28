@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-28T09:09:08.991836Z",
-  "fetched_document_count": 571,
+  "generated_at": "2026-08-28T17:33:27.368759Z",
+  "fetched_document_count": 545,
   "published_document_count": 11,
-  "high_relevance_count": 6,
-  "potential_relevance_count": 5,
+  "high_relevance_count": 5,
+  "potential_relevance_count": 6,
   "published_source_count": 5,
   "published_sources": [
     "Camera dei deputati",
@@ -17,7 +17,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 208,
+      "document_count": 203,
       "error": ""
     },
     {
@@ -52,14 +52,14 @@
     },
     {
       "source": "EUR-Lex",
-      "status": "error",
+      "status": "ok",
       "document_count": 0,
-      "error": "EUR-Lex non interrogabile tramite i feed RSS ufficiali"
+      "error": ""
     },
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 53,
+      "document_count": 52,
       "error": ""
     },
     {
@@ -70,9 +70,9 @@
     },
     {
       "source": "Pagine istituzionali",
-      "status": "ok",
-      "document_count": 20,
-      "error": ""
+      "status": "error",
+      "document_count": 0,
+      "error": "timed out"
     }
   ],
   "documents": [
@@ -85,9 +85,10 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-07-30",
-      "updated_at": "2026-08-26T05:51:49.800651Z",
+      "updated_at": "2026-08-28T17:28:05.145899Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60357.htm",
       "relevance": "Potenziale",
+      "act_type": "disegno_di_legge",
       "topics": [],
       "summary": "Stato: da assegn. a commis. Natura: ordinaria Presentazione: 2026-07-30 Ultimo stato: 2026-07-30",
       "level": "nazionale",
@@ -196,9 +197,10 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-28T17:27:28.759215Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
+      "act_type": "proposta_di_legge",
       "topics": [
         "Minori e famiglia"
       ],
@@ -222,9 +224,10 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-28T17:27:28.759215Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
+      "act_type": "proposta_di_legge",
       "topics": [
         "Minori e famiglia",
         "Disabilita e autismo"
@@ -233,16 +236,13 @@
       "level": "nazionale",
       "region": "",
       "status": "presentato",
-      "score": 12.24,
+      "score": 9.04,
       "found_terms": {
-        "sanita_welfare": [
-          "disabilita"
-        ],
         "scuola_minori_famiglia": [
           "minori"
         ],
         "clinica_sociale": [
-          "disabilita"
+          "epilessia"
         ]
       }
     },
@@ -255,9 +255,10 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-07",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-28T17:27:28.759215Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2922",
-      "relevance": "Alta",
+      "relevance": "Potenziale",
+      "act_type": "proposta_di_legge",
       "topics": [
         "Disabilita e autismo"
       ],
@@ -265,13 +266,10 @@
       "level": "nazionale",
       "region": "",
       "status": "presentato",
-      "score": 10.0,
+      "score": 6.8,
       "found_terms": {
-        "sanita_welfare": [
-          "disabilita"
-        ],
         "clinica_sociale": [
-          "disabilita"
+          "neurodegenerative"
         ]
       }
     },
@@ -284,9 +282,10 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-05",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-28T17:27:28.759215Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2918",
       "relevance": "Alta",
+      "act_type": "proposta_di_legge",
       "topics": [
         "Psicoterapia e clinica",
         "Salute mentale"
@@ -314,9 +313,10 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-23",
-      "updated_at": "2026-08-26T05:51:07.140862Z",
+      "updated_at": "2026-08-28T17:27:28.759215Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2902",
       "relevance": "Potenziale",
+      "act_type": "proposta_di_legge",
       "topics": [
         "Violenza e trauma"
       ],
@@ -366,9 +366,10 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-08-26T05:51:53.005097Z",
+      "updated_at": "2026-08-28T17:28:08.735628Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
+      "act_type": "altro",
       "topics": [
         "Professione psicologica"
       ],
