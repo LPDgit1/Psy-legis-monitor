@@ -721,13 +721,13 @@ with st.sidebar:
         "Documenti da mostrare",
         [
             "Atti di interesse + potenziali",
-            "Solo atti di interesse",
+            "Solo atti ad alta rilevanza",
             "Atti potenziali",
             "Tutti gli atti/proposte",
             "Solo news / aggiornamenti",
             "Tutto",
         ],
-        index=0,
+        index=1,
     )
     search = st.text_input("Cerca nella vista selezionata", "")
 
@@ -771,7 +771,7 @@ if view_mode == "Atti di interesse + potenziali":
         for row in filtered
         if is_relevant_primary_document(row) or is_potential_primary_document(row)
     ]
-elif view_mode == "Solo atti di interesse":
+elif view_mode == "Solo atti ad alta rilevanza":
     filtered = [row for row in filtered if is_relevant_primary_document(row)]
 elif view_mode == "Atti potenziali":
     filtered = [row for row in filtered if is_potential_primary_document(row)]

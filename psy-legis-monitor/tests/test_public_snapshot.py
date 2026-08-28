@@ -31,9 +31,9 @@ def test_public_snapshot_includes_every_relevant_and_potential_act():
     direct = _document()
     potential = _document(
         identifier="C.101",
-        title="Misure di tutela per adolescenti",
-        summary="Interventi rivolti agli adolescenti.",
-        text="Misure di tutela rivolte agli adolescenti.",
+        title="Misure di tutela e prevenzione del disagio giovanile",
+        summary="Interventi di prevenzione del disagio rivolti agli adolescenti.",
+        text="Misure di tutela e prevenzione del disagio rivolte agli adolescenti.",
     )
 
     payload = build_public_snapshot(
@@ -91,6 +91,36 @@ def test_public_snapshot_rejects_regional_weak_repetition():
     )
 
     assert document_to_public_item(weak) is None
+
+
+def test_public_snapshot_rejects_regional_header_without_subject():
+    untitled = _document(
+        source="Regione Abruzzo - BURA",
+        source_type="pdf",
+        level="regionale",
+        region="Abruzzo",
+        act_type="dgr",
+        identifier="BUR-Abruzzo-untitled",
+        title="DETERMINAZIONE N.",
+        summary="Metanodotto e opere connesse.",
+        text="Metanodotto e opere connesse.",
+    )
+
+    assert document_to_public_item(untitled) is None
+
+
+def test_public_snapshot_rejects_disability_parking_false_positive():
+    parking = _document(
+        source="Camera dei deputati - Dati Camera",
+        source_type="official_api",
+        act_type="proposta_di_legge",
+        identifier="C-parking",
+        title="Disposizioni per il rinnovo del contrassegno europeo di parcheggio per le persone con disabilita",
+        summary="Semplificazione del rinnovo del contrassegno per la mobilita.",
+        text="Semplificazione del rinnovo del contrassegno europeo di parcheggio.",
+    )
+
+    assert document_to_public_item(parking) is None
 
 
 def test_public_snapshot_revalidates_previous_noise_items():

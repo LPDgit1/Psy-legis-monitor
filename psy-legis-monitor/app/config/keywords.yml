@@ -107,8 +107,12 @@ categories:
       cronicita: 1
       fragilita: 1
       servizi sociali: 1
-      disabilita: 1
       caregiver: 1
+      riabilitazione: 2
+      progetto di vita: 2
+      vita indipendente: 2
+      inclusione scolastica: 2
+      servizi per la disabilita: 2
       PNRR salute: 2
 
   scuola_minori_famiglia:
@@ -139,7 +143,11 @@ categories:
       dipendenze: 2
       autismo: 2
       disturbo dello spettro autistico: 2
-      disabilita: 2
+      neurodivergenze: 3
+      neurodegenerative: 2
+      epilessia: 2
+      riabilitazione: 2
+      progetto di vita: 2
       violenza di genere: 2
       trauma: 2
       emergenza psicologica: 3

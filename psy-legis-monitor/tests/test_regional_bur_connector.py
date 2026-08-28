@@ -12,6 +12,7 @@ from app.connectors.regions.bur import (
     load_regional_bur_sources,
     parse_regional_bur_html,
     parse_regional_bur_pdf,
+    _has_meaningful_regional_title,
 )
 
 
@@ -86,6 +87,25 @@ def test_regional_relevance_requires_direct_signal_or_two_contexts():
 def test_regional_relevance_rejects_educational_wine_and_viticulture_noise():
     assert not is_relevant_regional_act(
         "Criteri per l'accreditamento di un istituto scolastico enologico e vitivinicolo"
+    )
+
+
+def test_regional_relevance_rejects_disability_parking_without_psychological_context():
+    assert not is_relevant_regional_act(
+        "Disposizioni per il rinnovo del contrassegno europeo di parcheggio per le persone con disabilita"
+    )
+    assert is_relevant_regional_act(
+        "Servizi di riabilitazione e presa in carico delle persone con disabilita"
+    )
+
+
+def test_regional_title_validation_rejects_header_only_fragments():
+    assert not _has_meaningful_regional_title("DETERMINAZIONE N.")
+    assert not _has_meaningful_regional_title(
+        "deliberazione, il Dirigente del Servizio e il Direttore del Dipartimento competente"
+    )
+    assert _has_meaningful_regional_title(
+        "DELIBERAZIONE DELLA GIUNTA REGIONALE 2/2026 - Servizi di supporto psicologico"
     )
 
 

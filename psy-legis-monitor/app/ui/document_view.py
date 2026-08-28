@@ -33,6 +33,92 @@ CONTEXTUAL_RELEVANCE_CATEGORIES = {
     "anziani_lavoro_organizzazioni",
     "tecnologia_ai_privacy",
 }
+SPECIFIC_CONTEXT_PATTERNS = (
+    "servizi sanitari",
+    "servizi sociosanitari",
+    "servizi territoriali",
+    "assistenza sanitaria",
+    "consultor",
+    "presa in carico",
+    "equipe multidisciplinare",
+    "equipe multiprofessionale",
+    "riabilitaz",
+    "abilitaz",
+    "autism",
+    "neuropsichiatr",
+    "neurodegener",
+    "epiless",
+    "disturbo dello spettro",
+    "disturbi alimentari",
+    "violenza di genere",
+    "maltratt",
+    "trauma",
+    "bullismo",
+    "cyberbullismo",
+    "disagio giovanile",
+    "disagio minorile",
+    "tutela minori",
+    "genitorial",
+    "sviluppo cognitivo",
+    "sviluppo relazionale",
+    "inclusione scolastica",
+    "non autosufficien",
+    "caregiver",
+    "progetto di vita",
+    "vita indipendente",
+    "stress lavoro-correlato",
+    "burnout",
+    "rischi psicosociali",
+    "dati sanitari",
+    "dati relativi alla salute",
+    "consenso informato",
+    "telemedicina",
+    "fascicolo sanitario elettronico",
+    "sanita digitale",
+    "servizi per le dipendenze",
+    "dipendenze patologiche",
+    "salute sessuale",
+    "emergenza psicologica",
+)
+DISABILITY_MARKERS = ("disabilita", "invalidita", "handicap")
+DISABILITY_CONTEXT_PATTERNS = (
+    "autism",
+    "neurodivergen",
+    "neuropsichiatr",
+    "neurodegener",
+    "epiless",
+    "disturbo",
+    "salute mentale",
+    "psicolog",
+    "psicoterap",
+    "riabilitaz",
+    "abilitaz",
+    "presa in carico",
+    "servizi sanitari",
+    "servizi sociosanitari",
+    "assistenza sanitaria",
+    "inclusione scolastica",
+    "progetto di vita",
+    "vita indipendente",
+    "non autosufficien",
+    "caregiver",
+)
+ADMINISTRATIVE_DISABILITY_NOISE_PATTERNS = (
+    "contrassegno europeo di parcheggio",
+    "parcheggio per le persone con disabilita",
+    "barriere architettoniche",
+    "collocamento mirato",
+    "legge 104",
+    "assistenza continuativa a familiari con disabilita",
+    "garante per i diritti delle persone con disabilita",
+)
+REGIONAL_TITLE_FRAGMENT_PATTERNS = (
+    "il dirigente del servizio",
+    "il direttore del dipartimento",
+    "attestano la legittimita",
+    "regolarita tecnico amministrativa",
+    "ufficio contratti",
+)
 NOISE_PATTERNS = [
     "liquidazione coatta amministrativa",
     "commissario liquidatore",
@@ -192,12 +278,16 @@ def is_relevant_primary_document(row: dict[str, Any]) -> bool:
 
     if not is_primary_document(row):
         return False
+    if _is_regional_document(row) and not has_meaningful_regional_title(row.get("title")):
+        return False
     found_terms = row.get("found_terms") or {}
     found_categories = set(found_terms)
     if DIRECT_RELEVANCE_CATEGORIES & found_categories or _has_direct_relevance_signal(row):
         return True
 
     if _matches_noise_pattern(row):
+        return False
+    if not _has_specific_psychological_context(row):
         return False
 
     score = float(row.get("score") or 0)
@@ -214,13 +304,17 @@ def is_relevant_primary_document(row: dict[str, Any]) -> bool:
 def is_potential_primary_document(row: dict[str, Any]) -> bool:
     if not is_primary_document(row) or is_relevant_primary_document(row):
         return False
+    if _is_regional_document(row) and not has_meaningful_regional_title(row.get("title")):
+        return False
     if _matches_noise_pattern(row):
+        return False
+    if not _has_specific_psychological_context(row):
         return False
     if _is_regional_document(row):
         found_categories = set(row.get("found_terms") or {})
         contextual_categories = CONTEXTUAL_RELEVANCE_CATEGORIES & found_categories
         return float(row.get("score") or 0) >= 2 and len(contextual_categories) >= 2
-    return float(row.get("score") or 0) >= 1
+    return float(row.get("score") or 0) >= 2
 
 
 def _is_regional_document(row: dict[str, Any]) -> bool:
@@ -232,6 +326,8 @@ def is_excluded_noise_document(row: dict[str, Any]) -> bool:
 
     if not is_primary_document(row):
         return False
+    if _is_regional_document(row) and not has_meaningful_regional_title(row.get("title")):
+        return True
     if not _matches_noise_pattern(row):
         return False
     if _has_direct_relevance_signal(row):
@@ -249,7 +345,41 @@ def _has_direct_relevance_signal(row: dict[str, Any]) -> bool:
 
 def _matches_noise_pattern(row: dict[str, Any]) -> bool:
     searchable_text = _searchable_row_text(row)
-    return any(pattern in searchable_text for pattern in NOISE_PATTERNS)
+    if any(pattern in searchable_text for pattern in NOISE_PATTERNS):
+        return True
+    return any(
+        pattern in searchable_text for pattern in ADMINISTRATIVE_DISABILITY_NOISE_PATTERNS
+    ) and not _has_specific_psychological_context(row)
+
+
+def _has_specific_psychological_context(row: dict[str, Any]) -> bool:
+    searchable_text = _searchable_row_text(row)
+    if any(marker in searchable_text for marker in DISABILITY_MARKERS):
+        return any(pattern in searchable_text for pattern in DISABILITY_CONTEXT_PATTERNS)
+    return any(pattern in searchable_text for pattern in SPECIFIC_CONTEXT_PATTERNS)
+
+
+def has_meaningful_regional_title(value: object | None) -> bool:
+    title = fold_for_search(normalize_text(str(value or "")))
+    if len(title) < 25:
+        return False
+    if any(pattern in title for pattern in REGIONAL_TITLE_FRAGMENT_PATTERNS):
+        return False
+    if re.fullmatch(
+        r"(?:legge|decreto|delibera(?:zione)?|ordinanza|determinazione|parte terza|bollettino)"
+        r"(?: regionale| della giunta regionale| del consiglio regionale)?"
+        r"(?:\s+(?:n|numero)\.?\s*[a-z0-9./-]+)?",
+        title,
+    ):
+        return False
+    subject = re.sub(
+        r"^(?:legge|decreto|delibera(?:zione)?|ordinanza|determinazione)"
+        r"(?: regionale| della giunta regionale| del consiglio regionale)?"
+        r"(?:\s+(?:n|numero)\.?\s*[a-z0-9./-]+)?\s*[-:.]?\s*",
+        "",
+        title,
+    )
+    return len(re.sub(r"[^a-z]+", "", subject)) >= 12
 
 
 def _searchable_row_text(row: dict[str, Any]) -> str:

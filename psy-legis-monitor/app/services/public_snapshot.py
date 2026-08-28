@@ -16,6 +16,7 @@ from app.core.text_cleaning import fold_for_search
 from app.ui.document_view import (
     clean_display_text,
     document_type_label,
+    has_meaningful_regional_title,
     is_excluded_noise_document,
     is_potential_primary_document,
     is_relevant_primary_document,
@@ -120,6 +121,11 @@ def build_public_snapshot(
 def document_to_public_item(document: LegislativeDocument) -> dict[str, object] | None:
     """Return a display-ready record when an act passes the dashboard rules."""
 
+    if not clean_display_text(document.title):
+        return None
+    if document.level == "regionale" and not has_meaningful_regional_title(document.title):
+        return None
+
     if "trova norme salute" in document.source.lower():
         from app.connectors.trovanorme_salute import is_ministry_health_document_relevant
 
@@ -180,6 +186,8 @@ def document_to_public_item(document: LegislativeDocument) -> dict[str, object] 
 
 def _is_publishable_public_item(item: Mapping[str, object]) -> bool:
     if not item.get("title"):
+        return False
+    if str(item.get("level") or "").strip().lower() == "regionale" and not has_meaningful_regional_title(item.get("title")):
         return False
     row = _public_item_to_row(item)
     if is_excluded_noise_document(row):

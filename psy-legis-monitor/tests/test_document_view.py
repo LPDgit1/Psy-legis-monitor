@@ -83,9 +83,47 @@ def test_document_view_requires_combined_context_for_indirect_relevance():
     }
 
     assert not is_relevant_primary_document(weak_row)
-    assert is_potential_primary_document(weak_row)
+    assert not is_potential_primary_document(weak_row)
     assert is_relevant_primary_document(combined_row)
     assert not is_potential_primary_document(combined_row)
+
+
+def test_document_view_excludes_disability_parking_false_positive():
+    row = {
+        "source": "Camera dei deputati - Dati Camera",
+        "source_type": "official_api",
+        "act_type": "proposta_di_legge",
+        "found_terms": {
+            "sanita_welfare": ["disabilita"],
+            "clinica_sociale": ["disabilita"],
+        },
+        "score": 20,
+        "title": (
+            "Disposizioni per il rinnovo del contrassegno europeo di parcheggio "
+            "per le persone con disabilita"
+        ),
+    }
+
+    assert is_excluded_noise_document(row)
+    assert not is_relevant_primary_document(row)
+    assert not is_potential_primary_document(row)
+
+
+def test_document_view_keeps_disability_act_with_clinical_context():
+    row = {
+        "source": "Camera dei deputati - Dati Camera",
+        "source_type": "official_api",
+        "act_type": "proposta_di_legge",
+        "found_terms": {
+            "sanita_welfare": ["disabilita"],
+            "clinica_sociale": ["epilessia"],
+        },
+        "score": 6,
+        "title": "Riconoscimento della disabilita dei minori affetti da epilessia",
+    }
+
+    assert not is_excluded_noise_document(row)
+    assert is_relevant_primary_document(row)
 
 
 def test_document_view_excludes_known_noise_from_potential_acts():
@@ -134,6 +172,26 @@ def test_document_view_excludes_regional_enology_school_noise():
         "score": 2.0,
         "title": "Criteri per l'accreditamento di un istituto scolastico enologico e vitivinicolo",
         "text": "Accreditamento e requisiti organizzativi dell'istituto scolastico.",
+    }
+
+    assert is_excluded_noise_document(row)
+    assert not is_relevant_primary_document(row)
+    assert not is_potential_primary_document(row)
+
+
+def test_document_view_excludes_regional_header_without_subject():
+    row = {
+        "source": "Regione Abruzzo - BURA",
+        "source_type": "pdf",
+        "level": "regionale",
+        "act_type": "dgr",
+        "found_terms": {
+            "sanita_welfare": ["LEA", "presa in carico"],
+            "clinica_sociale": ["autismo"],
+        },
+        "score": 16.4,
+        "title": "DETERMINAZIONE N.",
+        "summary": "Metanodotto e opere connesse.",
     }
 
     assert is_excluded_noise_document(row)

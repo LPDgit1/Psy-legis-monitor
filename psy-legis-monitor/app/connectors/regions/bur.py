@@ -86,6 +86,37 @@ CONTEXT_ANCHOR_TERMS = (
     "non autosufficien",
 )
 
+DISABILITY_MARKERS = ("disabilita", "invalidita", "handicap")
+DISABILITY_CONTEXT_TERMS = (
+    "autism",
+    "neurodivergen",
+    "neuropsichiatr",
+    "neurodegener",
+    "epiless",
+    "disturbo",
+    "salute mentale",
+    "psicolog",
+    "psicoterap",
+    "riabilitaz",
+    "abilitaz",
+    "presa in carico",
+    "servizi sanitari",
+    "servizi sociosanitari",
+    "assistenza sanitaria",
+    "inclusione scolastica",
+    "progetto di vita",
+    "vita indipendente",
+    "non autosufficien",
+    "caregiver",
+)
+REGIONAL_TITLE_FRAGMENT_PATTERNS = (
+    "il dirigente del servizio",
+    "il direttore del dipartimento",
+    "attestano la legittimita",
+    "regolarita tecnico amministrativa",
+    "ufficio contratti",
+)
+
 NOISE_TERMS = (
     "veterinar",
     "sanita animale",
@@ -308,6 +339,8 @@ def parse_regional_bur_html(
             continue
         seen_urls.add(absolute_url)
         display_title = _best_candidate_title(title, context)
+        if not _has_meaningful_regional_title(display_title):
+            continue
         documents.append(
             _build_document(
                 display_title,
@@ -404,7 +437,9 @@ def parse_regional_bur_pdf(
         if not PDF_ACT_START.match(chunk):
             continue
         title = _pdf_chunk_title(chunk)
-        if not title or not is_relevant_regional_candidate(title, chunk):
+        if not title or not _has_meaningful_regional_title(title):
+            continue
+        if not is_relevant_regional_candidate(title, chunk):
             continue
         if not _has_normative_marker(chunk, pdf_url):
             continue
@@ -450,6 +485,10 @@ def is_relevant_regional_candidate(title: str, context: str) -> bool:
 
 def _is_relevant_regional_text(folded: str) -> bool:
     has_direct = any(term in folded for term in DIRECT_RELEVANCE_TERMS)
+    if any(term in folded for term in DISABILITY_MARKERS) and not any(
+        term in folded for term in DISABILITY_CONTEXT_TERMS
+    ):
+        return False
     if any(term in folded for term in NOISE_TERMS) and not has_direct:
         return False
     if has_direct:
@@ -511,6 +550,29 @@ def _best_candidate_title(anchor_text: str, context: str) -> str:
         return title
     context = normalize_text(context)
     return context[:700] or title or "Atto pubblicato nel Bollettino Ufficiale regionale"
+
+
+def _has_meaningful_regional_title(value: object | None) -> bool:
+    title = fold_for_search(normalize_text(str(value or "")))
+    if len(title) < 25:
+        return False
+    if any(pattern in title for pattern in REGIONAL_TITLE_FRAGMENT_PATTERNS):
+        return False
+    if re.fullmatch(
+        r"(?:legge|decreto|delibera(?:zione)?|ordinanza|determinazione|parte terza|bollettino)"
+        r"(?: regionale| della giunta regionale| del consiglio regionale)?"
+        r"(?:\s+(?:n|numero)\.?\s*[a-z0-9./-]+)?",
+        title,
+    ):
+        return False
+    subject = re.sub(
+        r"^(?:legge|decreto|delibera(?:zione)?|ordinanza|determinazione)"
+        r"(?: regionale| della giunta regionale| del consiglio regionale)?"
+        r"(?:\s+(?:n|numero)\.?\s*[a-z0-9./-]+)?\s*[-:.]?\s*",
+        "",
+        title,
+    )
+    return len(re.sub(r"[^a-z]+", "", subject)) >= 12
 
 
 def _pdf_chunk_title(chunk: str) -> str:
