@@ -1,15 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-01T10:16:02.383532Z",
-  "fetched_document_count": 577,
-  "published_document_count": 11,
-  "high_relevance_count": 5,
+  "generated_at": "2026-09-02T09:45:16.140382Z",
+  "fetched_document_count": 589,
+  "published_document_count": 12,
+  "high_relevance_count": 6,
   "potential_relevance_count": 6,
-  "published_source_count": 5,
+  "published_source_count": 6,
   "published_sources": [
     "Camera dei deputati",
     "Gazzetta Ufficiale",
     "Ministero della Salute",
+    "Regione Emilia-Romagna - BURERT",
     "Regione Toscana - BURT",
     "Senato della Repubblica"
   ],
@@ -17,7 +18,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 253,
+      "document_count": 263,
       "error": ""
     },
     {
@@ -59,7 +60,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 34,
+      "document_count": 36,
       "error": ""
     },
     {
@@ -197,7 +198,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-09-01T10:08:39.672946Z",
+      "updated_at": "2026-09-02T09:39:16.592070Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -224,7 +225,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-09-01T10:08:39.672946Z",
+      "updated_at": "2026-09-02T09:39:16.592070Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -255,7 +256,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-07",
-      "updated_at": "2026-09-01T10:08:39.672946Z",
+      "updated_at": "2026-09-02T09:39:16.592070Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2922",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -282,7 +283,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-05",
-      "updated_at": "2026-09-01T10:08:39.672946Z",
+      "updated_at": "2026-09-02T09:39:16.592070Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2918",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -313,7 +314,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-23",
-      "updated_at": "2026-09-01T10:08:39.672946Z",
+      "updated_at": "2026-09-02T09:39:16.592070Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2902",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -366,7 +367,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-09-01T10:09:18.917323Z",
+      "updated_at": "2026-09-02T09:40:10.084254Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
@@ -381,6 +382,56 @@
       "found_terms": {
         "professione_diretta": [
           "psicologo"
+        ]
+      }
+    },
+    {
+      "key": "e56f2135aa62d482fea50267a0d2995a8276e0b3fb1c18f2c738f05a9b1242ad",
+      "id": "BUR-Emilia-Romagna-35933f727aa3dc20e2ad",
+      "identifier": "BUR-Emilia-Romagna-35933f727aa3dc20e2ad",
+      "title": "deliberazione del Direttore Generale n.",
+      "source": "Regione Emilia-Romagna - BURERT",
+      "source_detail": "Regione Emilia-Romagna - BURERT",
+      "kind": "Decreto regionale",
+      "date": "2023-12-01",
+      "updated_at": "2026-09-02T09:41:31.441985Z",
+      "href": "https://bur.regione.emilia-romagna.it/area-bollettini/settembre-periodico-parte-terza-1a-quindicina-4/bollettino_view/++widget++form.widgets.pdf_firmato/@@download",
+      "relevance": "Alta",
+      "act_type": "decreto_legislativo",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Cure primarie",
+        "Salute mentale",
+        "Dipendenze",
+        "Anziani e non autosufficienza",
+        "Lavoro e burnout",
+        "Inclusione",
+        "Welfare e servizi"
+      ],
+      "summary": "389 del 01/12/2023 cui si rinvia per quanto qui non precisato, è emesso il presente avviso pubblico finalizzato all’attribuzione di incarico a tempo determinato di dirigente del Progetto “Supporto allo sviluppo della rete dei servizi territoriali e delle case di comunità”, ai sensi dell’art. 15-septies, comma 2, del D. Lgs n. 502/1992 e s.m. e i., con le caratteristiche di seguito indicate: Denominazione incarico: D...",
+      "level": "regionale",
+      "region": "Emilia-Romagna",
+      "status": "pubblicato",
+      "score": 62.66,
+      "found_terms": {
+        "servizi_psicologici": [
+          "salute mentale"
+        ],
+        "salute_mentale_servizi": [
+          "dipendenze patologiche"
+        ],
+        "sanita_welfare": [
+          "caregiver",
+          "case della comunita",
+          "presa in carico",
+          "servizi territoriali"
+        ],
+        "clinica_sociale": [
+          "dipendenze"
+        ],
+        "anziani_lavoro_organizzazioni": [
+          "caregiver",
+          "lavoro"
         ]
       }
     }
