@@ -4,11 +4,17 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-09-02T09:39:16.592070Z",
+  "generated_at": "2026-09-03T09:52:51.019650Z",
   "result_count": 200,
-  "newest_identifier": "3083",
-  "newest_date": "20260807",
+  "newest_identifier": "3086",
+  "newest_date": "20260901",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3086",
+      "title": "\"Conversione in legge del decreto-legge 26 agosto 2026. n.153, recante disposizioni urgenti in materia di prezzi petroliferi connessi al protrarsi della nuova crisi dei mercati internazionali\" (3086)",
+      "date": "20260901",
+      "identifier": "3086"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3083",
       "title": "\"Conversione in legge del decreto-legge 7 agosto 2026, n. 144, recante disposizioni urgenti per la funzionalità della pubblica amministrazione e degli enti territoriali, nonché in materia di protezione civile\" (3083)",
@@ -1202,12 +1208,6 @@
       "title": "GUSMEROLI ed altri: \"Istituzione della Giornata nazionale del consumo consapevole dei prodotti di qualità\" (2887)",
       "date": "20260420",
       "identifier": "2887"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2886",
-      "title": "S. 1818. - \"Conversione in legge, con modificazioni, del decreto-legge 24 febbraio 2026, n. 23, recante disposizioni urgenti in materia di sicurezza pubblica, di attività di indagine dell'autorità giudiziaria in presenza di cause di giustificazione, di funzionalità delle forze di polizia e del Ministero dell'interno, nonché di immigrazione e protezione internazionale\" <em>(approvato dal Senato)</em> (2886)",
-      "date": "20260417",
-      "identifier": "2886"
     }
   ]
 }

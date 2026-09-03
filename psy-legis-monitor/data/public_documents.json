@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T09:45:16.140382Z",
-  "fetched_document_count": 589,
+  "generated_at": "2026-09-03T09:58:44.933179Z",
+  "fetched_document_count": 605,
   "published_document_count": 12,
   "high_relevance_count": 6,
   "potential_relevance_count": 6,
@@ -18,7 +18,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 263,
+      "document_count": 274,
       "error": ""
     },
     {
@@ -60,7 +60,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 36,
+      "document_count": 21,
       "error": ""
     },
     {
@@ -71,9 +71,9 @@
     },
     {
       "source": "Pagine istituzionali",
-      "status": "error",
-      "document_count": 0,
-      "error": "timed out"
+      "status": "ok",
+      "document_count": 20,
+      "error": ""
     }
   ],
   "documents": [
@@ -198,7 +198,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-09-02T09:39:16.592070Z",
+      "updated_at": "2026-09-03T09:52:51.019650Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -225,7 +225,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-09-02T09:39:16.592070Z",
+      "updated_at": "2026-09-03T09:52:51.019650Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -256,7 +256,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-07",
-      "updated_at": "2026-09-02T09:39:16.592070Z",
+      "updated_at": "2026-09-03T09:52:51.019650Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2922",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -283,7 +283,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-05",
-      "updated_at": "2026-09-02T09:39:16.592070Z",
+      "updated_at": "2026-09-03T09:52:51.019650Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2918",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -314,7 +314,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-23",
-      "updated_at": "2026-09-02T09:39:16.592070Z",
+      "updated_at": "2026-09-03T09:52:51.019650Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2902",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -367,7 +367,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-09-02T09:40:10.084254Z",
+      "updated_at": "2026-09-03T09:53:25.462831Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
@@ -394,7 +394,7 @@
       "source_detail": "Regione Emilia-Romagna - BURERT",
       "kind": "Decreto regionale",
       "date": "2023-12-01",
-      "updated_at": "2026-09-02T09:41:31.441985Z",
+      "updated_at": "2026-09-03T09:55:09.722761Z",
       "href": "https://bur.regione.emilia-romagna.it/area-bollettini/settembre-periodico-parte-terza-1a-quindicina-4/bollettino_view/++widget++form.widgets.pdf_firmato/@@download",
       "relevance": "Alta",
       "act_type": "decreto_legislativo",
