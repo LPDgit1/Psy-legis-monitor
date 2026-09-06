@@ -4,14 +4,14 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-09-05T09:06:46.022939Z",
+  "generated_at": "2026-09-06T09:27:47.157085Z",
   "result_count": 200,
   "newest_identifier": "3086",
   "newest_date": "20260901",
   "rows": [
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3086",
-      "title": "\"Conversione in legge del decreto-legge 26 agosto 2026. n.153, recante disposizioni urgenti in materia di prezzi petroliferi connessi al protrarsi della nuova crisi dei mercati internazionali\" (3086)",
+      "title": "\"Conversione in legge del decreto-legge 26 agosto 2026, n. 153, recante disposizioni urgenti in materia di prezzi petroliferi connessi al protrarsi della nuova crisi dei mercati internazionali\" (3086)",
       "date": "20260901",
       "identifier": "3086"
     },
