@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-06T09:34:18.080350Z",
-  "fetched_document_count": 617,
+  "generated_at": "2026-09-07T10:26:50.425913Z",
+  "fetched_document_count": 333,
   "published_document_count": 12,
   "high_relevance_count": 6,
   "potential_relevance_count": 6,
@@ -17,9 +17,9 @@
   "source_statuses": [
     {
       "source": "Gazzetta Ufficiale",
-      "status": "ok",
-      "document_count": 291,
-      "error": ""
+      "status": "error",
+      "document_count": 0,
+      "error": "timed out"
     },
     {
       "source": "Camera",
@@ -35,15 +35,15 @@
     },
     {
       "source": "Normattiva",
-      "status": "ok",
-      "document_count": 12,
-      "error": ""
+      "status": "error",
+      "document_count": 0,
+      "error": "timed out"
     },
     {
       "source": "Ministero Salute",
-      "status": "ok",
-      "document_count": 1,
-      "error": ""
+      "status": "error",
+      "document_count": 0,
+      "error": "Ministero Salute non interrogabile dalle fonti configurate"
     },
     {
       "source": "AGENAS",
@@ -71,9 +71,9 @@
     },
     {
       "source": "Pagine istituzionali",
-      "status": "error",
-      "document_count": 0,
-      "error": "timed out"
+      "status": "ok",
+      "document_count": 20,
+      "error": ""
     }
   ],
   "documents": [
@@ -198,7 +198,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-09-06T09:27:47.157085Z",
+      "updated_at": "2026-09-07T10:20:27.161498Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -225,7 +225,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-09-06T09:27:47.157085Z",
+      "updated_at": "2026-09-07T10:20:27.161498Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -256,7 +256,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-07",
-      "updated_at": "2026-09-06T09:27:47.157085Z",
+      "updated_at": "2026-09-07T10:20:27.161498Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2922",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -283,7 +283,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-05",
-      "updated_at": "2026-09-06T09:27:47.157085Z",
+      "updated_at": "2026-09-07T10:20:27.161498Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2918",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -314,7 +314,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-23",
-      "updated_at": "2026-09-06T09:27:47.157085Z",
+      "updated_at": "2026-09-07T10:20:27.161498Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2902",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
