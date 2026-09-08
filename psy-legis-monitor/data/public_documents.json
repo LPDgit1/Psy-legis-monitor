@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-07T10:26:50.425913Z",
-  "fetched_document_count": 333,
+  "generated_at": "2026-09-08T09:50:18.706489Z",
+  "fetched_document_count": 313,
   "published_document_count": 12,
   "high_relevance_count": 6,
   "potential_relevance_count": 6,
@@ -71,9 +71,9 @@
     },
     {
       "source": "Pagine istituzionali",
-      "status": "ok",
-      "document_count": 20,
-      "error": ""
+      "status": "error",
+      "document_count": 0,
+      "error": "timed out"
     }
   ],
   "documents": [
