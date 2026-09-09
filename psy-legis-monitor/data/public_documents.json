@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-08T09:50:18.706489Z",
-  "fetched_document_count": 313,
-  "published_document_count": 12,
-  "high_relevance_count": 6,
+  "generated_at": "2026-09-09T09:55:57.699393Z",
+  "fetched_document_count": 613,
+  "published_document_count": 13,
+  "high_relevance_count": 7,
   "potential_relevance_count": 6,
   "published_source_count": 6,
   "published_sources": [
@@ -17,9 +17,9 @@
   "source_statuses": [
     {
       "source": "Gazzetta Ufficiale",
-      "status": "error",
-      "document_count": 0,
-      "error": "timed out"
+      "status": "ok",
+      "document_count": 285,
+      "error": ""
     },
     {
       "source": "Camera",
@@ -35,15 +35,15 @@
     },
     {
       "source": "Normattiva",
-      "status": "error",
-      "document_count": 0,
-      "error": "timed out"
+      "status": "ok",
+      "document_count": 12,
+      "error": ""
     },
     {
       "source": "Ministero Salute",
-      "status": "error",
-      "document_count": 0,
-      "error": "Ministero Salute non interrogabile dalle fonti configurate"
+      "status": "ok",
+      "document_count": 2,
+      "error": ""
     },
     {
       "source": "AGENAS",
@@ -60,7 +60,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 36,
+      "document_count": 37,
       "error": ""
     },
     {
@@ -77,6 +77,33 @@
     }
   ],
   "documents": [
+    {
+      "key": "e101ae5995d60443ed2d53c6ae7205d3135b6a06368a27a74371983428ca3c2d",
+      "id": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
+      "identifier": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
+      "title": "Determinazione del numero globale di specialisti da formare per le professioni di biologo, chimico, farmacista, fisico, odontoiatra, medico veterinario e psicologo per il triennio... (Decreto 31/07/2026)",
+      "source": "Ministero della Salute",
+      "source_detail": "Ministero della Salute - Trova Norme Salute",
+      "kind": "Atto normativo",
+      "date": "2026-07-31",
+      "updated_at": "2026-09-09T09:49:00.905685Z",
+      "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Professione psicologica"
+      ],
+      "summary": "Atto: Decreto 31/07/2026. Risultato Trova Norme Salute per: psicologo",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 36.0,
+      "found_terms": {
+        "professione_diretta": [
+          "psicologo"
+        ]
+      }
+    },
     {
       "key": "6d4b47315957d55d316418b155db7bb971a829aabf72900485ba8ad4dfaf1dcc",
       "id": "S.1990",
@@ -198,7 +225,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-09-07T10:20:27.161498Z",
+      "updated_at": "2026-09-09T09:48:05.286810Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -225,7 +252,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-09-07T10:20:27.161498Z",
+      "updated_at": "2026-09-09T09:48:05.286810Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -256,7 +283,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-07",
-      "updated_at": "2026-09-07T10:20:27.161498Z",
+      "updated_at": "2026-09-09T09:48:05.286810Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2922",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -283,7 +310,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-05",
-      "updated_at": "2026-09-07T10:20:27.161498Z",
+      "updated_at": "2026-09-09T09:48:05.286810Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2918",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -314,7 +341,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-04-23",
-      "updated_at": "2026-09-07T10:20:27.161498Z",
+      "updated_at": "2026-09-09T09:48:05.286810Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2902",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -367,7 +394,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-09-06T09:28:36.404192Z",
+      "updated_at": "2026-09-09T09:49:00.905685Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
