@@ -4,16 +4,76 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-09-10T09:46:37.269465Z",
+  "generated_at": "2026-09-11T09:43:19.847153Z",
   "result_count": 200,
-  "newest_identifier": "3086",
-  "newest_date": "20260901",
+  "newest_identifier": "3094",
+  "newest_date": "20260908",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3094",
+      "title": "SIMIANI: \"Modifiche all’articolo 2 della legge 23 dicembre 2009, n. 191, e all’articolo 17 del testo unico delle leggi sull'ordinamento degli enti locali, di cui al decreto legislativo 18 agosto 2000, n. 267, in materia di circoscrizioni di decentramento comunale nei comuni capoluogo di provincia\" (3094)",
+      "date": "20260908",
+      "identifier": "3094"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3093",
+      "title": "ORRICO ed altri: \"Disposizioni in materia di politiche per l’orientamento e per favorire l’inserimento lavorativo dei giovani\" (3093)",
+      "date": "20260908",
+      "identifier": "3093"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3092",
+      "title": "CALDERONE: \"Istituzione della Giornata nazionale degli orfani a causa di femminicidio\" (3092)",
+      "date": "20260907",
+      "identifier": "3092"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3091",
+      "title": "MORFINO: \"Disposizioni in materia di reclutamento e stabilizzazione del personale docente\" (3091)",
+      "date": "20260907",
+      "identifier": "3091"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3090",
+      "title": "PITTALIS: \"Modifica all’articolo 57 del codice di procedura penale, in materia di conferimento delle qualifiche di ufficiale o agente di polizia giudiziaria ai componenti delle compagnie barracellari nella regione Sardegna\" (3090)",
+      "date": "20260903",
+      "identifier": "3090"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3089",
+      "title": "ZARATTI: \"Disposizioni per favorire la tornanza, la rigenerazione ambientale e il ripopolamento delle zone montane\" (3089)",
+      "date": "20260903",
+      "identifier": "3089"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3088",
+      "title": "AMATO ed altri: \"Disposizioni per la riforma del reclutamento e per la valorizzazione dell’esperienza professionale del personale docente nonché per la riduzione del precariato\" (3088)",
+      "date": "20260902",
+      "identifier": "3088"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3087",
+      "title": "BRAGA ed altri: \"Disposizioni per l’adattamento delle città ai cambiamenti climatici e per la protezione della popolazione dagli effetti delle ondate di calore\" (3087)",
+      "date": "20260901",
+      "identifier": "3087"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3086",
       "title": "\"Conversione in legge del decreto-legge 26 agosto 2026, n. 153, recante disposizioni urgenti in materia di prezzi petroliferi connessi al protrarsi della nuova crisi dei mercati internazionali\" (3086)",
       "date": "20260901",
       "identifier": "3086"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3085",
+      "title": "CARMINA: \"Istituzione della Giornata nazionale dell’artrogriposi multipla congenita\" (3085)",
+      "date": "20260831",
+      "identifier": "3085"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3084",
+      "title": "FOSSI: \"Disposizioni per la promozione dell’accesso alle tecniche di preservazione della fertilità per fini sociali\" (3084)",
+      "date": "20260814",
+      "identifier": "3084"
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3083",
@@ -1148,66 +1208,6 @@
       "title": "L'ABBATE: \"Disposizioni in materia di contenimento delle emissioni fuggitive di gas naturale\" (2897)",
       "date": "20260422",
       "identifier": "2897"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2896",
-      "title": "L'ABBATE: \"Modifica all’articolo 8 del decreto-legge 13 settembre 2012, n. 158, convertito, con modificazioni, dalla legge 8 novembre 2012, n. 189, e altre disposizioni in materia di etichettatura e di sicurezza alimentare dei prodotti caseari a base di latte crudo\" (2896)",
-      "date": "20260422",
-      "identifier": "2896"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2895",
-      "title": "L'ABBATE: \"Disciplina delle attività di ristorazione domestica nell’ambito dell’economia della condivisione\" (2895)",
-      "date": "20260422",
-      "identifier": "2895"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2894",
-      "title": "L'ABBATE: \"Legge quadro per la disciplina della vigilanza ecologica volontaria\" (2894)",
-      "date": "20260422",
-      "identifier": "2894"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2893",
-      "title": "L'ABBATE: \"Disposizioni tributarie per la promozione della decarbonizzazione dei processi produttivi e istituzione di un fondo per la riqualificazione dei territori e la riconversione industriale\" (2893)",
-      "date": "20260422",
-      "identifier": "2893"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2892",
-      "title": "CARMINA ed altri: \"Norme concernenti l’adozione di percorsi formativi personalizzati per gli studenti iscritti contemporaneamente a corsi di istruzione secondaria superiore e di alta formazione artistica, musicale o coreutica\" (2892)",
-      "date": "20260422",
-      "identifier": "2892"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2891",
-      "title": "MIELE ed altri: \"Istituzione e valorizzazione dell’Itinerario culturale delle città del Novecento\" (2891)",
-      "date": "20260422",
-      "identifier": "2891"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2890",
-      "title": "S. 1845. - \"Conversione in legge, con modificazioni, del decreto-legge 18 marzo 2026, n. 33, recante disposizioni urgenti in materia di prezzi petroliferi connessi alle crisi dei mercati internazionali\" <em>(approvato dal Senato)</em> (2890)",
-      "date": "20260422",
-      "identifier": "2890"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2889",
-      "title": "GIANASSI ed altri: \"Modifica all’articolo 9 della legge 5 febbraio 1992, n. 91, in materia di concessione della cittadinanza allo straniero che assuma la qualità di testimone di giustizia\" (2889)",
-      "date": "20260421",
-      "identifier": "2889"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2888",
-      "title": "ASCANI ed altri: \"Disposizioni concernenti la disciplina dell’attività di creatore di contenuti digitali\" (2888)",
-      "date": "20260421",
-      "identifier": "2888"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2887",
-      "title": "GUSMEROLI ed altri: \"Istituzione della Giornata nazionale del consumo consapevole dei prodotti di qualità\" (2887)",
-      "date": "20260420",
-      "identifier": "2887"
     }
   ]
 }
