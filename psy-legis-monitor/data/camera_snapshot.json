@@ -4,11 +4,41 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-09-11T09:43:19.847153Z",
+  "generated_at": "2026-09-12T09:22:58.584453Z",
   "result_count": 200,
-  "newest_identifier": "3094",
-  "newest_date": "20260908",
+  "newest_identifier": "3099",
+  "newest_date": "20260909",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3099",
+      "title": "BRUZZONE: \"Modifiche agli articoli 415 e 595 del codice penale in materia di istigazione a disobbedire alle leggi e di diffamazione\" (3099)",
+      "date": "20260909",
+      "identifier": "3099"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3098",
+      "title": "FARAONE: \"Disposizioni in materia di videosorveglianza negli asili nido e nelle scuole dell’infanzia nonché presso le strutture socio assistenziali per anziani, disabili e minori in situazioni di disagio\" (3098)",
+      "date": "20260909",
+      "identifier": "3098"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3097",
+      "title": "GUERINI: \"Disposizioni per il sostegno abitativo dei lavoratori dipendenti e per la promozione degli alloggi aziendali\" (3097)",
+      "date": "20260909",
+      "identifier": "3097"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3096",
+      "title": "ROSATO: \"Introduzione dell’articolo 1084-<i>ter</i> del codice dell’ordinamento militare, di cui al decreto legislativo 15 marzo 2010, n. 66, in materia di avanzamento a titolo onorifico degli ufficiali di complemento delle Forze armate\" (3096)",
+      "date": "20260909",
+      "identifier": "3096"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3095",
+      "title": "ROSATO: \"Modifiche all'ordinamento penitenziario in materia di detenzione domiciliare\" (3095)",
+      "date": "20260909",
+      "identifier": "3095"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3094",
       "title": "SIMIANI: \"Modifiche all’articolo 2 della legge 23 dicembre 2009, n. 191, e all’articolo 17 del testo unico delle leggi sull'ordinamento degli enti locali, di cui al decreto legislativo 18 agosto 2000, n. 267, in materia di circoscrizioni di decentramento comunale nei comuni capoluogo di provincia\" (3094)",
@@ -1178,36 +1208,6 @@
       "title": "FERRARI ed altri: \"Modifiche all’articolo 612-<em>ter</em> del codice penale, in materia di diffusione illecita di immagini o video sessualmente espliciti o di contenuto intimo, nonché obblighi a carico dei gestori di piattaforme telematiche per la prevenzione e la repressione degli atti di violenza di genere in ambito digitale\" (2902)",
       "date": "20260423",
       "identifier": "2902"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2901",
-      "title": "GIACCONE ed altri: \"Disposizioni in materia di adeguamento delle retribuzioni su base territoriale nonché di determinazione e applicazione dei relativi coefficienti\" (2901)",
-      "date": "20260423",
-      "identifier": "2901"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2900",
-      "title": "\"Ratifica ed esecuzione dei Trattati di estradizione e sul trasferimento di persone condannate tra la Repubblica italiana e la Repubblica kirghisa, fatti a Roma il 3 ottobre 2024\" (2900)",
-      "date": "20260422",
-      "identifier": "2900"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2899",
-      "title": "L'ABBATE: \"Tutela e valorizzazione della ceramica artistica e di qualità italiana\" (2899)",
-      "date": "20260422",
-      "identifier": "2899"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2898",
-      "title": "MATTEONI ed altri: \"Dichiarazione di monumento nazionale della foiba dell’Abisso Plutone\" (2898)",
-      "date": "20260422",
-      "identifier": "2898"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2897",
-      "title": "L'ABBATE: \"Disposizioni in materia di contenimento delle emissioni fuggitive di gas naturale\" (2897)",
-      "date": "20260422",
-      "identifier": "2897"
     }
   ]
 }
