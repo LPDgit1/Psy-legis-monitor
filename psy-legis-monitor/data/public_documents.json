@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-13T10:24:29.013573Z",
-  "fetched_document_count": 609,
-  "published_document_count": 13,
-  "high_relevance_count": 7,
+  "generated_at": "2026-09-14T10:48:54.358343Z",
+  "fetched_document_count": 550,
+  "published_document_count": 14,
+  "high_relevance_count": 8,
   "potential_relevance_count": 6,
   "published_source_count": 6,
   "published_sources": [
@@ -29,9 +29,9 @@
     },
     {
       "source": "Senato",
-      "status": "ok",
-      "document_count": 60,
-      "error": ""
+      "status": "error",
+      "document_count": 0,
+      "error": "Server error '503 Service Temporarily Unavailable' for url 'https://dati.senato.it/sparql?query=PREFIX+osr%3A+%3Chttp%3A%2F%2Fdati.senato.it%2Fosr%2F%3E%0A%0ASELECT+DISTINCT+%3Fddl+%3FidFase+%3Framo+%3Flegislatura+%3FnumeroFase+%3Ftitolo+%3FtitoloBreve%0A++++++++++++++++%3Fnatura+%3Fstato+%3FdataStato+%3FdataPresentazione%0A++++++++++++++++%3FpresentatoTrasmesso+%3FtestoPresentato+%3FtestoApprovato+WHERE+%7B%0A++%3Fddl+a+osr%3ADdl.%0A++%3Fddl+osr%3AidFase+%3FidFase.%0A++%3Fddl+osr%3AstatoDdl+%3F"
     },
     {
       "source": "Normattiva",
@@ -42,7 +42,7 @@
     {
       "source": "Ministero Salute",
       "status": "ok",
-      "document_count": 2,
+      "document_count": 3,
       "error": ""
     },
     {
@@ -86,7 +86,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-09-13T10:19:40.436014Z",
+      "updated_at": "2026-09-14T10:43:15.779571Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -126,6 +126,33 @@
       "found_terms": {
         "scuola_minori_famiglia": [
           "disagio giovanile"
+        ]
+      }
+    },
+    {
+      "key": "7bac1e99f50fdb5223d577ad4ef1200b1291400fb972407c1024fd9afc500bc7",
+      "id": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
+      "identifier": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
+      "title": "MORENO ALZATE Maria Carolina – Decreto di riconoscimento della qualifica professionale conseguita in Portogallo, ai fini dell’esercizio in Italia della professione di psicologo... (Decreto 23/07/2026)",
+      "source": "Ministero della Salute",
+      "source_detail": "Ministero della Salute - Trova Norme Salute",
+      "kind": "Atto normativo",
+      "date": "2026-07-23",
+      "updated_at": "2026-09-14T10:43:15.779571Z",
+      "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Professione psicologica"
+      ],
+      "summary": "Atto: Decreto 23/07/2026. Risultato Trova Norme Salute per: psicologo",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 36.0,
+      "found_terms": {
+        "professione_diretta": [
+          "psicologo"
         ]
       }
     },
@@ -394,21 +421,23 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-09-13T10:19:40.436014Z",
+      "updated_at": "2026-09-14T10:43:15.779571Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
       "topics": [
-        "Professione psicologica"
+        "Professione psicologica",
+        "Psicoterapia e clinica"
       ],
-      "summary": "Atto: Decreto 10/07/2025. Risultato Trova Norme Salute per: psicologo",
+      "summary": "Atto: Decreto 10/07/2025. Risultato Trova Norme Salute per: psicoterapia",
       "level": "nazionale",
       "region": "",
       "status": "pubblicato",
       "score": 36.0,
       "found_terms": {
         "professione_diretta": [
-          "psicologo"
+          "psicologo",
+          "psicoterapia"
         ]
       }
     },
