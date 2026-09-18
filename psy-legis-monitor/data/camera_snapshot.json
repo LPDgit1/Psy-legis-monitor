@@ -4,11 +4,23 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-09-17T10:00:18.857832Z",
+  "generated_at": "2026-09-18T09:47:24.347814Z",
   "result_count": 200,
-  "newest_identifier": "3104",
-  "newest_date": "20260914",
+  "newest_identifier": "3105",
+  "newest_date": "20260915",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3105",
+      "title": "LOIZZO e CENTEMERO: \"Disposizioni per agevolare l’accesso alle prestazioni sanitarie di crioconservazione degli ovociti a scopo precauzionale\" (3105)",
+      "date": "20260915",
+      "identifier": "3105"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2822-B",
+      "title": "S. 1971. - BIGNAMI ed altri: \"Disposizioni in materia di elezioni della Camera dei deputati e del Senato della Repubblica\" <i>(approvata dalla Camera e modificata dal Senato) </i>(2822-B)",
+      "date": "20260915",
+      "identifier": "2822-B"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3104",
       "title": "L'ABBATE: \"Agevolazione fiscale per il recupero e la valorizzazione delle architetture rurali tradizionali da adibire ad abitazione principale\" (3104)",
@@ -581,7 +593,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3011",
-      "title": "TENERINI ed altri: \"Modifiche all’articolo 26 del testo unico delle disposizioni legislative in materia di tutela e sostegno della maternità e della paternità, di cui al decreto legislativo 26 marzo 2001, n. 151, concernenti il congedo di maternità per le lavoratrici nei casi di adozione, affidamento familiare o preadottivo e collocamento temporaneo di minori\" (3011)",
+      "title": "TENERINI ed altri: \"Modifiche all’articolo 26 del testo unico delle disposizioni legislative in materia di tutela e sostegno della maternità e della paternità, di cui al decreto legislativo 26 marzo 2001, n. 151, concernenti il congedo di maternità per le lavoratrici e per i lavoratori nei casi di adozione, affidamento familiare o preadottivo e collocamento temporaneo di minori\" (3011)",
       "date": "20260709",
       "identifier": "3011"
     },
@@ -1196,18 +1208,6 @@
       "title": "AMICH ed altri: \"Modifiche al codice di procedura penale, alle norme di attuazione, di coordinamento e transitorie del medesimo codice e alla legge 14 novembre 2012, n. 203, in materia di ricerca delle persone scomparse\" (2909)",
       "date": "20260429",
       "identifier": "2909"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2908",
-      "title": "S. 413. - Senatori DE CARLO ed altri: \"Disposizioni in materia di produzione e vendita del pane\" <em>(approvata dal Senato)</em> (2908)",
-      "date": "20260428",
-      "identifier": "2908"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2907",
-      "title": "LAZZARINI ed altri: \"Disposizioni concernenti lo svolgimento dell’attività di formazione scuola-lavoro degli studenti residenti nei comuni con popolazione fino a 10.000 abitanti presso gli uffici comunali del comune di residenza o dei comuni limitrofi\" (2907)",
-      "date": "20260427",
-      "identifier": "2907"
     }
   ]
 }

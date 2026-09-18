@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T10:06:11.058607Z",
-  "fetched_document_count": 566,
-  "published_document_count": 14,
-  "high_relevance_count": 8,
+  "generated_at": "2026-09-18T09:53:52.878762Z",
+  "fetched_document_count": 562,
+  "published_document_count": 17,
+  "high_relevance_count": 11,
   "potential_relevance_count": 6,
   "published_source_count": 6,
   "published_sources": [
@@ -18,7 +18,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 228,
+      "document_count": 226,
       "error": ""
     },
     {
@@ -60,7 +60,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 43,
+      "document_count": 41,
       "error": ""
     },
     {
@@ -78,6 +78,95 @@
   ],
   "documents": [
     {
+      "key": "af818abedc6f1bf3bdcd113ab66465143fc9b4e8639faa7f9ddbc55215d4d760",
+      "id": "26A04361",
+      "identifier": "26A04361",
+      "title": "DECRETO 5 febbraio 2026 - Abilitazione della «Scuola di specializzazione in psicoterapia interattivo-cognitiva» ad istituire e ad attivare, nella sede periferica di Venezia, un corso di specializzazione in psicoterapia, per un numero massimo di venti allievi ammissibili a ciascun anno di corso e di ottanta allievi per l’intero corso. (26A04361) Pag. 11",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-08-31",
+      "updated_at": "2026-09-18T09:47:52.631892Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-31&atto.codiceRedazionale=26A04361&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Scuola"
+      ],
+      "summary": "Abilitazione della «Scuola di specializzazione in psicoterapia interattivo-cognitiva» ad istituire e ad attivare, nella sede periferica di Venezia, un corso di specializzazione in psicoterapia, per un numero massimo di venti allievi ammissibili a ciascun anno di corso e di ottanta allievi per l’intero corso. (26A04361) Pag. 11",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 57.36,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ],
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "d356878fbbea13ad33423b8c9060972ef6de47717e2dfd6850280afe50f6e804",
+      "id": "26A04360",
+      "identifier": "26A04360",
+      "title": "DECRETO 5 febbraio 2026 - Abilitazione della «Scuola superiore di analisi transazionale Seminari romani di analisi transazionale» ad istituire e ad attivare, nella sede periferica di Brescia, un corso di specializzazione in psicoterapia, per un numero massimo di dieci allievi ammissibili a ciascun anno di corso e di quaranta allievi per l’intero corso. (26A04360) Pag. 10",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-08-31",
+      "updated_at": "2026-09-18T09:47:52.631892Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-31&atto.codiceRedazionale=26A04360&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Scuola"
+      ],
+      "summary": "Abilitazione della «Scuola superiore di analisi transazionale Seminari romani di analisi transazionale» ad istituire e ad attivare, nella sede periferica di Brescia, un corso di specializzazione in psicoterapia, per un numero massimo di dieci allievi ammissibili a ciascun anno di corso e di quaranta allievi per l’intero corso. (26A04360) Pag. 10",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 30.36,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ],
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "5583fe15465a564d2f193000ed33a74d484fc2337524a9efd562588e2f03120b",
+      "id": "26A04359",
+      "identifier": "26A04359",
+      "title": "DECRETO 29 gennaio 2026 - Abilitazione dell'«Istituto modenese di psicoterapia sistemica e relazionale - I.S.C.R.A.» ad istituire e ad attivare, nella sede periferica di Reggio dell’Emilia, un corso di specializzazione in psicoterapia, per un numero massimo di venti allievi ammissibili a ciascun anno di corso e di ottanta allievi per l’intero corso. (26A04359) Pag. 10",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-08-31",
+      "updated_at": "2026-09-18T09:47:52.631892Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-31&atto.codiceRedazionale=26A04359&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica"
+      ],
+      "summary": "Abilitazione dell'«Istituto modenese di psicoterapia sistemica e relazionale - I.S.C.R.A.» ad istituire e ad attivare, nella sede periferica di Reggio dell’Emilia, un corso di specializzazione in psicoterapia, per un numero massimo di venti allievi ammissibili a ciascun anno di corso e di ottanta allievi per l’intero corso. (26A04359) Pag. 10",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 54.0,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ]
+      }
+    },
+    {
       "key": "e101ae5995d60443ed2d53c6ae7205d3135b6a06368a27a74371983428ca3c2d",
       "id": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "identifier": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
@@ -86,7 +175,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-09-17T10:00:53.486570Z",
+      "updated_at": "2026-09-18T09:48:12.657604Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -138,7 +227,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-09-17T10:00:53.486570Z",
+      "updated_at": "2026-09-18T09:48:12.657604Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -252,7 +341,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-09-17T10:00:18.857832Z",
+      "updated_at": "2026-09-18T09:47:24.347814Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -279,7 +368,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-09-17T10:00:18.857832Z",
+      "updated_at": "2026-09-18T09:47:24.347814Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -310,7 +399,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-07",
-      "updated_at": "2026-09-17T10:00:18.857832Z",
+      "updated_at": "2026-09-18T09:47:24.347814Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2922",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -337,7 +426,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-05",
-      "updated_at": "2026-09-17T10:00:18.857832Z",
+      "updated_at": "2026-09-18T09:47:24.347814Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2918",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -421,7 +510,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-09-17T10:00:53.486570Z",
+      "updated_at": "2026-09-18T09:48:12.657604Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
