@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-18T09:53:52.878762Z",
-  "fetched_document_count": 562,
-  "published_document_count": 17,
-  "high_relevance_count": 11,
+  "generated_at": "2026-09-19T09:38:55.802575Z",
+  "fetched_document_count": 580,
+  "published_document_count": 20,
+  "high_relevance_count": 14,
   "potential_relevance_count": 6,
   "published_source_count": 6,
   "published_sources": [
@@ -18,7 +18,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 226,
+      "document_count": 222,
       "error": ""
     },
     {
@@ -60,7 +60,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 41,
+      "document_count": 43,
       "error": ""
     },
     {
@@ -71,12 +71,97 @@
     },
     {
       "source": "Pagine istituzionali",
-      "status": "error",
-      "document_count": 0,
-      "error": "timed out"
+      "status": "ok",
+      "document_count": 20,
+      "error": ""
     }
   ],
   "documents": [
+    {
+      "key": "96a133e6f1bf39f3d259107ecff9694303ae1df06fab0d968a8532d7358c8544",
+      "id": "26A04364",
+      "identifier": "26A04364",
+      "title": "DECRETO 29 gennaio 2026 - Autorizzazione alla «Scuola di specializzazione in psicoterapia ad indirizzo psicoanalisi della relazione» a modificare la propria denominazione in «Società italiana di psicoanalisi della relazione ETS (SIPRe ETS)». (26A04364) Pag. 7",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-01",
+      "updated_at": "2026-09-19T09:33:31.141151Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-01&atto.codiceRedazionale=26A04364&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Scuola"
+      ],
+      "summary": "Autorizzazione alla «Scuola di specializzazione in psicoterapia ad indirizzo psicoanalisi della relazione» a modificare la propria denominazione in «Società italiana di psicoanalisi della relazione ETS (SIPRe ETS)». (26A04364) Pag. 7",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 30.36,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ],
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "8380f4f58427e4da5190f956e66b26332c150c23a3672d5e7054c123f0076f26",
+      "id": "26A04363",
+      "identifier": "26A04363",
+      "title": "DECRETO 29 gennaio 2026 - Autorizzazione all'«Istituto italiano di psicoterapia relazionale» a spostare la sede periferica di Ancona, mantenendo il medesimo numero di allievi. (26A04363) Pag. 6",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-01",
+      "updated_at": "2026-09-19T09:33:31.141151Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-01&atto.codiceRedazionale=26A04363&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica"
+      ],
+      "summary": "Autorizzazione all'«Istituto italiano di psicoterapia relazionale» a spostare la sede periferica di Ancona, mantenendo il medesimo numero di allievi. (26A04363) Pag. 6",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 27.0,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ]
+      }
+    },
+    {
+      "key": "8c78cdad023393a62a33617cd0be4608d0fb37fcb7583b1461e1adf8d8545da0",
+      "id": "26A04362",
+      "identifier": "26A04362",
+      "title": "DECRETO 29 gennaio 2026 - Autorizzazione all'«Istituto italiano di psicoterapia relazionale» a spostare la sede periferica di Messina, con diminuzione del numero massimo annuale di allievi ammissibili da 20 a 15 unità e, per l’intero corso, da 80 a 60 unità. (26A04362) Pag. 5",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-01",
+      "updated_at": "2026-09-19T09:33:31.141151Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-01&atto.codiceRedazionale=26A04362&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica"
+      ],
+      "summary": "Autorizzazione all'«Istituto italiano di psicoterapia relazionale» a spostare la sede periferica di Messina, con diminuzione del numero massimo annuale di allievi ammissibili da 20 a 15 unità e, per l’intero corso, da 80 a 60 unità. (26A04362) Pag. 5",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 27.0,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ]
+      }
+    },
     {
       "key": "af818abedc6f1bf3bdcd113ab66465143fc9b4e8639faa7f9ddbc55215d4d760",
       "id": "26A04361",
@@ -86,7 +171,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-08-31",
-      "updated_at": "2026-09-18T09:47:52.631892Z",
+      "updated_at": "2026-09-19T09:33:28.506403Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-31&atto.codiceRedazionale=26A04361&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -117,7 +202,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-08-31",
-      "updated_at": "2026-09-18T09:47:52.631892Z",
+      "updated_at": "2026-09-19T09:33:28.506403Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-31&atto.codiceRedazionale=26A04360&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -148,7 +233,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-08-31",
-      "updated_at": "2026-09-18T09:47:52.631892Z",
+      "updated_at": "2026-09-19T09:33:28.506403Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-31&atto.codiceRedazionale=26A04359&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -175,7 +260,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-09-18T09:48:12.657604Z",
+      "updated_at": "2026-09-19T09:33:50.230794Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -227,7 +312,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-09-18T09:48:12.657604Z",
+      "updated_at": "2026-09-19T09:33:50.230794Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -341,7 +426,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-09-18T09:47:24.347814Z",
+      "updated_at": "2026-09-19T09:33:04.000478Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -368,7 +453,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-09-18T09:47:24.347814Z",
+      "updated_at": "2026-09-19T09:33:04.000478Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -399,7 +484,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-07",
-      "updated_at": "2026-09-18T09:47:24.347814Z",
+      "updated_at": "2026-09-19T09:33:04.000478Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2922",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -426,7 +511,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-05",
-      "updated_at": "2026-09-18T09:47:24.347814Z",
+      "updated_at": "2026-09-19T09:33:04.000478Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2918",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -510,7 +595,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-09-18T09:48:12.657604Z",
+      "updated_at": "2026-09-19T09:33:50.230794Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
