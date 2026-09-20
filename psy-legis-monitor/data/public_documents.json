@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-19T09:38:55.802575Z",
-  "fetched_document_count": 580,
-  "published_document_count": 20,
-  "high_relevance_count": 14,
+  "generated_at": "2026-09-20T09:55:41.205703Z",
+  "fetched_document_count": 569,
+  "published_document_count": 25,
+  "high_relevance_count": 19,
   "potential_relevance_count": 6,
   "published_source_count": 6,
   "published_sources": [
@@ -18,7 +18,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 222,
+      "document_count": 231,
       "error": ""
     },
     {
@@ -71,12 +71,159 @@
     },
     {
       "source": "Pagine istituzionali",
-      "status": "ok",
-      "document_count": 20,
-      "error": ""
+      "status": "error",
+      "document_count": 0,
+      "error": "timed out"
     }
   ],
   "documents": [
+    {
+      "key": "73626f18cb18bf3dde39e1736de933291f3616f712ddde270a100f386cf96d57",
+      "id": "26A04370",
+      "identifier": "26A04370",
+      "title": "DECRETO 5 febbraio 2026 - Abilitazione dell'«Istituto Gestalt di Puglia» ad istituire e ad attivare, nella sede periferica di Bari, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 18 unità e, per l’intero corso, a 72 unità. (26A04370) Pag. 33",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-02",
+      "updated_at": "2026-09-20T09:49:59.619852Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-02&atto.codiceRedazionale=26A04370&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica"
+      ],
+      "summary": "Abilitazione dell'«Istituto Gestalt di Puglia» ad istituire e ad attivare, nella sede periferica di Bari, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 18 unità e, per l’intero corso, a 72 unità. (26A04370) Pag. 33",
+      "level": "nazionale",
+      "region": "Puglia",
+      "status": "pubblicato",
+      "score": 27.0,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ]
+      }
+    },
+    {
+      "key": "4eaf54749f8f614f3a3b221daaaa684a30ccdf5a7a8cb31a6f2151de0728b8d3",
+      "id": "26A04369",
+      "identifier": "26A04369",
+      "title": "DECRETO 5 febbraio 2026 - Abilitazione dell'«Istituto di terapia relazionale - Scuola di specializzazione in terapia familiare sistemico-relazionale» ad istituire e ad attivare, nella sede periferica di Aversa, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04369) Pag. 32",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-02",
+      "updated_at": "2026-09-20T09:49:59.619852Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-02&atto.codiceRedazionale=26A04369&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Scuola"
+      ],
+      "summary": "Abilitazione dell'«Istituto di terapia relazionale - Scuola di specializzazione in terapia familiare sistemico-relazionale» ad istituire e ad attivare, nella sede periferica di Aversa, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04369) Pag. 32",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 30.36,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ],
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "334375073ec1919c0754569ccbcf11d66829211e5420276e226c2174e532a279",
+      "id": "26A04368",
+      "identifier": "26A04368",
+      "title": "DECRETO 29 gennaio 2026 - Autorizzazione alla «Scuola di formazione di psicoterapia ad indirizzo dinamico» a spostare la sede periferica di Bologna, mantenendo il medesimo numero di allievi. (26A04368) Pag. 29",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-02",
+      "updated_at": "2026-09-20T09:49:59.619852Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-02&atto.codiceRedazionale=26A04368&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Scuola"
+      ],
+      "summary": "Autorizzazione alla «Scuola di formazione di psicoterapia ad indirizzo dinamico» a spostare la sede periferica di Bologna, mantenendo il medesimo numero di allievi. (26A04368) Pag. 29",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 30.36,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ],
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "5a446f7ce87f6e966aedf13220929f511ad4555102378eba46c593e3c75b1ea2",
+      "id": "26A04367",
+      "identifier": "26A04367",
+      "title": "DECRETO 5 febbraio 2026 - Abilitazione della «Scuola quadriennale di formazione in psicoterapia comportamentale e cognitiva» ad istituire e ad attivare, nella sede periferica di Vietri sul Mare, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04367) Pag. 31",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-02",
+      "updated_at": "2026-09-20T09:49:59.619852Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-02&atto.codiceRedazionale=26A04367&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Scuola"
+      ],
+      "summary": "Abilitazione della «Scuola quadriennale di formazione in psicoterapia comportamentale e cognitiva» ad istituire e ad attivare, nella sede periferica di Vietri sul Mare, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04367) Pag. 31",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 57.36,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ],
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "b704c125c0f4e74e8c49d315ae73c77301b0fa6d5d761fd75d4ec4fb5163db45",
+      "id": "26A04366",
+      "identifier": "26A04366",
+      "title": "DECRETO 5 febbraio 2026 - Abilitazione dell'«IGA - Istituto Gestalt analitica» ad istituire e ad attivare, nella sede periferica di Roseto degli Abruzzi, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04366) Pag. 30",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-02",
+      "updated_at": "2026-09-20T09:49:59.619852Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-02&atto.codiceRedazionale=26A04366&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica"
+      ],
+      "summary": "Abilitazione dell'«IGA - Istituto Gestalt analitica» ad istituire e ad attivare, nella sede periferica di Roseto degli Abruzzi, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04366) Pag. 30",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 27.0,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ]
+      }
+    },
     {
       "key": "96a133e6f1bf39f3d259107ecff9694303ae1df06fab0d968a8532d7358c8544",
       "id": "26A04364",
@@ -86,7 +233,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-01",
-      "updated_at": "2026-09-19T09:33:31.141151Z",
+      "updated_at": "2026-09-20T09:49:58.448938Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-01&atto.codiceRedazionale=26A04364&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -117,7 +264,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-01",
-      "updated_at": "2026-09-19T09:33:31.141151Z",
+      "updated_at": "2026-09-20T09:49:58.448938Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-01&atto.codiceRedazionale=26A04363&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -144,7 +291,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-01",
-      "updated_at": "2026-09-19T09:33:31.141151Z",
+      "updated_at": "2026-09-20T09:49:58.448938Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-01&atto.codiceRedazionale=26A04362&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -171,7 +318,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-08-31",
-      "updated_at": "2026-09-19T09:33:28.506403Z",
+      "updated_at": "2026-09-20T09:49:57.276127Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-31&atto.codiceRedazionale=26A04361&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -202,7 +349,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-08-31",
-      "updated_at": "2026-09-19T09:33:28.506403Z",
+      "updated_at": "2026-09-20T09:49:57.276127Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-31&atto.codiceRedazionale=26A04360&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -233,7 +380,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-08-31",
-      "updated_at": "2026-09-19T09:33:28.506403Z",
+      "updated_at": "2026-09-20T09:49:57.276127Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-31&atto.codiceRedazionale=26A04359&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -260,7 +407,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-09-19T09:33:50.230794Z",
+      "updated_at": "2026-09-20T09:50:20.042473Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -312,7 +459,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-09-19T09:33:50.230794Z",
+      "updated_at": "2026-09-20T09:50:20.042473Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -426,7 +573,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-09-19T09:33:04.000478Z",
+      "updated_at": "2026-09-20T09:49:37.278508Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -453,7 +600,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-09-19T09:33:04.000478Z",
+      "updated_at": "2026-09-20T09:49:37.278508Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -484,7 +631,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-07",
-      "updated_at": "2026-09-19T09:33:04.000478Z",
+      "updated_at": "2026-09-20T09:49:37.278508Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2922",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -511,7 +658,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-05",
-      "updated_at": "2026-09-19T09:33:04.000478Z",
+      "updated_at": "2026-09-20T09:49:37.278508Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2918",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -595,7 +742,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-09-19T09:33:50.230794Z",
+      "updated_at": "2026-09-20T09:50:20.042473Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
