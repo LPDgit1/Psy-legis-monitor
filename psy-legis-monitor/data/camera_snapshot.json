@@ -4,11 +4,59 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-09-20T09:49:37.278508Z",
+  "generated_at": "2026-09-21T10:45:42.082213Z",
   "result_count": 200,
-  "newest_identifier": "3105",
-  "newest_date": "20260915",
+  "newest_identifier": "3113",
+  "newest_date": "20260917",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3113",
+      "title": "S. 1938. - \"Ratifica ed esecuzione della Dichiarazione congiunta relativa all’Accordo di cooperazione nel settore della difesa tra il Governo della Repubblica italiana e il Governo della Repubblica algerina democratica e popolare, fatto a Roma il 15 maggio 2003, fatta a Roma il 23 luglio 2025\"<i>(approvato dal Senato)</i> (3113)",
+      "date": "20260917",
+      "identifier": "3113"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3112",
+      "title": "S. 1923. - \"Ratifica ed esecuzione dei Trattati di estradizione, di mutua assistenza in materia penale e sul trasferimento delle persone condannate tra la Repubblica italiana e la Repubblica dell’Uzbekistan, fatti a Roma l’8 giugno 2023\" <i>(approvato dal Senato)</i> (3112)",
+      "date": "20260917",
+      "identifier": "3112"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3111",
+      "title": "PROPOSTA DI LEGGE COSTITUZIONALE ZARATTI: \"Modifiche agli articoli 42 e 47 della Costituzione in materia di diritto all’abitazione\" (3111)",
+      "date": "20260917",
+      "identifier": "3111"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3110",
+      "title": "ALESSANDRO COLUCCI: \"Modifiche al decreto legislativo 3 aprile 2006, n. 152, in materia di procedure di pronto intervento in caso di eventi comportanti rischio ambientale, e delega al Governo per il coordinamento normativo\" (3110)",
+      "date": "20260917",
+      "identifier": "3110"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3109",
+      "title": "CECCHETTI: \"Modifica all’articolo 1 della legge 13 luglio 2015, n. 107, e altre disposizioni in materia di formazione sulle tecniche di primo soccorso per gli studenti e il personale delle scuole secondarie di primo e di secondo grado\" (3109)",
+      "date": "20260917",
+      "identifier": "3109"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3108",
+      "title": "BILLI: \"Modifica all’articolo 19 del decreto legislativo 5 aprile 2006, n. 160, in materia di permanenza presso il medesimo ufficio dei magistrati addetti alla trattazione delle controversie concernenti la proprietà industriale\" (3108)",
+      "date": "20260917",
+      "identifier": "3108"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3107",
+      "title": "GIRELLI: \"Istituzione della Giornata nazionale per l’informazione sulla demenza frontotemporale nonché disposizioni per promuovere la diagnosi della malattia, l’assistenza delle persone che ne sono affette e il sostegno dei familiari che ne prendono cura\" (3107)",
+      "date": "20260917",
+      "identifier": "3107"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3106",
+      "title": "\"Conversione in legge del decreto-legge 17 settembre 2026, n. 162, recante disposizioni urgenti per il sostegno economico e il contenimento degli effetti derivanti dal perdurante aumento del costo dei carburanti, nonché in materia fiscale\" (3106)",
+      "date": "20260917",
+      "identifier": "3106"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3105",
       "title": "LOIZZO e CENTEMERO: \"Disposizioni per agevolare l’accesso alle prestazioni sanitarie di crioconservazione degli ovociti a scopo precauzionale\" (3105)",
@@ -1160,54 +1208,6 @@
       "title": "PAVANELLI ed altri: \"Disciplina dell’esercizio dell’attività di truccatore professionista e disposizioni concernenti il suo inserimento nella classificazione delle attività economiche\" (2917)",
       "date": "20260505",
       "identifier": "2917"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2916",
-      "title": "BONELLI ed altri: \"Divieto di importazione e di pubblicità di beni e servizi provenienti da insediamenti israeliani nel territorio palestinese occupato\" (2916)",
-      "date": "20260504",
-      "identifier": "2916"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2915",
-      "title": "SOTTANELLI: \"Modifica all’articolo 1 della legge 7 aprile 2014, n. 56, in materia di istituzione della città metropolitana di Pescara\" (2915)",
-      "date": "20260504",
-      "identifier": "2915"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2914",
-      "title": "MARCHETTO ALIPRANDI ed altri: \"Dichiarazione di monumento nazionale del sistema bastionato della città di Treviso\" (2914)",
-      "date": "20260504",
-      "identifier": "2914"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2913",
-      "title": "GUSMEROLI ed altri: \"Disposizioni in materia di produzione e commercio del pane e di impiego della denominazione di “pane fresco” nonché istituzione della Festa del pane\" (2913)",
-      "date": "20260430",
-      "identifier": "2913"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2912",
-      "title": "\"Conversione in legge del decreto-legge 30 aprile 2026, n. 63, recante disposizioni urgenti in materia di prezzi petroliferi connessi al protrarsi della crisi dei mercati internazionali\" (2912)",
-      "date": "20260430",
-      "identifier": "2912"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2911",
-      "title": "\"Conversione in legge del decreto-legge 30 aprile 2026, n. 62, recante disposizioni urgenti in materia di salario giusto, di incentivi all’occupazione e di contrasto del caporalato digitale\" (2911)",
-      "date": "20260430",
-      "identifier": "2911"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2910",
-      "title": "S. 1832. - \"Conversione in legge, con modificazioni, del decreto-legge 11 marzo 2026, n. 32, recante disposizioni urgenti in materia di commissari straordinari e concessioni\"<em>(approvato dal Senato)</em> (2910)",
-      "date": "20260430",
-      "identifier": "2910"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2909",
-      "title": "AMICH ed altri: \"Modifiche al codice di procedura penale, alle norme di attuazione, di coordinamento e transitorie del medesimo codice e alla legge 14 novembre 2012, n. 203, in materia di ricerca delle persone scomparse\" (2909)",
-      "date": "20260429",
-      "identifier": "2909"
     }
   ]
 }

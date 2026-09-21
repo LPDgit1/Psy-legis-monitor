@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-20T09:55:41.205703Z",
-  "fetched_document_count": 569,
-  "published_document_count": 25,
-  "high_relevance_count": 19,
+  "generated_at": "2026-09-21T10:51:47.994484Z",
+  "fetched_document_count": 572,
+  "published_document_count": 32,
+  "high_relevance_count": 26,
   "potential_relevance_count": 6,
   "published_source_count": 6,
   "published_sources": [
@@ -18,7 +18,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 231,
+      "document_count": 233,
       "error": ""
     },
     {
@@ -54,7 +54,7 @@
     {
       "source": "EUR-Lex",
       "status": "ok",
-      "document_count": 0,
+      "document_count": 1,
       "error": ""
     },
     {
@@ -78,6 +78,211 @@
   ],
   "documents": [
     {
+      "key": "6aa21d2152f81eeaed6a61a3fbfdd138a3686c818ce127e30c054ba306dbad34",
+      "id": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELLAR:a1db9a95-b554-11f1-81de-01aa75ed71a1",
+      "identifier": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELLAR:a1db9a95-b554-11f1-81de-01aa75ed71a1",
+      "title": "CELEX:32026R2098: Regolamento di esecuzione (UE) 2026/2098 della Commissione, del 18 settembre 2026, che stabilisce gli elementi di metadati minimi e le caratteristiche di tali elementi che i titolari dei dati sanitari sono tenuti a fornire riguardo alle descrizioni delle serie di dati per l’uso secondario dei dati sanitari elettronici a norma dell’articolo 77, paragrafo 4, del regolamento (UE) 2025/327 che istituisce lo spazio europeo dei dati sanitari",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "EUR-Lex - Gazzetta ufficiale dell’Unione europea",
+      "kind": "Atto normativo",
+      "date": "2026-09-21",
+      "updated_at": "",
+      "href": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2098",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Privacy e sanita digitale"
+      ],
+      "summary": "Atto incluso dal monitor in base ai riferimenti tematici rilevati.",
+      "level": "europeo",
+      "region": "",
+      "status": "pubblicato",
+      "score": 27.0,
+      "found_terms": {
+        "tecnologia_ai_privacy": [
+          "dati sanitari"
+        ]
+      }
+    },
+    {
+      "key": "3d4a55051c3ed8b9883d9dda20bb50e898ed3398f0408b44ee8c6b25b26e58f3",
+      "id": "26A04376",
+      "identifier": "26A04376",
+      "title": "DECRETO 5 febbraio 2026 - Abilitazione della «Scuola di specializzazione in psicoterapia cognitivo-neuropsicologica integrata “Istituto Santa Chiara”» ad istituire e ad attivare, nella sede periferica di Lecce, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04376) Pag. 45",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-03",
+      "updated_at": "2026-09-21T10:46:01.654256Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-03&atto.codiceRedazionale=26A04376&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Scuola"
+      ],
+      "summary": "Abilitazione della «Scuola di specializzazione in psicoterapia cognitivo-neuropsicologica integrata “Istituto Santa Chiara”» ad istituire e ad attivare, nella sede periferica di Lecce, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04376) Pag. 45",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 57.36,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ],
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "082d40051ac0ca40cdd7912387024fdd450363a8521face145cea35d2923bab1",
+      "id": "26A04375",
+      "identifier": "26A04375",
+      "title": "DECRETO 29 gennaio 2026 - Abilitazione dell'«Istituto Symbolon - Scuola di specializzazione in psicoterapia ad orientamento analitico-archetipico» ad istituire e ad attivare, nella sede principale di Scandicci, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 12 unità e, per l’intero corso, a 48 unità. (26A04375) Pag. 45",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-03",
+      "updated_at": "2026-09-21T10:46:01.654256Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-03&atto.codiceRedazionale=26A04375&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Scuola"
+      ],
+      "summary": "Abilitazione dell'«Istituto Symbolon - Scuola di specializzazione in psicoterapia ad orientamento analitico-archetipico» ad istituire e ad attivare, nella sede principale di Scandicci, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 12 unità e, per l’intero corso, a 48 unità. (26A04375) Pag. 45",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 57.36,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ],
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "546947b69f33dea9a5af3bb0ebcccee5bc60db663ebdffdb4494043042b236ef",
+      "id": "26A04374",
+      "identifier": "26A04374",
+      "title": "DECRETO 29 gennaio 2026 - Autorizzazione all'«Istituto di formazione in psicoterapia cognitivo comportamentale» a spostare la sede principale di Milano, mantenendo il medesimo numero di allievi. (26A04374) Pag. 44",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-03",
+      "updated_at": "2026-09-21T10:46:01.654256Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-03&atto.codiceRedazionale=26A04374&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica"
+      ],
+      "summary": "Autorizzazione all'«Istituto di formazione in psicoterapia cognitivo comportamentale» a spostare la sede principale di Milano, mantenendo il medesimo numero di allievi. (26A04374) Pag. 44",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 27.0,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ]
+      }
+    },
+    {
+      "key": "04dc4be163c2cc71e446a76b440e3268df9fb0602bf09b9bd3a4818142feea9d",
+      "id": "26A04373",
+      "identifier": "26A04373",
+      "title": "DECRETO 29 gennaio 2026 - Abilitazione della «Scuola di specializzazione in psicoterapia psicoanalitica e gruppoanalitica» ad istituire e ad attivare, nella sede periferica di Pistoia, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04373) Pag. 43",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-03",
+      "updated_at": "2026-09-21T10:46:01.654256Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-03&atto.codiceRedazionale=26A04373&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Scuola"
+      ],
+      "summary": "Abilitazione della «Scuola di specializzazione in psicoterapia psicoanalitica e gruppoanalitica» ad istituire e ad attivare, nella sede periferica di Pistoia, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04373) Pag. 43",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 57.36,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ],
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "fb62209296d609248fc048f657fc04620db7d5568a2a472d44fedd274a6d04c0",
+      "id": "26A04372",
+      "identifier": "26A04372",
+      "title": "DECRETO 29 gennaio 2026 - Abilitazione della «Scuola di specializzazione in psicoterapia psicoanalitica e gruppoanalitica» ad istituire e ad attivare, nella sede periferica di Torino, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04372) Pag. 42",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-03",
+      "updated_at": "2026-09-21T10:46:01.654256Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-03&atto.codiceRedazionale=26A04372&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Scuola"
+      ],
+      "summary": "Abilitazione della «Scuola di specializzazione in psicoterapia psicoanalitica e gruppoanalitica» ad istituire e ad attivare, nella sede periferica di Torino, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04372) Pag. 42",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 57.36,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ],
+        "scuola_minori_famiglia": [
+          "scuola"
+        ]
+      }
+    },
+    {
+      "key": "7d25c020c6beefec031c0f57afa3a64237f99aa04e16775ae1191456845726d4",
+      "id": "26A04371",
+      "identifier": "26A04371",
+      "title": "DECRETO 29 gennaio 2026 - Abilitazione dell'«Istituto di psicoterapia relazionale integrata» ad istituire e ad attivare, nella sede periferica di Monza, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04371) Pag. 41",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-09-03",
+      "updated_at": "2026-09-21T10:46:01.654256Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-03&atto.codiceRedazionale=26A04371&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Psicoterapia e clinica"
+      ],
+      "summary": "Abilitazione dell'«Istituto di psicoterapia relazionale integrata» ad istituire e ad attivare, nella sede periferica di Monza, un corso di specializzazione in psicoterapia, per un numero massimo degli allievi ammissibili a ciascun anno di corso pari a 20 unità e, per l’intero corso, a 80 unità. (26A04371) Pag. 41",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 54.0,
+      "found_terms": {
+        "professione_diretta": [
+          "psicoterapia"
+        ]
+      }
+    },
+    {
       "key": "73626f18cb18bf3dde39e1736de933291f3616f712ddde270a100f386cf96d57",
       "id": "26A04370",
       "identifier": "26A04370",
@@ -86,7 +291,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-02",
-      "updated_at": "2026-09-20T09:49:59.619852Z",
+      "updated_at": "2026-09-21T10:46:00.747445Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-02&atto.codiceRedazionale=26A04370&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -113,7 +318,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-02",
-      "updated_at": "2026-09-20T09:49:59.619852Z",
+      "updated_at": "2026-09-21T10:46:00.747445Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-02&atto.codiceRedazionale=26A04369&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -144,7 +349,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-02",
-      "updated_at": "2026-09-20T09:49:59.619852Z",
+      "updated_at": "2026-09-21T10:46:00.747445Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-02&atto.codiceRedazionale=26A04368&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -175,7 +380,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-02",
-      "updated_at": "2026-09-20T09:49:59.619852Z",
+      "updated_at": "2026-09-21T10:46:00.747445Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-02&atto.codiceRedazionale=26A04367&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -206,7 +411,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-02",
-      "updated_at": "2026-09-20T09:49:59.619852Z",
+      "updated_at": "2026-09-21T10:46:00.747445Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-02&atto.codiceRedazionale=26A04366&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -233,7 +438,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-01",
-      "updated_at": "2026-09-20T09:49:58.448938Z",
+      "updated_at": "2026-09-21T10:45:59.372870Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-01&atto.codiceRedazionale=26A04364&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -264,7 +469,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-01",
-      "updated_at": "2026-09-20T09:49:58.448938Z",
+      "updated_at": "2026-09-21T10:45:59.372870Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-01&atto.codiceRedazionale=26A04363&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -291,7 +496,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-01",
-      "updated_at": "2026-09-20T09:49:58.448938Z",
+      "updated_at": "2026-09-21T10:45:59.372870Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-01&atto.codiceRedazionale=26A04362&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -318,7 +523,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-08-31",
-      "updated_at": "2026-09-20T09:49:57.276127Z",
+      "updated_at": "2026-09-21T10:45:57.107043Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-31&atto.codiceRedazionale=26A04361&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -349,7 +554,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-08-31",
-      "updated_at": "2026-09-20T09:49:57.276127Z",
+      "updated_at": "2026-09-21T10:45:57.107043Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-31&atto.codiceRedazionale=26A04360&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -380,7 +585,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-08-31",
-      "updated_at": "2026-09-20T09:49:57.276127Z",
+      "updated_at": "2026-09-21T10:45:57.107043Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-08-31&atto.codiceRedazionale=26A04359&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -407,7 +612,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-09-20T09:50:20.042473Z",
+      "updated_at": "2026-09-21T10:46:27.027522Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -459,7 +664,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-09-20T09:50:20.042473Z",
+      "updated_at": "2026-09-21T10:46:27.027522Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -573,7 +778,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-09-20T09:49:37.278508Z",
+      "updated_at": "2026-09-21T10:45:42.082213Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -600,7 +805,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-09-20T09:49:37.278508Z",
+      "updated_at": "2026-09-21T10:45:42.082213Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -631,7 +836,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-07",
-      "updated_at": "2026-09-20T09:49:37.278508Z",
+      "updated_at": "2026-09-21T10:45:42.082213Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2922",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -658,7 +863,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-05",
-      "updated_at": "2026-09-20T09:49:37.278508Z",
+      "updated_at": "2026-09-21T10:45:42.082213Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2918",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -742,7 +947,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-09-20T09:50:20.042473Z",
+      "updated_at": "2026-09-21T10:46:27.027522Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
