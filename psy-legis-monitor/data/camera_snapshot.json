@@ -4,11 +4,17 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-09-22T09:59:07.286861Z",
+  "generated_at": "2026-09-23T10:00:48.751109Z",
   "result_count": 200,
-  "newest_identifier": "3113",
-  "newest_date": "20260917",
+  "newest_identifier": "3114",
+  "newest_date": "20260918",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3114",
+      "title": "MOLLICONE ed altri: \"Modifiche alla legge 22 aprile 1941, n. 633, e altre disposizioni concernenti la protezione del diritto all’immagine e all’identità personale nonché del diritto all’utilizzo della voce e della prestazione artistica degli artisti interpreti ed esecutori e la riconoscibilità dei contenuti prodotti o modificati mediante sistemi di intelligenza artificiale\" (3114)",
+      "date": "20260918",
+      "identifier": "3114"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3113",
       "title": "S. 1938. - \"Ratifica ed esecuzione della Dichiarazione congiunta relativa all’Accordo di cooperazione nel settore della difesa tra il Governo della Repubblica italiana e il Governo della Repubblica algerina democratica e popolare, fatto a Roma il 15 maggio 2003, fatta a Roma il 23 luglio 2025\"<i>(approvato dal Senato)</i> (3113)",
@@ -616,16 +622,16 @@
       "identifier": "3016"
     },
     {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3014",
-      "title": "LUPI: \"Disposizioni per il rafforzamento dell’autonomia amministrativa del comune e della città metropolitana di Milano\" (3014)",
-      "date": "20260710",
-      "identifier": "3014"
-    },
-    {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3015",
       "title": "LUPI: \"Disposizioni concernenti la promozione della comunità educante per l’organizzazione di attività extrascolastiche e di partecipazione civica rivolte ai giovani\" (3015)",
       "date": "20260709",
       "identifier": "3015"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3014",
+      "title": "LUPI: \"Disposizioni per il rafforzamento dell’autonomia amministrativa del comune e della città metropolitana di Milano\" (3014)",
+      "date": "20260709",
+      "identifier": "3014"
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3013",
@@ -1202,12 +1208,6 @@
       "title": "CECCHETTI ed altri: \"Modifiche all’articolo 1 del decreto legislativo 21 aprile 2011, n. 67, concernenti l’accesso anticipato al pensionamento per il personale sanitario e sociosanitario operante presso i servizi psichiatrici e di salute mentale\" (2918)",
       "date": "20260505",
       "identifier": "2918"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2917",
-      "title": "PAVANELLI ed altri: \"Disciplina dell’esercizio dell’attività di truccatore professionista e disposizioni concernenti il suo inserimento nella classificazione delle attività economiche\" (2917)",
-      "date": "20260505",
-      "identifier": "2917"
     }
   ]
 }
