@@ -4,11 +4,17 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-09-23T10:00:48.751109Z",
+  "generated_at": "2026-09-24T10:03:00.801909Z",
   "result_count": 200,
-  "newest_identifier": "3114",
-  "newest_date": "20260918",
+  "newest_identifier": "3115",
+  "newest_date": "20260921",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3115",
+      "title": "MARIANNA RICCIARDI: \"Disposizioni per la promozione della ricerca sui disturbi del neurosviluppo, la diagnosi e cura di essi e l’assistenza delle persone che ne sono affette, nonché riconoscimento della disprassia quale disturbo del neurosviluppo\" (3115)",
+      "date": "20260921",
+      "identifier": "3115"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3114",
       "title": "MOLLICONE ed altri: \"Modifiche alla legge 22 aprile 1941, n. 633, e altre disposizioni concernenti la protezione del diritto all’immagine e all’identità personale nonché del diritto all’utilizzo della voce e della prestazione artistica degli artisti interpreti ed esecutori e la riconoscibilità dei contenuti prodotti o modificati mediante sistemi di intelligenza artificiale\" (3114)",
@@ -1202,12 +1208,6 @@
       "title": "TENERINI: \"Delega al Governo per l’aggiornamento e il potenziamento del sistema nazionale di certificazione delle competenze, di cui al decreto legislativo 16 gennaio 2013, n. 13\" (2919)",
       "date": "20260505",
       "identifier": "2919"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2918",
-      "title": "CECCHETTI ed altri: \"Modifiche all’articolo 1 del decreto legislativo 21 aprile 2011, n. 67, concernenti l’accesso anticipato al pensionamento per il personale sanitario e sociosanitario operante presso i servizi psichiatrici e di salute mentale\" (2918)",
-      "date": "20260505",
-      "identifier": "2918"
     }
   ]
 }
