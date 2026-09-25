@@ -4,7 +4,7 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-09-24T10:03:00.801909Z",
+  "generated_at": "2026-09-25T10:13:18.680751Z",
   "result_count": 200,
   "newest_identifier": "3115",
   "newest_date": "20260921",
@@ -707,7 +707,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3002",
-      "title": "DE BERTOLDI: \"Istituzione della certificazione di qualità della ristorazione italiana “Carlo Petrini”\" (3002)",
+      "title": "DE BERTOLDI ed altri: \"Istituzione della certificazione di qualità della ristorazione italiana “Carlo Petrini”\" (3002)",
       "date": "20260703",
       "identifier": "3002"
     },
