@@ -4,11 +4,29 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-09-25T10:13:18.680751Z",
+  "generated_at": "2026-09-26T09:52:55.558114Z",
   "result_count": 200,
-  "newest_identifier": "3115",
-  "newest_date": "20260921",
+  "newest_identifier": "3118",
+  "newest_date": "20260924",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3118",
+      "title": "S. 2020. - \"Conversione in legge, con modificazioni, del decreto-legge 7 agosto 2026, n. 143, recante disposizioni urgenti in materia di obbligo di compostabilità di determinate tipologie di imballaggi\" <i>(approvato dal Senato)</i> (3118)",
+      "date": "20260924",
+      "identifier": "3118"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3117",
+      "title": "SERGIO COSTA: \"Istituzione della Giornata nazionale contro l’estorsione e l’usura\" (3117)",
+      "date": "20260923",
+      "identifier": "3117"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3116",
+      "title": "PAGANO e TENERINI: \"Incentivi per la sostituzione degli apparecchi alimentati a gas e la riduzione dell’impiego di bombole di gas di petrolio liquefatto nelle abitazioni\" (3116)",
+      "date": "20260923",
+      "identifier": "3116"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3115",
       "title": "MARIANNA RICCIARDI: \"Disposizioni per la promozione della ricerca sui disturbi del neurosviluppo, la diagnosi e cura di essi e l’assistenza delle persone che ne sono affette, nonché riconoscimento della disprassia quale disturbo del neurosviluppo\" (3115)",
@@ -1190,24 +1208,6 @@
       "title": "PAGANO: \"Modifica all’articolo 6 del decreto-legge 10 gennaio 2006, n. 4, convertito, con modificazioni, dalla legge 9 marzo 2006, n. 80, in materia di termini per l’accertamento dell’invalidità civile o della condizione di disabilità per i soggetti affetti da malattie neurodegenerative\" (2922)",
       "date": "20260507",
       "identifier": "2922"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2921",
-      "title": "MARINO: \"Disposizioni concernenti la copertura delle piante organiche delle amministrazioni dei comuni in stato di dissesto finanziario\" (2921)",
-      "date": "20260507",
-      "identifier": "2921"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2920",
-      "title": "\"Conversione in legge del decreto-legge 7 maggio 2026, n. 66, recante disposizioni urgenti per il Piano Casa\" (2920)",
-      "date": "20260507",
-      "identifier": "2920"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2919",
-      "title": "TENERINI: \"Delega al Governo per l’aggiornamento e il potenziamento del sistema nazionale di certificazione delle competenze, di cui al decreto legislativo 16 gennaio 2013, n. 13\" (2919)",
-      "date": "20260505",
-      "identifier": "2919"
     }
   ]
 }
