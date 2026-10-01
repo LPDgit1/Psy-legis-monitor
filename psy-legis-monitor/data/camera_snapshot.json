@@ -4,11 +4,35 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-09-30T11:11:25.824513Z",
+  "generated_at": "2026-10-01T11:38:15.383867Z",
   "result_count": 200,
-  "newest_identifier": "3118",
-  "newest_date": "20260924",
+  "newest_identifier": "3122",
+  "newest_date": "20260929",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3122",
+      "title": "ZIELLO ed altri: \"Disposizioni per la prevenzione e la repressione delle attività organizzate volte all’eversione dell’ordinamento costituzionale mediante l’applicazione di princìpi dell’islam politico, nonché modifica dell’articolo 5 della legge 22 maggio 1975, n. 152, in materia di divieto di travisamento nei luoghi pubblici e di salvaguardia della libertà individuale\" (3122)",
+      "date": "20260929",
+      "identifier": "3122"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3121",
+      "title": "\"Conversione in legge del decreto-legge 29 settembre 2026, n. 168, recante misure urgenti in materia di giustizia, di funzionalità del Ministero dell’interno e di impianti di interesse strategico nazionale\" (3121)",
+      "date": "20260929",
+      "identifier": "3121"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3120",
+      "title": "\"Legge annuale per il mercato e la concorrenza 2026\" (3120)",
+      "date": "20260928",
+      "identifier": "3120"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3119",
+      "title": "\"Conversione in legge del decreto-legge 28 settembre 2026, n. 167, recante misure urgenti per la circolazione dei veicoli ad alimentazione <i>diesel</i> appartenenti alla categoria ambientale “EURO 5”\" (3119)",
+      "date": "20260928",
+      "identifier": "3119"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3118",
       "title": "S. 2020. - \"Conversione in legge, con modificazioni, del decreto-legge 7 agosto 2026, n. 143, recante disposizioni urgenti in materia di obbligo di compostabilità di determinate tipologie di imballaggi\" <i>(approvato dal Senato)</i> (3118)",
@@ -29,7 +53,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3115",
-      "title": "MARIANNA RICCIARDI: \"Disposizioni per la promozione della ricerca sui disturbi del neurosviluppo, la diagnosi e cura di essi e l’assistenza delle persone che ne sono affette, nonché riconoscimento della disprassia quale disturbo del neurosviluppo\" (3115)",
+      "title": "MARIANNA RICCIARDI e FERRARA: \"Disposizioni per la promozione della ricerca sui disturbi del neurosviluppo, la diagnosi e cura di essi e l’assistenza delle persone che ne sono affette, nonché riconoscimento della disprassia quale disturbo del neurosviluppo\" (3115)",
       "date": "20260921",
       "identifier": "3115"
     },
@@ -347,7 +371,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3063",
-      "title": "CARMINA e L'ABBATE: \"Istituzione della Rete nazionale delle strade della cultura\" (3063)",
+      "title": "CARMINA ed altri: \"Istituzione della Rete nazionale delle strade della cultura\" (3063)",
       "date": "20260731",
       "identifier": "3063"
     },
@@ -629,7 +653,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3018",
-      "title": "CECCHETTI: \"Modifiche all’articolo 1129 del codice civile, concernenti l’obbligo di assicurazione per l’assunzione dell’incarico di amministratore di condominio, e introduzione del capo V-<i>bis </i>del titolo XVII del codice delle assicurazioni private, di cui al decreto legislativo 7 settembre 2005, n. 209, in materia di istituzione di un fondo di garanzia per l’indennizzo dei danni cagionati nell’esercizio dell’attività di amministrazione condominiale\" (3018)",
+      "title": "CECCHETTI ed altri: \"Modifiche all’articolo 1129 del codice civile, concernenti l’obbligo di assicurazione per l’assunzione dell’incarico di amministratore di condominio, e introduzione del capo V-<i>bis </i>del titolo XVII del codice delle assicurazioni private, di cui al decreto legislativo 7 settembre 2005, n. 209, in materia di istituzione di un fondo di garanzia per l’indennizzo dei danni cagionati nell’esercizio dell’attività di amministrazione condominiale\" (3018)",
       "date": "20260713",
       "identifier": "3018"
     },
@@ -1184,30 +1208,6 @@
       "title": "APPENDINO ed altri: \"Contributo ai comuni per la digitalizzazione delle attività di gestione e riscossione del canone di concessione per l’occupazione delle aree e degli spazi appartenenti al demanio o al patrimonio indisponibile, destinati a mercati realizzati anche in strutture attrezzate\" (2926)",
       "date": "20260511",
       "identifier": "2926"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2925",
-      "title": "\"Riordino della legge 28 gennaio 1994, n. 84, in materia di <em>governance</em> portuale e rilancio degli investimenti in infrastrutture strategiche di trasporto marittimo di interesse generale\" (2925)",
-      "date": "20260508",
-      "identifier": "2925"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2924",
-      "title": "TESTA: \"Dichiarazione di monumento nazionale della piazza Caduti di Marcinelle e della cappella delle vittime di Marcinelle a Manoppello, nella provincia di Pescara\" (2924)",
-      "date": "20260508",
-      "identifier": "2924"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2923",
-      "title": "ZARATTI ed altri: \"Disposizioni per promuovere la partecipazione popolare alla titolarità di azioni e quote delle società sportive e delega al Governo per la riforma della disciplina del settore del calcio\" (2923)",
-      "date": "20260508",
-      "identifier": "2923"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2922",
-      "title": "PAGANO: \"Modifica all’articolo 6 del decreto-legge 10 gennaio 2006, n. 4, convertito, con modificazioni, dalla legge 9 marzo 2006, n. 80, in materia di termini per l’accertamento dell’invalidità civile o della condizione di disabilità per i soggetti affetti da malattie neurodegenerative\" (2922)",
-      "date": "20260507",
-      "identifier": "2922"
     }
   ]
 }
