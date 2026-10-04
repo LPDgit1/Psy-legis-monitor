@@ -4,11 +4,17 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-10-03T10:25:43.839134Z",
+  "generated_at": "2026-10-04T11:07:38.522255Z",
   "result_count": 200,
-  "newest_identifier": "3122",
-  "newest_date": "20260929",
+  "newest_identifier": "3123",
+  "newest_date": "20261001",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3123",
+      "title": "S. 1890. - \"Riordino e riorganizzazione del Consiglio universitario nazionale\" <i>(approvato dal Senato)</i> (3123)",
+      "date": "20261001",
+      "identifier": "3123"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3122",
       "title": "ZIELLO ed altri: \"Disposizioni per la prevenzione e la repressione delle attività organizzate volte all’eversione dell’ordinamento costituzionale mediante l’applicazione di princìpi dell’islam politico, nonché modifica dell’articolo 5 della legge 22 maggio 1975, n. 152, in materia di divieto di travisamento nei luoghi pubblici e di salvaguardia della libertà individuale\" (3122)",
@@ -1202,12 +1208,6 @@
       "title": "ASCANI ed altri: \"Disposizioni per la tutela dell’identità personale contro la diffusione di immagini e contenuti audio o video prodotti o modificati mediante programmi informatici, applicazioni digitali o sistemi di intelligenza artificiale\" (2927)",
       "date": "20260511",
       "identifier": "2927"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2926",
-      "title": "APPENDINO ed altri: \"Contributo ai comuni per la digitalizzazione delle attività di gestione e riscossione del canone di concessione per l’occupazione delle aree e degli spazi appartenenti al demanio o al patrimonio indisponibile, destinati a mercati realizzati anche in strutture attrezzate\" (2926)",
-      "date": "20260511",
-      "identifier": "2926"
     }
   ]
 }
