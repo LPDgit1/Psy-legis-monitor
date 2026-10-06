@@ -4,11 +4,29 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-10-05T12:18:08.044193Z",
+  "generated_at": "2026-10-06T12:02:47.809096Z",
   "result_count": 200,
-  "newest_identifier": "3123",
-  "newest_date": "20261001",
+  "newest_identifier": "3126",
+  "newest_date": "20261002",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3126",
+      "title": "DORI: \"Disposizioni concernenti l’istituzione e la gestione di cimiteri per animali da compagnia nonché in materia di inumazione, tumulazione e cremazione dei medesimi animali\" (3126)",
+      "date": "20261002",
+      "identifier": "3126"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3125",
+      "title": "COPPO: \"Disposizioni concernenti l’impiego di sistemi di intelligenza artificiale per la prevenzione dei rischi e la tutela della salute e della sicurezza nei luoghi di lavoro\" (3125)",
+      "date": "20261002",
+      "identifier": "3125"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3124",
+      "title": "MULE': \"Modifiche all’articolo 176 del decreto legislativo 9 aprile 2008, n. 81, concernenti l’introduzione dell’obbligo di visita oculistica biennale per i lavoratori addetti ad attività che comportano l’uso di attrezzature munite di videoterminali\" (3124)",
+      "date": "20261002",
+      "identifier": "3124"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3123",
       "title": "S. 1890. - \"Riordino e riorganizzazione del Consiglio universitario nazionale\" <i>(approvato dal Senato)</i> (3123)",
@@ -59,7 +77,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3115",
-      "title": "MARIANNA RICCIARDI e FERRARA: \"Disposizioni per la promozione della ricerca sui disturbi del neurosviluppo, la diagnosi e cura di essi e l’assistenza delle persone che ne sono affette, nonché riconoscimento della disprassia quale disturbo del neurosviluppo\" (3115)",
+      "title": "MARIANNA RICCIARDI ed altri: \"Disposizioni per la promozione della ricerca sui disturbi del neurosviluppo, la diagnosi e cura di essi e l’assistenza delle persone che ne sono affette, nonché riconoscimento della disprassia quale disturbo del neurosviluppo\" (3115)",
       "date": "20260921",
       "identifier": "3115"
     },
@@ -749,7 +767,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3003",
-      "title": "DEL BARBA: \"Modifiche alla legge 4 maggio 1983, n. 184, in materia di adozione dei minori da parte delle persone dello stesso sesso unite in unione civile, delle persone non coniugate conviventi e delle persone singole\" (3003)",
+      "title": "DEL BARBA: \"Modifiche alla legge 4 maggio 1983, n. 184, in materia di adozione dei minori da parte delle persone dello stesso sesso unite in unione civile, delle persone conviventi di fatto e delle persone singole\" (3003)",
       "date": "20260703",
       "identifier": "3003"
     },
@@ -1190,24 +1208,6 @@
       "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Disposizioni in materia di scindibilità del cumulo delle pene\" (2930)",
       "date": "20260512",
       "identifier": "2930"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2929",
-      "title": "PROPOSTA DI LEGGE COSTITUZIONALE IEZZI: \"Modifiche agli articoli 114 e 117 della Costituzione, concernenti le funzioni dei<em> </em>comuni capoluogo delle città metropolitane e il conferimento della potestà legislativa ai medesimi\" (2929)",
-      "date": "20260512",
-      "identifier": "2929"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2928",
-      "title": "GRIBAUDO ed altri: \"Disposizioni per la tutela e l’assistenza delle vittime dei reati di riduzione in schiavitù, tratta di persone e intermediazione illecita e sfruttamento del lavoro, che ne denunciano gli autori, e per l’emersione dei rapporti di lavoro irregolari\" (2928)",
-      "date": "20260512",
-      "identifier": "2928"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2927",
-      "title": "ASCANI ed altri: \"Disposizioni per la tutela dell’identità personale contro la diffusione di immagini e contenuti audio o video prodotti o modificati mediante programmi informatici, applicazioni digitali o sistemi di intelligenza artificiale\" (2927)",
-      "date": "20260511",
-      "identifier": "2927"
     }
   ]
 }
