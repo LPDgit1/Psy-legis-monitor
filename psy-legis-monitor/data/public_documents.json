@@ -1,15 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-06T12:08:07.714195Z",
-  "fetched_document_count": 771,
-  "published_document_count": 65,
-  "high_relevance_count": 58,
+  "generated_at": "2026-10-07T11:55:40.054404Z",
+  "fetched_document_count": 756,
+  "published_document_count": 67,
+  "high_relevance_count": 60,
   "potential_relevance_count": 7,
-  "published_source_count": 6,
+  "published_source_count": 7,
   "published_sources": [
     "Camera dei deputati",
     "Gazzetta Ufficiale",
     "Ministero della Salute",
+    "Regione Abruzzo - BURA",
     "Regione Emilia-Romagna - BURERT",
     "Regione Toscana - BURT",
     "Senato della Repubblica"
@@ -18,7 +19,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 422,
+      "document_count": 419,
       "error": ""
     },
     {
@@ -36,14 +37,14 @@
     {
       "source": "Normattiva",
       "status": "ok",
-      "document_count": 14,
+      "document_count": 15,
       "error": ""
     },
     {
       "source": "Ministero Salute",
-      "status": "error",
-      "document_count": 0,
-      "error": "Ministero Salute non interrogabile dalle fonti configurate"
+      "status": "ok",
+      "document_count": 3,
+      "error": ""
     },
     {
       "source": "AGENAS",
@@ -60,7 +61,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 38,
+      "document_count": 42,
       "error": ""
     },
     {
@@ -71,9 +72,9 @@
     },
     {
       "source": "Pagine istituzionali",
-      "status": "ok",
-      "document_count": 20,
-      "error": ""
+      "status": "error",
+      "document_count": 0,
+      "error": "timed out"
     }
   ],
   "documents": [
@@ -86,7 +87,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-09-30",
-      "updated_at": "2026-10-06T12:03:26.669236Z",
+      "updated_at": "2026-10-07T11:49:15.329359Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60496.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -117,7 +118,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-09-30",
-      "updated_at": "2026-10-06T12:03:26.669236Z",
+      "updated_at": "2026-10-07T11:49:15.329359Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60491.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -174,7 +175,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-09-21",
-      "updated_at": "2026-10-06T12:03:26.669236Z",
+      "updated_at": "2026-10-07T11:49:15.329359Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60477.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -234,7 +235,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-12",
-      "updated_at": "2026-10-06T12:03:07.704941Z",
+      "updated_at": "2026-10-07T11:48:41.850272Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-12&atto.codiceRedazionale=26A04506&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -265,7 +266,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-12",
-      "updated_at": "2026-10-06T12:03:07.704941Z",
+      "updated_at": "2026-10-07T11:48:41.850272Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-12&atto.codiceRedazionale=26A04505&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -296,7 +297,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-12",
-      "updated_at": "2026-10-06T12:03:07.704941Z",
+      "updated_at": "2026-10-07T11:48:41.850272Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-12&atto.codiceRedazionale=26A04504&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -323,7 +324,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-11",
-      "updated_at": "2026-10-06T12:03:05.661917Z",
+      "updated_at": "2026-10-07T11:48:39.918516Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-11&atto.codiceRedazionale=26A04503&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -354,7 +355,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-11",
-      "updated_at": "2026-10-06T12:03:05.661917Z",
+      "updated_at": "2026-10-07T11:48:39.918516Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-11&atto.codiceRedazionale=26A04502&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -381,7 +382,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-11",
-      "updated_at": "2026-10-06T12:03:05.661917Z",
+      "updated_at": "2026-10-07T11:48:39.918516Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-11&atto.codiceRedazionale=26A04501&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -412,7 +413,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-11",
-      "updated_at": "2026-10-06T12:03:05.661917Z",
+      "updated_at": "2026-10-07T11:48:39.918516Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-11&atto.codiceRedazionale=26A04500&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -443,7 +444,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-11",
-      "updated_at": "2026-10-06T12:03:05.661917Z",
+      "updated_at": "2026-10-07T11:48:39.918516Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-11&atto.codiceRedazionale=26A04499&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -470,7 +471,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-10",
-      "updated_at": "2026-10-06T12:03:03.313844Z",
+      "updated_at": "2026-10-07T11:48:37.872267Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-10&atto.codiceRedazionale=26A04441&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -501,7 +502,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-10",
-      "updated_at": "2026-10-06T12:03:03.313844Z",
+      "updated_at": "2026-10-07T11:48:37.872267Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-10&atto.codiceRedazionale=26A04440&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -532,7 +533,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-10",
-      "updated_at": "2026-10-06T12:03:03.313844Z",
+      "updated_at": "2026-10-07T11:48:37.872267Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-10&atto.codiceRedazionale=26A04439&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -563,7 +564,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-09",
-      "updated_at": "2026-10-06T12:03:00.499883Z",
+      "updated_at": "2026-10-07T11:48:35.175012Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-09&atto.codiceRedazionale=26A04434&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -594,7 +595,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-09",
-      "updated_at": "2026-10-06T12:03:00.499883Z",
+      "updated_at": "2026-10-07T11:48:35.175012Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-09&atto.codiceRedazionale=26A04433&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -625,7 +626,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-08",
-      "updated_at": "2026-10-06T12:02:58.755236Z",
+      "updated_at": "2026-10-07T11:48:32.980894Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-08&atto.codiceRedazionale=26A04704&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -655,7 +656,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-08",
-      "updated_at": "2026-10-06T12:02:58.755236Z",
+      "updated_at": "2026-10-07T11:48:32.980894Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-08&atto.codiceRedazionale=26A04429&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -686,7 +687,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-08",
-      "updated_at": "2026-10-06T12:02:58.755236Z",
+      "updated_at": "2026-10-07T11:48:32.980894Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-08&atto.codiceRedazionale=26A04428&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -717,7 +718,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-09-08",
-      "updated_at": "2026-10-06T12:02:58.755236Z",
+      "updated_at": "2026-10-07T11:48:32.980894Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-08&atto.codiceRedazionale=26A04427&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1588,7 +1589,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-10-05T12:18:51.972281Z",
+      "updated_at": "2026-10-07T11:49:19.977725Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1640,7 +1641,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-10-05T12:18:51.972281Z",
+      "updated_at": "2026-10-07T11:49:19.977725Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1754,7 +1755,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-10-06T12:02:47.809096Z",
+      "updated_at": "2026-10-07T11:48:27.724995Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -1781,7 +1782,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-10-06T12:02:47.809096Z",
+      "updated_at": "2026-10-07T11:48:27.724995Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -1923,7 +1924,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-10-05T12:18:51.972281Z",
+      "updated_at": "2026-10-07T11:49:19.977725Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1990,6 +1991,68 @@
         "anziani_lavoro_organizzazioni": [
           "caregiver",
           "lavoro"
+        ]
+      }
+    },
+    {
+      "key": "ae70383b29ee7df3655221e48bd7aa4f3d69dd80248db2d1eda3eec1fa36bb9e",
+      "id": "BUR-Abruzzo-bd561fb0098218c6cef9",
+      "identifier": "BUR-Abruzzo-bd561fb0098218c6cef9",
+      "title": "decreto legislativo 30 dicembre 1992, n.",
+      "source": "Regione Abruzzo - BURA",
+      "source_detail": "Regione Abruzzo - BURA",
+      "kind": "Decreto regionale",
+      "date": "1992-12-30",
+      "updated_at": "2026-10-07T11:49:46.291993Z",
+      "href": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-10-07/bollettino-ordinario-numero-40-del-07-10-2026.pdf",
+      "relevance": "Alta",
+      "act_type": "decreto_legislativo",
+      "topics": [
+        "Privacy e sanita digitale",
+        "Welfare e servizi"
+      ],
+      "summary": "502”;  l’Accordo tra lo Stato, le Regioni e le Province Autonome di Trento e di Bolzano del 15 settembre 2016 “Piano Nazionale Cronicità”;  l’Intesa Stato-Regioni del 18 dicembre 2019 con cui è stata data approvazione al Patto per la Salute 2019-2021;  il Piano Nazionale di Ripresa e Resilienza (PNRR) - approvato dal Consiglio dell’Unione Europea il 6 luglio 2021 (10160/21) - ed in particolare la Missione 6 Salut...",
+      "level": "regionale",
+      "region": "Abruzzo",
+      "status": "pubblicato",
+      "score": 7.8,
+      "found_terms": {
+        "sanita_welfare": [
+          "cronicita",
+          "servizi sociosanitari"
+        ],
+        "tecnologia_ai_privacy": [
+          "telemedicina"
+        ]
+      }
+    },
+    {
+      "key": "dd2b2be8193d372f7bae4c22d63c83e9564135059c4420fd0b20cfb84a1612f4",
+      "id": "BUR-Abruzzo-de10deeabea6f8dadb2f",
+      "identifier": "BUR-Abruzzo-de10deeabea6f8dadb2f",
+      "title": "Decreto del Ministero della Salute 77/2022 “Regolamento recante la definizione di modelli e standard per lo sviluppo dell’assistenza territoriale nel Servizio Sanitario Nazionale”, che individua la COT come un “modello organizzativo che svolge una funzione di coordinamento della presa in carico della persona e raccordo tra servizi e professionisti coinvolti nei diversi setting assistenziali: attività territoriali, sanitarie e sociosanitarie, ospedaliere e dialoga con la rete dell’emergenza-urgenza”, nonché ne definisce gli standard qualitativi, strutturali, tecnologici e quantitativi;",
+      "source": "Regione Abruzzo - BURA",
+      "source_detail": "Regione Abruzzo - BURA",
+      "kind": "Regolamento regionale",
+      "date": "",
+      "updated_at": "2026-10-07T11:49:46.291993Z",
+      "href": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-10-07/bollettino-ordinario-numero-40-del-07-10-2026.pdf",
+      "relevance": "Alta",
+      "act_type": "regolamento",
+      "topics": [
+        "Salute mentale"
+      ],
+      "summary": " il",
+      "level": "regionale",
+      "region": "Abruzzo",
+      "status": "pubblicato",
+      "score": 8.1,
+      "found_terms": {
+        "sanita_welfare": [
+          "presa in carico"
+        ],
+        "clinica_sociale": [
+          "emergenza"
         ]
       }
     }
