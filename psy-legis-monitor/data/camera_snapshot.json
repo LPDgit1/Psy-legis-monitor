@@ -4,11 +4,47 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-10-08T12:03:25.610975Z",
+  "generated_at": "2026-10-09T11:55:11.222002Z",
   "result_count": 200,
-  "newest_identifier": "3126",
-  "newest_date": "20261002",
+  "newest_identifier": "3132",
+  "newest_date": "20261007",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3132",
+      "title": "LUPI: \"Introduzione degli articoli 10-<i>bis </i>del codice civile e 85-<i>bis.</i>1 della legge 22 aprile 1941, n. 633, e altre disposizioni concernenti la tutela della voce, dell’identità vocale e del marchio vocale della persona nonché la disciplina della produzione e utilizzazione di repliche vocali realizzate mediante sistemi di intelligenza artificiale\" (3132)",
+      "date": "20261007",
+      "identifier": "3132"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3131",
+      "title": "S. 2023. - \"Conversione in legge, con modificazioni, del decreto-legge 28 agosto 2026, n. 154, recante misure urgenti per assicurare la continuità operativa di impianti di interesse strategico nazionale\" <i>(approvato dal Senato)</i> (3131)",
+      "date": "20261007",
+      "identifier": "3131"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3130",
+      "title": "ROSSELLO: \"Disposizioni concernenti la protezione del diritto all’identità vocale personale e la disciplina della realizzazione di manifestazioni vocali ad essa riconducibili mediante sistemi di intelligenza artificiale\" (3130)",
+      "date": "20261006",
+      "identifier": "3130"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3129",
+      "title": "GIRELLI: \"Disposizioni per la prevenzione, la diagnosi precoce e la cura della malattia renale cronica nella popolazione adulta\" (3129)",
+      "date": "20261006",
+      "identifier": "3129"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3128",
+      "title": "POLIDORI: \"Disposizioni concernenti l’accreditamento di contributi previdenziali figurativi per periodi di interruzione dell’attività lavorativa dedicati alla cura e all’assistenza di figli minori di sei anni\" (3128)",
+      "date": "20261006",
+      "identifier": "3128"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3127",
+      "title": "\"Revisione della disciplina della responsabilità amministrativa delle persone giuridiche di cui al decreto legislativo 8 giugno 2001, n. 231\" (3127)",
+      "date": "20261002",
+      "identifier": "3127"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3126",
       "title": "DORI: \"Disposizioni concernenti l’istituzione e la gestione di cimiteri per animali da compagnia nonché in materia di inumazione, tumulazione e cremazione dei medesimi animali\" (3126)",
@@ -1172,42 +1208,6 @@
       "title": "CECCHETTI ed altri: \"Introduzione della valutazione di impatto occupazionale dei sistemi di intelligenza artificiale incidenti sull’organizzazione e sullo svolgimento di prestazioni lavorative nonché disposizioni per la tutela del lavoro umano e dell’occupazione\" (2936)",
       "date": "20260515",
       "identifier": "2936"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2935",
-      "title": "S. 1852. - \"Conversione in legge, con modificazioni, del decreto-legge 27 marzo 2026, n. 38, recante disposizioni urgenti in materia fiscale ed economica\" <em>(approvato dal Senato)</em> (2935)",
-      "date": "20260514",
-      "identifier": "2935"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2934",
-      "title": "GRIPPO: \"Modifiche alla legge 22 aprile 1941, n. 633, in materia di diritto di pubblicazione secondaria in ambito scientifico\" (2934)",
-      "date": "20260513",
-      "identifier": "2934"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2933",
-      "title": "FARAONE: \"Introduzione dell’articolo 1-<em>bis</em> della legge 23 novembre 1998, n. 407, concernente l’estensione dei benefìci ai figli delle vittime del reato di femminicidio di cui all’articolo 577-<em>bis </em>del codice penale\" (2933)",
-      "date": "20260513",
-      "identifier": "2933"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2932",
-      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Modifica dell’articolo 9 della legge 23 dicembre 1993, n. 559, in materia di Riserva Fondo Lire UNRRA\" (2932)",
-      "date": "20260512",
-      "identifier": "2932"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2931",
-      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Disposizioni in materia di recupero e valorizzazione del patrimonio immobiliare inutilizzato o abbandonato per finalità sociali e abitative\" (2931)",
-      "date": "20260512",
-      "identifier": "2931"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2930",
-      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Disposizioni in materia di scindibilità del cumulo delle pene\" (2930)",
-      "date": "20260512",
-      "identifier": "2930"
     }
   ]
 }
