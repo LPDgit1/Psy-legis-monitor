@@ -4,11 +4,29 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-10-10T11:11:45.628097Z",
+  "generated_at": "2026-10-11T11:25:21.187830Z",
   "result_count": 200,
-  "newest_identifier": "3132",
-  "newest_date": "20261007",
+  "newest_identifier": "3135",
+  "newest_date": "20261008",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3135",
+      "title": "S. 1786. - \"Delega al Governo per la riforma e il riordino della legislazione farmaceutica in materia di accesso al farmaco, monitoraggio e controllo della spesa farmaceutica, prestazione di servizi sanitari sul territorio da parte delle farmacie e rafforzamento della rete assistenziale farmaceutica\" <i>(approvato dal Senato)</i> (3135)",
+      "date": "20261008",
+      "identifier": "3135"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3134",
+      "title": "S. 1875. - \"Istituzione del Registro unico nazionale dei dispositivi medici impiantabili\" <i>(approvato dal Senato)</i> (3134)",
+      "date": "20261008",
+      "identifier": "3134"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3133",
+      "title": "\"Conversione in legge del decreto-legge 8 ottobre 2026, n. 177, recante disposizioni urgenti per il rafforzamento delle istruttorie ambientali, la gestione dei problemi climatici, l’economia circolare e le bonifiche\" (3133)",
+      "date": "20261008",
+      "identifier": "3133"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3132",
       "title": "LUPI: \"Introduzione degli articoli 10-<i>bis </i>del codice civile e 85-<i>bis.</i>1 della legge 22 aprile 1941, n. 633, e altre disposizioni concernenti la tutela della voce, dell’identità vocale e del marchio vocale della persona nonché la disciplina della produzione e utilizzazione di repliche vocali realizzate mediante sistemi di intelligenza artificiale\" (3132)",
@@ -1190,24 +1208,6 @@
       "title": "DARA ed altri: \"Disposizioni per garantire l’accesso universale ai servizi erogati dalle pubbliche amministrazioni assicurandone la disponibilità in forma sia fisica sia digitale\" (2939)",
       "date": "20260521",
       "identifier": "2939"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2938",
-      "title": "DI LAURO ed altri: \"Disposizioni concernenti l’istituzione di ambulatori per l’assistenza materno-infantile nell’ambito del Servizio sanitario nazionale\" (2938)",
-      "date": "20260520",
-      "identifier": "2938"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2937",
-      "title": "RAIMONDO ed altri: \"Disposizioni per la semplificazione del procedimento di rinnovo del contrassegno europeo di parcheggio per le persone con disabilità nei casi di disabilità grave permanente e non rivedibile\" (2937)",
-      "date": "20260520",
-      "identifier": "2937"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2936",
-      "title": "CECCHETTI ed altri: \"Introduzione della valutazione di impatto occupazionale dei sistemi di intelligenza artificiale incidenti sull’organizzazione e sullo svolgimento di prestazioni lavorative nonché disposizioni per la tutela del lavoro umano e dell’occupazione\" (2936)",
-      "date": "20260515",
-      "identifier": "2936"
     }
   ]
 }
