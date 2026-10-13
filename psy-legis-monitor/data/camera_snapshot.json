@@ -4,11 +4,17 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-10-12T13:11:36.766416Z",
+  "generated_at": "2026-10-13T12:43:49.684890Z",
   "result_count": 200,
-  "newest_identifier": "3135",
-  "newest_date": "20261008",
+  "newest_identifier": "3136",
+  "newest_date": "20261009",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3136",
+      "title": "SEMENZATO: \"Introduzione dell’articolo 572-<i>ter</i> del codice penale in materia di controllo coercitivo nei confronti di familiari e conviventi\" (3136)",
+      "date": "20261009",
+      "identifier": "3136"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3135",
       "title": "S. 1786. - \"Delega al Governo per la riforma e il riordino della legislazione farmaceutica in materia di accesso al farmaco, monitoraggio e controllo della spesa farmaceutica, prestazione di servizi sanitari sul territorio da parte delle farmacie e rafforzamento della rete assistenziale farmaceutica\" <i>(approvato dal Senato)</i> (3135)",
@@ -1202,12 +1208,6 @@
       "title": "SARRACINO ed altri: \"Modifiche alla legge 12 settembre 2025, n. 131, in materia di classificazione e individuazione dei comuni montani nonché di rifinanziamento del Fondo per lo sviluppo delle montagne italiane\" (2940)",
       "date": "20260521",
       "identifier": "2940"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2939",
-      "title": "DARA ed altri: \"Disposizioni per garantire l’accesso universale ai servizi erogati dalle pubbliche amministrazioni assicurandone la disponibilità in forma sia fisica sia digitale\" (2939)",
-      "date": "20260521",
-      "identifier": "2939"
     }
   ]
 }
