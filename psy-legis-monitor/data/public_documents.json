@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-13T12:51:13.577210Z",
-  "fetched_document_count": 645,
-  "published_document_count": 68,
-  "high_relevance_count": 61,
+  "generated_at": "2026-10-14T10:21:56.304015Z",
+  "fetched_document_count": 658,
+  "published_document_count": 67,
+  "high_relevance_count": 60,
   "potential_relevance_count": 7,
   "published_source_count": 8,
   "published_sources": [
@@ -20,7 +20,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 310,
+      "document_count": 303,
       "error": ""
     },
     {
@@ -73,9 +73,9 @@
     },
     {
       "source": "Pagine istituzionali",
-      "status": "error",
-      "document_count": 0,
-      "error": "timed out"
+      "status": "ok",
+      "document_count": 20,
+      "error": ""
     }
   ],
   "documents": [
@@ -88,7 +88,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-10-10",
-      "updated_at": "2026-10-13T12:44:22.015926Z",
+      "updated_at": "2026-10-14T10:15:41.898062Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-10-10&atto.codiceRedazionale=26R00224",
       "relevance": "Alta",
       "act_type": "legge",
@@ -119,7 +119,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-09-30",
-      "updated_at": "2026-10-13T12:44:31.623335Z",
+      "updated_at": "2026-10-14T10:15:51.107189Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60496.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -150,7 +150,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-09-30",
-      "updated_at": "2026-10-13T12:44:31.623335Z",
+      "updated_at": "2026-10-14T10:15:51.107189Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60491.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -207,7 +207,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-09-21",
-      "updated_at": "2026-10-13T12:44:31.623335Z",
+      "updated_at": "2026-10-14T10:15:51.107189Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60477.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -1621,7 +1621,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-10-13T12:44:34.754341Z",
+      "updated_at": "2026-10-14T10:15:54.868470Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1673,7 +1673,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-10-13T12:44:34.754341Z",
+      "updated_at": "2026-10-14T10:15:54.868470Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1787,7 +1787,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-06-04",
-      "updated_at": "2026-10-13T12:43:49.684890Z",
+      "updated_at": "2026-10-14T10:15:10.296326Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2950",
       "relevance": "Potenziale",
       "act_type": "proposta_di_legge",
@@ -1814,7 +1814,7 @@
       "source_detail": "Camera dei deputati - Dati Camera",
       "kind": "Proposta di legge",
       "date": "2026-05-29",
-      "updated_at": "2026-10-13T12:43:49.684890Z",
+      "updated_at": "2026-10-14T10:15:10.296326Z",
       "href": "https://www.camera.it/leg19/126?leg=19&idDocumento=2945",
       "relevance": "Alta",
       "act_type": "proposta_di_legge",
@@ -1956,7 +1956,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-10-13T12:44:34.754341Z",
+      "updated_at": "2026-10-14T10:15:54.868470Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
@@ -2023,38 +2023,6 @@
         "anziani_lavoro_organizzazioni": [
           "caregiver",
           "lavoro"
-        ]
-      }
-    },
-    {
-      "key": "ae70383b29ee7df3655221e48bd7aa4f3d69dd80248db2d1eda3eec1fa36bb9e",
-      "id": "BUR-Abruzzo-bd561fb0098218c6cef9",
-      "identifier": "BUR-Abruzzo-bd561fb0098218c6cef9",
-      "title": "decreto legislativo 30 dicembre 1992, n.",
-      "source": "Regione Abruzzo - BURA",
-      "source_detail": "Regione Abruzzo - BURA",
-      "kind": "Decreto regionale",
-      "date": "1992-12-30",
-      "updated_at": "2026-10-13T12:45:01.162528Z",
-      "href": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-10-07/bollettino-ordinario-numero-40-del-07-10-2026.pdf",
-      "relevance": "Alta",
-      "act_type": "decreto_legislativo",
-      "topics": [
-        "Privacy e sanita digitale",
-        "Welfare e servizi"
-      ],
-      "summary": "502”;  l’Accordo tra lo Stato, le Regioni e le Province Autonome di Trento e di Bolzano del 15 settembre 2016 “Piano Nazionale Cronicità”;  l’Intesa Stato-Regioni del 18 dicembre 2019 con cui è stata data approvazione al Patto per la Salute 2019-2021;  il Piano Nazionale di Ripresa e Resilienza (PNRR) - approvato dal Consiglio dell’Unione Europea il 6 luglio 2021 (10160/21) - ed in particolare la Missione 6 Salut...",
-      "level": "regionale",
-      "region": "Abruzzo",
-      "status": "pubblicato",
-      "score": 7.8,
-      "found_terms": {
-        "sanita_welfare": [
-          "cronicita",
-          "servizi sociosanitari"
-        ],
-        "tecnologia_ai_privacy": [
-          "telemedicina"
         ]
       }
     },
