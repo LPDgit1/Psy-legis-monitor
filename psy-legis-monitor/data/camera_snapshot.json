@@ -4,11 +4,41 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-10-14T10:15:10.296326Z",
+  "generated_at": "2026-10-15T09:57:02.239809Z",
   "result_count": 200,
-  "newest_identifier": "3136",
-  "newest_date": "20261009",
+  "newest_identifier": "3141",
+  "newest_date": "20261012",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3141",
+      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Modifica all’articolo 20 della legge 26 luglio 1975, n. 354, in materia di rapporti di lavoro dei detenuti e degli internati\" (3141)",
+      "date": "20261012",
+      "identifier": "3141"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3140",
+      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Disposizioni in materia di dichiarazione di equivalenza delle tutele dei contratti collettivi negli appalti pubblici\" (3140)",
+      "date": "20261012",
+      "identifier": "3140"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3139",
+      "title": "L'ABBATE: \"Disposizioni per la realizzazione di coperture fotovoltaiche, alberature e interventi di adattamento ai cambiamenti climatici nei parcheggi aperti al pubblico\" (3139)",
+      "date": "20261012",
+      "identifier": "3139"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3138",
+      "title": "GRIPPO: \"Istituzione del Parco archeologico culturale di Tuscolo\" (3138)",
+      "date": "20261012",
+      "identifier": "3138"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3137",
+      "title": "SCERRA: \"Modifiche all’articolo 45 della legge 23 luglio 2009, n. 99, e altre disposizioni per la compensazione territoriale, sociale e ambientale e per la riduzione del prezzo dei carburanti nei territori in cui hanno sede impianti di raffinazione e stabilimenti petrolchimici\" (3137)",
+      "date": "20261012",
+      "identifier": "3137"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3136",
       "title": "SEMENZATO: \"Introduzione dell’articolo 572-<i>ter</i> del codice penale in materia di controllo coercitivo nei confronti di familiari e conviventi\" (3136)",
@@ -1178,36 +1208,6 @@
       "title": "MANES: \"Riconoscimento della condizione di disabilità dei minori affetti da epilessia\" (2945)",
       "date": "20260529",
       "identifier": "2945"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2944",
-      "title": "DI RUBBA ed altri: \"Disposizioni generali in materia di provvedimenti limitativi della circolazione veicolare, per la tutela del diritto alla mobilità\" (2944)",
-      "date": "20260528",
-      "identifier": "2944"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2943",
-      "title": "MOLLICONE ed altri: \"Istituzione della Giornata nazionale dei bambini\" (2943)",
-      "date": "20260528",
-      "identifier": "2943"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2942",
-      "title": "PROPOSTA DI LEGGE COSTITUZIONALE D'INIZIATIVA DEL CONSIGLIO REGIONALE DELLA SARDEGNA: \"Integrazione all’articolo 43 della legge costituzionale 26 febbraio 1948, n. 3, recante Statuto speciale per la Sardegna, in materia di elezione diretta degli organi di governo degli enti di area vasta\" (2942)",
-      "date": "20260525",
-      "identifier": "2942"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2941",
-      "title": "ZIELLO ed altri: \"Istituzione del Ministero per le politiche della casa, della riqualificazione urbana e dell’edilizia abitativa e sociale\" (2941)",
-      "date": "20260521",
-      "identifier": "2941"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2940",
-      "title": "SARRACINO ed altri: \"Modifiche alla legge 12 settembre 2025, n. 131, in materia di classificazione e individuazione dei comuni montani nonché di rifinanziamento del Fondo per lo sviluppo delle montagne italiane\" (2940)",
-      "date": "20260521",
-      "identifier": "2940"
     }
   ]
 }
