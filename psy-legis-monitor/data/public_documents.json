@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-16T10:01:30.853309Z",
-  "fetched_document_count": 569,
+  "generated_at": "2026-10-17T09:29:38.174204Z",
+  "fetched_document_count": 646,
   "published_document_count": 67,
   "high_relevance_count": 60,
   "potential_relevance_count": 7,
@@ -20,7 +20,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 274,
+      "document_count": 289,
       "error": ""
     },
     {
@@ -31,9 +31,9 @@
     },
     {
       "source": "Senato",
-      "status": "error",
-      "document_count": 0,
-      "error": "Server error '503 Service Temporarily Unavailable' for url 'https://dati.senato.it/sparql?query=PREFIX+osr%3A+%3Chttp%3A%2F%2Fdati.senato.it%2Fosr%2F%3E%0A%0ASELECT+DISTINCT+%3Fddl+%3FidFase+%3Framo+%3Flegislatura+%3FnumeroFase+%3Ftitolo+%3FtitoloBreve%0A++++++++++++++++%3Fnatura+%3Fstato+%3FdataStato+%3FdataPresentazione%0A++++++++++++++++%3FpresentatoTrasmesso+%3FtestoPresentato+%3FtestoApprovato+WHERE+%7B%0A++%3Fddl+a+osr%3ADdl.%0A++%3Fddl+osr%3AidFase+%3FidFase.%0A++%3Fddl+osr%3AstatoDdl+%3F"
+      "status": "ok",
+      "document_count": 60,
+      "error": ""
     },
     {
       "source": "Normattiva",
@@ -62,7 +62,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 42,
+      "document_count": 44,
       "error": ""
     },
     {
@@ -88,7 +88,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-10-10",
-      "updated_at": "2026-10-16T09:53:00.347589Z",
+      "updated_at": "2026-10-17T09:23:53.536864Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-10-10&atto.codiceRedazionale=26R00224",
       "relevance": "Alta",
       "act_type": "legge",
@@ -119,7 +119,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-09-30",
-      "updated_at": "2026-10-14T10:15:51.107189Z",
+      "updated_at": "2026-10-17T09:24:06.647989Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60496.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -150,7 +150,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-09-30",
-      "updated_at": "2026-10-14T10:15:51.107189Z",
+      "updated_at": "2026-10-17T09:24:06.647989Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60491.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -207,7 +207,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-09-21",
-      "updated_at": "2026-10-14T10:15:51.107189Z",
+      "updated_at": "2026-10-17T09:24:06.647989Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60477.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -1621,7 +1621,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-10-16T09:53:13.257212Z",
+      "updated_at": "2026-10-17T09:24:09.764027Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1673,7 +1673,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-10-16T09:53:13.257212Z",
+      "updated_at": "2026-10-17T09:24:09.764027Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1956,7 +1956,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-10-16T09:53:13.257212Z",
+      "updated_at": "2026-10-17T09:24:09.764027Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",

@@ -4,11 +4,47 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-10-15T09:57:02.239809Z",
+  "generated_at": "2026-10-17T09:23:19.960065Z",
   "result_count": 200,
-  "newest_identifier": "3141",
-  "newest_date": "20261012",
+  "newest_identifier": "3148",
+  "newest_date": "20261015",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3148",
+      "title": "S. 2029. - \"Conversione in legge, con modificazioni, del decreto-legge 10 settembre 2026, n. 157, recante disposizioni urgenti in materia di prezzi petroliferi connessi al protrarsi della nuova crisi dei mercati internazionali e di infrastrutture e attività energetiche strategiche\" <i>(approvato dal Senato)</i> (3148)",
+      "date": "20261015",
+      "identifier": "3148"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3146",
+      "title": "CONSIGLIO REGIONALE DEL VENETO: \"Modifica all’articolo 1277 del codice civile in materia di tutela del diritto alla libertà di pagamento in contanti\" (3146)",
+      "date": "20261013",
+      "identifier": "3146"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3145",
+      "title": "PROPOSTA DI LEGGE COSTITUZIONALE SPERANZA: \"Modifica all’articolo 94 della Costituzione in materia di divieto di apposizione della questione di fiducia su progetti di legge vertenti su materia costituzionale o elettorale\" (3145)",
+      "date": "20261013",
+      "identifier": "3145"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3144",
+      "title": "GIACHETTI: \"Introduzione dell’articolo 47-<i>septies</i> della legge 26 luglio 1975, n. 354, in materia di detenzione domiciliare allargata nei casi di eccezionale distanza temporale tra la commissione del reato e l’esecuzione della pena\" (3144)",
+      "date": "20261013",
+      "identifier": "3144"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3143",
+      "title": "GIACHETTI: \"Introduzione dell’articolo 656-<i>bis </i>del codice di procedura penale e altre disposizioni concernenti una modalità speciale di esecuzione non carceraria della pena detentiva per i condannati ultrasettantacinquenni\" (3143)",
+      "date": "20261013",
+      "identifier": "3143"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3142",
+      "title": "MIELE: \"Disposizioni in materia di percorsi formativi per il sostegno dell’esercizio delle competenze genitoriali nell’ambito del patto educativo di corresponsabilità tra le istituzioni scolastiche e le famiglie\" (3142)",
+      "date": "20261013",
+      "identifier": "3142"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3141",
       "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Modifica all’articolo 20 della legge 26 luglio 1975, n. 354, in materia di rapporti di lavoro dei detenuti e degli internati\" (3141)",
@@ -1172,42 +1208,6 @@
       "title": "PITTALIS ed altri: \"Disposizioni concernenti l’organizzazione del Sistema di emergenza sanitaria territoriale “118”, la disciplina della figura professionale dell’autista soccorritore e la sperimentazione di forme di erogazione di prestazioni ospedaliere di emergenza-urgenza da parte di soggetti pubblici e privati accreditati\" (2951)",
       "date": "20260604",
       "identifier": "2951"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2950",
-      "title": "ONORI e D'ALESSIO: \"Modifiche all’articolo 5-<em>bis</em> della legge 4 maggio 1983, n. 184, e altre disposizioni per assicurare il rilascio dei documenti di identità e dei permessi di soggiorno e lo svolgimento delle attività amministrative necessarie per la continuità dell’erogazione dei servizi scolastici, educativi, di assistenza sanitaria e per la mobilità nei riguardi dei minori affidati o collocati presso famiglie, comunità o istituti di assistenza\" (2950)",
-      "date": "20260604",
-      "identifier": "2950"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2949",
-      "title": "SARRACINO ed altri: \"Disposizioni per la promozione dell’occupazione e dell’imprenditoria giovanile nonché in materia di politiche abitative e di mobilità, per contrastare l’emigrazione e favorire la permanenza e il rientro dei giovani in Italia\" (2949)",
-      "date": "20260604",
-      "identifier": "2949"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2948",
-      "title": "LOMUTI ed altri: \"Istituzione dell’Autorità per la vigilanza sull’acquisizione dei sistemi d’arma e sulle compensazioni e introduzione del capo II-<em>bis </em>del titolo II del libro terzo del codice di cui al decreto legislativo 15 marzo 2010, n. 66, concernente il procedimento per la stipulazione dei contratti relativi a sistemi d’arma e gli obblighi di compensazione industriale\" (2948)",
-      "date": "20260604",
-      "identifier": "2948"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2947",
-      "title": "S. 1885. - \"Conversione in legge del decreto-legge 24 aprile 2026, n. 55, recante disposizioni urgenti in materia di rimpatri volontari assistiti\" <em>(approvato dal Senato)</em> (2947)",
-      "date": "20260604",
-      "identifier": "2947"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2946",
-      "title": "MORRONE ed altri: \"Modifiche alle leggi 4 aprile 1956, n. 212, e 10 dicembre 1993, n. 515, in materia di impiego della lingua italiana nella propaganda e nelle campagne elettorali\" (2946)",
-      "date": "20260529",
-      "identifier": "2946"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2945",
-      "title": "MANES: \"Riconoscimento della condizione di disabilità dei minori affetti da epilessia\" (2945)",
-      "date": "20260529",
-      "identifier": "2945"
     }
   ]
 }
