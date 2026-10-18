@@ -4,11 +4,17 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-10-17T09:23:19.960065Z",
+  "generated_at": "2026-10-18T09:39:06.832602Z",
   "result_count": 200,
-  "newest_identifier": "3148",
-  "newest_date": "20261015",
+  "newest_identifier": "3151",
+  "newest_date": "20261016",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3151",
+      "title": "\"Conversione in legge del decreto-legge 16 ottobre 2026, n. 185, recante misure urgenti a sostegno dei lavoratori dell’ex ILVA e dell’indotto e per il rilancio industriale del territorio\" (3151)",
+      "date": "20261016",
+      "identifier": "3151"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3148",
       "title": "S. 2029. - \"Conversione in legge, con modificazioni, del decreto-legge 10 settembre 2026, n. 157, recante disposizioni urgenti in materia di prezzi petroliferi connessi al protrarsi della nuova crisi dei mercati internazionali e di infrastrutture e attività energetiche strategiche\" <i>(approvato dal Senato)</i> (3148)",
@@ -1202,12 +1208,6 @@
       "title": "MORRONE ed altri: \"Modifiche al decreto legislativo 8 giugno 2001, n. 231, in materia di responsabilità delle persone giuridiche, delle società e delle associazioni, anche prive di personalità giuridica, per fatti illeciti dipendenti da reato\" (2952)",
       "date": "20260605",
       "identifier": "2952"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2951",
-      "title": "PITTALIS ed altri: \"Disposizioni concernenti l’organizzazione del Sistema di emergenza sanitaria territoriale “118”, la disciplina della figura professionale dell’autista soccorritore e la sperimentazione di forme di erogazione di prestazioni ospedaliere di emergenza-urgenza da parte di soggetti pubblici e privati accreditati\" (2951)",
-      "date": "20260604",
-      "identifier": "2951"
     }
   ]
 }
