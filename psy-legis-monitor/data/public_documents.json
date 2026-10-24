@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-23T10:11:23.269155Z",
-  "fetched_document_count": 659,
-  "published_document_count": 67,
-  "high_relevance_count": 60,
+  "generated_at": "2026-10-24T09:39:39.336049Z",
+  "fetched_document_count": 662,
+  "published_document_count": 68,
+  "high_relevance_count": 61,
   "potential_relevance_count": 7,
   "published_source_count": 8,
   "published_sources": [
@@ -20,7 +20,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 302,
+      "document_count": 300,
       "error": ""
     },
     {
@@ -43,9 +43,9 @@
     },
     {
       "source": "Ministero Salute",
-      "status": "error",
-      "document_count": 0,
-      "error": "Ministero Salute non interrogabile dalle fonti configurate"
+      "status": "ok",
+      "document_count": 3,
+      "error": ""
     },
     {
       "source": "AGENAS",
@@ -62,7 +62,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 45,
+      "document_count": 47,
       "error": ""
     },
     {
@@ -80,6 +80,36 @@
   ],
   "documents": [
     {
+      "key": "59b4e039fb53ef2feda4a708f31b9375e386c6089532d8996ba629649f0b108d",
+      "id": "S.2063",
+      "identifier": "S.2063",
+      "title": "Riconoscimento e tutela delle persone che assistono e si prendono cura dei propri cari",
+      "source": "Senato della Repubblica",
+      "source_detail": "Senato della Repubblica - dati.senato.it",
+      "kind": "Disegno di legge",
+      "date": "2026-10-16",
+      "updated_at": "2026-10-24T09:34:41.837609Z",
+      "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60529.htm",
+      "relevance": "Alta",
+      "act_type": "disegno_di_legge",
+      "topics": [
+        "Anziani e non autosufficienza"
+      ],
+      "summary": "Caregiver",
+      "level": "nazionale",
+      "region": "",
+      "status": "assegnato",
+      "score": 8.4,
+      "found_terms": {
+        "sanita_welfare": [
+          "caregiver"
+        ],
+        "anziani_lavoro_organizzazioni": [
+          "caregiver"
+        ]
+      }
+    },
+    {
       "key": "da5d57341e566ac3ebd4fb199413965e731fb9fe3f8a307b859ee3e52a94361d",
       "id": "26R00224",
       "identifier": "26R00224",
@@ -88,7 +118,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-10-10",
-      "updated_at": "2026-10-23T10:06:03.980110Z",
+      "updated_at": "2026-10-24T09:34:30.477511Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-10-10&atto.codiceRedazionale=26R00224",
       "relevance": "Alta",
       "act_type": "legge",
@@ -119,7 +149,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-09-30",
-      "updated_at": "2026-10-23T10:06:12.035459Z",
+      "updated_at": "2026-10-24T09:34:41.837609Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60496.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -150,7 +180,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-09-30",
-      "updated_at": "2026-10-23T10:06:12.035459Z",
+      "updated_at": "2026-10-24T09:34:41.837609Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60491.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -1621,7 +1651,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-10-22T10:13:44.169402Z",
+      "updated_at": "2026-10-24T09:34:44.354480Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1673,7 +1703,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-10-22T10:13:44.169402Z",
+      "updated_at": "2026-10-24T09:34:44.354480Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1956,7 +1986,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-10-22T10:13:44.169402Z",
+      "updated_at": "2026-10-24T09:34:44.354480Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
