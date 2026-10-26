@@ -4,11 +4,89 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-10-23T10:05:42.217408Z",
+  "generated_at": "2026-10-26T11:09:09.953570Z",
   "result_count": 200,
-  "newest_identifier": "3151",
-  "newest_date": "20261016",
+  "newest_identifier": "3164",
+  "newest_date": "20261022",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3164",
+      "title": "\"Attribuzione alla regione Veneto di ulteriori forme e condizioni particolari di autonomia, ai sensi dell’articolo 116, terzo comma, della Costituzione\" (3164)",
+      "date": "20261022",
+      "identifier": "3164"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3163",
+      "title": "\"Attribuzione alla regione Piemonte di ulteriori forme e condizioni particolari di autonomia, ai sensi dell’articolo 116, terzo comma, della Costituzione\" (3163)",
+      "date": "20261022",
+      "identifier": "3163"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3162",
+      "title": "\"Attribuzione alla regione Lombardia di ulteriori forme e condizioni particolari di autonomia, ai sensi dell’articolo 116, terzo comma, della Costituzione\" (3162)",
+      "date": "20261022",
+      "identifier": "3162"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3161",
+      "title": "\"Attribuzione alla regione Liguria di ulteriori forme e condizioni particolari di autonomia, ai sensi dell’articolo 116, terzo comma, della Costituzione\" (3161)",
+      "date": "20261022",
+      "identifier": "3161"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3160",
+      "title": "CARETTA e CIABURRO: \"Concessione di un’agevolazione contributiva in favore dei datori di lavoro che erogano mensilità aggiuntive ai lavoratori per ogni figlio nato o adottato, nonché modifica all’articolo 18 della legge 22 maggio 2017, n. 81, in materia di esecuzione del rapporto di lavoro in modalità agile da parte delle lavoratrici e dei lavoratori con figli fino a dodici anni di età o disabili\" (3160)",
+      "date": "20261022",
+      "identifier": "3160"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3159",
+      "title": "\"Conversione in legge del decreto-legge 22 ottobre 2026, n. 190, recante disposizioni urgenti in materia di sicurezza pubblica e contrasto alla criminalità minorile\" (3159)",
+      "date": "20261022",
+      "identifier": "3159"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3158",
+      "title": "ENRICO COSTA ed altri: \"Modifiche alla legge 13 aprile 1988, n. 117, al codice di procedura penale e alle norme di attuazione, di coordinamento e transitorie del medesimo codice, in materia di responsabilità disciplinare e amministrativa dei magistrati, di diritto del cittadino al risarcimento dei danni ingiusti cagionati nell’esercizio della funzione giudiziaria e di equa riparazione per l’applicazione di misure cautelari o l’esercizio palesemente infondato dell’azione penale in caso di proscioglimento\" (3158)",
+      "date": "20261021",
+      "identifier": "3158"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3157",
+      "title": "GAETANA RUSSO ed altri: \"Disposizioni per la celebrazione, nell’anno 2028, del centoventesimo anniversario della nascita e del sessantesimo anniversario della morte di Giovannino Guareschi\" (3157)",
+      "date": "20261021",
+      "identifier": "3157"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3156",
+      "title": "ZIELLO ed altri: \"Modifiche agli articoli 18 del testo unico di cui al regio decreto 18 giugno 1931, n. 773, in materia di riunioni pubbliche, 335-<i>quinquies</i> del codice di procedura penale, in materia di attività di indagine in presenza di cause di giustificazione, 53 del codice penale, in materia di uso legittimo delle armi e di altri mezzi di coazione fisica, e 10-<i>bis </i>della legge 5 febbraio 1992, n. 91, in materia di revoca della cittadinanza per delitti contro l’ordine pubblico, e altre disposizioni concernenti l’impiego delle Forze armate, delle unità cinofile e di mezzi di coazione fisica nei casi di pericolo per l’ordine e la sicurezza pubblica\" (3156)",
+      "date": "20261021",
+      "identifier": "3156"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3155",
+      "title": "FILINI ed altri: \"Modifica all’articolo 14 del testo unico delle disposizioni concernenti la disciplina dell’immigrazione e norme sulla condizione dello straniero, di cui al decreto legislativo 25 luglio 1998, n. 286, in materia di sanzioni per inottemperanza all’ordine di lasciare il territorio dello Stato\" (3155)",
+      "date": "20261021",
+      "identifier": "3155"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3154",
+      "title": "LOIZZO: \"Modifiche all’articolo 82 della legge 23 dicembre 2000, n. 388, in materia di perequazione degli importi della speciale elargizione in favore dei superstiti delle vittime della criminalità organizzata\" (3154)",
+      "date": "20261020",
+      "identifier": "3154"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3153",
+      "title": "RUFFINO: \"Modifiche al decreto legislativo 28 febbraio 2021, n. 36, in materia di attività sportiva delle persone con disabilità e di pari opportunità di accesso degli atleti con disabilità intellettive e del neurosviluppo ai gruppi sportivi militari e dei corpi civili dello Stato\" (3153)",
+      "date": "20261020",
+      "identifier": "3153"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3152",
+      "title": "CASO ed altri: \"Istituzione del Piano straordinario nazionale per la sicurezza, la riqualificazione, l’accessibilità e la resilienza climatica dell’edilizia scolastica nonché disposizioni per favorire l’apertura delle scuole al territorio\" (3152)",
+      "date": "20261019",
+      "identifier": "3152"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3151",
       "title": "\"Conversione in legge del decreto-legge 16 ottobre 2026, n. 185, recante misure urgenti a sostegno dei lavoratori dell’ex ILVA e dell’indotto e per il rilancio industriale del territorio\" (3151)",
@@ -167,7 +245,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3125",
-      "title": "COPPO: \"Disposizioni concernenti l’impiego di sistemi di intelligenza artificiale per la prevenzione dei rischi e la tutela della salute e della sicurezza nei luoghi di lavoro\" (3125)",
+      "title": "COPPO e CERRETO: \"Disposizioni concernenti l’impiego di sistemi di intelligenza artificiale per la prevenzione dei rischi e la tutela della salute e della sicurezza nei luoghi di lavoro\" (3125)",
       "date": "20261002",
       "identifier": "3125"
     },
@@ -551,7 +629,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3062",
-      "title": "GIGLIO VIGNA: \"Modifica all’articolo 100 del codice della strada, di cui al decreto legislativo 30 aprile 1992, n. 285, in materia di inserimento della bandiera della regione e della sigla della provincia di immatricolazione nelle targhe degli autoveicoli, dei motoveicoli e dei rimorchi\" (3062)",
+      "title": "GIGLIO VIGNA ed altri: \"Modifica all’articolo 100 del codice della strada, di cui al decreto legislativo 30 aprile 1992, n. 285, in materia di inserimento della bandiera della regione e della sigla della provincia di immatricolazione nelle targhe degli autoveicoli, dei motoveicoli e dei rimorchi\" (3062)",
       "date": "20260731",
       "identifier": "3062"
     },
@@ -725,7 +803,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3034",
-      "title": "MICHELOTTI: \"Istituzione di un fondo per l’indennizzo delle vittime dei fatti accaduti presso la comunità “Il Forteto”\" (3034)",
+      "title": "MICHELOTTI e DI MAGGIO: \"Istituzione di un fondo per l’indennizzo delle vittime dei fatti accaduti presso la comunità “Il Forteto”\" (3034)",
       "date": "20260717",
       "identifier": "3034"
     },
@@ -743,7 +821,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3031",
-      "title": "CECCHETTI: \"Disposizioni concernenti l’impiego di materiali ambientalmente sostenibili e aventi proprietà di riduzione degli inquinanti atmosferici per la costruzione e la ristrutturazione degli edifici pubblici statali\" (3031)",
+      "title": "CECCHETTI ed altri: \"Disposizioni concernenti l’impiego di materiali ambientalmente sostenibili e aventi proprietà di riduzione degli inquinanti atmosferici per la costruzione e la ristrutturazione degli edifici pubblici statali\" (3031)",
       "date": "20260716",
       "identifier": "3031"
     },
@@ -773,7 +851,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3026",
-      "title": "CAFIERO DE RAHO: \"Modifiche agli articoli 81 del codice penale, in materia di concorso formale di reati e di reato continuato, e 438 del codice di procedura penale, in materia di giudizio abbreviato nei procedimenti per delitti di criminalità organizzata\" (3026)",
+      "title": "CAFIERO DE RAHO ed altri: \"Modifiche agli articoli 81 del codice penale, in materia di concorso formale di reati e di reato continuato, e 438 del codice di procedura penale, in materia di giudizio abbreviato nei procedimenti per delitti di criminalità organizzata\" (3026)",
       "date": "20260715",
       "identifier": "3026"
     },
@@ -1130,84 +1208,6 @@
       "title": "CARMINA ed altri: \"Istituzione di una Commissione parlamentare di inchiesta sulla gestione del servizio sanitario regionale e delle risorse a esso destinate nella Regione siciliana\" (2968)",
       "date": "20260616",
       "identifier": "2968"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2967",
-      "title": "ORRICO ed altri: \"Istituzione di un fondo per l’organizzazione, da parte delle scuole secondarie di primo e di secondo grado, di viaggi di istruzione nei luoghi della Resistenza e della liberazione dall’occupazione nazista e dal fascismo\" (2967)",
-      "date": "20260615",
-      "identifier": "2967"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2966",
-      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Disposizioni in materia di prospetto paga e indicazione del codice identificativo del contratto collettivo nazionale di lavoro applicato\" (2966)",
-      "date": "20260612",
-      "identifier": "2966"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2965",
-      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Modifiche alla legge 21 aprile 2011, n. 62\" (2965)",
-      "date": "20260612",
-      "identifier": "2965"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2964",
-      "title": "ANDREUZZA ed altri: \"Modifiche alla legge 28 febbraio 2020, n. 17, in materia di estensione delle aree cedibili a privati nella fascia lagunare di Sottomarina, nel comune di Chioggia, e di sospensione dei procedimenti di ingiunzione, di rilascio o di riscossione dei proventi relativi alle medesime\" (2964)",
-      "date": "20260611",
-      "identifier": "2964"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2963",
-      "title": "MAFFIOLI ed altri: \"Disposizioni concernenti la stipulazione di convenzioni tra i comuni e le istituzioni scolastiche per lo svolgimento di attività didattiche extracurricolari presso biblioteche e altri spazi pubblici di proprietà comunale\" (2963)",
-      "date": "20260611",
-      "identifier": "2963"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2962",
-      "title": "S. 1891. - \"Conversione in legge, con modificazioni, del decreto-legge 30 aprile 2026, n. 63, recante disposizioni urgenti in materia di prezzi petroliferi connessi al protrarsi della crisi dei mercati internazionali\" <em>(approvato dal Senato)</em> (2962)",
-      "date": "20260611",
-      "identifier": "2962"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2961",
-      "title": "S. 1635. - \"Disposizioni in materia di detenzione domiciliare per il recupero dei detenuti tossicodipendenti o alcoldipendenti\" <em>(approvato dal Senato)</em> (2961)",
-      "date": "20260610",
-      "identifier": "2961"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2960",
-      "title": "S. 1884. - \"Ratifica ed esecuzione dello Scambio di Note Verbali, fatto al Cairo il 3 agosto ed il 10 settembre 2025, concernenti la proroga di validità del Memorandum d’intesa tra il Ministero della difesa della Repubblica italiana ed il Ministero della difesa della Repubblica Araba d’Egitto sulla cooperazione nel settore della difesa, fatto a Roma il 23 marzo 1998\" <em>(approvato dal Senato)</em> (2960)",
-      "date": "20260610",
-      "identifier": "2960"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2959",
-      "title": "S. 1879. - \"Ratifica ed esecuzione del Trattato sul trasferimento delle persone condannate tra la Repubblica italiana e la Repubblica del Paraguay, fatto ad Assunzione il 7 luglio 2023\" <em>(approvato dal Senato)</em> (2959)",
-      "date": "20260610",
-      "identifier": "2959"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2958",
-      "title": "S. 1880. - \"Ratifica ed esecuzione dei Trattati di estradizione, trasferimento delle persone condannate e assistenza giudiziaria in materia penale tra la Repubblica italiana e la Repubblica Socialista del Vietnam, fatti a Roma il 18 e il 26 luglio 2023\" <em>(approvato dal Senato)</em> (2958)",
-      "date": "20260610",
-      "identifier": "2958"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2957",
-      "title": "S. 1878. - \"Ratifica ed esecuzione dell’Accordo tra il Governo della Repubblica italiana e il Governo dello Stato del Kuwait sulla cooperazione nel settore della difesa, fatto a Roma il 13 gennaio 2026\" <em>(approvato dal Senato)</em> (2957)",
-      "date": "20260610",
-      "identifier": "2957"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2956",
-      "title": "S. 1863. - \"Ratifica ed esecuzione dell’Accordo di partenariato economico interinale tra la Costa d’Avorio, da una parte, e la Comunità europea e i suoi Stati membri, dall’altra, con Allegati, fatto ad Abidjan, il ventisei novembre 2008, e a Bruxelles, il ventidue gennaio 2009, rispettivamente\" <em>(approvato dal Senato)</em> (2956)",
-      "date": "20260610",
-      "identifier": "2956"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2955",
-      "title": "MILANI: \"Modifiche alla legge 4 agosto 1984, n. 464, concernenti l’obbligo di trasmissione delle informazioni e della documentazione relative a cavità sotterranee naturali o artificiali all’Istituto superiore per la protezione e la ricerca ambientale\" (2955)",
-      "date": "20260609",
-      "identifier": "2955"
     }
   ]
 }
