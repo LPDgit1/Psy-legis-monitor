@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T10:43:19.632280Z",
-  "fetched_document_count": 663,
+  "generated_at": "2026-10-28T11:27:53.767896Z",
+  "fetched_document_count": 656,
   "published_document_count": 68,
   "high_relevance_count": 61,
   "potential_relevance_count": 7,
@@ -20,7 +20,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 302,
+      "document_count": 293,
       "error": ""
     },
     {
@@ -38,7 +38,7 @@
     {
       "source": "Normattiva",
       "status": "ok",
-      "document_count": 14,
+      "document_count": 13,
       "error": ""
     },
     {
@@ -62,7 +62,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 47,
+      "document_count": 50,
       "error": ""
     },
     {
@@ -88,7 +88,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-10-16",
-      "updated_at": "2026-10-27T10:37:34.510618Z",
+      "updated_at": "2026-10-28T11:22:38.159264Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60529.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -98,7 +98,7 @@
       "summary": "Caregiver",
       "level": "nazionale",
       "region": "",
-      "status": "assegnato",
+      "status": "presentato",
       "score": 8.4,
       "found_terms": {
         "sanita_welfare": [
@@ -118,7 +118,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-10-10",
-      "updated_at": "2026-10-27T10:37:27.123132Z",
+      "updated_at": "2026-10-28T11:22:16.256531Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-10-10&atto.codiceRedazionale=26R00224",
       "relevance": "Alta",
       "act_type": "legge",
@@ -1651,7 +1651,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-10-27T10:37:39.085787Z",
+      "updated_at": "2026-10-28T11:22:42.114886Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1703,7 +1703,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-10-27T10:37:39.085787Z",
+      "updated_at": "2026-10-28T11:22:42.114886Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1986,7 +1986,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-10-27T10:37:39.085787Z",
+      "updated_at": "2026-10-28T11:22:42.114886Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",

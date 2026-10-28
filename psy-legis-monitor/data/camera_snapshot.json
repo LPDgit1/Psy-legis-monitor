@@ -4,7 +4,7 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-10-26T11:09:09.953570Z",
+  "generated_at": "2026-10-28T11:21:51.908018Z",
   "result_count": 200,
   "newest_identifier": "3164",
   "newest_date": "20261022",
