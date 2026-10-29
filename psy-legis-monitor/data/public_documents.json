@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T11:27:53.767896Z",
-  "fetched_document_count": 656,
-  "published_document_count": 68,
-  "high_relevance_count": 61,
+  "generated_at": "2026-10-29T11:38:31.045927Z",
+  "fetched_document_count": 637,
+  "published_document_count": 70,
+  "high_relevance_count": 63,
   "potential_relevance_count": 7,
-  "published_source_count": 8,
+  "published_source_count": 9,
   "published_sources": [
     "Camera dei deputati",
     "Gazzetta Ufficiale",
@@ -13,6 +13,7 @@
     "Regione Abruzzo - BURA",
     "Regione Emilia-Romagna - BURERT",
     "Regione Lazio - BUR",
+    "Regione Marche - BUR",
     "Regione Toscana - BURT",
     "Senato della Repubblica"
   ],
@@ -20,7 +21,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 293,
+      "document_count": 264,
       "error": ""
     },
     {
@@ -38,7 +39,7 @@
     {
       "source": "Normattiva",
       "status": "ok",
-      "document_count": 13,
+      "document_count": 15,
       "error": ""
     },
     {
@@ -62,7 +63,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 50,
+      "document_count": 58,
       "error": ""
     },
     {
@@ -80,6 +81,86 @@
   ],
   "documents": [
     {
+      "key": "793734ebca4c8e9f5636d271dfab89696a55f3cfced0b1a53b8aa389cef6b731",
+      "id": "BUR-Marche-cfaa4935b58d6bc33115",
+      "identifier": "BUR-Marche-cfaa4935b58d6bc33115",
+      "title": "Decreto del Dirigente della Dire- zione Programmazione Integrata Risorse Comunitarie e Nazionali del 27 ottobre 2026, n.",
+      "source": "Regione Marche - BUR",
+      "source_detail": "Regione Marche - BUR",
+      "kind": "DGR / delibera regionale",
+      "date": "2026-10-27",
+      "updated_at": "2026-10-29T11:36:19.335005Z",
+      "href": "https://bur.regione.marche.it/bur/PDF/2026/N99%20del%2029%20ottobre%202026.pdf",
+      "relevance": "Alta",
+      "act_type": "dgr",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Salute mentale",
+        "Minori e famiglia",
+        "Dipendenze",
+        "Anziani e non autosufficienza"
+      ],
+      "summary": "128 DGR n. 331/2026 – Intervento “Mul - tileva” 2.2 – Avviso pubblico per la concessione di contributi agli Enti titolari dell’autorizzazione all’eserci - zio delle strutture residenziali socia- li che operano nell’area dei Minori e degli Adulti (esclusi gli alloggi sociali convenzionati per i malati di Aids), nonché agli Enti titolari dell’autoriz - zazione all’esercizio delle strutture sociosanitarie e sociali che...",
+      "level": "regionale",
+      "region": "Marche",
+      "status": "pubblicato",
+      "score": 13.62,
+      "found_terms": {
+        "servizi_psicologici": [
+          "salute mentale"
+        ],
+        "scuola_minori_famiglia": [
+          "minori"
+        ],
+        "clinica_sociale": [
+          "dipendenze"
+        ],
+        "anziani_lavoro_organizzazioni": [
+          "anziani"
+        ]
+      }
+    },
+    {
+      "key": "3016550003ef1b0f0e08be40bd9baee3cf3a2da8ba70842688cef04f69fa9e34",
+      "id": "BUR-Marche-ca7d8bd8b9248dc8253e",
+      "identifier": "BUR-Marche-ca7d8bd8b9248dc8253e",
+      "title": "Decreto del Dirigente della Dire- zione Programmazione Integrata Risorse Comunitarie e Nazionali del 27 ottobre 2026, n.",
+      "source": "Regione Marche - BUR",
+      "source_detail": "Regione Marche - BUR",
+      "kind": "DGR / delibera regionale",
+      "date": "2026-10-27",
+      "updated_at": "2026-10-29T11:36:19.335005Z",
+      "href": "https://bur.regione.marche.it/bur/PDF/2026/N99 del 29 ottobre 2026.pdf",
+      "relevance": "Alta",
+      "act_type": "dgr",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Salute mentale",
+        "Minori e famiglia",
+        "Dipendenze",
+        "Anziani e non autosufficienza"
+      ],
+      "summary": "128 DGR n. 331/2026 – Intervento “Mul - tileva” 2.2 – Avviso pubblico per la concessione di contributi agli Enti titolari dell’autorizzazione all’eserci - zio delle strutture residenziali socia- li che operano nell’area dei Minori e degli Adulti (esclusi gli alloggi sociali convenzionati per i malati di Aids), nonché agli Enti titolari dell’autoriz - zazione all’esercizio delle strutture sociosanitarie e sociali che...",
+      "level": "regionale",
+      "region": "Marche",
+      "status": "pubblicato",
+      "score": 13.62,
+      "found_terms": {
+        "servizi_psicologici": [
+          "salute mentale"
+        ],
+        "scuola_minori_famiglia": [
+          "minori"
+        ],
+        "clinica_sociale": [
+          "dipendenze"
+        ],
+        "anziani_lavoro_organizzazioni": [
+          "anziani"
+        ]
+      }
+    },
+    {
       "key": "59b4e039fb53ef2feda4a708f31b9375e386c6089532d8996ba629649f0b108d",
       "id": "S.2063",
       "identifier": "S.2063",
@@ -88,7 +169,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-10-16",
-      "updated_at": "2026-10-28T11:22:38.159264Z",
+      "updated_at": "2026-10-29T11:32:55.895856Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60529.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -118,7 +199,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-10-10",
-      "updated_at": "2026-10-28T11:22:16.256531Z",
+      "updated_at": "2026-10-29T11:32:44.326212Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-10-10&atto.codiceRedazionale=26R00224",
       "relevance": "Alta",
       "act_type": "legge",
@@ -1651,7 +1732,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-10-28T11:22:42.114886Z",
+      "updated_at": "2026-10-29T11:32:57.958021Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1703,7 +1784,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-10-28T11:22:42.114886Z",
+      "updated_at": "2026-10-29T11:32:57.958021Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1986,7 +2067,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-10-28T11:22:42.114886Z",
+      "updated_at": "2026-10-29T11:32:57.958021Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
