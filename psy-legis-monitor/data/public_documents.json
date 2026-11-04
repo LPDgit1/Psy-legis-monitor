@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T12:55:55.369043Z",
-  "fetched_document_count": 618,
-  "published_document_count": 70,
+  "generated_at": "2026-11-04T13:06:22.955992Z",
+  "fetched_document_count": 616,
+  "published_document_count": 71,
   "high_relevance_count": 63,
-  "potential_relevance_count": 7,
+  "potential_relevance_count": 8,
   "published_source_count": 9,
   "published_sources": [
     "Camera dei deputati",
@@ -21,7 +21,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 262,
+      "document_count": 260,
       "error": ""
     },
     {
@@ -44,9 +44,9 @@
     },
     {
       "source": "Ministero Salute",
-      "status": "ok",
-      "document_count": 3,
-      "error": ""
+      "status": "error",
+      "document_count": 0,
+      "error": "Ministero Salute non interrogabile dalle fonti configurate"
     },
     {
       "source": "AGENAS",
@@ -63,7 +63,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 41,
+      "document_count": 44,
       "error": ""
     },
     {
@@ -80,6 +80,33 @@
     }
   ],
   "documents": [
+    {
+      "key": "a3c852fb79e68c1d8fd31a23d2ec22910aaa38b786cd280f296bd5eddf8990b1",
+      "id": "S.2083",
+      "identifier": "S.2083",
+      "title": "Disposizioni per la prevenzione del burnout e per la tutela del benessere psico-fisico nella professione forense",
+      "source": "Senato della Repubblica",
+      "source_detail": "Senato della Repubblica - dati.senato.it",
+      "kind": "Disegno di legge",
+      "date": "2026-11-02",
+      "updated_at": "2026-11-04T13:00:45.978004Z",
+      "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60576.htm",
+      "relevance": "Potenziale",
+      "act_type": "disegno_di_legge",
+      "topics": [
+        "Lavoro e burnout"
+      ],
+      "summary": "Stato: da assegn. a commis. Natura: ordinaria Presentazione: 2026-11-02 Ultimo stato: 2026-11-02",
+      "level": "nazionale",
+      "region": "",
+      "status": "assegnato",
+      "score": 7.8,
+      "found_terms": {
+        "anziani_lavoro_organizzazioni": [
+          "burnout"
+        ]
+      }
+    },
     {
       "key": "793734ebca4c8e9f5636d271dfab89696a55f3cfced0b1a53b8aa389cef6b731",
       "id": "BUR-Marche-cfaa4935b58d6bc33115",
@@ -169,7 +196,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-10-16",
-      "updated_at": "2026-11-03T12:50:15.809685Z",
+      "updated_at": "2026-11-04T13:00:45.978004Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60529.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -199,7 +226,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-10-10",
-      "updated_at": "2026-11-03T12:50:03.787936Z",
+      "updated_at": "2026-11-04T13:00:29.659669Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-10-10&atto.codiceRedazionale=26R00224",
       "relevance": "Alta",
       "act_type": "legge",

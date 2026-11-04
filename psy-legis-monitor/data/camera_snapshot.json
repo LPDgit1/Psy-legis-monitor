@@ -4,11 +4,23 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-11-02T13:31:29.666856Z",
+  "generated_at": "2026-11-04T13:00:04.594746Z",
   "result_count": 200,
-  "newest_identifier": "3172",
-  "newest_date": "20261029",
+  "newest_identifier": "3174",
+  "newest_date": "20261030",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3174",
+      "title": "\"Bilancio di previsione dello Stato per l’anno finanziario 2027 e bilancio pluriennale per il triennio 2027-2029\" (3174)",
+      "date": "20261030",
+      "identifier": "3174"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3173",
+      "title": "QUARTINI ed altri: \"Istituzione del servizio civile volontario delle persone anziane\" (3173)",
+      "date": "20261030",
+      "identifier": "3173"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3172",
       "title": "FARAONE ed altri: \"Istituzione della Giornata nazionale del cane guida\" (3172)",
@@ -581,7 +593,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3079",
-      "title": "GIRELLI: \"Disposizioni per la promozione della salute digitale dei minori e la prevenzione della dipendenza da strumenti e piattaforme digitali \" (3079)",
+      "title": "GIRELLI: \"Disposizioni per la promozione della salute digitale dei minori e la prevenzione della dipendenza da strumenti e piattaforme digitali\" (3079)",
       "date": "20260805",
       "identifier": "3079"
     },
@@ -1196,18 +1208,6 @@
       "title": "CARMINA ed altri: \"Disposizioni concernenti la trasparenza dell’informazione al contraente sui piani di ammortamento dei contratti di mutuo e di finanziamento e l’addebito degli interessi nonché modifiche alle leggi 7 marzo 1996, n. 108, e 28 dicembre 2005, n. 262, in materia di rilevazione e vigilanza sull’applicazione dei tassi d’interesse\" (2979)",
       "date": "20260623",
       "identifier": "2979"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2978",
-      "title": "MARINO: \"Disposizioni per assicurare la presenza di uffici operativi delle camere di commercio, industria, artigianato e agricoltura nelle zone montane e periferiche nonché modifica all’articolo 14 della legge 29 dicembre 1993, n. 580, in materia di rappresentanza territoriale nella composizione delle giunte delle medesime\" (2978)",
-      "date": "20260623",
-      "identifier": "2978"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2977",
-      "title": "DI LAURO ed altri: \"Disposizioni concernenti l’introduzione dell’opzione alimentare vegetale ed ecosostenibile nei luoghi di ristorazione pubblici e la promozione di pratiche alimentari sostenibili\" (2977)",
-      "date": "20260623",
-      "identifier": "2977"
     }
   ]
 }
