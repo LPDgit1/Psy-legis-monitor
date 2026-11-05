@@ -4,11 +4,29 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-11-04T13:00:04.594746Z",
+  "generated_at": "2026-11-05T13:13:16.574378Z",
   "result_count": 200,
-  "newest_identifier": "3174",
-  "newest_date": "20261030",
+  "newest_identifier": "3174-ter",
+  "newest_date": "20261104",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3174-ter",
+      "title": "\"Disposizioni in materia di documento riepilogativo delle informazioni riguardanti le prestazioni sanitarie eseguite\" (<i>Già articolo 69, comma 8, del disegno di legge n. 3174 – Stralcio disposto dal Presidente della Camera, ai sensi dell'articolo 120, comma 2, del Regolamento, e comunicato all'Assemblea il 4 novembre 2026</i>) (3174-<i>ter</i>)",
+      "date": "20261104",
+      "identifier": "3174-ter"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3174-quater",
+      "title": "\"Modifiche all’articolo 15 del decreto-legge 25 giugno 2008, n. 112, convertito, con modificazioni, dalla legge 6 agosto 2008, n. 133, e altre disposizioni in materia di versione digitale stampabile dei libri di testo scolastici e universitari\" (<i>Già articolo 105 del disegno di legge n. 3174 – Stralcio disposto dal Presidente della Camera, ai sensi dell'articolo 120, comma 2, del Regolamento, e comunicato all'Assemblea il 4 novembre 2026</i>) (3174-<i>quater</i>)",
+      "date": "20261104",
+      "identifier": "3174-quater"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3174-bis",
+      "title": "\"Bilancio di previsione dello Stato per l’anno finanziario 2027 e bilancio pluriennale per il triennio 2027-2029\" (<i>Testo risultante dallo stralcio, disposto dal Presidente della Camera, ai sensi dell'articolo 120, comma 2, del Regolamento, e comunicato all'Assemblea il 4 novembre 2026, degli articoli 69, comma 8, 105 e 115 del disegno di legge n. 3174</i>) (3174-<i>bis</i>)",
+      "date": "20261104",
+      "identifier": "3174-bis"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3174",
       "title": "\"Bilancio di previsione dello Stato per l’anno finanziario 2027 e bilancio pluriennale per il triennio 2027-2029\" (3174)",
@@ -1190,24 +1208,6 @@
       "title": "L'ABBATE: \"Istituzione di un programma nazionale di interventi per il contrasto dell’erosione delle coste e per l’adattamento ai cambiamenti climatici nelle aree costiere\" (2982)",
       "date": "20260624",
       "identifier": "2982"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2981",
-      "title": "PROPOSTA DI LEGGE COSTITUZIONALE CAVANDOLI ed altri: \"Modifica all’articolo 67 della Costituzione, concernente l’introduzione del giuramento dei membri del Parlamento\" (2981)",
-      "date": "20260624",
-      "identifier": "2981"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2980",
-      "title": "ZANELLA ed altri: \"Disposizioni per il finanziamento e la perequazione pubblica dei servizi ecosistemici e ambientali comunali\" (2980)",
-      "date": "20260624",
-      "identifier": "2980"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2979",
-      "title": "CARMINA ed altri: \"Disposizioni concernenti la trasparenza dell’informazione al contraente sui piani di ammortamento dei contratti di mutuo e di finanziamento e l’addebito degli interessi nonché modifiche alle leggi 7 marzo 1996, n. 108, e 28 dicembre 2005, n. 262, in materia di rilevazione e vigilanza sull’applicazione dei tassi d’interesse\" (2979)",
-      "date": "20260623",
-      "identifier": "2979"
     }
   ]
 }
