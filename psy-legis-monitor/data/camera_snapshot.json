@@ -4,16 +4,46 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-11-05T13:13:16.574378Z",
+  "generated_at": "2026-11-06T12:58:08.696879Z",
   "result_count": 200,
-  "newest_identifier": "3174-ter",
+  "newest_identifier": "3178",
   "newest_date": "20261104",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3178",
+      "title": "PROPOSTA DI LEGGE D'INIZIATIVA POPOLARE: \"“Cieli blu”. Divieto di modifica delle condizioni meteorologiche (geoingegneria)» \" (3178)",
+      "date": "20261104",
+      "identifier": "3178"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3177",
+      "title": "S. 1299. - PROPOSTA DI LEGGE COSTITUZIONALE D'INIZIATIVA DEI SENATORI GUIDI ed altri: \"Modifica all’articolo 38 della Costituzione in materia di diritti delle persone con disabilità\" <i>(approvata, in prima deliberazione, dal Senato) </i>(3177)",
+      "date": "20261104",
+      "identifier": "3177"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3176",
+      "title": "SCHIANO DI VISCONTI ed altri: \"Riconoscimento dell’endometriosi come malattia cronica e invalidante nonché disposizioni per la diagnosi precoce e la cura, la tutela della fertilità e l’assistenza integrata delle donne che ne sono affette\" (3176)",
+      "date": "20261104",
+      "identifier": "3176"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3175",
+      "title": "VOLPI: \"Modifiche alla legge 2 aprile 1958, n. 339, in materia di tutela del lavoro domestico\" (3175)",
+      "date": "20261104",
+      "identifier": "3175"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3174-ter",
       "title": "\"Disposizioni in materia di documento riepilogativo delle informazioni riguardanti le prestazioni sanitarie eseguite\" (<i>Già articolo 69, comma 8, del disegno di legge n. 3174 – Stralcio disposto dal Presidente della Camera, ai sensi dell'articolo 120, comma 2, del Regolamento, e comunicato all'Assemblea il 4 novembre 2026</i>) (3174-<i>ter</i>)",
       "date": "20261104",
       "identifier": "3174-ter"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3174-quinquies",
+      "title": "\"Modifiche alla legge 18 marzo 2025, n. 40, in materia di ricostruzione post-calamità\" (<i>Già articolo 115 del disegno di legge n. 3174 – Stralcio disposto dal Presidente della Camera, ai sensi dell'articolo 120, comma 2, del Regolamento, e comunicato all'Assemblea il 4 novembre 2026</i>) (3174-<i>quinquies</i>)",
+      "date": "20261104",
+      "identifier": "3174-quinquies"
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3174-quater",
@@ -1178,36 +1208,6 @@
       "title": "\"Conversione in legge del decreto-legge 26 giugno 2026, n. 107, recante disposizioni urgenti per interventi infrastrutturali e per l’attuazione del Piano nazionale di ripresa e resilienza (PNRR), nonché ulteriori disposizioni finanziarie urgenti\" (2987)",
       "date": "20260626",
       "identifier": "2987"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2986",
-      "title": "CAVANDOLI ed altri: \"Istituzione della Giornata nazionale per la prevenzione della ludopatia e delle conseguenze patologiche del gioco d’azzardo\" (2986)",
-      "date": "20260625",
-      "identifier": "2986"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2985",
-      "title": "SIMIANI ed altri: \"Istituzione di un fondo nazionale per la sicurezza nei luoghi di lavoro, destinato al sostegno degli investimenti delle imprese per la formazione dei lavoratori, la prevenzione degli infortuni, l’acquisto di dispositivi di protezione e gli interventi di innovazione tecnologica finalizzati alla tutela dei lavoratori\" (2985)",
-      "date": "20260625",
-      "identifier": "2985"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2984",
-      "title": "S. 1552. - Senatori MALAN ed altri: \"Modifiche alla legge 11 febbraio 1992, n. 157, recante norme per la protezione della fauna selvatica omeoterma e per il prelievo venatorio\"<i>(approvata dal Senato)</i> (2984)",
-      "date": "20260624",
-      "identifier": "2984"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2983",
-      "title": "BATTILOCCHIO ed altri: \"Disposizioni concernenti l’istituzione di presìdi socio-educativi nelle aree urbane caratterizzate da disagio educativo e socio-economico per il potenziamento dell’offerta culturale, sociale, sportiva e ricreativa nei riguardi dei minorenni\" (2983)",
-      "date": "20260624",
-      "identifier": "2983"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2982",
-      "title": "L'ABBATE: \"Istituzione di un programma nazionale di interventi per il contrasto dell’erosione delle coste e per l’adattamento ai cambiamenti climatici nelle aree costiere\" (2982)",
-      "date": "20260624",
-      "identifier": "2982"
     }
   ]
 }

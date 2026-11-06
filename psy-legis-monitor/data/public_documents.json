@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-05T13:18:32.821703Z",
-  "fetched_document_count": 617,
-  "published_document_count": 71,
-  "high_relevance_count": 63,
+  "generated_at": "2026-11-06T13:04:09.337789Z",
+  "fetched_document_count": 609,
+  "published_document_count": 72,
+  "high_relevance_count": 64,
   "potential_relevance_count": 8,
   "published_source_count": 9,
   "published_sources": [
@@ -21,7 +21,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 257,
+      "document_count": 250,
       "error": ""
     },
     {
@@ -63,7 +63,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 42,
+      "document_count": 40,
       "error": ""
     },
     {
@@ -75,7 +75,7 @@
     {
       "source": "Pagine istituzionali",
       "status": "ok",
-      "document_count": 20,
+      "document_count": 21,
       "error": ""
     }
   ],
@@ -89,7 +89,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-11-02",
-      "updated_at": "2026-11-05T13:13:47.733470Z",
+      "updated_at": "2026-11-06T12:58:48.506308Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60576.htm",
       "relevance": "Potenziale",
       "act_type": "disegno_di_legge",
@@ -188,6 +188,33 @@
       }
     },
     {
+      "key": "63a698e714816904cb3e029c439a78a5dc77523b72146d3cf676c0343e05cdaa",
+      "id": "26A05446",
+      "identifier": "26A05446",
+      "title": "DECRETO 11 settembre 2026 - Disposizioni per l’impiego su strada di dispositivi di sicurezza stradale per i motociclisti (DSM). Modifica e sostituzione del decreto 1° aprile 2019. (26A05446) Pag. 26",
+      "source": "Gazzetta Ufficiale",
+      "source_detail": "Gazzetta Ufficiale - Serie Generale",
+      "kind": "Atto normativo",
+      "date": "2026-10-19",
+      "updated_at": "2026-11-06T12:58:33.043935Z",
+      "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-10-19&atto.codiceRedazionale=26A05446&elenco30giorni=true",
+      "relevance": "Alta",
+      "act_type": "altro",
+      "topics": [
+        "Salute mentale"
+      ],
+      "summary": "Disposizioni per l’impiego su strada di dispositivi di sicurezza stradale per i motociclisti (DSM). Modifica e sostituzione del decreto 1° aprile 2019. (26A05446) Pag. 26",
+      "level": "nazionale",
+      "region": "",
+      "status": "pubblicato",
+      "score": 19.8,
+      "found_terms": {
+        "salute_mentale_servizi": [
+          "DSM"
+        ]
+      }
+    },
+    {
       "key": "59b4e039fb53ef2feda4a708f31b9375e386c6089532d8996ba629649f0b108d",
       "id": "S.2063",
       "identifier": "S.2063",
@@ -196,7 +223,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-10-16",
-      "updated_at": "2026-11-05T13:13:47.733470Z",
+      "updated_at": "2026-11-06T12:58:48.506308Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60529.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -226,7 +253,7 @@
       "source_detail": "Gazzetta Ufficiale - 3a Serie Speciale Regioni",
       "kind": "Legge regionale",
       "date": "2026-10-10",
-      "updated_at": "2026-11-05T13:13:36.394616Z",
+      "updated_at": "2026-11-06T12:58:35.207395Z",
       "href": "https://www.gazzettaufficiale.it/atto/regioni/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-10-10&atto.codiceRedazionale=26R00224",
       "relevance": "Alta",
       "act_type": "legge",
@@ -1759,7 +1786,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-11-05T13:13:50.033537Z",
+      "updated_at": "2026-11-06T12:58:52.402697Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1811,7 +1838,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-11-05T13:13:50.033537Z",
+      "updated_at": "2026-11-06T12:58:52.402697Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -2094,7 +2121,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-11-05T13:13:50.033537Z",
+      "updated_at": "2026-11-06T12:58:52.402697Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
