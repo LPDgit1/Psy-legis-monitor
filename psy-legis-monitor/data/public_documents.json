@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-08T12:02:01.634001Z",
+  "generated_at": "2026-11-09T14:00:43.531279Z",
   "fetched_document_count": 642,
-  "published_document_count": 72,
-  "high_relevance_count": 64,
+  "published_document_count": 74,
+  "high_relevance_count": 66,
   "potential_relevance_count": 8,
   "published_source_count": 9,
   "published_sources": [
@@ -21,7 +21,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 281,
+      "document_count": 277,
       "error": ""
     },
     {
@@ -63,7 +63,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 42,
+      "document_count": 46,
       "error": ""
     },
     {
@@ -89,7 +89,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-11-02",
-      "updated_at": "2026-11-08T11:57:34.276585Z",
+      "updated_at": "2026-11-09T13:56:16.097913Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60576.htm",
       "relevance": "Potenziale",
       "act_type": "disegno_di_legge",
@@ -196,7 +196,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-10-19",
-      "updated_at": "2026-11-08T11:57:14.482721Z",
+      "updated_at": "2026-11-09T13:55:58.553778Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-10-19&atto.codiceRedazionale=26A05446&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -223,7 +223,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-10-16",
-      "updated_at": "2026-11-08T11:57:34.276585Z",
+      "updated_at": "2026-11-09T13:56:16.097913Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60529.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -233,7 +233,7 @@
       "summary": "Caregiver",
       "level": "nazionale",
       "region": "",
-      "status": "presentato",
+      "status": "assegnato",
       "score": 8.4,
       "found_terms": {
         "sanita_welfare": [
@@ -1786,7 +1786,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-11-08T11:57:37.225160Z",
+      "updated_at": "2026-11-09T13:56:18.386221Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1838,7 +1838,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-11-08T11:57:37.225160Z",
+      "updated_at": "2026-11-09T13:56:18.386221Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -2121,7 +2121,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-11-08T11:57:37.225160Z",
+      "updated_at": "2026-11-09T13:56:18.386221Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
@@ -2188,6 +2188,90 @@
         "anziani_lavoro_organizzazioni": [
           "caregiver",
           "lavoro"
+        ]
+      }
+    },
+    {
+      "key": "bbd73d98cdc4ea8d6e563628cb6a0a69e1d6ab16ceeb7a6303b59856726c1f96",
+      "id": "BUR-Emilia-Romagna-edc0b0875625ce1c95f1",
+      "identifier": "BUR-Emilia-Romagna-edc0b0875625ce1c95f1",
+      "title": "deliberazione la disciplina concernente: a) le modalità e i criteri di verifica dei requisiti;",
+      "source": "Regione Emilia-Romagna - BURERT",
+      "source_detail": "Regione Emilia-Romagna - BURERT",
+      "kind": "DGR / delibera regionale",
+      "date": "",
+      "updated_at": "2026-11-09T13:57:57.932093Z",
+      "href": "https://bur.regione.emilia-romagna.it/area-bollettini/n-291-del-09-11-2026-parte-prima-1/bollettino_view/++widget++form.widgets.pdf_firmato/@@download",
+      "relevance": "Alta",
+      "act_type": "dgr",
+      "topics": [
+        "Supporto psicologico",
+        "Violenza e trauma",
+        "Competenze professionali"
+      ],
+      "summary": "b) i requisiti strutturali e strumentali necessari per l’esercizio dell’attività diagnostica; c) la formazione continua e l’aggiornamento professionale del personale; d) l’adozione di percorsi diagnostico-terapeutici assistenziali conformi alle linee guida e ai protocolli clinici nazionali e internazionali; e) le modalità di erogazione delle attività di supporto psicologico e di counsell ing nutrizionale ai pazienti...",
+      "level": "regionale",
+      "region": "Emilia-Romagna",
+      "status": "pubblicato",
+      "score": 13.8,
+      "found_terms": {
+        "professione_diretta": [
+          "psicologico"
+        ],
+        "servizi_psicologici": [
+          "supporto psicologico"
+        ]
+      }
+    },
+    {
+      "key": "8560a65d5c252d698f7ebdd38e03998647e11bf40e93c58e97fd0cbd5ffa751f",
+      "id": "BUR-Emilia-Romagna-1b8510f2193b311828e5",
+      "identifier": "BUR-Emilia-Romagna-1b8510f2193b311828e5",
+      "title": "deliberazione, il modello organizzativo di presa in carico dell’assistito celiaco volto a: a) favorire il coordinamento in rete tra professionisti sanitari e sociosanitari, strutture sanitarie e servizi sociali in tutte le articolazioni territoriali e ospedaliere, particolarmente in presenza di specifiche condizioni di fragilità o vulnerabilità sociale, economica o familiare;",
+      "source": "Regione Emilia-Romagna - BURERT",
+      "source_detail": "Regione Emilia-Romagna - BURERT",
+      "kind": "DGR / delibera regionale",
+      "date": "",
+      "updated_at": "2026-11-09T13:57:57.932093Z",
+      "href": "https://bur.regione.emilia-romagna.it/area-bollettini/n-291-del-09-11-2026-parte-prima-1/bollettino_view/++widget++form.widgets.pdf_firmato/@@download",
+      "relevance": "Alta",
+      "act_type": "dgr",
+      "topics": [
+        "Supporto psicologico",
+        "Cure primarie",
+        "Salute mentale",
+        "Violenza e trauma",
+        "Disabilita e autismo",
+        "Inclusione",
+        "Privacy e sanita digitale",
+        "Welfare e servizi",
+        "Competenze professionali"
+      ],
+      "summary": "b) individuare le Case della Comunità, ove operative nel territorio di riferimento, quali sedi privilegiate per l’erogazione della consulenza nutrizionale, del supporto psicologico e delle attività di educazione terapeutica; c) promuovere l’ utilizzo di tecnologie e sistemi informatici per la gestione e la condivisione dei dati sanitari, nel rispetto della normativa in materia di protezione dei dati personali; d) va...",
+      "level": "regionale",
+      "region": "Emilia-Romagna",
+      "status": "pubblicato",
+      "score": 42.3,
+      "found_terms": {
+        "professione_diretta": [
+          "psicologico"
+        ],
+        "servizi_psicologici": [
+          "supporto psicologico"
+        ],
+        "sanita_welfare": [
+          "case della comunita",
+          "cronicita",
+          "fragilita",
+          "presa in carico",
+          "servizi sociali"
+        ],
+        "clinica_sociale": [
+          "vulnerabilita"
+        ],
+        "tecnologia_ai_privacy": [
+          "dati sanitari",
+          "telemedicina"
         ]
       }
     },
