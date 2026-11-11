@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-10T13:35:28.732540Z",
-  "fetched_document_count": 621,
+  "generated_at": "2026-11-11T12:49:40.794980Z",
+  "fetched_document_count": 610,
   "published_document_count": 74,
   "high_relevance_count": 66,
   "potential_relevance_count": 8,
@@ -21,7 +21,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 277,
+      "document_count": 272,
       "error": ""
     },
     {
@@ -39,7 +39,7 @@
     {
       "source": "Normattiva",
       "status": "ok",
-      "document_count": 18,
+      "document_count": 15,
       "error": ""
     },
     {
@@ -63,7 +63,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 46,
+      "document_count": 43,
       "error": ""
     },
     {
@@ -89,7 +89,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-11-02",
-      "updated_at": "2026-11-10T13:30:12.592987Z",
+      "updated_at": "2026-11-11T12:44:39.382439Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60576.htm",
       "relevance": "Potenziale",
       "act_type": "disegno_di_legge",
@@ -196,7 +196,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-10-19",
-      "updated_at": "2026-11-10T13:29:51.776880Z",
+      "updated_at": "2026-11-11T12:44:23.763443Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-10-19&atto.codiceRedazionale=26A05446&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1786,7 +1786,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-11-10T13:30:16.474004Z",
+      "updated_at": "2026-11-11T12:44:42.391819Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1838,7 +1838,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-11-10T13:30:16.474004Z",
+      "updated_at": "2026-11-11T12:44:42.391819Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -2121,7 +2121,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-11-10T13:30:16.474004Z",
+      "updated_at": "2026-11-11T12:44:42.391819Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
