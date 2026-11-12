@@ -4,11 +4,17 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-11-11T12:44:12.699535Z",
+  "generated_at": "2026-11-12T13:47:08.030347Z",
   "result_count": 200,
-  "newest_identifier": "3179",
-  "newest_date": "20261106",
+  "newest_identifier": "3180",
+  "newest_date": "20261110",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3180",
+      "title": "ALFONSO COLUCCI: \"Modifiche al testo unico di cui al decreto del Presidente della Repubblica 30 maggio 2002, n. 115, e al decreto legislativo 1° settembre 2011, n. 150, in materia di termine per l’opposizione al decreto di pagamento delle spese di giustizia\" (3180)",
+      "date": "20261110",
+      "identifier": "3180"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3179",
       "title": "SARRACINO ed altri: \"Modifiche al codice delle assicurazioni private, di cui al decreto legislativo 7 settembre 2005, n. 209, in materia di riequilibrio territoriale dei premi dell’assicurazione obbligatoria per la responsabilità civile derivante dalla circolazione dei veicoli a motore\" (3179)",
@@ -17,7 +23,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3178",
-      "title": "PROPOSTA DI LEGGE D'INIZIATIVA POPOLARE: \"“Cieli blu”. Divieto di modifica delle condizioni meteorologiche (geoingegneria)» \" (3178)",
+      "title": "PROPOSTA DI LEGGE D'INIZIATIVA POPOLARE: \"‘Cieli blu’. Divieto di modifica delle condizioni meteorologiche (geoingegneria)\" (3178)",
       "date": "20261104",
       "identifier": "3178"
     },
@@ -1202,12 +1208,6 @@
       "title": "L'ABBATE: \"Modifiche al decreto legislativo 3 aprile 2006, n. 152, concernenti l’istituzione di un sistema nazionale armonizzato di identificazione ai fini della raccolta differenziata dei rifiuti urbani\" (2989)",
       "date": "20260626",
       "identifier": "2989"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2988",
-      "title": "\"Conversione in legge del decreto-legge 26 giugno 2026, n. 108, recante disposizioni urgenti in materia di sport, per lo svolgimento di grandi eventi e l’efficacia del documento di identità\" (2988)",
-      "date": "20260626",
-      "identifier": "2988"
     }
   ]
 }
