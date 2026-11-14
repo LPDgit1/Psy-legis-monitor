@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T13:12:45.164012Z",
-  "fetched_document_count": 634,
-  "published_document_count": 74,
-  "high_relevance_count": 66,
+  "generated_at": "2026-11-14T12:16:58.192447Z",
+  "fetched_document_count": 617,
+  "published_document_count": 75,
+  "high_relevance_count": 67,
   "potential_relevance_count": 8,
   "published_source_count": 9,
   "published_sources": [
@@ -21,7 +21,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 271,
+      "document_count": 274,
       "error": ""
     },
     {
@@ -39,7 +39,7 @@
     {
       "source": "Normattiva",
       "status": "ok",
-      "document_count": 17,
+      "document_count": 16,
       "error": ""
     },
     {
@@ -56,14 +56,14 @@
     },
     {
       "source": "EUR-Lex",
-      "status": "ok",
+      "status": "error",
       "document_count": 0,
-      "error": ""
+      "error": "EUR-Lex non interrogabile tramite i feed RSS ufficiali"
     },
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 45,
+      "document_count": 47,
       "error": ""
     },
     {
@@ -74,12 +74,42 @@
     },
     {
       "source": "Pagine istituzionali",
-      "status": "ok",
-      "document_count": 21,
-      "error": ""
+      "status": "error",
+      "document_count": 0,
+      "error": "timed out"
     }
   ],
   "documents": [
+    {
+      "key": "9ccbd8e6278696d6295d05fe127deb3ca68fc48a1944e98b54959abd477a7111",
+      "id": "S.2093",
+      "identifier": "S.2093",
+      "title": "Disposizioni per il rafforzamento del Percorso Lilla per l’accoglienza e la presa in carico delle persone con disturbi della nutrizione e dell’alimentazione nei servizi di emergenza-urgenza e per la continuità assistenziale",
+      "source": "Senato della Repubblica",
+      "source_detail": "Senato della Repubblica - dati.senato.it",
+      "kind": "Disegno di legge",
+      "date": "2026-11-10",
+      "updated_at": "2026-11-14T12:12:56.185867Z",
+      "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60602.htm",
+      "relevance": "Alta",
+      "act_type": "disegno_di_legge",
+      "topics": [
+        "Salute mentale"
+      ],
+      "summary": "Stato: da assegn. a commis. Natura: ordinaria Presentazione: 2026-11-10 Ultimo stato: 2026-11-10",
+      "level": "nazionale",
+      "region": "",
+      "status": "assegnato",
+      "score": 8.1,
+      "found_terms": {
+        "sanita_welfare": [
+          "presa in carico"
+        ],
+        "clinica_sociale": [
+          "emergenza"
+        ]
+      }
+    },
     {
       "key": "a3c852fb79e68c1d8fd31a23d2ec22910aaa38b786cd280f296bd5eddf8990b1",
       "id": "S.2083",
@@ -89,7 +119,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-11-02",
-      "updated_at": "2026-11-13T13:08:40.851604Z",
+      "updated_at": "2026-11-14T12:12:56.185867Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60576.htm",
       "relevance": "Potenziale",
       "act_type": "disegno_di_legge",
@@ -196,7 +226,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-10-19",
-      "updated_at": "2026-11-13T13:08:22.772599Z",
+      "updated_at": "2026-11-14T12:12:41.238866Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-10-19&atto.codiceRedazionale=26A05446&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1786,7 +1816,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-11-13T13:08:44.909716Z",
+      "updated_at": "2026-11-14T12:12:58.436140Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1838,7 +1868,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-11-13T13:08:44.909716Z",
+      "updated_at": "2026-11-14T12:12:58.436140Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -2121,7 +2151,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-11-13T13:08:44.909716Z",
+      "updated_at": "2026-11-14T12:12:58.436140Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",

@@ -4,11 +4,29 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-11-13T13:08:09.726720Z",
+  "generated_at": "2026-11-14T12:12:37.483715Z",
   "result_count": 200,
-  "newest_identifier": "3180",
-  "newest_date": "20261110",
+  "newest_identifier": "3183",
+  "newest_date": "20261111",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3183",
+      "title": "CONSIGLIO REGIONALE DELLA LOMBARDIA: \"Disposizioni per la bonifica delle valanghe mediante distacco artificiale\" (3183)",
+      "date": "20261111",
+      "identifier": "3183"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3182",
+      "title": "DE MARIA e MULE': \"Disposizioni per la celebrazione del trentesimo anniversario della morte di Giuseppe Dossetti\" (3182)",
+      "date": "20261111",
+      "identifier": "3182"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3181",
+      "title": "\"Conversione in legge del decreto-legge 11 novembre 2026, n. 205, recante piano straordinario per i Campi Flegrei nonché ulteriori disposizioni urgenti di protezione civile\" (3181)",
+      "date": "20261111",
+      "identifier": "3181"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3180",
       "title": "ALFONSO COLUCCI: \"Modifiche al testo unico di cui al decreto del Presidente della Repubblica 30 maggio 2002, n. 115, e al decreto legislativo 1° settembre 2011, n. 150, in materia di termine per l’opposizione al decreto di pagamento delle spese di giustizia\" (3180)",
@@ -1190,24 +1208,6 @@
       "title": "L'ABBATE: \"Disposizioni concernenti l’istituzione di percorsi didattici interdisciplinari nelle scuole secondarie di primo e di secondo grado per promuovere la conoscenza e l’uso consapevole dei sistemi di intelligenza artificiale\" (2992)",
       "date": "20260629",
       "identifier": "2992"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2991",
-      "title": "L'ABBATE: \"Modifiche al decreto legislativo 3 aprile 2006, n. 152, concernenti l’introduzione della valutazione del ciclo di vita dei prodotti, servizi e processi nell’ambito dei procedimenti delle amministrazioni pubbliche in materia ambientale\" (2991)",
-      "date": "20260626",
-      "identifier": "2991"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2990",
-      "title": "PAGANO: \"Istituzione della Giornata nazionale del merito pubblico\" (2990)",
-      "date": "20260626",
-      "identifier": "2990"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2989",
-      "title": "L'ABBATE: \"Modifiche al decreto legislativo 3 aprile 2006, n. 152, concernenti l’istituzione di un sistema nazionale armonizzato di identificazione ai fini della raccolta differenziata dei rifiuti urbani\" (2989)",
-      "date": "20260626",
-      "identifier": "2989"
     }
   ]
 }
