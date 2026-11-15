@@ -4,11 +4,17 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-11-14T12:12:37.483715Z",
+  "generated_at": "2026-11-15T12:45:46.472503Z",
   "result_count": 200,
-  "newest_identifier": "3183",
-  "newest_date": "20261111",
+  "newest_identifier": "3184",
+  "newest_date": "20261112",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3184",
+      "title": "BELLOMO ed altri: \"Modifica all’articolo 1 della legge 7 ottobre 1969, n. 742, in materia di sospensione feriale dei termini processuali\" (3184)",
+      "date": "20261112",
+      "identifier": "3184"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3183",
       "title": "CONSIGLIO REGIONALE DELLA LOMBARDIA: \"Disposizioni per la bonifica delle valanghe mediante distacco artificiale\" (3183)",
@@ -485,7 +491,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3109",
-      "title": "CECCHETTI: \"Modifica all’articolo 1 della legge 13 luglio 2015, n. 107, e altre disposizioni in materia di formazione sulle tecniche di primo soccorso per gli studenti e il personale delle scuole secondarie di primo e di secondo grado\" (3109)",
+      "title": "CECCHETTI ed altri: \"Modifica all’articolo 1 della legge 13 luglio 2015, n. 107, e altre disposizioni in materia di formazione sulle tecniche di primo soccorso per gli studenti e il personale delle scuole secondarie di primo e di secondo grado\" (3109)",
       "date": "20260917",
       "identifier": "3109"
     },
@@ -1202,12 +1208,6 @@
       "title": "L'ABBATE: \"Concessione di agevolazioni previdenziali per la maternità e per la prestazione di assistenza continuativa a familiari con disabilità\" (2993)",
       "date": "20260629",
       "identifier": "2993"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2992",
-      "title": "L'ABBATE: \"Disposizioni concernenti l’istituzione di percorsi didattici interdisciplinari nelle scuole secondarie di primo e di secondo grado per promuovere la conoscenza e l’uso consapevole dei sistemi di intelligenza artificiale\" (2992)",
-      "date": "20260629",
-      "identifier": "2992"
     }
   ]
 }
