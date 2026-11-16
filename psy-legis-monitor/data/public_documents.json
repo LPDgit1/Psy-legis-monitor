@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-15T12:50:59.599767Z",
-  "fetched_document_count": 607,
+  "generated_at": "2026-11-16T13:45:52.811301Z",
+  "fetched_document_count": 596,
   "published_document_count": 75,
   "high_relevance_count": 67,
   "potential_relevance_count": 8,
@@ -21,7 +21,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 264,
+      "document_count": 254,
       "error": ""
     },
     {
@@ -56,14 +56,14 @@
     },
     {
       "source": "EUR-Lex",
-      "status": "error",
+      "status": "ok",
       "document_count": 0,
-      "error": "EUR-Lex non interrogabile tramite i feed RSS ufficiali"
+      "error": ""
     },
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 47,
+      "document_count": 46,
       "error": ""
     },
     {
@@ -89,7 +89,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-11-10",
-      "updated_at": "2026-11-15T12:46:26.175590Z",
+      "updated_at": "2026-11-16T13:41:19.844355Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60602.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -119,7 +119,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-11-02",
-      "updated_at": "2026-11-15T12:46:26.175590Z",
+      "updated_at": "2026-11-16T13:41:19.844355Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60576.htm",
       "relevance": "Potenziale",
       "act_type": "disegno_di_legge",
@@ -226,7 +226,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-10-19",
-      "updated_at": "2026-11-15T12:45:54.456896Z",
+      "updated_at": "2026-11-16T13:40:50.335075Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-10-19&atto.codiceRedazionale=26A05446&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1816,7 +1816,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-11-15T12:46:28.131762Z",
+      "updated_at": "2026-11-16T13:41:24.046377Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1868,7 +1868,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-11-15T12:46:28.131762Z",
+      "updated_at": "2026-11-16T13:41:24.046377Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -2151,7 +2151,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-11-15T12:46:28.131762Z",
+      "updated_at": "2026-11-16T13:41:24.046377Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
