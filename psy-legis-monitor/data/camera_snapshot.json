@@ -4,11 +4,29 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-11-17T14:26:58.912103Z",
+  "generated_at": "2026-11-18T14:00:59.152943Z",
   "result_count": 200,
-  "newest_identifier": "3184",
-  "newest_date": "20261112",
+  "newest_identifier": "3187",
+  "newest_date": "20261113",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3187",
+      "title": "CONSIGLIO REGIONALE DEL PIEMONTE: \"Disposizioni in materia di attività libero-professionale del personale delle professioni sanitarie\" (3187)",
+      "date": "20261113",
+      "identifier": "3187"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3186",
+      "title": "AURIEMMA e D'ORSO: \"Modifica all’articolo 1 della legge 7 ottobre 1969, n. 742, in materia di sospensione feriale dei termini processuali\" (3186)",
+      "date": "20261113",
+      "identifier": "3186"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3185",
+      "title": "D'ALESSIO: \"Modifica all’articolo 1 della legge 7 ottobre 1969, n. 742, in materia di sospensione feriale dei termini processuali\" (3185)",
+      "date": "20261113",
+      "identifier": "3185"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3184",
       "title": "BELLOMO ed altri: \"Modifica all’articolo 1 della legge 7 ottobre 1969, n. 742, in materia di sospensione feriale dei termini processuali\" (3184)",
@@ -143,7 +161,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3167",
-      "title": "MONTEMAGNI: \"Introduzione dell’articolo 219-<i>ter</i> del decreto legislativo 3 aprile 2006, n. 152, e altre disposizioni concernenti il sistema nazionale di deposito cauzionale e restituzione degli imballaggi monouso per bevande, la tutela degli utilizzatori e la verifica indipendente dei dati\" (3167)",
+      "title": "MONTEMAGNI ed altri: \"Introduzione dell’articolo 219-<i>ter</i> del decreto legislativo 3 aprile 2006, n. 152, e altre disposizioni concernenti il sistema nazionale di deposito cauzionale e restituzione degli imballaggi monouso per bevande, la tutela degli utilizzatori e la verifica indipendente dei dati\" (3167)",
       "date": "20261027",
       "identifier": "3167"
     },
@@ -767,7 +785,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3064",
-      "title": "EVI ed altri: \"Modifiche al codice dell’ordinamento militare, di cui al decreto legislativo 15 marzo 2010, n. 66, al decreto legislativo 19 agosto 2016, n. 177, e altre disposizioni concernenti l’organizzazione dell’Arma dei carabinieri per la tutela forestale, ambientale e agroalimentare, i ruoli e il reclutamento del personale a essa destinato\" (3064)",
+      "title": "EVI ed altri: \"Modifiche al codice dell’ordinamento militare, di cui al decreto legislativo 15 marzo 2010, n. 66, e al decreto legislativo 19 agosto 2016, n. 177, concernenti l’organizzazione dell’Arma dei carabinieri per la tutela forestale, ambientale e agroalimentare, i ruoli e il reclutamento del personale a essa destinato\" (3064)",
       "date": "20260803",
       "identifier": "3064"
     },
@@ -1190,24 +1208,6 @@
       "title": "MOLINARI ed altri: \"Introduzione del capo III-<em>bis</em> del decreto-legge 19 settembre 2023, n. 124, convertito, con modificazioni, dalla legge 13 novembre 2023, n. 162, concernente l’istituzione della Zona economica speciale per le aree transfrontaliere dell’Italia settentrionale – ZES Nord\" (2996)",
       "date": "20260630",
       "identifier": "2996"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2995",
-      "title": "L'ABBATE: \"Istituzione di un Comitato interministeriale per l’approccio integrato, coordinato e interdisciplinare nella definizione delle politiche pubbliche in materia di salute umana e animale, di tutela dell’ambiente, di agricoltura e di sicurezza alimentare\" (2995)",
-      "date": "20260629",
-      "identifier": "2995"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2994",
-      "title": "L'ABBATE: \"Disposizioni concernenti il concorso statale al finanziamento della spesa per la partecipazione a viaggi di istruzione e la fornitura gratuita dei libri di testo\" (2994)",
-      "date": "20260629",
-      "identifier": "2994"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2993",
-      "title": "L'ABBATE: \"Concessione di agevolazioni previdenziali per la maternità e per la prestazione di assistenza continuativa a familiari con disabilità\" (2993)",
-      "date": "20260629",
-      "identifier": "2993"
     }
   ]
 }
