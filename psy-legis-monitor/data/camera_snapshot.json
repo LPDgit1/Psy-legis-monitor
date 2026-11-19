@@ -4,11 +4,17 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-11-18T14:00:59.152943Z",
+  "generated_at": "2026-11-19T14:27:26.087219Z",
   "result_count": 200,
-  "newest_identifier": "3187",
-  "newest_date": "20261113",
+  "newest_identifier": "3188",
+  "newest_date": "20261117",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3188",
+      "title": "GRIBAUDO: \"Introduzione di una maggiorazione retributiva per le prestazioni lavorative svolte con orario giornaliero articolato in frazioni temporali separate da interruzioni di durata prolungata\" (3188)",
+      "date": "20261117",
+      "identifier": "3188"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3187",
       "title": "CONSIGLIO REGIONALE DEL PIEMONTE: \"Disposizioni in materia di attività libero-professionale del personale delle professioni sanitarie\" (3187)",
@@ -971,7 +977,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3034",
-      "title": "MICHELOTTI e DI MAGGIO: \"Istituzione di un fondo per l’indennizzo delle vittime dei fatti accaduti presso la comunità “Il Forteto”\" (3034)",
+      "title": "MICHELOTTI ed altri: \"Istituzione di un fondo per l’indennizzo delle vittime dei fatti accaduti presso la comunità “Il Forteto”\" (3034)",
       "date": "20260717",
       "identifier": "3034"
     },
@@ -1202,12 +1208,6 @@
       "title": "PROPOSTA DI LEGGE D'INIZIATIVA POPOLARE: \"Remigrazione e riconquista: Disposizioni in materia di governo dei flussi migratori, istituzione del programma nazionale di remigrazione e di un fondo per la natalità italiana\" (2997)",
       "date": "20260630",
       "identifier": "2997"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2996",
-      "title": "MOLINARI ed altri: \"Introduzione del capo III-<em>bis</em> del decreto-legge 19 settembre 2023, n. 124, convertito, con modificazioni, dalla legge 13 novembre 2023, n. 162, concernente l’istituzione della Zona economica speciale per le aree transfrontaliere dell’Italia settentrionale – ZES Nord\" (2996)",
-      "date": "20260630",
-      "identifier": "2996"
     }
   ]
 }
