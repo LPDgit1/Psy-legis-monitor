@@ -4,11 +4,17 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-11-19T14:27:26.087219Z",
+  "generated_at": "2026-11-20T14:01:53.779645Z",
   "result_count": 200,
-  "newest_identifier": "3188",
-  "newest_date": "20261117",
+  "newest_identifier": "3189",
+  "newest_date": "20261119",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3189",
+      "title": "S. 2053. - \"Conversione in legge, con modificazioni, del decreto-legge 30 settembre 2026, n. 170, recante misure urgenti per garantire il regolare avvio dell’anno scolastico 2026/2027, per l’accompagnamento delle misure del Piano nazionale di ripresa e resilienza (PNRR) di competenza del Ministero dell’istruzione e del merito, per la promozione dell’integrazione degli studenti stranieri nell’ambito scolastico, nonché in materia di formazione superiore e ricerca\" <i>(approvato dal Senato) </i>(3189)",
+      "date": "20261119",
+      "identifier": "3189"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3188",
       "title": "GRIBAUDO: \"Introduzione di una maggiorazione retributiva per le prestazioni lavorative svolte con orario giornaliero articolato in frazioni temporali separate da interruzioni di durata prolungata\" (3188)",
@@ -155,7 +161,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3169",
-      "title": "BERRUTO: \"Istituzione del Servizio nazionale sportivo e disposizioni concernenti la determinazione dei livelli essenziali delle prestazioni volte a garantire il diritto di accesso alla pratica sportiva\" (3169)",
+      "title": "BERRUTO ed altri: \"Istituzione del Servizio nazionale sportivo e disposizioni concernenti la determinazione dei livelli essenziali delle prestazioni volte a garantire il diritto di accesso alla pratica sportiva\" (3169)",
       "date": "20261027",
       "identifier": "3169"
     },
@@ -1202,12 +1208,6 @@
       "title": "PRETTO ed altri: \"Istituzione di una Commissione parlamentare di inchiesta sulla strage di Vergarolla del 18 agosto 1946, sulle relative responsabilità e sulle circostanze che impedirono il completo accertamento dei fatti\" (2998)",
       "date": "20260701",
       "identifier": "2998"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2997",
-      "title": "PROPOSTA DI LEGGE D'INIZIATIVA POPOLARE: \"Remigrazione e riconquista: Disposizioni in materia di governo dei flussi migratori, istituzione del programma nazionale di remigrazione e di un fondo per la natalità italiana\" (2997)",
-      "date": "20260630",
-      "identifier": "2997"
     }
   ]
 }

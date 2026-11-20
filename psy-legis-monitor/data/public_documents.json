@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-19T14:34:45.236153Z",
-  "fetched_document_count": 613,
-  "published_document_count": 75,
-  "high_relevance_count": 67,
+  "generated_at": "2026-11-20T14:07:29.560781Z",
+  "fetched_document_count": 609,
+  "published_document_count": 77,
+  "high_relevance_count": 69,
   "potential_relevance_count": 8,
   "published_source_count": 9,
   "published_sources": [
@@ -21,7 +21,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 243,
+      "document_count": 234,
       "error": ""
     },
     {
@@ -63,7 +63,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 49,
+      "document_count": 54,
       "error": ""
     },
     {
@@ -81,6 +81,80 @@
   ],
   "documents": [
     {
+      "key": "34db708e13f0dfc9031de95c21d0760dfc93d29c2fa4cee7b789e8b20f450390",
+      "id": "BUR-Marche-1d6ca80c91359d0e46a0",
+      "identifier": "BUR-Marche-1d6ca80c91359d0e46a0",
+      "title": "Decreto del Dirigente della Direzione Pro- grammazione Integrata Risorse Comunita - rie e Nazionali del 12 novembre 2026, n.",
+      "source": "Regione Marche - BUR",
+      "source_detail": "Regione Marche - BUR",
+      "kind": "Decreto regionale",
+      "date": "2026-11-12",
+      "updated_at": "2026-11-20T14:04:14.913505Z",
+      "href": "https://bur.regione.marche.it/bur/PDF/2026/N103%20del%2019%20novembre%202026.pdf",
+      "relevance": "Alta",
+      "act_type": "decreto_legislativo",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Salute mentale",
+        "Dipendenze",
+        "Disabilita e autismo",
+        "Anziani e non autosufficienza"
+      ],
+      "summary": "136 PR FSE+ 2021/27 (Asse 3, OS 4.k) – DDD n. 127/PRCN del 23.10.2026 – Intervento “Mul - tileva” 2.1 – Avviso pubblico per la concessio - ne di contributi agli enti non pubblici titolari dell’autorizzazione all’esercizio di strutture re- sidenziali sociosanitarie convenzionate (area della salute mentale e degli adulti malati di AIDS) e di strutture residenziali sociali autoriz- zate (aree anziani, disabilità, salut...",
+      "level": "regionale",
+      "region": "Marche",
+      "status": "pubblicato",
+      "score": 20.3,
+      "found_terms": {
+        "servizi_psicologici": [
+          "salute mentale"
+        ],
+        "clinica_sociale": [
+          "dipendenze"
+        ],
+        "anziani_lavoro_organizzazioni": [
+          "anziani"
+        ]
+      }
+    },
+    {
+      "key": "a4fcf58e2a2a1eb6fcb4374f88b09330e4b866ff627f46778946b07e0c82ce0b",
+      "id": "BUR-Marche-1d625eb624558f9b4814",
+      "identifier": "BUR-Marche-1d625eb624558f9b4814",
+      "title": "Decreto del Dirigente della Direzione Pro- grammazione Integrata Risorse Comunita - rie e Nazionali del 12 novembre 2026, n.",
+      "source": "Regione Marche - BUR",
+      "source_detail": "Regione Marche - BUR",
+      "kind": "Decreto regionale",
+      "date": "2026-11-12",
+      "updated_at": "2026-11-20T14:04:14.913505Z",
+      "href": "https://bur.regione.marche.it/bur/PDF/2026/N103 del 19 novembre 2026.pdf",
+      "relevance": "Alta",
+      "act_type": "decreto_legislativo",
+      "topics": [
+        "Psicoterapia e clinica",
+        "Salute mentale",
+        "Dipendenze",
+        "Disabilita e autismo",
+        "Anziani e non autosufficienza"
+      ],
+      "summary": "136 PR FSE+ 2021/27 (Asse 3, OS 4.k) – DDD n. 127/PRCN del 23.10.2026 – Intervento “Mul - tileva” 2.1 – Avviso pubblico per la concessio - ne di contributi agli enti non pubblici titolari dell’autorizzazione all’esercizio di strutture re- sidenziali sociosanitarie convenzionate (area della salute mentale e degli adulti malati di AIDS) e di strutture residenziali sociali autoriz- zate (aree anziani, disabilità, salut...",
+      "level": "regionale",
+      "region": "Marche",
+      "status": "pubblicato",
+      "score": 20.3,
+      "found_terms": {
+        "servizi_psicologici": [
+          "salute mentale"
+        ],
+        "clinica_sociale": [
+          "dipendenze"
+        ],
+        "anziani_lavoro_organizzazioni": [
+          "anziani"
+        ]
+      }
+    },
+    {
       "key": "9ccbd8e6278696d6295d05fe127deb3ca68fc48a1944e98b54959abd477a7111",
       "id": "S.2093",
       "identifier": "S.2093",
@@ -89,7 +163,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-11-10",
-      "updated_at": "2026-11-19T14:27:49.969820Z",
+      "updated_at": "2026-11-20T14:02:26.200360Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60602.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -119,7 +193,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-11-02",
-      "updated_at": "2026-11-19T14:27:49.969820Z",
+      "updated_at": "2026-11-20T14:02:26.200360Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60576.htm",
       "relevance": "Potenziale",
       "act_type": "disegno_di_legge",
@@ -1816,7 +1890,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-11-19T14:27:52.896958Z",
+      "updated_at": "2026-11-20T14:02:28.749758Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1868,7 +1942,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-11-19T14:27:52.896958Z",
+      "updated_at": "2026-11-20T14:02:28.749758Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -2151,7 +2225,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-11-19T14:27:52.896958Z",
+      "updated_at": "2026-11-20T14:02:28.749758Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
