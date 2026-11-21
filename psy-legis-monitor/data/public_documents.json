@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T14:07:29.560781Z",
-  "fetched_document_count": 609,
+  "generated_at": "2026-11-21T13:33:46.964669Z",
+  "fetched_document_count": 612,
   "published_document_count": 77,
   "high_relevance_count": 69,
   "potential_relevance_count": 8,
@@ -21,7 +21,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 234,
+      "document_count": 238,
       "error": ""
     },
     {
@@ -63,7 +63,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 54,
+      "document_count": 53,
       "error": ""
     },
     {
@@ -163,7 +163,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-11-10",
-      "updated_at": "2026-11-20T14:02:26.200360Z",
+      "updated_at": "2026-11-21T13:29:38.555567Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60602.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -188,12 +188,12 @@
       "key": "a3c852fb79e68c1d8fd31a23d2ec22910aaa38b786cd280f296bd5eddf8990b1",
       "id": "S.2083",
       "identifier": "S.2083",
-      "title": "Disposizioni per la prevenzione del burnout e per la tutela del benessere psico-fisico nella professione forense",
+      "title": "Disposizioni per la prevenzione del burnout e per la tutela del benessere psicofisico nella professione forense",
       "source": "Senato della Repubblica",
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-11-02",
-      "updated_at": "2026-11-20T14:02:26.200360Z",
+      "updated_at": "2026-11-21T13:29:38.555567Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60576.htm",
       "relevance": "Potenziale",
       "act_type": "disegno_di_legge",
@@ -1890,7 +1890,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-11-20T14:02:28.749758Z",
+      "updated_at": "2026-11-21T13:29:40.939764Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -1942,7 +1942,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-11-20T14:02:28.749758Z",
+      "updated_at": "2026-11-21T13:29:40.939764Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -2225,7 +2225,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-11-20T14:02:28.749758Z",
+      "updated_at": "2026-11-21T13:29:40.939764Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
