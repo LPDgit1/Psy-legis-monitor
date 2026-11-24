@@ -4,11 +4,41 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-11-23T16:00:06.389582Z",
+  "generated_at": "2026-11-24T15:54:28.052004Z",
   "result_count": 200,
-  "newest_identifier": "3189",
-  "newest_date": "20261119",
+  "newest_identifier": "3194",
+  "newest_date": "20261120",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3194",
+      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Disposizioni per il contrasto delle diseguaglianze territoriali nell’assistenza pediatrica e per il sostegno delle famiglie nell’ambito delle politiche demografiche e sociali\" (3194)",
+      "date": "20261120",
+      "identifier": "3194"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3193",
+      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Delega al Governo per il riordino della disciplina dei servizi e delle politiche sociali mediante l’adozione del testo unico delle disposizioni in materia di sistema integrato di interventi e servizi sociali\" (3193)",
+      "date": "20261120",
+      "identifier": "3193"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3192",
+      "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Modifica dell’articolo 111-<i>bis</i> del testo unico delle leggi in materia bancaria e creditizia, di cui al decreto legislativo 1° settembre 1993, n. 385\" (3192)",
+      "date": "20261120",
+      "identifier": "3192"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3191",
+      "title": "S. 483. - CANTU' ed altri: \"Disposizioni per la prevenzione e la cura delle patologie oculari cronico-degenerative, in particolare della maculopatia degenerativa miopica e senile\" <i>(approvata dal Senato)</i> (3191)",
+      "date": "20261119",
+      "identifier": "3191"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3190",
+      "title": "PROPOSTA DI LEGGE D'INIZIATIVA POPOLARE: \"Misure per la rigenerazione urbana del commercio e dei servizi di prossimità\" (3190)",
+      "date": "20261119",
+      "identifier": "3190"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3189",
       "title": "S. 2053. - \"Conversione in legge, con modificazioni, del decreto-legge 30 settembre 2026, n. 170, recante misure urgenti per garantire il regolare avvio dell’anno scolastico 2026/2027, per l’accompagnamento delle misure del Piano nazionale di ripresa e resilienza (PNRR) di competenza del Ministero dell’istruzione e del merito, per la promozione dell’integrazione degli studenti stranieri nell’ambito scolastico, nonché in materia di formazione superiore e ricerca\" <i>(approvato dal Senato) </i>(3189)",
@@ -251,7 +281,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3154",
-      "title": "LOIZZO: \"Modifiche all’articolo 82 della legge 23 dicembre 2000, n. 388, in materia di perequazione degli importi della speciale elargizione in favore dei superstiti delle vittime della criminalità organizzata\" (3154)",
+      "title": "LOIZZO: \"Modifiche all’articolo 82 della legge 23 dicembre 2000, n. 388, in materia di perequazione degli importi della speciale elargizione in favore delle vittime della criminalità organizzata e dei loro familiari superstiti\" (3154)",
       "date": "20261020",
       "identifier": "3154"
     },
@@ -527,7 +557,7 @@
     },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3108",
-      "title": "BILLI: \"Modifica all’articolo 19 del decreto legislativo 5 aprile 2006, n. 160, in materia di permanenza presso il medesimo ufficio dei magistrati addetti alla trattazione delle controversie concernenti la proprietà industriale\" (3108)",
+      "title": "BILLI e GIGLIO VIGNA: \"Modifica all’articolo 19 del decreto legislativo 5 aprile 2006, n. 160, in materia di permanenza presso il medesimo ufficio dei magistrati addetti alla trattazione delle controversie concernenti la proprietà industriale\" (3108)",
       "date": "20260917",
       "identifier": "3108"
     },
@@ -1178,36 +1208,6 @@
       "title": "DEL BARBA: \"Modifiche alla legge 4 maggio 1983, n. 184, in materia di adozione dei minori da parte delle persone dello stesso sesso unite in unione civile, delle persone conviventi di fatto e delle persone singole\" (3003)",
       "date": "20260703",
       "identifier": "3003"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3002",
-      "title": "DE BERTOLDI ed altri: \"Istituzione della certificazione di qualità della ristorazione italiana “Carlo Petrini”\" (3002)",
-      "date": "20260703",
-      "identifier": "3002"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3001",
-      "title": "S. 1809. - \"Modifica dell’intesa tra il Governo della Repubblica italiana e l’Unione Buddhista Italiana, in attuazione dell’articolo 8, terzo comma, della Costituzione\"<em>(approvato dal Senato)</em> (3001)",
-      "date": "20260702",
-      "identifier": "3001"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3000",
-      "title": "MALAVASI ed altri: \"Istituzione del Fondo nazionale per l’accoglienza abitativa delle persone senza dimora\" (3000)",
-      "date": "20260702",
-      "identifier": "3000"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2999",
-      "title": "MATERA ed altri: \"Istituzione della Giornata nazionale in memoria delle vittime degli incidenti ferroviari\" (2999)",
-      "date": "20260701",
-      "identifier": "2999"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_2998",
-      "title": "PRETTO ed altri: \"Istituzione di una Commissione parlamentare di inchiesta sulla strage di Vergarolla del 18 agosto 1946, sulle relative responsabilità e sulle circostanze che impedirono il completo accertamento dei fatti\" (2998)",
-      "date": "20260701",
-      "identifier": "2998"
     }
   ]
 }
