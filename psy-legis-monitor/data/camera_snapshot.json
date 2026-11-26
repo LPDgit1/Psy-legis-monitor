@@ -4,11 +4,23 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-11-25T15:37:44.813240Z",
+  "generated_at": "2026-11-26T15:19:26.607008Z",
   "result_count": 200,
-  "newest_identifier": "3194",
-  "newest_date": "20261120",
+  "newest_identifier": "3196",
+  "newest_date": "20261124",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3196",
+      "title": "L'ABBATE: \"Disposizioni per il riconoscimento, la salvaguardia e la valorizzazione della Festa delle Fanove di Castellana Grotte quale espressione del patrimonio culturale immateriale nazionale\" (3196)",
+      "date": "20261124",
+      "identifier": "3196"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3195",
+      "title": "GALLO: \"Modifica all’articolo 1 della legge 7 ottobre 1969, n. 742, in materia di sospensione feriale dei termini processuali\" (3195)",
+      "date": "20261124",
+      "identifier": "3195"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3194",
       "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Disposizioni per il contrasto delle diseguaglianze territoriali nell’assistenza pediatrica e per il sostegno delle famiglie nell’ambito delle politiche demografiche e sociali\" (3194)",
@@ -1196,18 +1208,6 @@
       "title": "\"Rendiconto generale dell’Amministrazione dello Stato per l’esercizio finanziario 2025\" (3005)",
       "date": "20260706",
       "identifier": "3005"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3004",
-      "title": "L'ABBATE: \"Disposizioni concernenti l’istituzione e l’obbligo di possesso della certificazione nazionale per la gestione degli allergeni nelle attività di preparazione, vendita e somministrazione di prodotti alimentari\" (3004)",
-      "date": "20260706",
-      "identifier": "3004"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3003",
-      "title": "DEL BARBA: \"Modifiche alla legge 4 maggio 1983, n. 184, in materia di adozione dei minori da parte delle persone dello stesso sesso unite in unione civile, delle persone conviventi di fatto e delle persone singole\" (3003)",
-      "date": "20260703",
-      "identifier": "3003"
     }
   ]
 }
