@@ -4,11 +4,29 @@
   "source": "dati.camera.it",
   "endpoint_url": "https://dati.camera.it/sparql",
   "legislature_uri": "http://dati.camera.it/ocd/legislatura.rdf/repubblica_19",
-  "generated_at": "2026-11-26T15:19:26.607008Z",
+  "generated_at": "2026-11-27T15:07:21.241998Z",
   "result_count": 200,
-  "newest_identifier": "3196",
-  "newest_date": "20261124",
+  "newest_identifier": "3199",
+  "newest_date": "20261126",
   "rows": [
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3199",
+      "title": "S. 2065. - \"Conversione in legge, con modificazioni, del decreto-legge 16 ottobre 2026, n. 185, recante misure urgenti a sostegno dei lavoratori dell’ex ILVA e dell’indotto e per il rilancio industriale del territorio\"<i>(approvato dal Senato)</i> (3199)",
+      "date": "20261126",
+      "identifier": "3199"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3198",
+      "title": "STEFANAZZI: \"Modifiche al testo unico delle disposizioni legislative in materia di imposta sul valore aggiunto, di cui al decreto legislativo 19 gennaio 2026, n. 10, in materia di costituzione di un gruppo IVA da parte degli enti del Servizio sanitario nazionale e delle società <i>in house</i> da essi interamente partecipate\" (3198)",
+      "date": "20261125",
+      "identifier": "3198"
+    },
+    {
+      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3197",
+      "title": "S. 2086. - \"Conversione in legge del decreto-legge 6 novembre 2026, n. 200, recante misure urgenti per assicurare la continuità delle funzioni dell’Autorità nazionale anticorruzione (ANAC)\" <i>(approvato dal Senato)</i> (3197)",
+      "date": "20261125",
+      "identifier": "3197"
+    },
     {
       "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3196",
       "title": "L'ABBATE: \"Disposizioni per il riconoscimento, la salvaguardia e la valorizzazione della Festa delle Fanove di Castellana Grotte quale espressione del patrimonio culturale immateriale nazionale\" (3196)",
@@ -1190,24 +1208,6 @@
       "title": "CONSIGLIO NAZIONALE DELL'ECONOMIA E DEL LAVORO: \"Modifiche all’articolo 25-<em>quater</em> del decreto-legge 23 ottobre 2018, n. 119, convertito, con modificazioni, dalla legge 17 dicembre 2018, n. 136, in materia di rafforzamento del Tavolo operativo e degli strumenti per il contrasto del caporalato e dello sfruttamento lavorativo nell’agricoltura\" (3008)",
       "date": "20260707",
       "identifier": "3008"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3007",
-      "title": "ILARIA FONTANA ed altri: \"Modifiche al codice dei contratti pubblici, di cui al decreto legislativo 31 marzo 2023, n. 36, e al decreto legislativo 3 aprile 2006, n. 152, concernenti la disciplina del dibattito pubblico sui progetti di opere e la presa in considerazione degli esiti di esso nei procedimenti di valutazione ambientale strategica e di valutazione di impatto ambientale\" (3007)",
-      "date": "20260707",
-      "identifier": "3007"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3006",
-      "title": "\"Disposizioni per l’assestamento del bilancio dello Stato per l’anno finanziario 2026\" (3006)",
-      "date": "20260706",
-      "identifier": "3006"
-    },
-    {
-      "atto": "http://dati.camera.it/ocd/attocamera.rdf/ac19_3005",
-      "title": "\"Rendiconto generale dell’Amministrazione dello Stato per l’esercizio finanziario 2025\" (3005)",
-      "date": "20260706",
-      "identifier": "3005"
     }
   ]
 }

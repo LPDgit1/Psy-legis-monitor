@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:26:41.885945Z",
-  "fetched_document_count": 567,
-  "published_document_count": 79,
-  "high_relevance_count": 71,
+  "generated_at": "2026-11-27T15:12:52.864394Z",
+  "fetched_document_count": 609,
+  "published_document_count": 80,
+  "high_relevance_count": 72,
   "potential_relevance_count": 8,
   "published_source_count": 10,
   "published_sources": [
@@ -22,7 +22,7 @@
     {
       "source": "Gazzetta Ufficiale",
       "status": "ok",
-      "document_count": 245,
+      "document_count": 253,
       "error": ""
     },
     {
@@ -64,7 +64,7 @@
     {
       "source": "BUR regionali",
       "status": "ok",
-      "document_count": 3,
+      "document_count": 37,
       "error": ""
     },
     {
@@ -81,6 +81,39 @@
     }
   ],
   "documents": [
+    {
+      "key": "12a5b8996217a857b76742b46b7f8ecce4eb0b092f51271f4976cc3f55617d57",
+      "id": "BUR-Calabria-36af0601b1a7d486e2fb",
+      "identifier": "BUR-Calabria-36af0601b1a7d486e2fb",
+      "title": "Atto n. 20463 del 26/11/2026 Parte Terza ESITI E GRADUATORIE DIPARTIMENTO PER L’INCLUSIONE SOCIALE, LA SUSSIDIARIETÀ E IL WELFARE DI COMUNITÀ - DECRETO Num. 20463 del 26/11/2026 DDS 12546 DEL 15/07/2026_APPROVAZIONE AVVISO PUBBLICO PER RIEQUILIBRARE LA PRESENZA DI CENTRI ANTIVIOLENZA SUL TERRITORIO DELLA REGIONE CALABRIA_ DECRETO DELLA MINISTRA PER LA FAMIGLIA, LA NATALITÀ E LE PARI OPPORTUNITÀ DEL 29 DICEMBRE 2025, DI RIPARTO DELLE RISORSE FINANZIARIE DEL FONDO PER LE POLITICHE RELATIVE AI DIRITTI E ALLE PARI OPPORTUNITÀ E INTESA, AI SENSI DELL’ART. 8, COMMA 6 DELLA LEGGE 5 GIUGNO 2023 N. 131 E RIPARTO TRA LE REGIONI DELLE RISORSE FINANZIARIE DEL FONDO CONTRO LE DISCRIMINAZIONI E LA VIOLE",
+      "source": "Regione Calabria - BURC",
+      "source_detail": "Regione Calabria - BURC",
+      "kind": "Legge regionale",
+      "date": "2026-11-26",
+      "updated_at": "2026-11-27T15:08:31.762392Z",
+      "href": "https://burc.regione.calabria.it/visualizzatore-ws/download?attachedID=586890&documentiID=499755",
+      "relevance": "Alta",
+      "act_type": "legge",
+      "topics": [
+        "Minori e famiglia",
+        "Violenza e trauma",
+        "Inclusione",
+        "Welfare e servizi"
+      ],
+      "summary": "NZA DI GENERE, PER L’ANNUALITÀ 2025_APPROVAZIONE GRADUATORIA E SCHEMA DI CONVENZIONE. IMPEGNO DI SPESA PERFETTO. Atto n. 20463 del 26/11/2026 Parte Terza ESITI E GRADUATORIE DIPARTIMENTO PER L’INCLUSIONE SOCIALE, LA SUSSIDIARIETÀ E IL WELFARE DI COMUNITÀ - DECRETO Num. 20463 del 26/11/2026 DDS 12546 DEL 15/07/2026_APPROVAZIONE AVVISO PUBBLICO PER RIEQUILIBRARE LA PRESENZA DI CENTRI ANTIVIOLENZA SUL TERRITORIO DELLA...",
+      "level": "regionale",
+      "region": "Calabria",
+      "status": "pubblicato",
+      "score": 8.9,
+      "found_terms": {
+        "scuola_minori_famiglia": [
+          "famiglia"
+        ],
+        "clinica_sociale": [
+          "violenza di genere"
+        ]
+      }
+    },
     {
       "key": "f2be4306319cfe325f6100704c19cbab83b78c81c3d700a8cb855cad5c83b34c",
       "id": "BUR-Calabria-79371d77271cdd167efb",
@@ -195,7 +228,7 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-11-10",
-      "updated_at": "2026-11-26T15:20:14.607468Z",
+      "updated_at": "2026-11-27T15:08:00.525845Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60602.htm",
       "relevance": "Alta",
       "act_type": "disegno_di_legge",
@@ -225,7 +258,7 @@
       "source_detail": "Gazzetta Ufficiale - Serie Generale",
       "kind": "Atto normativo",
       "date": "2026-11-07",
-      "updated_at": "2026-11-26T15:19:58.838102Z",
+      "updated_at": "2026-11-27T15:07:40.106383Z",
       "href": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-11-07&atto.codiceRedazionale=26A05817&elenco30giorni=true",
       "relevance": "Alta",
       "act_type": "altro",
@@ -257,14 +290,14 @@
       "source_detail": "Senato della Repubblica - dati.senato.it",
       "kind": "Disegno di legge",
       "date": "2026-11-02",
-      "updated_at": "2026-11-26T15:20:14.607468Z",
+      "updated_at": "2026-11-27T15:08:00.525845Z",
       "href": "https://www.senato.it/leg/19/BGT/Schede/Ddliter/60576.htm",
       "relevance": "Potenziale",
       "act_type": "disegno_di_legge",
       "topics": [
         "Lavoro e burnout"
       ],
-      "summary": "Stato: da assegn. a commis. Natura: ordinaria Presentazione: 2026-11-02 Ultimo stato: 2026-11-02",
+      "summary": "Stato: assegnato (no esame) Natura: ordinaria Presentazione: 2026-11-02 Ultimo stato: 2026-11-26",
       "level": "nazionale",
       "region": "",
       "status": "assegnato",
@@ -1954,7 +1987,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-31",
-      "updated_at": "2026-11-26T15:20:17.700036Z",
+      "updated_at": "2026-11-27T15:08:03.540493Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114354",
       "relevance": "Alta",
       "act_type": "altro",
@@ -2006,7 +2039,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2026-07-23",
-      "updated_at": "2026-11-26T15:20:17.700036Z",
+      "updated_at": "2026-11-27T15:08:03.540493Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=114499",
       "relevance": "Alta",
       "act_type": "altro",
@@ -2289,7 +2322,7 @@
       "source_detail": "Ministero della Salute - Trova Norme Salute",
       "kind": "Atto normativo",
       "date": "2025-07-10",
-      "updated_at": "2026-11-26T15:20:17.700036Z",
+      "updated_at": "2026-11-27T15:08:03.540493Z",
       "href": "https://www.trovanorme.salute.gov.it/norme/dettaglioAtto?id=107174",
       "relevance": "Alta",
       "act_type": "altro",
